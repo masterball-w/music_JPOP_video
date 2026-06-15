@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Data (batch-generated, too large for GitHub)
+data/lyrics/
+data/serialized/
+data/songs/songs_list.json
+
+# Output videos (too large for GitHub)
+output/videos/*.mp4
+
+# Config secrets
+config.yaml
+
+# Keep example config
+!config.example.yaml

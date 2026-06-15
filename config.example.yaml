@@ -1,0 +1,87 @@
+# ==========================================
+# JP Music Video Generator - Configuration
+# ==========================================
+
+# --- Spotify API Configuration ---
+spotify:
+  client_id: "YOUR_SPOTIFY_CLIENT_ID"
+  client_secret: "YOUR_SPOTIFY_CLIENT_SECRET"
+  # Playlist IDs for popular Japanese music
+  playlist_ids:
+    - "37i9dQZF1DX4wta20PHgwo"  # This is J-Pop
+    - "37i9dQZF1DX8KcjI43eNlX"  # J-Hits
+    - "37i9dQZF1DWXLeEK8V8nQm"  # Viral Japan
+  max_songs: 100
+
+# --- Lyrics Scraping ---
+lyrics:
+  # Sources to try in order
+  sources:
+    - "uta_net"       # Uta-Net (歌ネット)
+    - "kashinavi"     # 歌詞ナビ
+    - "utamap"        # UtaMap
+  request_delay: 2.0  # Seconds between requests (be polite)
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
+
+# --- Japanese Analysis ---
+analysis:
+  # POS tags to highlight
+  highlight_pos:
+    - "名詞"       # Nouns
+    - "動詞"       # Verbs
+    - "形容詞"     # Adjectives
+    - "副詞"       # Adverbs
+    - "助動詞"     # Auxiliary verbs
+    - "接続詞"     # Conjunctions
+  # JLPT level tagging
+  jlpt_levels: ["N5", "N4", "N3", "N2", "N1"]
+  # Max grammar notes per song
+  max_notes: 15
+
+# --- Video Generation ---
+video:
+  # Output formats (for multi-platform)
+  formats:
+    tiktok:
+      width: 1080
+      height: 1920
+      fps: 30
+    youtube:
+      width: 1920
+      height: 1080
+      fps: 30
+    instagram:
+      width: 1080
+      height: 1080
+      fps: 30
+  default_format: "tiktok"
+  
+  # Visual style
+  style:
+    background_color: [15, 15, 25]        # Dark blue-ish
+    lyric_font_size: 56
+    lyric_font_color: [255, 255, 255]
+    lyric_active_color: [0, 200, 255]     # Cyan highlight
+    note_font_size: 28
+    note_font_color: [200, 220, 255]
+    note_bg_color: [30, 30, 60, 180]      # Semi-transparent dark
+    romaji_font_size: 32
+    romaji_color: [180, 180, 200]
+    
+    # Animation
+    lyric_scroll_speed: "smooth"          # smooth | step
+    glow_effect: true
+    particle_effect: true
+    
+  # Duration limits
+  max_duration_seconds: 180  # 3 minutes max for short video
+  intro_seconds: 3
+  outro_seconds: 2
+
+# --- Paths ---
+paths:
+  data_dir: "data"
+  output_dir: "output"
+  assets_dir: "assets"
+  font_dir: "assets/fonts"
+  bg_dir: "assets/backgrounds"
