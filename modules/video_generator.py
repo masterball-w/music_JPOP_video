@@ -1,11 +1,12 @@
 """
-Video Generator Module
-=======================
-Generates beautiful short videos combining:
-- Dynamic flowing lyrics (karaoke-style)
-- Romaji readings
-- Japanese knowledge notes (vocabulary + grammar)
-- Visual effects (glow, particles, gradients)
+Video Generator Module v2
+==========================
+Generates visually stunning short videos combining:
+- Karaoke-style lyrics with sweep-fill animation
+- Dynamic bokeh / aurora / sakura background
+- Smooth slide transitions for lyrics and note cards
+- Glass-morphism knowledge note cards with JLPT badges
+- Glowing progress indicator
 
 Uses MoviePy 2.x for video compositing and Pillow for text rendering.
 """
@@ -23,17 +24,14 @@ from rich.console import Console
 
 console = Console()
 
-# MoviePy 2.x imports
 try:
     from moviepy import (
         VideoClip, AudioFileClip, ImageClip, CompositeVideoClip,
         concatenate_videoclips, ColorClip, TextClip, CompositeAudioClip,
     )
-    from moviepy.video.fx import FadeIn, FadeOut
     HAS_MOVIEPY = True
 except ImportError:
     try:
-        # Fallback for older MoviePy versions
         from moviepy.editor import (
             VideoClip, AudioFileClip, ImageClip, CompositeVideoClip,
             concatenate_videoclips, ColorClip, TextClip, CompositeAudioClip,
@@ -43,754 +41,804 @@ except ImportError:
         HAS_MOVIEPY = False
 
 
-# ========== Color Utility Functions ==========
+# ============================================================
+#  Utility Functions
+# ============================================================
 
-def hex_to_rgb(hex_color: str) -> tuple:
-    """Convert hex color to RGB tuple."""
-    hex_color = hex_color.lstrip("#")
-    return tuple(int(hex_color[i:i+2], 16) for i in (0, 2, 4))
+def lerp(a, b, t):
+    return a + (b - a) * max(0.0, min(1.0, t))
 
+def lerp_color(c1, c2, t):
+    t = max(0.0, min(1.0, t))
+    return tuple(int(a + (b - a) * t) for a, b in zip(c1[:3], c2[:3]))
 
-def rgb_to_hex(rgb: tuple) -> str:
-    """Convert RGB tuple to hex color."""
-    return "#{:02x}{:02x}{:02x}".format(*rgb[:3])
-
-
-def lerp_color(c1: tuple, c2: tuple, t: float) -> tuple:
-    """Linearly interpolate between two colors."""
-    t = max(0, min(1, t))
-    return tuple(int(a + (b - a) * t) for a, b in zip(c1, c2))
-
-
-def ease_in_out(t: float) -> float:
-    """Smooth easing function."""
-    return t * t * (3 - 2 * t)
-
-
-def ease_out_cubic(t: float) -> float:
-    """Cubic ease-out function."""
+def ease_out_cubic(t):
     return 1 - (1 - t) ** 3
 
+def ease_in_out(t):
+    return t * t * (3 - 2 * t)
 
-# ========== Font Management ==========
+def ease_out_back(t):
+    c1 = 1.70158
+    c3 = c1 + 1
+    return 1 + c3 * (t - 1) ** 3 + c1 * (t - 1) ** 2
+
+def clamp(v, lo, hi):
+    return max(lo, min(hi, v))
+
+
+# ============================================================
+#  Font Management
+# ============================================================
 
 def find_japanese_font() -> str:
-    """Find a suitable Japanese font on the system."""
-    # Common Japanese font paths on Windows (prioritize those with good Latin+CJK)
-    font_candidates = [
-        "C:/Windows/Fonts/YuGothM.ttc",      # Yu Gothic Medium (best for JP+Latin)
-        "C:/Windows/Fonts/YuGothB.ttc",      # Yu Gothic Bold
-        "C:/Windows/Fonts/meiryo.ttc",       # Meiryo
-        "C:/Windows/Fonts/YuGothR.ttc",      # Yu Gothic Regular
-        "C:/Windows/Fonts/YuGothL.ttc",      # Yu Gothic Light
-        "C:/Windows/Fonts/msgothic.ttc",     # MS Gothic
-        "C:/Windows/Fonts/msmincho.ttc",     # MS Mincho
-        "C:/Windows/Fonts/segoeui.ttf",      # Segoe UI (fallback)
-        # macOS
+    candidates = [
+        "C:/Windows/Fonts/YuGothM.ttc",
+        "C:/Windows/Fonts/YuGothB.ttc",
+        "C:/Windows/Fonts/meiryo.ttc",
+        "C:/Windows/Fonts/YuGothR.ttc",
+        "C:/Windows/Fonts/msgothic.ttc",
+        "C:/Windows/Fonts/msmincho.ttc",
+        "C:/Windows/Fonts/segoeui.ttf",
         "/System/Library/Fonts/Hiragino Sans GB.ttc",
-        "/System/Library/Fonts/ヒラギノ角ゴシック W3.ttc",
-        # Linux
         "/usr/share/fonts/truetype/noto/NotoSansCJK-Regular.ttc",
         "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
     ]
-
-    for font_path in font_candidates:
-        if os.path.exists(font_path):
-            return font_path
-
-    # Try to find any CJK font
+    for p in candidates:
+        if os.path.exists(p):
+            return p
     import glob
-    cjk_fonts = glob.glob("C:/Windows/Fonts/*gothic*") + \
-                glob.glob("C:/Windows/Fonts/*mincho*") + \
-                glob.glob("C:/Windows/Fonts/*Yu*")
-    if cjk_fonts:
-        return cjk_fonts[0]
-
+    for pattern in ("C:/Windows/Fonts/*gothic*", "C:/Windows/Fonts/*Yu*"):
+        found = glob.glob(pattern)
+        if found:
+            return found[0]
     return None
 
 
-# ========== Text Rendering ==========
+# ============================================================
+#  Text Renderer
+# ============================================================
 
 class TextRenderer:
-    """Render text with effects using Pillow."""
-
-    def __init__(self, font_path: str = None):
+    def __init__(self, font_path=None):
         self.font_path = font_path or find_japanese_font()
-        self._font_cache = {}
+        self._cache = {}
 
-    def get_font(self, size: int) -> ImageFont.FreeTypeFont:
-        """Get a cached font at the given size."""
-        if size not in self._font_cache:
+    def font(self, size):
+        if size not in self._cache:
             try:
-                if self.font_path:
-                    self._font_cache[size] = ImageFont.truetype(self.font_path, size)
-                else:
-                    self._font_cache[size] = ImageFont.load_default()
+                self._cache[size] = ImageFont.truetype(self.font_path, size) if self.font_path else ImageFont.load_default()
             except Exception:
-                self._font_cache[size] = ImageFont.load_default()
-        return self._font_cache[size]
+                self._cache[size] = ImageFont.load_default()
+        return self._cache[size]
 
-    def render_text(
-        self,
-        text: str,
-        size: int,
-        color: tuple = (255, 255, 255),
-        max_width: int = None,
-        glow: bool = False,
-        glow_color: tuple = (100, 180, 255),
-        glow_radius: int = 8,
-    ) -> Image.Image:
-        """
-        Render text to a Pillow Image with optional glow effect.
-        """
-        font = self.get_font(size)
-
-        # Measure text
-        dummy_img = Image.new("RGBA", (1, 1))
-        draw = ImageDraw.Draw(dummy_img)
-        bbox = draw.textbbox((0, 0), text, font=font)
-        text_w = bbox[2] - bbox[0]
-        text_h = bbox[3] - bbox[1]
-
-        if max_width and text_w > max_width:
-            # Truncate with ellipsis
-            while text_w > max_width and len(text) > 1:
-                text = text[:-1]
-                bbox = draw.textbbox((0, 0), text + "...", font=font)
-                text_w = bbox[2] - bbox[0]
-            text += "..."
-            bbox = draw.textbbox((0, 0), text, font=font)
-            text_w = bbox[2] - bbox[0]
-
-        # Add padding for glow
-        pad = glow_radius * 2 if glow else 4
-        img_w = text_w + pad * 2
-        img_h = text_h + pad * 2
-
-        img = Image.new("RGBA", (img_w, img_h), (0, 0, 0, 0))
-        draw = ImageDraw.Draw(img)
-
-        if glow:
-            # Render glow layer
-            glow_img = Image.new("RGBA", (img_w, img_h), (0, 0, 0, 0))
-            glow_draw = ImageDraw.Draw(glow_img)
-            glow_draw.text((pad, pad), text, font=font, fill=(*glow_color, 180))
-            glow_img = glow_img.filter(ImageFilter.GaussianBlur(radius=glow_radius))
-            img = Image.alpha_composite(img, glow_img)
-            draw = ImageDraw.Draw(img)
-
-        # Render main text
-        draw.text((pad, pad), text, font=font, fill=(*color, 255))
-
-        return img
-
-    def render_rich_line(
-        self,
-        text: str,
-        size: int,
-        color: tuple = (255, 255, 255),
-        highlight_chars: set = None,
-        highlight_color: tuple = (0, 220, 255),
-    ) -> Image.Image:
-        """
-        Render text with character-level highlighting.
-        """
-        font = self.get_font(size)
-        dummy_img = Image.new("RGBA", (1, 1))
-        draw = ImageDraw.Draw(dummy_img)
-
-        # Measure total width
-        total_w = 0
-        max_h = 0
-        char_widths = []
-        for ch in text:
-            bbox = draw.textbbox((0, 0), ch, font=font)
-            w = bbox[2] - bbox[0]
-            h = bbox[3] - bbox[1]
-            char_widths.append(w)
-            total_w += w
-            max_h = max(max_h, h)
-
-        pad = 4
-        img = Image.new("RGBA", (total_w + pad * 2, max_h + pad * 2), (0, 0, 0, 0))
-        draw = ImageDraw.Draw(img)
-
-        x = pad
-        for i, ch in enumerate(text):
-            c = highlight_color if (highlight_chars and ch in highlight_chars) else color
-            draw.text((x, pad), ch, font=font, fill=(*c, 255))
-            x += char_widths[i]
-
-        return img
-
-    def _wrap_text(self, text: str, font: ImageFont.FreeTypeFont, max_width: int) -> list:
-        """Wrap text to fit within max_width pixels."""
+    # ----- core text rendering with multi-layer glow -----
+    def render(
+        self, text, size,
+        color=(255, 255, 255),
+        max_width=None,
+        glow=False, glow_color=(80, 180, 255), glow_radius=14,
+        shadow=False, shadow_color=(0, 0, 0), shadow_offset=3,
+    ):
+        f = self.font(size)
         dummy = Image.new("RGBA", (1, 1))
-        draw = ImageDraw.Draw(dummy)
-        lines = []
-        current = ""
-        for char in text:
-            test = current + char
-            bbox = draw.textbbox((0, 0), test, font=font)
-            if bbox[2] - bbox[0] > max_width and current:
-                lines.append(current)
-                current = char
+        d = ImageDraw.Draw(dummy)
+        bb = d.textbbox((0, 0), text, font=f)
+        tw, th = bb[2] - bb[0], bb[3] - bb[1]
+        if max_width and tw > max_width:
+            while tw > max_width and len(text) > 1:
+                text = text[:-1]
+                bb = d.textbbox((0, 0), text + "...", font=f)
+                tw = bb[2] - bb[0]
+            text += "..."
+            bb = d.textbbox((0, 0), text, font=f)
+            tw = bb[2] - bb[0]
+        pad = (glow_radius * 2 + shadow_offset) if glow else (shadow_offset + 6)
+        W, H = tw + pad * 2, th + pad * 2
+        img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+
+        # Shadow layer
+        if shadow:
+            sh = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+            ImageDraw.Draw(sh).text((pad + shadow_offset, pad + shadow_offset), text, font=f, fill=(*shadow_color, 120))
+            sh = sh.filter(ImageFilter.GaussianBlur(shadow_offset + 2))
+            img = Image.alpha_composite(img, sh)
+
+        # Glow layer
+        if glow:
+            gl = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+            ImageDraw.Draw(gl).text((pad, pad), text, font=f, fill=(*glow_color, 160))
+            gl = gl.filter(ImageFilter.GaussianBlur(glow_radius))
+            img = Image.alpha_composite(img, gl)
+            # second, tighter glow pass
+            gl2 = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+            ImageDraw.Draw(gl2).text((pad, pad), text, font=f, fill=(*glow_color, 100))
+            gl2 = gl2.filter(ImageFilter.GaussianBlur(glow_radius // 3))
+            img = Image.alpha_composite(img, gl2)
+
+        # Main text
+        ImageDraw.Draw(img).text((pad, pad), text, font=f, fill=(*color[:3], 255))
+        return img
+
+    # ----- karaoke sweep text: left portion in active color -----
+    def render_sweep(self, text, size, progress,
+                     base_color=(200, 200, 220), active_color=(0, 230, 255),
+                     glow_color=(60, 180, 255), max_width=None):
+        """Render text with a left-to-right sweep fill based on progress 0..1."""
+        f = self.font(size)
+        dummy = Image.new("RGBA", (1, 1))
+        d = ImageDraw.Draw(dummy)
+        bb = d.textbbox((0, 0), text, font=f)
+        tw, th = bb[2] - bb[0], bb[3] - bb[1]
+        if max_width and tw > max_width:
+            tw = max_width
+        pad = 20
+        W, H = tw + pad * 2, th + pad * 2
+
+        # Render base (inactive) text
+        base = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        ImageDraw.Draw(base).text((pad, pad), text, font=f, fill=(*base_color, 255))
+
+        # Render active (swept) text
+        active = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        ImageDraw.Draw(active).text((pad, pad), text, font=f, fill=(*active_color, 255))
+
+        # Glow layer for active portion
+        glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        ImageDraw.Draw(glow).text((pad, pad), text, font=f, fill=(*glow_color, 140))
+        glow = glow.filter(ImageFilter.GaussianBlur(10))
+
+        # Create sweep mask: white on left, black on right
+        sweep_x = int(pad + tw * clamp(progress, 0, 1))
+        mask = Image.new("L", (W, H), 0)
+        mask_draw = ImageDraw.Draw(mask)
+        mask_draw.rectangle([(0, 0), (sweep_x, H)], fill=255)
+        # Soft edge on the sweep boundary
+        mask = mask.filter(ImageFilter.GaussianBlur(4))
+
+        # Composite: glow under active text, then active over base using mask
+        result = base.copy()
+        # Add glow only where active
+        glow_masked = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        glow_masked.paste(glow, mask=mask)
+        result = Image.alpha_composite(result, glow_masked)
+        active_masked = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        active_masked.paste(active, mask=mask)
+        result = Image.alpha_composite(result, active_masked)
+
+        return result
+
+    # ----- wrap text to pixel width -----
+    def wrap(self, text, font_obj, max_w):
+        dummy = Image.new("RGBA", (1, 1))
+        d = ImageDraw.Draw(dummy)
+        lines, cur = [], ""
+        for ch in text:
+            t = cur + ch
+            if d.textbbox((0, 0), t, font=font_obj)[2] > max_w and cur:
+                lines.append(cur)
+                cur = ch
             else:
-                current = test
-        if current:
-            lines.append(current)
+                cur = t
+        if cur:
+            lines.append(cur)
         return lines
 
-    def render_note_card(
-        self,
-        note: dict,
-        width: int,
-        bg_color: tuple = (25, 25, 50, 220),
-        text_color: tuple = (220, 230, 255),
-        accent_color: tuple = (0, 200, 255),
-    ) -> Image.Image:
-        """
-        Render a knowledge note card (vocabulary or grammar explanation).
-        """
-        font_title = self.get_font(24)
-        font_body = self.get_font(20)
-        font_small = self.get_font(16)
+    # ----- rounded rectangle helper -----
+    @staticmethod
+    def rounded_rect(draw, xy, radius, fill, outline=None, width=0):
+        x0, y0, x1, y1 = xy
+        r = radius
+        # Main body
+        draw.rectangle([x0 + r, y0, x1 - r, y1], fill=fill)
+        draw.rectangle([x0, y0 + r, x1, y1 - r], fill=fill)
+        # Corners
+        draw.ellipse([x0, y0, x0 + 2*r, y0 + 2*r], fill=fill)
+        draw.ellipse([x1 - 2*r, y0, x1, y0 + 2*r], fill=fill)
+        draw.ellipse([x0, y1 - 2*r, x0 + 2*r, y1], fill=fill)
+        draw.ellipse([x1 - 2*r, y1 - 2*r, x1, y1], fill=fill)
+        if outline and width:
+            draw.arc([x0, y0, x0 + 2*r, y0 + 2*r], 180, 270, fill=outline, width=width)
+            draw.arc([x1 - 2*r, y0, x1, y0 + 2*r], 270, 360, fill=outline, width=width)
+            draw.arc([x0, y1 - 2*r, x0 + 2*r, y1], 90, 180, fill=outline, width=width)
+            draw.arc([x1 - 2*r, y1 - 2*r, x1, y1], 0, 90, fill=outline, width=width)
+            draw.line([x0 + r, y0, x1 - r, y0], fill=outline, width=width)
+            draw.line([x0 + r, y1, x1 - r, y1], fill=outline, width=width)
+            draw.line([x0, y0 + r, x0, y1 - r], fill=outline, width=width)
+            draw.line([x1, y0 + r, x1, y1 - r], fill=outline, width=width)
 
-        note_type = note.get("type", "vocabulary")
+    # ----- note card with glass-morphism -----
+    def render_note_card(self, note, width, accent=(0, 200, 255)):
+        f_title = self.font(26)
+        f_body = self.font(20)
+        f_small = self.font(16)
+        f_badge = self.font(14)
+        ntype = note.get("type", "vocabulary")
         data = note.get("data", {})
 
-        # Build card content
-        if note_type == "vocabulary":
-            word = data.get('word', '')
-            level = data.get('jlpt_level', '')
-            title = f"{word}  [{level}]"
+        # Content lines
+        if ntype == "vocabulary":
+            word = data.get("word", "")
+            level = data.get("jlpt_level", "")
             reading = data.get("reading", "")
             meaning = data.get("meaning", "")
-            lines_text = [
-                (title, font_title, accent_color),
-                (f"du yin: {reading}", font_body, text_color),
-                (f"yi yi: {meaning}", font_body, text_color),
+            content = [
+                ("title", f"{word}", f_title, accent),
+                ("body", f"\u8bfb\u97f3: {reading}", f_body, (220, 230, 255)),
+                ("body", f"\u542b\u4e49: {meaning}", f_body, (220, 230, 255)),
             ]
-        else:  # grammar
-            pattern = data.get('pattern', '').replace('\u301c', '~')
-            level = data.get('level', '')
-            title = f"{pattern}  [{level}]"
+            badge_text = level
+        else:
+            pat = data.get("pattern", "").replace("\u301c", "~")
+            level = data.get("level", "")
             meaning = data.get("meaning", "")
-            explanation = data.get("explanation", "").replace('\u301c', '~')
-            example = data.get("example", "").replace('\u301c', '~')
-            lines_text = [
-                (title, font_title, accent_color),
-                (meaning, font_body, text_color),
+            expl = data.get("explanation", "").replace("\u301c", "~")
+            ex = data.get("example", "").replace("\u301c", "~")
+            content = [
+                ("title", pat, f_title, accent),
+                ("body", meaning, f_body, (220, 230, 255)),
             ]
-            # Wrap long explanation using pixel width
-            if explanation:
-                max_text_w = width - 60  # available width
-                wrapped_lines = self._wrap_text(explanation, font_small, max_text_w)
-                for wl in wrapped_lines:
-                    lines_text.append((wl, font_small, (180, 190, 220)))
-            if example:
-                lines_text.append((f"li: {example}", font_small, (160, 200, 160)))
+            if expl:
+                for wl in self.wrap(expl, f_small, width - 80):
+                    content.append(("small", wl, f_small, (170, 185, 215)))
+            if ex:
+                content.append(("small", f"\u4f8b: {ex}", f_small, (150, 210, 160)))
+            badge_text = level
 
-        # Measure height
-        dummy_img = Image.new("RGBA", (1, 1))
-        draw = ImageDraw.Draw(dummy_img)
+        # Measure
+        dummy = Image.new("RGBA", (1, 1))
+        dd = ImageDraw.Draw(dummy)
         total_h = 0
-        for text, font, color in lines_text:
-            bbox = draw.textbbox((0, 0), text, font=font)
-            total_h += (bbox[3] - bbox[1]) + 8
+        for _, txt, fo, _ in content:
+            bb = dd.textbbox((0, 0), txt, font=fo)
+            total_h += (bb[3] - bb[1]) + 10
+        pad_x, pad_y = 20, 16
+        card_w, card_h = width, total_h + pad_y * 2 + 4
+        radius = 16
 
-        # Add padding
-        pad_x, pad_y = 16, 12
-        card_h = total_h + pad_y * 2
-        card_w = width
+        # Card image
+        card = Image.new("RGBA", (card_w, card_h), (0, 0, 0, 0))
+        cd = ImageDraw.Draw(card)
 
-        # Draw card background
-        img = Image.new("RGBA", (card_w, card_h), bg_color)
-        draw = ImageDraw.Draw(img)
+        # Frosted glass background
+        self.rounded_rect(cd, (0, 0, card_w - 1, card_h - 1), radius,
+                          fill=(20, 22, 45, 200))
+        # Subtle border
+        self.rounded_rect(cd, (0, 0, card_w - 1, card_h - 1), radius,
+                          fill=None, outline=(80, 130, 200, 80), width=1)
 
-        # Accent line on left
-        draw.rectangle([(0, 0), (4, card_h)], fill=(*accent_color, 255))
+        # Left accent bar (rounded)
+        cd.rectangle([(6, pad_y), (9, card_h - pad_y)], fill=(*accent, 220))
 
-        # Draw text lines
+        # JLPT badge (top-right)
+        badge_colors = {"N5": (80, 180, 80), "N4": (60, 150, 200), "N3": (200, 160, 50),
+                        "N2": (200, 100, 50), "N1": (180, 60, 60)}
+        bc = badge_colors.get(badge_text, (100, 100, 140))
+        badge_w = dd.textbbox((0, 0), badge_text, font=f_badge)[2] + 16
+        bx = card_w - badge_w - 14
+        by = 10
+        self.rounded_rect(cd, (bx, by, bx + badge_w, by + 22), 6, fill=(*bc, 200))
+        cd.text((bx + 8, by + 3), badge_text, font=f_badge, fill=(255, 255, 255, 240))
+
+        # Draw content
         y = pad_y
-        for text, font, color in lines_text:
-            draw.text((pad_x + 8, y), text, font=font, fill=(*color, 255))
-            bbox = draw.textbbox((0, 0), text, font=font)
-            y += (bbox[3] - bbox[1]) + 8
+        for kind, txt, fo, col in content:
+            cd.text((pad_x + 10, y), txt, font=fo, fill=(*col, 255))
+            bb = cd.textbbox((0, 0), txt, font=fo)
+            y += (bb[3] - bb[1]) + 10
 
-        return img
+        return card
 
 
-# ========== Particle System ==========
+# ============================================================
+#  Particle System  (Bokeh + Sakura + Music Notes)
+# ============================================================
 
-class Particle:
-    """A simple particle for background effects."""
-    def __init__(self, x, y, vx, vy, size, color, life):
-        self.x = x
-        self.y = y
-        self.vx = vx
-        self.vy = vy
-        self.size = size
-        self.color = color
-        self.life = life
-        self.max_life = life
+class BokehParticle:
+    __slots__ = ("x", "y", "r", "vx", "vy", "color", "alpha", "phase", "speed")
+    def __init__(self, W, H):
+        self.x = np.random.uniform(0, W)
+        self.y = np.random.uniform(-H * 0.1, H * 1.1)
+        self.r = np.random.uniform(8, 40)
+        self.vx = np.random.uniform(-8, 8)
+        self.vy = np.random.uniform(-18, -4)
+        hue_shift = np.random.uniform(0, 1)
+        if hue_shift < 0.4:
+            self.color = (np.random.randint(60, 140), np.random.randint(140, 220), 255)
+        elif hue_shift < 0.7:
+            self.color = (255, np.random.randint(140, 200), np.random.randint(180, 255))
+        else:
+            self.color = (np.random.randint(180, 255), np.random.randint(100, 180), 255)
+        self.alpha = np.random.uniform(0.04, 0.18)
+        self.phase = np.random.uniform(0, math.pi * 2)
+        self.speed = np.random.uniform(0.3, 0.8)
 
     def update(self, dt):
-        self.x += self.vx * dt
+        self.x += self.vx * dt + math.sin(self.phase) * 0.5
         self.y += self.vy * dt
-        self.life -= dt
+        self.phase += self.speed * dt
 
-    @property
-    def alpha(self):
-        return max(0, int(255 * (self.life / self.max_life)))
-
-
-class ParticleSystem:
-    """Simple particle system for ambient effects."""
-
-    def __init__(self, width, height, max_particles=50):
-        self.width = width
-        self.height = height
-        self.max_particles = max_particles
-        self.particles = []
-
-    def emit(self, count=5):
-        """Emit new particles."""
-        for _ in range(count):
-            if len(self.particles) >= self.max_particles:
-                break
-            self.particles.append(Particle(
-                x=np.random.randint(0, self.width),
-                y=self.height + 10,
-                vx=np.random.uniform(-15, 15),
-                vy=np.random.uniform(-60, -20),
-                size=np.random.randint(2, 6),
-                color=(
-                    np.random.randint(100, 200),
-                    np.random.randint(150, 255),
-                    255,
-                ),
-                life=np.random.uniform(2, 6),
-            ))
-
-    def update(self, dt):
-        """Update all particles."""
-        self.emit(count=2)
-        for p in self.particles:
-            p.update(dt)
-        self.particles = [p for p in self.particles if p.life > 0]
-
-    def render(self, img: Image.Image):
-        """Render particles onto an image."""
-        draw = ImageDraw.Draw(img, "RGBA")
-        for p in self.particles:
-            alpha = p.alpha
-            if alpha > 10:
-                x, y = int(p.x), int(p.y)
-                s = p.size
-                draw.ellipse(
-                    [(x - s, y - s), (x + s, y + s)],
-                    fill=(*p.color, alpha),
-                )
-
-
-# ========== Video Generator ==========
-
-class VideoGenerator:
-    """Generate beautiful lyrics videos with knowledge notes."""
-
-    def __init__(self, config: dict):
-        self.config = config
-        self.video_cfg = config.get("video", {})
-        self.style = self.video_cfg.get("style", {})
-        self.formats = self.video_cfg.get("formats", {})
-        self.default_format = self.video_cfg.get("default_format", "tiktok")
-        self.max_duration = self.video_cfg.get("max_duration_seconds", 180)
-        self.intro_seconds = self.video_cfg.get("intro_seconds", 3)
-        self.outro_seconds = self.video_cfg.get("outro_seconds", 2)
-
-        self.output_dir = Path(config["paths"]["output_dir"]) / "videos"
-        self.output_dir.mkdir(parents=True, exist_ok=True)
-
-        # Initialize text renderer
-        self.renderer = TextRenderer()
-
-        if not HAS_MOVIEPY:
-            console.print("[red]MoviePy not installed! Video generation will not work.[/red]")
-            console.print("[yellow]Install with: pip install moviepy[/yellow]")
-
-    def _get_format(self, format_name: str = None) -> dict:
-        """Get video format dimensions."""
-        fmt_name = format_name or self.default_format
-        fmt = self.formats.get(fmt_name, self.formats.get("tiktok", {}))
-        return {
-            "width": fmt.get("width", 1080),
-            "height": fmt.get("height", 1920),
-            "fps": fmt.get("fps", 30),
-        }
-
-    def _create_background(self, width: int, height: int, t: float) -> Image.Image:
-        """Create animated gradient background."""
-        bg_color = tuple(self.style.get("background_color", [15, 15, 25]))
-
-        img = Image.new("RGBA", (width, height), (*bg_color, 255))
-        draw = ImageDraw.Draw(img)
-
-        # Animated gradient overlay
-        phase = t * 0.3
-        for y in range(0, height, 4):
-            ratio = y / height
-            # Subtle color wave
-            r_offset = int(15 * math.sin(phase + ratio * 3))
-            g_offset = int(10 * math.sin(phase + ratio * 2 + 1))
-            b_offset = int(20 * math.sin(phase + ratio * 4 + 2))
-
-            r = max(0, min(255, bg_color[0] + r_offset))
-            g = max(0, min(255, bg_color[1] + g_offset))
-            b = max(0, min(255, bg_color[2] + b_offset))
-
-            draw.rectangle([(0, y), (width, y + 4)], fill=(r, g, b, 255))
-
-        return img
-
-    def _render_frame(
-        self,
-        t: float,
-        width: int,
-        height: int,
-        analyzed_data: dict,
-        particles: ParticleSystem,
-    ) -> np.ndarray:
-        """
-        Render a single video frame.
-        
-        Layout (vertical / 9:16):
-        - Top 25%: Title & Song info
-        - Middle 45%: Active lyrics + romaji
-        - Bottom 30%: Knowledge notes panel
-        """
-        lines = analyzed_data.get("analyzed_lines", [])
-        title = analyzed_data.get("title", "")
-        artist = analyzed_data.get("artist", "")
-        top_notes = analyzed_data.get("top_notes", [])
-
-        # Create background
-        bg = self._create_background(width, height, t)
-
-        # Update and render particles
-        particles.update(1.0 / 30)  # Assuming 30fps
-        particles.render(bg)
-
-        draw = ImageDraw.Draw(bg, "RGBA")
-
-        # ===== Title Section (Top) =====
-        title_font = self.renderer.get_font(28)
-        artist_font = self.renderer.get_font(20)
-
-        # Title with fade-in during intro
-        title_alpha = min(255, int(255 * min(1, t / self.intro_seconds)))
-        title_color = (200, 210, 230, title_alpha)
-
-        # Center title
-        title_bbox = draw.textbbox((0, 0), title, font=title_font)
-        title_w = title_bbox[2] - title_bbox[0]
-        title_x = (width - title_w) // 2
-        draw.text((title_x, int(height * 0.06)), title, font=title_font, fill=title_color)
-
-        artist_bbox = draw.textbbox((0, 0), artist, font=artist_font)
-        artist_w = artist_bbox[2] - artist_bbox[0]
-        artist_x = (width - artist_w) // 2
-        draw.text((artist_x, int(height * 0.10)), artist, font=artist_font, fill=(*title_color[:3], title_alpha // 2))
-
-        # Decorative line
-        line_y = int(height * 0.135)
-        line_w = min(width // 2, title_w + 40)
-        line_x = (width - line_w) // 2
-        draw.line([(line_x, line_y), (line_x + line_w, line_y)], fill=(80, 120, 180, 120), width=2)
-
-        # ===== Lyrics Section (Middle) =====
-        # Find current active line based on time
-        active_idx = -1
-        for i, line in enumerate(lines):
-            start = line.get("start", 0) or 0
-            end = line.get("end", 0) or 0
-            if start <= t < end:
-                active_idx = i
-                break
-
-        # Show surrounding lines context (3 lines above, 1 below active)
-        lyric_start_idx = max(0, active_idx - 3) if active_idx >= 0 else 0
-        lyric_end_idx = min(len(lines), lyric_start_idx + 6)
-
-        lyric_font_size = self.style.get("lyric_font_size", 48)
-        romaji_font_size = self.style.get("romaji_font_size", 28)
-        inactive_color = tuple(self.style.get("lyric_font_color", [255, 255, 255]))
-        active_color = tuple(self.style.get("lyric_active_color", [0, 200, 255]))
-        romaji_color = tuple(self.style.get("romaji_color", [180, 180, 200]))
-
-        lyric_y = int(height * 0.18)
-        line_spacing = lyric_font_size + romaji_font_size + 20
-
-        for i in range(lyric_start_idx, lyric_end_idx):
-            line = lines[i]
-            text = line.get("text", "")
-            romaji = line.get("romaji", "")
-            is_active = (i == active_idx)
-
-            # Calculate fade based on distance from active
-            if active_idx >= 0:
-                distance = abs(i - active_idx)
-                fade = max(0.2, 1.0 - distance * 0.2)
-            else:
-                fade = 0.3
-
-            # Active line glow effect
-            if is_active:
-                current_color = active_color
-                glow = self.style.get("glow_effect", True)
-            else:
-                current_color = tuple(int(c * fade) for c in inactive_color[:3])
-                glow = False
-
-            # Render lyrics
-            lyric_img = self.renderer.render_text(
-                text,
-                lyric_font_size,
-                color=current_color,
-                max_width=width - 80,
-                glow=glow,
-                glow_color=active_color,
-                glow_radius=12 if is_active else 0,
+    def draw(self, draw_ctx):
+        a = int(self.alpha * 255)
+        if a < 3:
+            return
+        x, y, r = int(self.x), int(self.y), int(self.r)
+        # Soft circle with radial gradient (approximated with concentric circles)
+        for i in range(3):
+            ri = r - i * (r // 3)
+            ai = a * (1 - i * 0.35)
+            draw_ctx.ellipse(
+                [x - ri, y - ri, x + ri, y + ri],
+                fill=(*self.color, int(ai)),
             )
 
-            # Paste lyrics
-            lx = (width - lyric_img.width) // 2
-            bg.paste(lyric_img, (lx, lyric_y), lyric_img)
 
-            # Render romaji below active line
-            if is_active and romaji:
-                romaji_img = self.renderer.render_text(
-                    romaji, romaji_font_size, color=romaji_color, max_width=width - 80
+class SakuraPetal:
+    __slots__ = ("x", "y", "vx", "vy", "angle", "spin", "size", "alpha", "color")
+    def __init__(self, W, H):
+        self.x = np.random.uniform(-50, W + 50)
+        self.y = -20
+        self.vx = np.random.uniform(-20, 20)
+        self.vy = np.random.uniform(25, 60)
+        self.angle = np.random.uniform(0, 360)
+        self.spin = np.random.uniform(-90, 90)
+        self.size = np.random.uniform(4, 10)
+        self.alpha = np.random.uniform(0.15, 0.4)
+        pink = np.random.randint(200, 255)
+        self.color = (255, np.random.randint(150, 200), pink)
+
+    def update(self, dt):
+        self.x += self.vx * dt + math.sin(self.angle * 0.02) * 12 * dt
+        self.y += self.vy * dt
+        self.angle += self.spin * dt
+
+    def draw(self, draw_ctx):
+        a = int(self.alpha * 255)
+        if a < 5:
+            return
+        s = self.size
+        x, y = int(self.x), int(self.y)
+        # Simple petal shape: two overlapping ellipses
+        draw_ctx.ellipse([x - s, y - s//2, x + s, y + s//2],
+                         fill=(*self.color, a))
+        draw_ctx.ellipse([x - s//2, y - s, x + s//2, y + s],
+                         fill=(*self.color, int(a * 0.7)))
+
+
+class ParticleEngine:
+    def __init__(self, W, H, max_bokeh=25, max_sakura=15):
+        self.W, self.H = W, H
+        self.bokeh = [BokehParticle(W, H) for _ in range(max_bokeh)]
+        self.sakura = []
+        self.max_sakura = max_sakura
+        self._sakura_timer = 0
+
+    def update(self, dt):
+        for p in self.bokeh:
+            p.update(dt)
+            # Recycle off-screen
+            if p.y < -60 or p.x < -80 or p.x > self.W + 80:
+                p.__init__(self.W, self.H)
+                p.y = self.H + p.r
+        # Sakura emission
+        self._sakura_timer += dt
+        if self._sakura_timer > 0.6 and len(self.sakura) < self.max_sakura:
+            self.sakura.append(SakuraPetal(self.W, self.H))
+            self._sakura_timer = 0
+        for p in self.sakura:
+            p.update(dt)
+        self.sakura = [p for p in self.sakura if p.y < self.H + 30]
+
+    def render(self, img):
+        d = ImageDraw.Draw(img, "RGBA")
+        for p in self.bokeh:
+            p.draw(d)
+        for p in self.sakura:
+            p.draw(d)
+
+
+# ============================================================
+#  Aurora Background
+# ============================================================
+
+class AuroraBackground:
+    """Renders a dark gradient with animated aurora-like light waves."""
+
+    def __init__(self, W, H, base_color=(10, 10, 22)):
+        self.W, self.H = W, H
+        self.base = base_color
+        # Pre-compute a vertical gradient base (numpy)
+        self._base_arr = self._make_base()
+
+    def _make_base(self):
+        arr = np.zeros((self.H, self.W, 4), dtype=np.uint8)
+        for y in range(self.H):
+            ratio = y / self.H
+            r = int(self.base[0] + 12 * ratio)
+            g = int(self.base[1] + 8 * ratio)
+            b = int(self.base[2] + 25 * ratio)
+            arr[y, :] = [r, g, b, 255]
+        return arr
+
+    def render(self, t):
+        img = Image.fromarray(self._base_arr.copy(), "RGBA")
+        draw = ImageDraw.Draw(img, "RGBA")
+
+        # Aurora waves: 3 layered sine bands
+        waves = [
+            {"y_ratio": 0.25, "amp": 40, "freq": 1.8, "speed": 0.25,
+             "color": (30, 80, 180, 18), "width": 80},
+            {"y_ratio": 0.45, "amp": 30, "freq": 2.5, "speed": 0.35,
+             "color": (60, 40, 160, 14), "width": 60},
+            {"y_ratio": 0.70, "amp": 50, "freq": 1.2, "speed": 0.18,
+             "color": (20, 100, 140, 16), "width": 100},
+        ]
+        for w in waves:
+            base_y = int(self.H * w["y_ratio"])
+            pts = []
+            for x in range(0, self.W + 1, 6):
+                xr = x / self.W
+                y = base_y + int(w["amp"] * math.sin(xr * w["freq"] * math.pi + t * w["speed"])
+                                 + w["amp"] * 0.4 * math.sin(xr * w["freq"] * 2.3 * math.pi + t * w["speed"] * 1.7))
+                pts.append((x, y))
+            # Draw as a filled polygon band
+            poly = pts + [(self.W, pts[-1][1] + w["width"]), (0, pts[0][1] + w["width"])]
+            draw.polygon(poly, fill=w["color"])
+
+        # Subtle vignette overlay
+        vig = Image.new("RGBA", (self.W, self.H), (0, 0, 0, 0))
+        vd = ImageDraw.Draw(vig)
+        for i in range(20):
+            ratio = i / 20
+            alpha = int(60 * (1 - ratio))
+            margin = int(min(self.W, self.H) * 0.02 * i)
+            vd.rectangle([(0, 0), (margin, self.H)], fill=(0, 0, 0, alpha // 3))
+            vd.rectangle([(self.W - margin, 0), (self.W, self.H)], fill=(0, 0, 0, alpha // 3))
+            vd.rectangle([(0, 0), (self.W, margin)], fill=(0, 0, 0, alpha // 4))
+            vd.rectangle([(0, self.H - margin), (self.W, self.H)], fill=(0, 0, 0, alpha // 2))
+
+        img = Image.alpha_composite(img, vig)
+        return img
+
+
+# ============================================================
+#  Video Generator (main class)
+# ============================================================
+
+class VideoGenerator:
+    def __init__(self, config):
+        self.config = config
+        vc = config.get("video", {})
+        self.style = vc.get("style", {})
+        self.formats = vc.get("formats", {})
+        self.default_format = vc.get("default_format", "tiktok")
+        self.max_duration = vc.get("max_duration_seconds", 180)
+        self.intro_s = vc.get("intro_seconds", 3)
+        self.outro_s = vc.get("outro_seconds", 2)
+        self.output_dir = Path(config["paths"]["output_dir"]) / "videos"
+        self.output_dir.mkdir(parents=True, exist_ok=True)
+        self.R = TextRenderer()
+        if not HAS_MOVIEPY:
+            console.print("[red]MoviePy not installed[/red]")
+
+    # ---------- helpers ----------
+    def _fmt(self, name=None):
+        f = self.formats.get(name or self.default_format, self.formats.get("tiktok", {}))
+        return f.get("width", 1080), f.get("height", 1920), f.get("fps", 30)
+
+    def _find_active(self, lines, t):
+        for i, ln in enumerate(lines):
+            s = ln.get("start", 0) or 0
+            e = ln.get("end", 0) or 0
+            if s <= t < e:
+                return i
+        return -1
+
+    # ---------- main frame renderer ----------
+    def _render_frame(self, t, W, H, data, bg_engine, particles):
+        lines = data.get("analyzed_lines", [])
+        title = data.get("title", "")
+        artist = data.get("artist", "")
+        top_notes = data.get("top_notes", [])
+
+        # ---- 1. Background ----
+        frame = bg_engine.render(t)
+        particles.update(1.0 / 30)
+        particles.render(frame)
+        draw = ImageDraw.Draw(frame, "RGBA")
+
+        # ---- 2. Title area ----
+        intro_p = clamp(t / self.intro_s, 0, 1)
+        title_alpha = int(255 * ease_out_cubic(intro_p))
+        title_slide = int(20 * (1 - ease_out_cubic(intro_p)))
+
+        tf = self.R.font(32)
+        af = self.R.font(20)
+
+        # Title
+        tbb = draw.textbbox((0, 0), title, font=tf)
+        tw = tbb[2] - tbb[0]
+        tx = (W - tw) // 2
+        ty = int(H * 0.055) - title_slide
+        draw.text((tx, ty), title, font=tf, fill=(230, 235, 250, title_alpha))
+
+        # Artist
+        abb = draw.textbbox((0, 0), artist, font=af)
+        aw = abb[2] - abb[0]
+        ax = (W - aw) // 2
+        ay = ty + 40
+        draw.text((ax, ay), artist, font=af, fill=(160, 170, 200, title_alpha // 2))
+
+        # Animated decorative line under title
+        line_w_max = min(W // 2, tw + 60)
+        line_progress = ease_out_cubic(clamp((t - 0.5) / 1.5, 0, 1))
+        line_w = int(line_w_max * line_progress)
+        if line_w > 2:
+            ly = ay + 30
+            lx0 = (W - line_w) // 2
+            # Gradient line
+            for xi in range(line_w):
+                ratio = xi / max(1, line_w)
+                # Fade at edges
+                edge_fade = min(ratio * 4, (1 - ratio) * 4, 1)
+                a = int(100 * edge_fade * line_progress)
+                r = int(lerp(60, 0, ratio))
+                g = int(lerp(140, 200, ratio))
+                b = int(lerp(220, 255, ratio))
+                draw.point((lx0 + xi, ly), fill=(r, g, b, a))
+                draw.point((lx0 + xi, ly + 1), fill=(r, g, b, a // 2))
+
+        # ---- 3. Lyrics area ----
+        active_idx = self._find_active(lines, t)
+        visible_count = 5
+        start_idx = max(0, active_idx - 2) if active_idx >= 0 else 0
+        end_idx = min(len(lines), start_idx + visible_count)
+
+        lyric_size = self.style.get("lyric_font_size", 50)
+        romaji_size = self.style.get("romaji_font_size", 28)
+        active_col = tuple(self.style.get("lyric_active_color", [0, 220, 255]))
+        inactive_col = (180, 185, 210)
+        romaji_col = (150, 160, 190)
+
+        # Compute vertical positions with active-line scale
+        base_spacing = lyric_size + romaji_size + 28
+        active_scale = 1.12  # active line is 12% bigger
+        lyric_top = int(H * 0.175)
+        y_cursor = lyric_top
+
+        for i in range(start_idx, end_idx):
+            ln = lines[i]
+            text = ln.get("text", "")
+            romaji = ln.get("romaji", "")
+            is_active = (i == active_idx)
+
+            # Distance-based fade & scale
+            if active_idx >= 0:
+                dist = abs(i - active_idx)
+                fade = clamp(1.0 - dist * 0.22, 0.15, 1.0)
+                scale = active_scale if is_active else lerp(1.0, 0.92, min(dist, 3) / 3)
+            else:
+                fade, scale = 0.25, 0.92
+
+            cur_size = max(16, int(lyric_size * scale))
+
+            if is_active:
+                # Karaoke sweep fill
+                s = ln.get("start", 0) or 0
+                e = ln.get("end", 0) or s + 1
+                progress = clamp((t - s) / max(0.1, e - s), 0, 1)
+                lyric_img = self.R.render_sweep(
+                    text, cur_size, progress,
+                    base_color=inactive_col, active_color=active_col,
+                    glow_color=(active_col[0]//2, active_col[1]//2, active_col[2]),
+                    max_width=W - 80,
                 )
-                rx = (width - romaji_img.width) // 2
-                bg.paste(romaji_img, (rx, lyric_y + lyric_font_size + 4), romaji_img)
+            else:
+                col = tuple(int(c * fade) for c in inactive_col)
+                lyric_img = self.R.render(
+                    text, cur_size, color=col, max_width=W - 80,
+                    shadow=True, shadow_color=(0, 0, 0),
+                )
 
-            lyric_y += line_spacing
+            lx = (W - lyric_img.width) // 2
+            # Slight vertical slide for active line
+            v_offset = -8 if is_active else 0
+            frame.paste(lyric_img, (lx, y_cursor + v_offset), lyric_img)
 
-        # ===== Karaoke progress bar =====
-        if lines and active_idx >= 0:
-            line = lines[active_idx]
-            start = line.get("start", 0) or 0
-            end = line.get("end", 0) or start + 1
-            progress = (t - start) / max(0.1, end - start)
-            progress = max(0, min(1, progress))
+            # Romaji under active line
+            if is_active and romaji:
+                r_img = self.R.render(romaji, romaji_size, color=romaji_col, max_width=W - 80)
+                rx = (W - r_img.width) // 2
+                frame.paste(r_img, (rx, y_cursor + cur_size + 6 + v_offset), r_img)
 
-            bar_y = int(height * 0.63)
-            bar_w = width - 80
-            bar_h = 4
-            bar_x = 40
+            y_cursor += int(base_spacing * scale)
 
-            # Background bar
-            draw.rectangle([(bar_x, bar_y), (bar_x + bar_w, bar_y + bar_h)], fill=(40, 40, 80, 150))
-            # Progress bar
-            prog_w = int(bar_w * progress)
-            if prog_w > 0:
-                draw.rectangle([(bar_x, bar_y), (bar_x + prog_w, bar_y + bar_h)], fill=(*active_color, 200))
+        # ---- 4. Progress indicator ----
+        if lines:
+            first_s = lines[0].get("start", 0) or 0
+            last_e = max((l.get("end", 0) or 0) for l in lines)
+            overall = clamp((t - first_s) / max(0.1, last_e - first_s), 0, 1)
 
-        # ===== Knowledge Notes Section (Bottom) =====
-        note_font_size = self.style.get("note_font_size", 24)
-        note_bg_color = tuple(self.style.get("note_bg_color", [30, 30, 60, 180]))
+            bar_y = int(H * 0.635)
+            bar_x, bar_w, bar_h = 50, W - 100, 3
 
-        # Find notes relevant to current line
+            # Track
+            draw.rounded_rectangle([(bar_x, bar_y), (bar_x + bar_w, bar_y + bar_h)],
+                                   radius=1, fill=(40, 45, 70, 140))
+            # Filled portion with gradient
+            fill_w = int(bar_w * overall)
+            if fill_w > 2:
+                for xi in range(fill_w):
+                    ratio = xi / max(1, bar_w)
+                    r = int(lerp(active_col[0], 255, ratio))
+                    g = int(lerp(active_col[1], 255, ratio))
+                    b = int(lerp(active_col[2], 255, ratio))
+                    draw.line([(bar_x + xi, bar_y), (bar_x + xi, bar_y + bar_h)],
+                              fill=(r, g, b, 200))
+                # Glowing dot at the head
+                dot_x = bar_x + fill_w
+                dot_r = 6
+                # Outer glow
+                draw.ellipse([dot_x - dot_r - 3, bar_y - dot_r + bar_h//2 - 3,
+                              dot_x + dot_r + 3, bar_y + dot_r + bar_h//2 + 3],
+                             fill=(*active_col, 50))
+                draw.ellipse([dot_x - dot_r, bar_y - dot_r + bar_h//2,
+                              dot_x + dot_r, bar_y + dot_r + bar_h//2],
+                             fill=(*active_col, 220))
+                draw.ellipse([dot_x - dot_r + 2, bar_y - dot_r + bar_h//2 + 2,
+                              dot_x + dot_r - 2, bar_y + dot_r + bar_h//2 - 2],
+                             fill=(255, 255, 255, 200))
+
+        # ---- 5. Knowledge Notes Section ----
         current_notes = []
         if active_idx >= 0:
             for note in top_notes:
                 if active_idx in note.get("line_indices", []):
                     current_notes.append(note)
-
-        # Always show some notes
         if not current_notes and top_notes:
-            # Show notes based on time cycling
-            cycle_time = 8  # seconds per note
-            note_idx = int((t - self.intro_seconds) / cycle_time) % len(top_notes)
-            current_notes = [top_notes[note_idx]]
+            cyc = 8
+            ni = max(0, int((t - self.intro_s) / cyc)) % len(top_notes)
+            current_notes = [top_notes[ni]]
 
         if current_notes:
-            notes_y = int(height * 0.67)
+            notes_y = int(H * 0.68)
 
-            # Section header
-            header_font = self.renderer.get_font(18)
-            draw.text((40, notes_y - 28), "[*] JP Notes / \u65e5\u672c\u8a9e\u30ce\u30fc\u30c8", font=header_font, fill=(150, 170, 200, 200))
+            # Section header with icon
+            hf = self.R.font(17)
+            # Small diamond icon
+            icon_x, icon_y = 50, notes_y - 26
+            draw.polygon([(icon_x, icon_y + 7), (icon_x + 7, icon_y),
+                          (icon_x + 14, icon_y + 7), (icon_x + 7, icon_y + 14)],
+                         fill=(*active_col, 160))
+            draw.text((icon_x + 20, notes_y - 28),
+                      "JP Notes / \u65e5\u672c\u8a9e\u30ce\u30fc\u30c8",
+                      font=hf, fill=(140, 155, 195, 210))
 
             # Separator
-            draw.line([(40, notes_y - 8), (width - 40, notes_y - 8)], fill=(60, 70, 100, 150), width=1)
+            sep_y = notes_y - 8
+            for xi in range(50, W - 50):
+                ratio = (xi - 50) / max(1, W - 100)
+                a = int(50 * min(ratio * 3, (1 - ratio) * 3, 1))
+                draw.point((xi, sep_y), fill=(80, 110, 170, a))
 
-            # Render note cards
-            for note in current_notes[:3]:  # Max 3 notes visible
-                card = self.renderer.render_note_card(
-                    note, width=width - 80,
-                    bg_color=note_bg_color,
-                    accent_color=active_color,
-                )
-                bg.paste(card, (40, notes_y), card)
-                notes_y += card.height + 10
+            # Cards with slide-in animation
+            for ni, note in enumerate(current_notes[:2]):
+                card = self.R.render_note_card(note, width=W - 100, accent=active_col)
+                # Entrance animation based on how long this set of notes has been showing
+                # Calculate when these notes first appeared
+                if active_idx >= 0:
+                    note_start = lines[active_idx].get("start", 0) or 0
+                else:
+                    note_start = t - 2  # assume notes have been showing a while
+                note_age = t - note_start
+                # Stagger each card
+                card_delay = ni * 0.25
+                card_age = max(0, note_age - card_delay)
 
-        # ===== Outro fade =====
-        total_duration = 0
+                slide_p = ease_out_back(clamp(card_age / 0.5, 0, 1))
+                offset_x = int((1 - slide_p) * 80)
+                alpha_mult = clamp(card_age / 0.35, 0, 1)
+
+                if alpha_mult < 1:
+                    faded = card.copy()
+                    arr = np.array(faded)
+                    arr[:, :, 3] = (arr[:, :, 3] * alpha_mult).astype(np.uint8)
+                    card = Image.fromarray(arr)
+
+                cx = 50 + offset_x
+                frame.paste(card, (cx, notes_y), card)
+                notes_y += card.height + 14
+
+        # ---- 6. Outro fade ----
+        total_dur = 0
         if lines:
-            last_line = lines[-1]
-            total_duration = (last_line.get("end", 0) or 0) + self.outro_seconds
+            total_dur = max((l.get("end", 0) or 0) for l in lines) + self.outro_s
+        if total_dur > 0 and t > total_dur - self.outro_s:
+            fp = clamp((t - (total_dur - self.outro_s)) / self.outro_s, 0, 1)
+            overlay = Image.new("RGBA", (W, H), (0, 0, 0, int(255 * fp)))
+            frame = Image.alpha_composite(frame, overlay)
 
-        if total_duration > 0 and t > total_duration - self.outro_seconds:
-            fade_progress = (t - (total_duration - self.outro_seconds)) / self.outro_seconds
-            fade_alpha = int(255 * min(1, fade_progress))
-            overlay = Image.new("RGBA", (width, height), (0, 0, 0, fade_alpha))
-            bg = Image.alpha_composite(bg, overlay)
+        return np.array(frame)
 
-        return np.array(bg)
+    # =========================================================
+    #  Public API
+    # =========================================================
 
-    def generate_video(
-        self,
-        analyzed_data: dict,
-        audio_path: str = None,
-        format_name: str = None,
-        output_name: str = None,
-    ) -> Optional[str]:
-        """
-        Generate a complete lyrics video.
-        
-        Args:
-            analyzed_data: Analysis result dict from JPAnalyzer
-            audio_path: Path to audio file (optional)
-            format_name: Video format name (e.g., 'tiktok', 'youtube')
-            output_name: Output filename (without extension)
-            
-        Returns:
-            Path to generated video file, or None on failure
-        """
+    def generate_video(self, analyzed_data, audio_path=None, format_name=None, output_name=None):
         if not HAS_MOVIEPY:
-            console.print("[red]MoviePy is required for video generation[/red]")
+            console.print("[red]MoviePy required[/red]")
             return None
 
-        fmt = self._get_format(format_name)
-        width = fmt["width"]
-        height = fmt["height"]
-        fps = fmt["fps"]
-
+        W, H, fps = self._fmt(format_name)
         title = analyzed_data.get("title", "Unknown")
         artist = analyzed_data.get("artist", "Unknown")
-        safe_title = re.sub(r'[^\w\-\u3000-\u9fff\uff00-\uffef]', '_', f"{title}_{artist}")
-        output_name = output_name or safe_title
+        safe = re.sub(r'[^\w\-\u3000-\u9fff\uff00-\uffef]', '_', f"{title}_{artist}")
+        output_name = output_name or safe
 
-        # Calculate duration
         lines = analyzed_data.get("analyzed_lines", [])
         if lines:
-            last_end = max((l.get("end", 0) or 0) for l in lines)
-            duration = last_end + self.outro_seconds + 1
+            duration = max((l.get("end", 0) or 0) for l in lines) + self.outro_s + 1
         else:
-            duration = 30  # Default
-
+            duration = 30
         duration = min(duration, self.max_duration)
 
-        console.print(f"\n[bold cyan]=== Generating Video ===[/bold cyan]")
-        console.print(f"  Song: {title} - {artist}")
-        console.print(f"  Format: {format_name or self.default_format} ({width}x{height} @ {fps}fps)")
-        console.print(f"  Duration: {duration:.1f}s")
-        console.print(f"  Lines: {len(lines)}")
+        console.print(f"\n[bold cyan]=== Generating Video v2 ===[/bold cyan]")
+        console.print(f"  {title} - {artist}")
+        console.print(f"  {W}x{H} @ {fps}fps, {duration:.1f}s")
 
-        # Create particle system
-        particles = ParticleSystem(width, height)
+        bg_engine = AuroraBackground(W, H)
+        particles = ParticleEngine(W, H)
 
-        # Create video clip using make_frame
         def make_frame(t):
-            return self._render_frame(t, width, height, analyzed_data, particles)
+            return self._render_frame(t, W, H, analyzed_data, bg_engine, particles)
 
         video = VideoClip(make_frame, duration=duration)
 
-        # Add audio if available
         if audio_path and os.path.exists(audio_path):
             try:
-                audio = AudioFileClip(audio_path)
-                audio = audio.subclipped(0, min(duration, audio.duration))
+                audio = AudioFileClip(audio_path).subclipped(0, min(duration, AudioFileClip(audio_path).duration))
                 video = video.with_audio(audio)
-                console.print(f"  Audio: {audio_path}")
             except Exception as e:
-                console.print(f"  [yellow]Audio loading failed: {e}[/yellow]")
+                console.print(f"  [yellow]Audio: {e}[/yellow]")
 
-        # Output path
-        output_path = self.output_dir / f"{output_name}_{format_name or self.default_format}.mp4"
-
-        # Write video
-        console.print(f"  Rendering video... (this may take a while)")
+        out = self.output_dir / f"{output_name}_{format_name or self.default_format}.mp4"
+        console.print("  Rendering...")
         try:
-            video.write_videofile(
-                str(output_path),
-                fps=fps,
-                codec="libx264",
-                audio_codec="aac",
-                bitrate="5000k",
-                threads=4,
-                logger=None,  # Suppress MoviePy progress bar
-            )
-            console.print(f"  [green]Video saved: {output_path}[/green]")
-            return str(output_path)
+            video.write_videofile(str(out), fps=fps, codec="libx264",
+                                  audio_codec="aac", bitrate="6000k",
+                                  threads=4, logger=None)
+            console.print(f"  [green]Saved: {out}[/green]")
+            return str(out)
         except Exception as e:
-            console.print(f"  [red]Video generation failed: {e}[/red]")
+            console.print(f"  [red]Failed: {e}[/red]")
             return None
 
-    def generate_multi_format(
-        self,
-        analyzed_data: dict,
-        audio_path: str = None,
-    ) -> dict:
-        """
-        Generate videos in all configured formats.
-        Returns dict mapping format_name -> output_path.
-        """
+    def generate_multi_format(self, analyzed_data, audio_path=None):
         results = {}
-        for fmt_name in self.formats:
-            console.print(f"\n  Generating {fmt_name} format...")
-            path = self.generate_video(
-                analyzed_data,
-                audio_path=audio_path,
-                format_name=fmt_name,
-            )
-            if path:
-                results[fmt_name] = path
-
+        for name in self.formats:
+            p = self.generate_video(analyzed_data, audio_path, name)
+            if p:
+                results[name] = p
         return results
 
-    def generate_preview_frame(
-        self,
-        analyzed_data: dict,
-        time: float = None,
-        format_name: str = None,
-    ) -> Optional[str]:
-        """
-        Generate a single preview frame as an image.
-        Useful for previewing before full video render.
-        """
-        fmt = self._get_format(format_name)
-        width = fmt["width"]
-        height = fmt["height"]
-
-        # Pick a time that shows lyrics
+    def generate_preview_frame(self, analyzed_data, time=None, format_name=None):
+        W, H, _ = self._fmt(format_name)
+        lines = analyzed_data.get("analyzed_lines", [])
         if time is None:
-            lines = analyzed_data.get("analyzed_lines", [])
-            if len(lines) > 5:
-                time = lines[5].get("start", 10) or 10
-            else:
-                time = 5
+            time = (lines[5].get("start", 10) or 10) if len(lines) > 5 else 5
 
-        particles = ParticleSystem(width, height)
-        particles.emit(20)
+        bg = AuroraBackground(W, H)
+        pe = ParticleEngine(W, H)
+        # Warm up particles
+        for _ in range(60):
+            pe.update(1.0 / 30)
 
-        frame = self._render_frame(time, width, height, analyzed_data, particles)
+        frame = self._render_frame(time, W, H, analyzed_data, bg, pe)
         img = Image.fromarray(frame)
 
         title = analyzed_data.get("title", "preview")
-        safe_title = re.sub(r'[^\w\-\u3000-\u9fff\uff00-\uffef]', '_', title)
-        output_path = self.output_dir / f"preview_{safe_title}.png"
-        img.save(str(output_path))
-        console.print(f"  [green]Preview saved: {output_path}[/green]")
-        return str(output_path)
+        safe = re.sub(r'[^\w\-\u3000-\u9fff\uff00-\uffef]', '_', title)
+        out = self.output_dir / f"preview_v2_{safe}.png"
+        img.save(str(out))
+        console.print(f"  [green]Preview: {out}[/green]")
+        return str(out)
