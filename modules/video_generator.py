@@ -282,133 +282,130 @@ class TextRenderer:
             draw.line([x0, y0 + r, x0, y1 - r], fill=outline, width=width)
             draw.line([x1, y0 + r, x1, y1 - r], fill=outline, width=width)
 
-    # ----- note card with glass-morphism (v3: large, bold, beautiful) -----
+    # ----- note: flexible frameless layout, large fonts (v4) -----
     def render_note_card(self, note, width, accent=(0, 200, 255)):
-        """Render a large, visually rich knowledge note card."""
-        # Significantly larger fonts
-        f_title = self.bold_font(44)       # word / pattern
-        f_body = self.font(30)             # reading, meaning
-        f_small = self.font(24)            # explanation, examples
-        f_badge = self.bold_font(22)       # JLPT level badge
+        """Render a knowledge note as flowing typography — no rigid card frame."""
+        # Much larger fonts: title ~72, body ~48, small ~38, badge ~34
+        f_title = self.bold_font(72)
+        f_body = self.font(48)
+        f_small = self.font(38)
+        f_badge = self.bold_font(34)
 
         ntype = note.get("type", "vocabulary")
         data = note.get("data", {})
 
-        # ---- build content lines ----
+        # ---- Build visual elements ----
+        pad_x, pad_y = 24, 16
+        elements = []  # list of (kind, text, font, color)
+
         if ntype == "vocabulary":
             word = data.get("word", "")
             level = data.get("jlpt_level", "")
             reading = data.get("reading", "")
             meaning = data.get("meaning", "")
-            content = [
-                ("title", word, f_title, accent),
-                ("body", f"読み: {reading}", f_body, (220, 230, 255)),
-                ("body", f"意味: {meaning}", f_body, (220, 230, 255)),
-            ]
-            badge_text = level
+            # Title line: word + inline JLPT badge
+            elements.append(("title", word, f_title, accent, level))
+            # Reading and meaning in a lighter flow
+            if reading:
+                elements.append(("label", f"読み  {reading}", f_body, (220, 230, 255)))
+            if meaning:
+                elements.append(("label", f"意味  {meaning}", f_body, (220, 230, 255)))
         else:
             pat = data.get("pattern", "").replace('\u301c', '~')
             level = data.get("level", "")
             meaning = data.get("meaning", "")
             expl = data.get("explanation", "").replace('\u301c', '~')
             ex = data.get("example", "").replace('\u301c', '~')
-            content = [
-                ("title", pat, f_title, accent),
-                ("body", meaning, f_body, (220, 230, 255)),
-            ]
+            elements.append(("title", pat, f_title, accent, level))
+            if meaning:
+                elements.append(("label", meaning, f_body, (220, 230, 255)))
             if expl:
-                for wl in self.wrap(expl, f_small, width - 100):
-                    content.append(("small", wl, f_small, (180, 195, 225)))
+                for wl in self.wrap(expl, f_small, width - pad_x * 2 - 40):
+                    elements.append(("small", wl, f_small, (185, 200, 230)))
             if ex:
-                content.append(("small", f"例: {ex}", f_small, (150, 220, 170)))
-            badge_text = level
+                elements.append(("small", f"例: {ex}", f_small, (160, 225, 175)))
 
-        # ---- measure card dimensions ----
+        # ---- Measure total height ----
         dummy = Image.new("RGBA", (1, 1))
         dd = ImageDraw.Draw(dummy)
         total_h = 0
-        line_heights = []
-        for kind, txt, fo, _ in content:
+        line_metrics = []
+        for item in elements:
+            kind, txt, fo = item[0], item[1], item[2]
             bb = dd.textbbox((0, 0), txt, font=fo)
-            lh = (bb[3] - bb[1])
-            line_heights.append(lh)
-            total_h += lh + 14  # 14px spacing between lines
+            lh = bb[3] - bb[1]
+            lw = bb[2] - bb[0]
+            spacing = 18 if kind == "title" else 12
+            line_metrics.append((lh, lw, spacing))
+            total_h += lh + spacing
+        total_h += pad_y  # bottom padding
 
-        pad_x, pad_y = 36, 28
         card_w = width
-        card_h = total_h + pad_y * 2 + 8
-        radius = 24
+        card_h = total_h + pad_y
 
-        # ---- create card image ----
-        card = Image.new("RGBA", (card_w, card_h), (0, 0, 0, 0))
-        cd = ImageDraw.Draw(card)
+        # ---- Render onto transparent image (no background!) ----
+        img = Image.new("RGBA", (card_w, card_h), (0, 0, 0, 0))
+        d = ImageDraw.Draw(img, "RGBA")
 
-        # Frosted glass background with slight gradient
-        for row in range(card_h):
-            ratio = row / max(1, card_h)
-            r = int(18 + 8 * ratio)
-            g = int(20 + 6 * ratio)
-            b = int(42 + 15 * ratio)
-            a = 210
-            cd.line([(0, row), (card_w, row)], fill=(r, g, b, a))
-
-        # Mask to rounded rect shape
-        mask = Image.new("L", (card_w, card_h), 0)
-        md = ImageDraw.Draw(mask)
-        self.rounded_rect(md, (0, 0, card_w - 1, card_h - 1), radius, fill=255)
-        # Apply mask
-        card.putalpha(mask)
-        cd = ImageDraw.Draw(card, "RGBA")
-
-        # Glowing border
-        for bw in range(3):
-            alpha = int(60 - bw * 18)
-            self.rounded_rect(cd, (bw, bw, card_w - 1 - bw, card_h - 1 - bw),
-                              max(1, radius - bw), fill=None,
-                              outline=(accent[0], accent[1], accent[2], max(0, alpha)), width=1)
-
-        # Left accent bar (thicker, with glow)
-        bar_x = 10
-        bar_w = 5
-        for glow_i in range(4):
-            ga = max(0, 120 - glow_i * 30)
-            cd.rectangle([(bar_x - glow_i, pad_y - glow_i),
-                          (bar_x + bar_w + glow_i, card_h - pad_y + glow_i)],
-                         fill=(*accent, ga))
-        cd.rectangle([(bar_x, pad_y), (bar_x + bar_w, card_h - pad_y)],
-                     fill=(*accent, 240))
-
-        # JLPT badge (top-right, pill-shaped)
-        badge_colors = {"N5": (80, 190, 80), "N4": (60, 160, 210),
-                        "N3": (210, 170, 50), "N2": (210, 110, 50), "N1": (190, 60, 60)}
-        bc = badge_colors.get(badge_text, (110, 110, 150))
-        bb_badge = dd.textbbox((0, 0), badge_text, font=f_badge)
-        badge_tw = bb_badge[2] - bb_badge[0]
-        badge_w = badge_tw + 24
-        badge_h = 32
-        bx = card_w - badge_w - 20
-        by = 14
-        self.rounded_rect(cd, (bx, by, bx + badge_w, by + badge_h), badge_h // 2,
-                          fill=(*bc, 220))
-        cd.text((bx + 12, by + 4), badge_text, font=f_badge, fill=(255, 255, 255, 250))
-
-        # ---- Draw content with stroke for rounder look ----
         y = pad_y
-        for idx, (kind, txt, fo, col) in enumerate(content):
-            tx = pad_x + 16
-            stroke_w = 2 if kind == "title" else 1
-            stroke_col = (col[0]//3, col[1]//3, col[2]//3, 80)
-            # Draw with stroke for bolder, rounder text appearance
-            try:
-                cd.text((tx, y), txt, font=fo, fill=(*col, 255),
-                        stroke_width=stroke_w, stroke_fill=(*stroke_col[:3], stroke_col[3]))
-            except TypeError:
-                # Fallback for PIL versions without stroke support
-                cd.text((tx, y), txt, font=fo, fill=(*col, 255))
-            lh = line_heights[idx] if idx < len(line_heights) else 30
-            y += lh + 14
+        for idx, item in enumerate(elements):
+            kind, txt, fo, col = item[0], item[1], item[2], item[3]
+            level_tag = item[4] if len(item) > 4 else ""
+            lh, lw, spacing = line_metrics[idx]
+            tx = pad_x
 
-        return card
+            if kind == "title":
+                # ---- Title: large accent text + inline JLPT badge ----
+                # Draw with thick stroke for bold, rounded appearance
+                try:
+                    d.text((tx, y), txt, font=fo, fill=(*col, 255),
+                           stroke_width=3, stroke_fill=(col[0]//4, col[1]//4, col[2]//4, 60))
+                except TypeError:
+                    d.text((tx, y), txt, font=fo, fill=(*col, 255))
+
+                # Inline JLPT badge (small colored pill after the word)
+                if level_tag:
+                    bb_title = dd.textbbox((0, 0), txt, font=fo)
+                    title_w = bb_title[2] - bb_title[0]
+                    badge_colors = {
+                        "N5": (80, 200, 80), "N4": (60, 170, 220),
+                        "N3": (220, 180, 50), "N2": (220, 120, 50), "N1": (200, 65, 65),
+                    }
+                    bc = badge_colors.get(level_tag, (120, 120, 160))
+                    badge_x = tx + title_w + 18
+                    badge_y = y + (lh - 34) // 2  # vertically center with title
+                    bb_badge = dd.textbbox((0, 0), level_tag, font=f_badge)
+                    bw = bb_badge[2] - bb_badge[0] + 20
+                    # Pill-shaped badge
+                    self.rounded_rect(d, (badge_x, badge_y, badge_x + bw, badge_y + 38),
+                                      19, fill=(*bc, 180))
+                    d.text((badge_x + 10, badge_y + 2), level_tag, font=f_badge,
+                           fill=(255, 255, 255, 230))
+
+                # Subtle accent underline beneath title
+                ul_y = y + lh + 4
+                ul_w = min(lw + 20, card_w - pad_x * 2)
+                for xi in range(ul_w):
+                    ratio = xi / max(1, ul_w)
+                    a = int(100 * min(ratio * 5, (1 - ratio) * 2, 1))
+                    d.point((tx + xi, ul_y), fill=(*col, a))
+                    d.point((tx + xi, ul_y + 1), fill=(*col, a // 2))
+
+            elif kind == "label":
+                # ---- Label: clean readable text ----
+                try:
+                    d.text((tx + 6, y), txt, font=fo, fill=(*col, 240),
+                           stroke_width=1, stroke_fill=(col[0]//5, col[1]//5, col[2]//5, 40))
+                except TypeError:
+                    d.text((tx + 6, y), txt, font=fo, fill=(*col, 240))
+
+            elif kind == "small":
+                # ---- Small text: explanation / example ----
+                d.text((tx + 6, y), txt, font=fo, fill=(*col, 210))
+
+            y += lh + spacing
+
+        return img
 
 
 # ============================================================
@@ -516,36 +513,87 @@ class ParticleEngine:
 class AuroraBackground:
     """Renders a dark gradient with animated aurora-like light waves."""
 
-    def __init__(self, W, H, base_color=(10, 10, 22)):
+    def __init__(self, W, H, base_color=(10, 10, 22), bottom_color=None,
+                 aurora_colors=None, bg_image=None, overlay_darkness=0.45):
         self.W, self.H = W, H
         self.base = base_color
+        self.bottom_color = bottom_color or (base_color[0] + 12, base_color[1] + 8, base_color[2] + 25)
+        self._aurora_colors = aurora_colors  # None = use defaults
+        self._bg_image = self._load_bg_image(bg_image) if bg_image else None
+        self._overlay_darkness = overlay_darkness
         # Pre-compute a vertical gradient base (numpy)
         self._base_arr = self._make_base()
 
+    def _load_bg_image(self, path):
+        """Load and crop/resize a background image to fill the frame."""
+        try:
+            img = Image.open(path).convert("RGBA")
+            # Crop to aspect ratio of W:H (center crop)
+            iw, ih = img.size
+            target_ratio = self.W / self.H
+            current_ratio = iw / ih
+            if current_ratio > target_ratio:
+                # Image too wide, crop sides
+                new_w = int(ih * target_ratio)
+                left = (iw - new_w) // 2
+                img = img.crop((left, 0, left + new_w, ih))
+            else:
+                # Image too tall, crop top/bottom
+                new_h = int(iw / target_ratio)
+                top = (ih - new_h) // 2
+                img = img.crop((0, top, iw, top + new_h))
+            # Resize to exact frame size
+            img = img.resize((self.W, self.H), Image.LANCZOS)
+            return img
+        except Exception as e:
+            print(f"  [yellow]Failed to load bg image: {e}[/yellow]")
+            return None
+
     def _make_base(self):
         arr = np.zeros((self.H, self.W, 4), dtype=np.uint8)
+        bt = self.base
+        bb = self.bottom_color
         for y in range(self.H):
             ratio = y / self.H
-            r = int(self.base[0] + 12 * ratio)
-            g = int(self.base[1] + 8 * ratio)
-            b = int(self.base[2] + 25 * ratio)
+            r = int(bt[0] + (bb[0] - bt[0]) * ratio)
+            g = int(bt[1] + (bb[1] - bt[1]) * ratio)
+            b = int(bt[2] + (bb[2] - bt[2]) * ratio)
             arr[y, :] = [r, g, b, 255]
         return arr
 
     def render(self, t):
+        if self._bg_image:
+            # Image background mode: use the image with shadow overlay
+            img = self._bg_image.copy()
+            # Apply dark overlay for readability
+            dark = int(255 * self._overlay_darkness)
+            overlay = Image.new("RGBA", (self.W, self.H), (0, 0, 0, dark))
+            img = Image.alpha_composite(img, overlay)
+            return img
+
+        # Aurora mode: gradient + animated waves
         img = Image.fromarray(self._base_arr.copy(), "RGBA")
         draw = ImageDraw.Draw(img, "RGBA")
 
-        # Aurora waves: 3 layered sine bands
+        # Default aurora wave definitions
+        if self._aurora_colors:
+            wave_colors = self._aurora_colors
+        else:
+            wave_colors = [
+                (30, 80, 180, 18),
+                (60, 40, 160, 14),
+                (20, 100, 140, 16),
+            ]
+
         waves = [
-            {"y_ratio": 0.25, "amp": 40, "freq": 1.8, "speed": 0.25,
-             "color": (30, 80, 180, 18), "width": 80},
-            {"y_ratio": 0.45, "amp": 30, "freq": 2.5, "speed": 0.35,
-             "color": (60, 40, 160, 14), "width": 60},
-            {"y_ratio": 0.70, "amp": 50, "freq": 1.2, "speed": 0.18,
-             "color": (20, 100, 140, 16), "width": 100},
+            {"y_ratio": 0.25, "amp": 40, "freq": 1.8, "speed": 0.25, "width": 80},
+            {"y_ratio": 0.45, "amp": 30, "freq": 2.5, "speed": 0.35, "width": 60},
+            {"y_ratio": 0.70, "amp": 50, "freq": 1.2, "speed": 0.18, "width": 100},
         ]
-        for w in waves:
+        for idx, w in enumerate(waves):
+            col = wave_colors[idx] if idx < len(wave_colors) else wave_colors[-1]
+            if isinstance(col, list):
+                col = tuple(col)
             base_y = int(self.H * w["y_ratio"])
             pts = []
             for x in range(0, self.W + 1, 6):
@@ -553,9 +601,8 @@ class AuroraBackground:
                 y = base_y + int(w["amp"] * math.sin(xr * w["freq"] * math.pi + t * w["speed"])
                                  + w["amp"] * 0.4 * math.sin(xr * w["freq"] * 2.3 * math.pi + t * w["speed"] * 1.7))
                 pts.append((x, y))
-            # Draw as a filled polygon band
             poly = pts + [(self.W, pts[-1][1] + w["width"]), (0, pts[0][1] + w["width"])]
-            draw.polygon(poly, fill=w["color"])
+            draw.polygon(poly, fill=col)
 
         # Subtle vignette overlay
         vig = Image.new("RGBA", (self.W, self.H), (0, 0, 0, 0))
@@ -571,6 +618,44 @@ class AuroraBackground:
 
         img = Image.alpha_composite(img, vig)
         return img
+
+
+# ============================================================
+#  Theme Presets
+# ============================================================
+
+THEMES = {
+    "aurora": {
+        "gradient_top": (10, 10, 22),
+        "gradient_bottom": (22, 18, 47),
+        "aurora_colors": [(30, 80, 180, 18), (60, 40, 160, 14), (20, 100, 140, 16)],
+        "note_accent": (0, 200, 255),
+    },
+    "sakura": {
+        "gradient_top": (18, 8, 16),
+        "gradient_bottom": (35, 15, 30),
+        "aurora_colors": [(180, 80, 140, 16), (200, 120, 160, 12), (140, 60, 120, 14)],
+        "note_accent": (255, 150, 200),
+    },
+    "midnight": {
+        "gradient_top": (5, 5, 15),
+        "gradient_bottom": (10, 10, 30),
+        "aurora_colors": [(20, 40, 100, 14), (30, 30, 80, 10), (15, 50, 90, 12)],
+        "note_accent": (100, 180, 255),
+    },
+    "sunset": {
+        "gradient_top": (20, 8, 10),
+        "gradient_bottom": (40, 15, 25),
+        "aurora_colors": [(180, 80, 30, 16), (200, 60, 50, 12), (160, 100, 40, 14)],
+        "note_accent": (255, 160, 60),
+    },
+    "ocean": {
+        "gradient_top": (5, 12, 20),
+        "gradient_bottom": (10, 25, 45),
+        "aurora_colors": [(20, 80, 160, 18), (30, 120, 180, 14), (15, 60, 140, 16)],
+        "note_accent": (60, 220, 255),
+    },
+}
 
 
 # ============================================================
@@ -590,8 +675,68 @@ class VideoGenerator:
         self.output_dir = Path(config["paths"]["output_dir"]) / "videos"
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.R = TextRenderer()
+        self._theme = self._resolve_theme(vc)
         if not HAS_MOVIEPY:
             console.print("[red]MoviePy not installed[/red]")
+
+    def _resolve_theme(self, vc):
+        """Resolve theme settings from config, merging preset + custom overrides."""
+        theme_name = vc.get("theme", "aurora")
+        theme_custom = vc.get("theme_custom", {})
+
+        # Start with preset
+        base = THEMES.get(theme_name, THEMES["aurora"]).copy()
+
+        # Apply custom overrides
+        if theme_custom:
+            if "aurora_colors" in theme_custom and theme_custom["aurora_colors"]:
+                base["aurora_colors"] = [tuple(c) for c in theme_custom["aurora_colors"]]
+            if "gradient_top" in theme_custom:
+                base["gradient_top"] = tuple(theme_custom["gradient_top"])
+            if "gradient_bottom" in theme_custom:
+                base["gradient_bottom"] = tuple(theme_custom["gradient_bottom"])
+            if "note_accent" in theme_custom:
+                base["note_accent"] = tuple(theme_custom["note_accent"])
+            # Background image
+            bg_mode = theme_custom.get("background_mode", "aurora")
+            base["background_mode"] = bg_mode
+            if bg_mode == "image" and theme_custom.get("background_image"):
+                bg_path = theme_custom["background_image"]
+                # Resolve relative paths
+                if not os.path.isabs(bg_path):
+                    project_root = Path(self.config["paths"].get("output_dir", "output")).parent
+                    bg_path = str(project_root / bg_path)
+                base["background_image"] = bg_path
+            base["overlay_darkness"] = theme_custom.get("overlay_darkness", 0.45)
+
+        return base
+
+    def _make_bg_engine(self, W, H):
+        """Create the appropriate background engine based on theme settings."""
+        theme = self._theme
+        bg_mode = theme.get("background_mode", "aurora")
+        bg_image = theme.get("background_image", None)
+
+        if bg_mode == "image" and bg_image and os.path.exists(bg_image):
+            return AuroraBackground(
+                W, H,
+                base_color=theme.get("gradient_top", (10, 10, 22)),
+                bottom_color=theme.get("gradient_bottom", (22, 18, 47)),
+                aurora_colors=theme.get("aurora_colors"),
+                bg_image=bg_image,
+                overlay_darkness=theme.get("overlay_darkness", 0.45),
+            )
+        else:
+            return AuroraBackground(
+                W, H,
+                base_color=theme.get("gradient_top", (10, 10, 22)),
+                bottom_color=theme.get("gradient_bottom", (22, 18, 47)),
+                aurora_colors=theme.get("aurora_colors"),
+            )
+
+    def _get_note_accent(self):
+        """Get the note accent color from theme."""
+        return self._theme.get("note_accent", (0, 200, 255))
 
     # ---------- helpers ----------
     def _fmt(self, name=None):
@@ -668,8 +813,9 @@ class VideoGenerator:
         lyric_size = self.style.get("lyric_font_size", 50)
         romaji_size = self.style.get("romaji_font_size", 28)
         active_col = tuple(self.style.get("lyric_active_color", [0, 220, 255]))
-        inactive_col = (180, 185, 210)
-        romaji_col = (150, 160, 190)
+        inactive_col = tuple(self.style.get("lyric_inactive_color", [210, 215, 235]))
+        min_fade = self.style.get("lyric_inactive_min_fade", 0.55)
+        romaji_col = (160, 170, 200)
 
         # Compute vertical positions with active-line scale
         base_spacing = lyric_size + romaji_size + 28
@@ -683,13 +829,13 @@ class VideoGenerator:
             romaji = ln.get("romaji", "")
             is_active = (i == active_idx)
 
-            # Distance-based fade & scale
+            # Distance-based fade & scale (brighter minimum)
             if active_idx >= 0:
                 dist = abs(i - active_idx)
-                fade = clamp(1.0 - dist * 0.22, 0.15, 1.0)
+                fade = clamp(1.0 - dist * 0.18, min_fade, 1.0)
                 scale = active_scale if is_active else lerp(1.0, 0.92, min(dist, 3) / 3)
             else:
-                fade, scale = 0.25, 0.92
+                fade, scale = min_fade, 0.92
 
             cur_size = max(16, int(lyric_size * scale))
 
@@ -761,6 +907,7 @@ class VideoGenerator:
                              fill=(255, 255, 255, 200))
 
         # ---- 5. Knowledge Notes Section ----
+        note_accent = self._get_note_accent()
         current_notes = []
         if active_idx >= 0:
             for note in top_notes:
@@ -774,6 +921,18 @@ class VideoGenerator:
         if current_notes:
             notes_y = int(H * 0.665)
 
+            # Subtle gradient backdrop for readability over any background
+            backdrop = Image.new("RGBA", (W, H - notes_y + 20), (0, 0, 0, 0))
+            bd_draw = ImageDraw.Draw(backdrop)
+            for row in range(H - notes_y + 20):
+                ratio = row / max(1, H - notes_y + 20)
+                alpha = int(120 * (1 - ratio * 0.4))  # strong at top, lighter at bottom
+                bd_draw.line([(0, row), (W, row)], fill=(0, 0, 0, alpha))
+            # Apply a slight blur to the backdrop for softness
+            backdrop = backdrop.filter(ImageFilter.GaussianBlur(8))
+            frame.paste(backdrop, (0, notes_y - 20), backdrop)
+            draw = ImageDraw.Draw(frame, "RGBA")  # refresh draw after paste
+
             # ---- Section header ----
             hf = self.R.bold_font(22)
             icon_x, icon_y = 52, notes_y - 34
@@ -782,10 +941,10 @@ class VideoGenerator:
             ds = int(9 * pulse)
             draw.polygon([(icon_x, icon_y + ds), (icon_x + ds, icon_y),
                           (icon_x + 2 * ds, icon_y + ds), (icon_x + ds, icon_y + 2 * ds)],
-                         fill=(*active_col, 200))
+                         fill=(*note_accent, 200))
             draw.text((icon_x + 2 * ds + 10, notes_y - 36),
                       "JP Notes / 日本語ノート",
-                      font=hf, fill=(160, 175, 215, 240),
+                      font=hf, fill=(180, 195, 230, 255),
                       stroke_width=1, stroke_fill=(10, 10, 30, 80))
 
             # Gradient separator line
@@ -793,9 +952,9 @@ class VideoGenerator:
             for xi in range(52, W - 52):
                 ratio = (xi - 52) / max(1, W - 104)
                 a = int(70 * min(ratio * 3, (1 - ratio) * 3, 1))
-                r = int(lerp(active_col[0] * 0.6, 80, ratio))
-                g = int(lerp(active_col[1] * 0.6, 110, ratio))
-                b = int(lerp(active_col[2] * 0.6, 180, ratio))
+                r = int(lerp(note_accent[0] * 0.6, 80, ratio))
+                g = int(lerp(note_accent[1] * 0.6, 110, ratio))
+                b = int(lerp(note_accent[2] * 0.6, 180, ratio))
                 draw.point((xi, sep_y), fill=(r, g, b, a))
 
             # ---- Calculate timing for entrance animation ----
@@ -837,7 +996,7 @@ class VideoGenerator:
                     continue  # not visible yet
 
                 # Render the base card
-                card = self.R.render_note_card(note, width=int(card_w * 0.97), accent=active_col)
+                card = self.R.render_note_card(note, width=int(card_w * 0.97), accent=note_accent)
 
                 # ---- Apply scale (resize) ----
                 if abs(scale_val - 1.0) > 0.01:
@@ -901,7 +1060,7 @@ class VideoGenerator:
         console.print(f"  {title} - {artist}")
         console.print(f"  {W}x{H} @ {fps}fps, {duration:.1f}s")
 
-        bg_engine = AuroraBackground(W, H)
+        bg_engine = self._make_bg_engine(W, H)
         particles = ParticleEngine(W, H)
 
         def make_frame(t):
@@ -953,7 +1112,7 @@ class VideoGenerator:
         if time is None:
             time = (lines[5].get("start", 10) or 10) if len(lines) > 5 else 5
 
-        bg = AuroraBackground(W, H)
+        bg = self._make_bg_engine(W, H)
         pe = ParticleEngine(W, H)
 
         frame = self._render_frame(time, W, H, analyzed_data, bg, pe)
