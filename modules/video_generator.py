@@ -331,110 +331,101 @@ class TextRenderer:
 
 
 # ============================================================
-#  Particle System  (Bokeh + Sakura + Music Notes)
+#  Particle System  (Stateless / Deterministic per-frame)
+# ============================================================
+#  Key design: every particle's position at time t is computed
+#  from its seed parameters + t, so the same t always yields
+#  the same frame regardless of render order.
 # ============================================================
 
-class BokehParticle:
-    __slots__ = ("x", "y", "r", "vx", "vy", "color", "alpha", "phase", "speed")
-    def __init__(self, W, H):
-        self.x = np.random.uniform(0, W)
-        self.y = np.random.uniform(-H * 0.1, H * 1.1)
-        self.r = np.random.uniform(8, 40)
-        self.vx = np.random.uniform(-8, 8)
-        self.vy = np.random.uniform(-18, -4)
-        hue_shift = np.random.uniform(0, 1)
-        if hue_shift < 0.4:
-            self.color = (np.random.randint(60, 140), np.random.randint(140, 220), 255)
-        elif hue_shift < 0.7:
-            self.color = (255, np.random.randint(140, 200), np.random.randint(180, 255))
-        else:
-            self.color = (np.random.randint(180, 255), np.random.randint(100, 180), 255)
-        self.alpha = np.random.uniform(0.04, 0.18)
-        self.phase = np.random.uniform(0, math.pi * 2)
-        self.speed = np.random.uniform(0.3, 0.8)
-
-    def update(self, dt):
-        self.x += self.vx * dt + math.sin(self.phase) * 0.5
-        self.y += self.vy * dt
-        self.phase += self.speed * dt
-
-    def draw(self, draw_ctx):
-        a = int(self.alpha * 255)
-        if a < 3:
-            return
-        x, y, r = int(self.x), int(self.y), int(self.r)
-        # Soft circle with radial gradient (approximated with concentric circles)
-        for i in range(3):
-            ri = r - i * (r // 3)
-            ai = a * (1 - i * 0.35)
-            draw_ctx.ellipse(
-                [x - ri, y - ri, x + ri, y + ri],
-                fill=(*self.color, int(ai)),
-            )
-
-
-class SakuraPetal:
-    __slots__ = ("x", "y", "vx", "vy", "angle", "spin", "size", "alpha", "color")
-    def __init__(self, W, H):
-        self.x = np.random.uniform(-50, W + 50)
-        self.y = -20
-        self.vx = np.random.uniform(-20, 20)
-        self.vy = np.random.uniform(25, 60)
-        self.angle = np.random.uniform(0, 360)
-        self.spin = np.random.uniform(-90, 90)
-        self.size = np.random.uniform(4, 10)
-        self.alpha = np.random.uniform(0.15, 0.4)
-        pink = np.random.randint(200, 255)
-        self.color = (255, np.random.randint(150, 200), pink)
-
-    def update(self, dt):
-        self.x += self.vx * dt + math.sin(self.angle * 0.02) * 12 * dt
-        self.y += self.vy * dt
-        self.angle += self.spin * dt
-
-    def draw(self, draw_ctx):
-        a = int(self.alpha * 255)
-        if a < 5:
-            return
-        s = self.size
-        x, y = int(self.x), int(self.y)
-        # Simple petal shape: two overlapping ellipses
-        draw_ctx.ellipse([x - s, y - s//2, x + s, y + s//2],
-                         fill=(*self.color, a))
-        draw_ctx.ellipse([x - s//2, y - s, x + s//2, y + s],
-                         fill=(*self.color, int(a * 0.7)))
-
-
 class ParticleEngine:
-    def __init__(self, W, H, max_bokeh=25, max_sakura=15):
+    def __init__(self, W, H, n_bokeh=22, n_sakura=12):
         self.W, self.H = W, H
-        self.bokeh = [BokehParticle(W, H) for _ in range(max_bokeh)]
+        rng = np.random.RandomState(42)  # fixed seed for reproducibility
+        # Pre-generate bokeh parameters
+        self.bokeh = []
+        for _ in range(n_bokeh):
+            self.bokeh.append({
+                "x0": rng.uniform(0, W),
+                "y0": rng.uniform(0, H),
+                "r": rng.uniform(10, 38),
+                "vx": rng.uniform(-6, 6),
+                "vy": rng.uniform(-14, -3),
+                "phase0": rng.uniform(0, math.pi * 2),
+                "speed": rng.uniform(0.2, 0.6),
+                "alpha": rng.uniform(0.05, 0.16),
+                "color": self._rand_color(rng),
+            })
+        # Pre-generate sakura petal parameters
         self.sakura = []
-        self.max_sakura = max_sakura
-        self._sakura_timer = 0
+        for _ in range(n_sakura):
+            self.sakura.append({
+                "x0": rng.uniform(-40, W + 40),
+                "spawn_t": rng.uniform(0, 40),   # time offset when petal appears
+                "vx": rng.uniform(-18, 18),
+                "vy": rng.uniform(22, 55),
+                "angle0": rng.uniform(0, 360),
+                "spin": rng.uniform(-80, 80),
+                "size": rng.uniform(4, 9),
+                "alpha": rng.uniform(0.12, 0.35),
+                "color": (255, rng.randint(150, 200), rng.randint(200, 255)),
+                "period": rng.uniform(4, 10),    # recycling period
+            })
 
-    def update(self, dt):
-        for p in self.bokeh:
-            p.update(dt)
-            # Recycle off-screen
-            if p.y < -60 or p.x < -80 or p.x > self.W + 80:
-                p.__init__(self.W, self.H)
-                p.y = self.H + p.r
-        # Sakura emission
-        self._sakura_timer += dt
-        if self._sakura_timer > 0.6 and len(self.sakura) < self.max_sakura:
-            self.sakura.append(SakuraPetal(self.W, self.H))
-            self._sakura_timer = 0
-        for p in self.sakura:
-            p.update(dt)
-        self.sakura = [p for p in self.sakura if p.y < self.H + 30]
+    @staticmethod
+    def _rand_color(rng):
+        h = rng.uniform(0, 1)
+        if h < 0.4:
+            return (rng.randint(60, 140), rng.randint(140, 220), 255)
+        elif h < 0.7:
+            return (255, rng.randint(140, 200), rng.randint(180, 255))
+        else:
+            return (rng.randint(180, 255), rng.randint(100, 180), 255)
 
-    def render(self, img):
-        d = ImageDraw.Draw(img, "RGBA")
+    def render(self, t, img):
+        """Render all particles at time t onto img (RGBA PIL Image)."""
+        draw = ImageDraw.Draw(img, "RGBA")
+        W, H = self.W, self.H
+
+        # --- Bokeh circles (always present, looping positions) ---
         for p in self.bokeh:
-            p.draw(d)
+            period = max(8, H / max(1, abs(p["vy"])))
+            t_loop = t % period
+            x = p["x0"] + p["vx"] * t_loop + math.sin(p["phase0"] + t * p["speed"]) * 15
+            y = p["y0"] + p["vy"] * t_loop
+            # Wrap vertically
+            y = y % (H + p["r"] * 2) - p["r"]
+            x = x % (W + p["r"] * 2) - p["r"]
+            r = p["r"]
+            a = int(p["alpha"] * 255)
+            if a < 3:
+                continue
+            col = p["color"]
+            # Draw soft concentric circles
+            for i in range(3):
+                ri = int(r * (1 - i * 0.33))
+                ai = int(a * (1 - i * 0.4))
+                draw.ellipse([int(x)-ri, int(y)-ri, int(x)+ri, int(y)+ri],
+                             fill=(*col, ai))
+
+        # --- Sakura petals (appear/disappear based on time) ---
         for p in self.sakura:
-            p.draw(d)
+            age = (t - p["spawn_t"]) % p["period"]
+            if age < 0:
+                continue
+            x = p["x0"] + p["vx"] * age + math.sin(p["angle0"] * 0.02 + age) * 10
+            y = -20 + p["vy"] * age
+            if y > H + 20:
+                continue
+            angle = p["angle0"] + p["spin"] * age
+            s = p["size"]
+            a = int(p["alpha"] * 255 * clamp(1 - age / p["period"], 0, 1))
+            if a < 5:
+                continue
+            col = p["color"]
+            ix, iy = int(x), int(y)
+            draw.ellipse([ix - s, iy - s//2, ix + s, iy + s//2], fill=(*col, a))
+            draw.ellipse([ix - s//2, iy - s, ix + s//2, iy + s], fill=(*col, int(a*0.7)))
 
 
 # ============================================================
@@ -543,8 +534,7 @@ class VideoGenerator:
 
         # ---- 1. Background ----
         frame = bg_engine.render(t)
-        particles.update(1.0 / 30)
-        particles.render(frame)
+        particles.render(t, frame)
         draw = ImageDraw.Draw(frame, "RGBA")
 
         # ---- 2. Title area ----
@@ -758,7 +748,7 @@ class VideoGenerator:
             overlay = Image.new("RGBA", (W, H), (0, 0, 0, int(255 * fp)))
             frame = Image.alpha_composite(frame, overlay)
 
-        return np.array(frame)
+        return np.array(frame.convert("RGB"))
 
     # =========================================================
     #  Public API
@@ -796,8 +786,13 @@ class VideoGenerator:
 
         if audio_path and os.path.exists(audio_path):
             try:
-                audio = AudioFileClip(audio_path).subclipped(0, min(duration, AudioFileClip(audio_path).duration))
-                video = video.with_audio(audio)
+                audio = AudioFileClip(audio_path)
+                max_audio = min(duration, audio.duration)
+                # MoviePy 1.x: subclip()  /  2.x: subclipped()
+                audio = audio.subclip(0, max_audio) if hasattr(audio, 'subclip') else audio.subclipped(0, max_audio)
+                # MoviePy 1.x: set_audio()  /  2.x: with_audio()
+                video = video.set_audio(audio) if hasattr(video, 'set_audio') else video.with_audio(audio)
+                console.print(f"  Audio: {audio_path}")
             except Exception as e:
                 console.print(f"  [yellow]Audio: {e}[/yellow]")
 
@@ -806,7 +801,7 @@ class VideoGenerator:
         try:
             video.write_videofile(str(out), fps=fps, codec="libx264",
                                   audio_codec="aac", bitrate="6000k",
-                                  threads=4, logger=None)
+                                  threads=4, verbose=False, logger=None)
             console.print(f"  [green]Saved: {out}[/green]")
             return str(out)
         except Exception as e:
@@ -829,9 +824,6 @@ class VideoGenerator:
 
         bg = AuroraBackground(W, H)
         pe = ParticleEngine(W, H)
-        # Warm up particles
-        for _ in range(60):
-            pe.update(1.0 / 30)
 
         frame = self._render_frame(time, W, H, analyzed_data, bg, pe)
         img = Image.fromarray(frame)
