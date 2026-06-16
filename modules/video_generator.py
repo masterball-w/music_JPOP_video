@@ -63,6 +63,15 @@ def ease_out_back(t):
     c3 = c1 + 1
     return 1 + c3 * (t - 1) ** 3 + c1 * (t - 1) ** 2
 
+def ease_out_elastic(t):
+    """Spring-like bounce for dramatic entrances."""
+    if t == 0 or t == 1:
+        return t
+    return math.pow(2, -10 * t) * math.sin((t * 10 - 0.75) * (2 * math.pi / 3)) + 1
+
+def ease_out_quart(t):
+    return 1 - (1 - t) ** 4
+
 def clamp(v, lo, hi):
     return max(lo, min(hi, v))
 
@@ -72,13 +81,14 @@ def clamp(v, lo, hi):
 # ============================================================
 
 def find_japanese_font() -> str:
+    """Find the best available Japanese font, preferring bolder/cleaner ones."""
     candidates = [
-        "C:/Windows/Fonts/YuGothM.ttc",
-        "C:/Windows/Fonts/YuGothB.ttc",
-        "C:/Windows/Fonts/meiryo.ttc",
-        "C:/Windows/Fonts/YuGothR.ttc",
-        "C:/Windows/Fonts/msgothic.ttc",
-        "C:/Windows/Fonts/msmincho.ttc",
+        "C:/Windows/Fonts/YuGothB.ttc",    # Yu Gothic Bold - bolder, rounder feel
+        "C:/Windows/Fonts/YuGothM.ttc",    # Yu Gothic Medium
+        "C:/Windows/Fonts/meiryo.ttc",     # Meiryo
+        "C:/Windows/Fonts/YuGothR.ttc",    # Yu Gothic Regular
+        "C:/Windows/Fonts/msgothic.ttc",   # MS Gothic
+        "C:/Windows/Fonts/msmincho.ttc",   # MS Mincho
         "C:/Windows/Fonts/segoeui.ttf",
         "/System/Library/Fonts/Hiragino Sans GB.ttc",
         "/usr/share/fonts/truetype/noto/NotoSansCJK-Regular.ttc",
@@ -95,6 +105,21 @@ def find_japanese_font() -> str:
     return None
 
 
+def find_japanese_font_bold() -> str:
+    """Find a bold Japanese font for titles and emphasis."""
+    candidates = [
+        "C:/Windows/Fonts/YuGothB.ttc",
+        "C:/Windows/Fonts/meiryob.ttc",
+        "C:/Windows/Fonts/YuGothM.ttc",
+        "C:/Windows/Fonts/msgothic.ttc",
+        "C:/Windows/Fonts/segoeui.ttf",
+    ]
+    for p in candidates:
+        if os.path.exists(p):
+            return p
+    return find_japanese_font()
+
+
 # ============================================================
 #  Text Renderer
 # ============================================================
@@ -102,7 +127,9 @@ def find_japanese_font() -> str:
 class TextRenderer:
     def __init__(self, font_path=None):
         self.font_path = font_path or find_japanese_font()
+        self.bold_font_path = find_japanese_font_bold()
         self._cache = {}
+        self._bold_cache = {}
 
     def font(self, size):
         if size not in self._cache:
@@ -111,6 +138,14 @@ class TextRenderer:
             except Exception:
                 self._cache[size] = ImageFont.load_default()
         return self._cache[size]
+
+    def bold_font(self, size):
+        if size not in self._bold_cache:
+            try:
+                self._bold_cache[size] = ImageFont.truetype(self.bold_font_path, size) if self.bold_font_path else self.font(size)
+            except Exception:
+                self._bold_cache[size] = self.font(size)
+        return self._bold_cache[size]
 
     # ----- core text rendering with multi-layer glow -----
     def render(
@@ -247,85 +282,131 @@ class TextRenderer:
             draw.line([x0, y0 + r, x0, y1 - r], fill=outline, width=width)
             draw.line([x1, y0 + r, x1, y1 - r], fill=outline, width=width)
 
-    # ----- note card with glass-morphism -----
+    # ----- note card with glass-morphism (v3: large, bold, beautiful) -----
     def render_note_card(self, note, width, accent=(0, 200, 255)):
-        f_title = self.font(26)
-        f_body = self.font(20)
-        f_small = self.font(16)
-        f_badge = self.font(14)
+        """Render a large, visually rich knowledge note card."""
+        # Significantly larger fonts
+        f_title = self.bold_font(44)       # word / pattern
+        f_body = self.font(30)             # reading, meaning
+        f_small = self.font(24)            # explanation, examples
+        f_badge = self.bold_font(22)       # JLPT level badge
+
         ntype = note.get("type", "vocabulary")
         data = note.get("data", {})
 
-        # Content lines
+        # ---- build content lines ----
         if ntype == "vocabulary":
             word = data.get("word", "")
             level = data.get("jlpt_level", "")
             reading = data.get("reading", "")
             meaning = data.get("meaning", "")
             content = [
-                ("title", f"{word}", f_title, accent),
-                ("body", f"\u8bfb\u97f3: {reading}", f_body, (220, 230, 255)),
-                ("body", f"\u542b\u4e49: {meaning}", f_body, (220, 230, 255)),
+                ("title", word, f_title, accent),
+                ("body", f"読み: {reading}", f_body, (220, 230, 255)),
+                ("body", f"意味: {meaning}", f_body, (220, 230, 255)),
             ]
             badge_text = level
         else:
-            pat = data.get("pattern", "").replace("\u301c", "~")
+            pat = data.get("pattern", "").replace('\u301c', '~')
             level = data.get("level", "")
             meaning = data.get("meaning", "")
-            expl = data.get("explanation", "").replace("\u301c", "~")
-            ex = data.get("example", "").replace("\u301c", "~")
+            expl = data.get("explanation", "").replace('\u301c', '~')
+            ex = data.get("example", "").replace('\u301c', '~')
             content = [
                 ("title", pat, f_title, accent),
                 ("body", meaning, f_body, (220, 230, 255)),
             ]
             if expl:
-                for wl in self.wrap(expl, f_small, width - 80):
-                    content.append(("small", wl, f_small, (170, 185, 215)))
+                for wl in self.wrap(expl, f_small, width - 100):
+                    content.append(("small", wl, f_small, (180, 195, 225)))
             if ex:
-                content.append(("small", f"\u4f8b: {ex}", f_small, (150, 210, 160)))
+                content.append(("small", f"例: {ex}", f_small, (150, 220, 170)))
             badge_text = level
 
-        # Measure
+        # ---- measure card dimensions ----
         dummy = Image.new("RGBA", (1, 1))
         dd = ImageDraw.Draw(dummy)
         total_h = 0
-        for _, txt, fo, _ in content:
+        line_heights = []
+        for kind, txt, fo, _ in content:
             bb = dd.textbbox((0, 0), txt, font=fo)
-            total_h += (bb[3] - bb[1]) + 10
-        pad_x, pad_y = 20, 16
-        card_w, card_h = width, total_h + pad_y * 2 + 4
-        radius = 16
+            lh = (bb[3] - bb[1])
+            line_heights.append(lh)
+            total_h += lh + 14  # 14px spacing between lines
 
-        # Card image
+        pad_x, pad_y = 36, 28
+        card_w = width
+        card_h = total_h + pad_y * 2 + 8
+        radius = 24
+
+        # ---- create card image ----
         card = Image.new("RGBA", (card_w, card_h), (0, 0, 0, 0))
         cd = ImageDraw.Draw(card)
 
-        # Frosted glass background
-        self.rounded_rect(cd, (0, 0, card_w - 1, card_h - 1), radius,
-                          fill=(20, 22, 45, 200))
-        # Subtle border
-        self.rounded_rect(cd, (0, 0, card_w - 1, card_h - 1), radius,
-                          fill=None, outline=(80, 130, 200, 80), width=1)
+        # Frosted glass background with slight gradient
+        for row in range(card_h):
+            ratio = row / max(1, card_h)
+            r = int(18 + 8 * ratio)
+            g = int(20 + 6 * ratio)
+            b = int(42 + 15 * ratio)
+            a = 210
+            cd.line([(0, row), (card_w, row)], fill=(r, g, b, a))
 
-        # Left accent bar (rounded)
-        cd.rectangle([(6, pad_y), (9, card_h - pad_y)], fill=(*accent, 220))
+        # Mask to rounded rect shape
+        mask = Image.new("L", (card_w, card_h), 0)
+        md = ImageDraw.Draw(mask)
+        self.rounded_rect(md, (0, 0, card_w - 1, card_h - 1), radius, fill=255)
+        # Apply mask
+        card.putalpha(mask)
+        cd = ImageDraw.Draw(card, "RGBA")
 
-        # JLPT badge (top-right)
-        badge_colors = {"N5": (80, 180, 80), "N4": (60, 150, 200), "N3": (200, 160, 50),
-                        "N2": (200, 100, 50), "N1": (180, 60, 60)}
-        bc = badge_colors.get(badge_text, (100, 100, 140))
-        badge_w = dd.textbbox((0, 0), badge_text, font=f_badge)[2] + 16
-        bx = card_w - badge_w - 14
-        by = 10
-        self.rounded_rect(cd, (bx, by, bx + badge_w, by + 22), 6, fill=(*bc, 200))
-        cd.text((bx + 8, by + 3), badge_text, font=f_badge, fill=(255, 255, 255, 240))
+        # Glowing border
+        for bw in range(3):
+            alpha = int(60 - bw * 18)
+            self.rounded_rect(cd, (bw, bw, card_w - 1 - bw, card_h - 1 - bw),
+                              max(1, radius - bw), fill=None,
+                              outline=(accent[0], accent[1], accent[2], max(0, alpha)), width=1)
 
-        # Draw content
+        # Left accent bar (thicker, with glow)
+        bar_x = 10
+        bar_w = 5
+        for glow_i in range(4):
+            ga = max(0, 120 - glow_i * 30)
+            cd.rectangle([(bar_x - glow_i, pad_y - glow_i),
+                          (bar_x + bar_w + glow_i, card_h - pad_y + glow_i)],
+                         fill=(*accent, ga))
+        cd.rectangle([(bar_x, pad_y), (bar_x + bar_w, card_h - pad_y)],
+                     fill=(*accent, 240))
+
+        # JLPT badge (top-right, pill-shaped)
+        badge_colors = {"N5": (80, 190, 80), "N4": (60, 160, 210),
+                        "N3": (210, 170, 50), "N2": (210, 110, 50), "N1": (190, 60, 60)}
+        bc = badge_colors.get(badge_text, (110, 110, 150))
+        bb_badge = dd.textbbox((0, 0), badge_text, font=f_badge)
+        badge_tw = bb_badge[2] - bb_badge[0]
+        badge_w = badge_tw + 24
+        badge_h = 32
+        bx = card_w - badge_w - 20
+        by = 14
+        self.rounded_rect(cd, (bx, by, bx + badge_w, by + badge_h), badge_h // 2,
+                          fill=(*bc, 220))
+        cd.text((bx + 12, by + 4), badge_text, font=f_badge, fill=(255, 255, 255, 250))
+
+        # ---- Draw content with stroke for rounder look ----
         y = pad_y
-        for kind, txt, fo, col in content:
-            cd.text((pad_x + 10, y), txt, font=fo, fill=(*col, 255))
-            bb = cd.textbbox((0, 0), txt, font=fo)
-            y += (bb[3] - bb[1]) + 10
+        for idx, (kind, txt, fo, col) in enumerate(content):
+            tx = pad_x + 16
+            stroke_w = 2 if kind == "title" else 1
+            stroke_col = (col[0]//3, col[1]//3, col[2]//3, 80)
+            # Draw with stroke for bolder, rounder text appearance
+            try:
+                cd.text((tx, y), txt, font=fo, fill=(*col, 255),
+                        stroke_width=stroke_w, stroke_fill=(*stroke_col[:3], stroke_col[3]))
+            except TypeError:
+                # Fallback for PIL versions without stroke support
+                cd.text((tx, y), txt, font=fo, fill=(*col, 255))
+            lh = line_heights[idx] if idx < len(line_heights) else 30
+            y += lh + 14
 
         return card
 
@@ -691,53 +772,97 @@ class VideoGenerator:
             current_notes = [top_notes[ni]]
 
         if current_notes:
-            notes_y = int(H * 0.68)
+            notes_y = int(H * 0.665)
 
-            # Section header with icon
-            hf = self.R.font(17)
-            # Small diamond icon
-            icon_x, icon_y = 50, notes_y - 26
-            draw.polygon([(icon_x, icon_y + 7), (icon_x + 7, icon_y),
-                          (icon_x + 14, icon_y + 7), (icon_x + 7, icon_y + 14)],
-                         fill=(*active_col, 160))
-            draw.text((icon_x + 20, notes_y - 28),
-                      "JP Notes / \u65e5\u672c\u8a9e\u30ce\u30fc\u30c8",
-                      font=hf, fill=(140, 155, 195, 210))
+            # ---- Section header ----
+            hf = self.R.bold_font(22)
+            icon_x, icon_y = 52, notes_y - 34
+            # Animated diamond icon (slow rotation effect via scale)
+            pulse = 0.9 + 0.1 * math.sin(t * 2.5)
+            ds = int(9 * pulse)
+            draw.polygon([(icon_x, icon_y + ds), (icon_x + ds, icon_y),
+                          (icon_x + 2 * ds, icon_y + ds), (icon_x + ds, icon_y + 2 * ds)],
+                         fill=(*active_col, 200))
+            draw.text((icon_x + 2 * ds + 10, notes_y - 36),
+                      "JP Notes / 日本語ノート",
+                      font=hf, fill=(160, 175, 215, 240),
+                      stroke_width=1, stroke_fill=(10, 10, 30, 80))
 
-            # Separator
-            sep_y = notes_y - 8
-            for xi in range(50, W - 50):
-                ratio = (xi - 50) / max(1, W - 100)
-                a = int(50 * min(ratio * 3, (1 - ratio) * 3, 1))
-                draw.point((xi, sep_y), fill=(80, 110, 170, a))
+            # Gradient separator line
+            sep_y = notes_y - 10
+            for xi in range(52, W - 52):
+                ratio = (xi - 52) / max(1, W - 104)
+                a = int(70 * min(ratio * 3, (1 - ratio) * 3, 1))
+                r = int(lerp(active_col[0] * 0.6, 80, ratio))
+                g = int(lerp(active_col[1] * 0.6, 110, ratio))
+                b = int(lerp(active_col[2] * 0.6, 180, ratio))
+                draw.point((xi, sep_y), fill=(r, g, b, a))
 
-            # Cards with slide-in animation
-            for ni, note in enumerate(current_notes[:2]):
-                card = self.R.render_note_card(note, width=W - 100, accent=active_col)
-                # Entrance animation based on how long this set of notes has been showing
-                # Calculate when these notes first appeared
-                if active_idx >= 0:
-                    note_start = lines[active_idx].get("start", 0) or 0
-                else:
-                    note_start = t - 2  # assume notes have been showing a while
-                note_age = t - note_start
-                # Stagger each card
-                card_delay = ni * 0.25
+            # ---- Calculate timing for entrance animation ----
+            if active_idx >= 0:
+                note_start = lines[active_idx].get("start", 0) or 0
+            else:
+                note_start = t - 3  # assume notes have been showing
+            note_age = t - note_start
+
+            # Pre-determined tilt angles for each card slot (deterministic)
+            tilt_angles = [-2.5, 3.0, -1.5]  # degrees
+            # Horizontal stagger offsets
+            x_offsets = [0, 20, 10]
+
+            # ---- Render tilted cards with dramatic entrance ----
+            card_w = W - 60
+            y_cursor = notes_y + 4
+            max_cards = 2
+
+            for ni, note in enumerate(current_notes[:max_cards]):
+                card_delay = ni * 0.3
                 card_age = max(0, note_age - card_delay)
 
-                slide_p = ease_out_back(clamp(card_age / 0.5, 0, 1))
-                offset_x = int((1 - slide_p) * 80)
-                alpha_mult = clamp(card_age / 0.35, 0, 1)
+                # ---- Entrance animation progress ----
+                # Scale: 0.2 -> 1.0 with elastic overshoot
+                scale_p = ease_out_elastic(clamp(card_age / 0.7, 0, 1))
+                scale_val = lerp(0.2, 1.0, scale_p)
 
-                if alpha_mult < 1:
-                    faded = card.copy()
-                    arr = np.array(faded)
-                    arr[:, :, 3] = (arr[:, :, 3] * alpha_mult).astype(np.uint8)
+                # Rotation: starts rotated more, settles to target tilt
+                target_tilt = tilt_angles[ni % len(tilt_angles)]
+                start_tilt = target_tilt - 12  # start 12° more rotated
+                rot_p = ease_out_quart(clamp(card_age / 0.6, 0, 1))
+                current_tilt = lerp(start_tilt, target_tilt, rot_p)
+
+                # Opacity: fast fade in
+                alpha_p = clamp(card_age / 0.3, 0, 1)
+
+                if scale_val < 0.05 or alpha_p < 0.01:
+                    continue  # not visible yet
+
+                # Render the base card
+                card = self.R.render_note_card(note, width=int(card_w * 0.97), accent=active_col)
+
+                # ---- Apply scale (resize) ----
+                if abs(scale_val - 1.0) > 0.01:
+                    new_w = max(1, int(card.width * scale_val))
+                    new_h = max(1, int(card.height * scale_val))
+                    card = card.resize((new_w, new_h), Image.LANCZOS)
+
+                # ---- Apply rotation (tilt) ----
+                if abs(current_tilt) > 0.1:
+                    card = card.rotate(current_tilt, resample=Image.BICUBIC, expand=True)
+
+                # ---- Apply opacity ----
+                if alpha_p < 1.0:
+                    arr = np.array(card)
+                    arr[:, :, 3] = (arr[:, :, 3] * alpha_p).astype(np.uint8)
                     card = Image.fromarray(arr)
 
-                cx = 50 + offset_x
-                frame.paste(card, (cx, notes_y), card)
-                notes_y += card.height + 14
+                # ---- Position on frame ----
+                # Center the tilted card horizontally with stagger
+                cx = 30 + x_offsets[ni % len(x_offsets)]
+                # Adjust for rotation expansion (keep visually centered)
+                cx += (card_w - card.width) // 2
+
+                frame.paste(card, (cx, y_cursor), card)
+                y_cursor += card.height + 16
 
         # ---- 6. Outro fade ----
         total_dur = 0
@@ -799,9 +924,15 @@ class VideoGenerator:
         out = self.output_dir / f"{output_name}_{format_name or self.default_format}.mp4"
         console.print("  Rendering...")
         try:
-            video.write_videofile(str(out), fps=fps, codec="libx264",
-                                  audio_codec="aac", bitrate="6000k",
-                                  threads=4, verbose=False, logger=None)
+            # MoviePy 1.x uses verbose=False; 2.x uses logger=None
+            try:
+                video.write_videofile(str(out), fps=fps, codec="libx264",
+                                      audio_codec="aac", bitrate="6000k",
+                                      threads=4, verbose=False)
+            except TypeError:
+                video.write_videofile(str(out), fps=fps, codec="libx264",
+                                      audio_codec="aac", bitrate="6000k",
+                                      threads=4, logger=None)
             console.print(f"  [green]Saved: {out}[/green]")
             return str(out)
         except Exception as e:
