@@ -225,6 +225,7 @@ class SpotifyFetcher:
     def fetch_all(self) -> list[dict]:
         """
         Fetch songs: try Spotify first, fall back to curated list.
+        Also loads existing songs from data/songs/ directory.
         Returns list of song dicts.
         """
         console.print("\n[bold cyan]=== Fetching Popular Japanese Songs ===[/bold cyan]")
@@ -234,6 +235,18 @@ class SpotifyFetcher:
         if not songs:
             console.print("[yellow]Using curated fallback song list[/yellow]")
             songs = self.fetch_from_fallback()
+
+        # Also load any existing individual song files
+        existing_songs = self._load_existing_songs()
+        if existing_songs:
+            # Merge without duplicates (check by title+artist)
+            seen = {(s["title"], s["artist"]) for s in songs}
+            for es in existing_songs:
+                key = (es.get("title", ""), es.get("artist", ""))
+                if key not in seen and key[0]:
+                    seen.add(key)
+                    songs.append(es)
+            console.print(f"[dim]Loaded {len(existing_songs)} existing songs from data/songs/[/dim]")
 
         console.print(f"\n[green]Total songs collected: {len(songs)}[/green]")
 
@@ -256,6 +269,63 @@ class SpotifyFetcher:
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump(songs, f, ensure_ascii=False, indent=2)
         console.print(f"\nSaved to: {output_path}")
+
+        return songs
+
+    def _load_existing_songs(self) -> list[dict]:
+        """Load existing individual song files from data/songs/ directory."""
+        songs = []
+        songs_dir = self.data_dir
+
+        if not songs_dir.exists():
+            return songs
+
+        # Check for aggregated list files first
+        for list_file in songs_dir.glob("*_songs.json"):
+            try:
+                with open(list_file, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                    if isinstance(data, list):
+                        for item in data:
+                            if isinstance(item, dict) and "title" in item:
+                                songs.append({
+                                    "id": item.get("number", f"existing_{len(songs)}"),
+                                    "title": item["title"],
+                                    "artist": item.get("artist", ""),
+                                    "album": item.get("album", ""),
+                                    "year": item.get("year"),
+                                    "duration_ms": 0,
+                                    "spotify_url": "",
+                                    "preview_url": None,
+                                    "popularity": 100 - len(songs),
+                                    "source": "existing",
+                                })
+                    console.print(f"  [dim]Loaded {len(songs)} from {list_file.name}[/dim]")
+            except Exception as e:
+                console.print(f"  [yellow]Error loading {list_file.name}: {e}[/yellow]")
+
+        # Also check individual song files
+        for song_file in songs_dir.glob("*.json"):
+            if song_file.name == "songs_list.json" or "_songs" in song_file.name:
+                continue
+            try:
+                with open(song_file, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                if isinstance(data, dict) and "title" in data:
+                    songs.append({
+                        "id": data.get("number", f"existing_{len(songs)}"),
+                        "title": data["title"],
+                        "artist": data.get("artist", ""),
+                        "album": data.get("album", ""),
+                        "year": data.get("year"),
+                        "duration_ms": 0,
+                        "spotify_url": "",
+                        "preview_url": None,
+                        "popularity": 100 - len(songs),
+                        "source": "existing",
+                    })
+            except Exception:
+                pass
 
         return songs
 

@@ -21,10 +21,24 @@ data/lyrics/
 data/serialized/
 data/songs/songs_list.json
 
+# Audio files (too large, copyrighted)
+assets/audio/**/*.mp3
+assets/audio/**/*.wav
+assets/audio/**/*.m4a
+data/audio/**/*.mp3
+data/audio/**/*.wav
+data/audio/**/*.m4a
+
 # Output videos (too large for GitHub)
 output/videos/*.mp4
 
-# Config secrets
+# Preview images (regeneratable)
+output/videos/preview_*.png
+data/test_*.png
+data/font_test_*.png
+
+# Secrets / credentials
+cookie.txt
 config.yaml
 
 # Keep example config
