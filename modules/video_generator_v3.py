@@ -27,6 +27,17 @@ from rich.console import Console
 
 console = Console()
 
+# 配置 MoviePy 使用系统 ffmpeg（支持 NVENC 硬件编码）
+# 系统 ffmpeg 版本更新，支持最新的 NVENC API
+import shutil
+_system_ffmpeg = shutil.which("ffmpeg")
+if _system_ffmpeg:
+    try:
+        from moviepy.config import change_settings
+        change_settings({"FFMPEG_BINARY": _system_ffmpeg})
+    except Exception:
+        pass
+
 try:
     from moviepy import (
         VideoClip, AudioFileClip, ImageClip, CompositeVideoClip,
@@ -1061,8 +1072,9 @@ class VideoGenerator:
         inactive_col = tuple(self.style.get("lyric_inactive_color", [210, 215, 235]))
         min_fade = self.style.get("lyric_inactive_min_fade", 0.55)
         romaji_col = (160, 170, 200)
+        translation_col = (180, 210, 180)  # 淡绿色中文翻译
 
-        base_spacing = lyric_size + romaji_size + 28
+        base_spacing = lyric_size + romaji_size + 28 + 24  # +24 为中文翻译留空间
         lyric_top = int(H * 0.175)
         y_cursor = lyric_top
 
@@ -1070,6 +1082,7 @@ class VideoGenerator:
             ln = lines[i]
             text = ln.get("text", "")
             romaji = ln.get("romaji", "")
+            translation = ln.get("translation")
             is_active = (i == active_idx)
 
             line_start = ln.get("start", 0) or 0
@@ -1111,6 +1124,16 @@ class VideoGenerator:
                 r_img = self.R.render(romaji, romaji_size, color=romaji_col, max_width=W - 80)
                 rx = (W - r_img.width) // 2 + offset_x
                 frame.paste(r_img, (rx, y_cursor + cur_size + 6 + offset_y), r_img)
+
+            # 中文翻译显示在罗马音下方（仅活跃行）
+            if is_active and translation:
+                tr_size = max(20, int(lyric_size * 0.72 * scale))
+                tr_img = self.R.render(translation, tr_size, color=translation_col, max_width=W - 80)
+                tr_x = (W - tr_img.width) // 2 + offset_x
+                tr_y = y_cursor + cur_size + 6
+                if romaji:
+                    tr_y += romaji_size + 4
+                frame.paste(tr_img, (tr_x, tr_y + offset_y), tr_img)
 
             y_cursor += int(base_spacing * scale)
 
@@ -1315,16 +1338,20 @@ class VideoGenerator:
                 console.print(f"  [yellow]Audio: {e}[/yellow]")
 
         out = self.output_dir / f"{output_name}_{format_name or self.default_format}.mp4"
-        console.print("  Rendering...")
+        console.print("  Rendering (GPU: NVENC)...")
         try:
+            # 使用 NVIDIA NVENC 硬件编码加速
+            # 注意：NVENC 不支持 threads 参数，使用 ffmpeg_params 传递编码参数
             try:
-                video.write_videofile(str(out), fps=fps, codec="libx264",
+                video.write_videofile(str(out), fps=fps, codec="h264_nvenc",
                                       audio_codec="aac", bitrate="6000k",
-                                      threads=4, verbose=False)
+                                      verbose=False,
+                                      ffmpeg_params=["-cq", "25", "-preset", "slow"])
             except TypeError:
-                video.write_videofile(str(out), fps=fps, codec="libx264",
+                video.write_videofile(str(out), fps=fps, codec="h264_nvenc",
                                       audio_codec="aac", bitrate="6000k",
-                                      threads=4, logger=None)
+                                      logger=None,
+                                      ffmpeg_params=["-cq", "25", "-preset", "slow"])
             console.print(f"  [green]Saved: {out}[/green]")
             return str(out)
         except Exception as e:

@@ -287,13 +287,15 @@ class LyricsScraper:
         """
         Parse an LRC file (with timestamps) into structured lyrics.
         Format: [mm:ss.xx] lyrics line
+        Automatically merges Chinese translation lines with their Japanese counterparts.
         """
         path = Path(lrc_path)
         if not path.exists():
             console.print(f"[red]LRC file not found: {lrc_path}[/red]")
             return None
 
-        lines = []
+        # Phase 1: read all timed lines
+        timed_lines = []
         metadata = {}
         lrc_pattern = re.compile(r'\[(\d{2}):(\d{2})\.(\d{2,3})\]\s*(.*)')
         meta_pattern = re.compile(r'\[([a-zA-Z#]+):(.*)\]')
@@ -313,9 +315,8 @@ class LyricsScraper:
                     text = lrc_match.group(4).strip()
                     time_s = minutes * 60 + seconds + ms / 1000.0
                     if text:
-                        lines.append({
+                        timed_lines.append({
                             "start": round(time_s, 3),
-                            "end": None,  # Will be filled by serializer
                             "text": text,
                         })
                 else:
@@ -323,13 +324,50 @@ class LyricsScraper:
                     if meta_match:
                         metadata[meta_match.group(1)] = meta_match.group(2).strip()
 
-        if not lines:
+        if not timed_lines:
             return None
 
-        # Fill end times
+        # Phase 2: merge Chinese translations into Japanese lines
+        # Chinese translation lines follow their Japanese counterpart
+        # but share the timestamp with the NEXT Japanese line.
+        # Strategy: attach each Chinese line to the Japanese line before it.
+        def _is_chinese(t):
+            # Contains kana → Japanese
+            if re.search(r'[\u3040-\u309f\u30a0-\u30ff]', t):
+                return False
+            # Mostly CJK → Chinese
+            cjk = re.findall(r'[\u4e00-\u9fff\u3400-\u4dbf]', t)
+            return len(cjk) / max(len(t), 1) > 0.3
+
+        lines = []
+        i = 0
+        while i < len(timed_lines):
+            current = timed_lines[i]
+            text = current["text"]
+
+            if text.startswith(('词：', '曲：', '编曲', 'TME', '翻译', '原唱')):
+                i += 1
+                continue
+
+            if _is_chinese(text):
+                lines.append({"start": current["start"], "end": None, "text": text, "translation": None})
+                i += 1
+                continue
+
+            translation = None
+            if i + 1 < len(timed_lines):
+                next_line = timed_lines[i + 1]
+                if _is_chinese(next_line["text"]):
+                    translation = next_line["text"]
+                    i += 1
+
+            lines.append({"start": current["start"], "end": None, "text": text, "translation": translation})
+            i += 1
+
+        # Phase 3: fill end times
         for i in range(len(lines) - 1):
             lines[i]["end"] = lines[i + 1]["start"]
-        lines[-1]["end"] = lines[-1]["start"] + 5.0  # Default 5s for last line
+        lines[-1]["end"] = lines[-1]["start"] + 5.0
 
         return {
             "lines": lines,

@@ -24,6 +24,16 @@ from rich.console import Console
 
 console = Console()
 
+# 配置 MoviePy 使用系统 ffmpeg（支持 NVENC 硬件编码）
+import shutil
+_system_ffmpeg = shutil.which("ffmpeg")
+if _system_ffmpeg:
+    try:
+        from moviepy.config import change_settings
+        change_settings({"FFMPEG_BINARY": _system_ffmpeg})
+    except Exception:
+        pass
+
 try:
     from moviepy import (
         VideoClip, AudioFileClip, ImageClip, CompositeVideoClip,
@@ -1081,17 +1091,20 @@ class VideoGenerator:
                 console.print(f"  [yellow]Audio: {e}[/yellow]")
 
         out = self.output_dir / f"{output_name}_{format_name or self.default_format}.mp4"
-        console.print("  Rendering...")
+        console.print("  Rendering (GPU: NVENC)...")
         try:
-            # MoviePy 1.x uses verbose=False; 2.x uses logger=None
+            # 使用 NVIDIA NVENC 硬件编码加速
+            # 注意：NVENC 不支持 threads 参数，使用 ffmpeg_params 传递编码参数
             try:
-                video.write_videofile(str(out), fps=fps, codec="libx264",
+                video.write_videofile(str(out), fps=fps, codec="h264_nvenc",
                                       audio_codec="aac", bitrate="6000k",
-                                      threads=4, verbose=False)
+                                      verbose=False,
+                                      ffmpeg_params=["-cq", "25", "-preset", "slow"])
             except TypeError:
-                video.write_videofile(str(out), fps=fps, codec="libx264",
+                video.write_videofile(str(out), fps=fps, codec="h264_nvenc",
                                       audio_codec="aac", bitrate="6000k",
-                                      threads=4, logger=None)
+                                      logger=None,
+                                      ffmpeg_params=["-cq", "25", "-preset", "slow"])
             console.print(f"  [green]Saved: {out}[/green]")
             return str(out)
         except Exception as e:

@@ -2,15 +2,15 @@
   "title": "夜に駆ける",
   "artist": "YOASOBI",
   "song_id": "YOASOBI_夜に駆ける",
-  "total_lines": 135,
-  "lines_with_notes": 60,
+  "total_lines": 77,
+  "lines_with_notes": 51,
   "jlpt_distribution": {
-    "N5": 16,
-    "N3": 12,
+    "N5": 15,
+    "N3": 11,
     "N4": 12,
     "N1": 1
   },
-  "vocabulary_count": 41,
+  "vocabulary_count": 39,
   "grammar_count": 11,
   "top_notes": [
     {
@@ -19,19 +19,17 @@
       "data": {
         "word": "夜",
         "reading": "よる",
-        "meaning": "night, evening",
+        "meaning": "夜晚",
         "jlpt_level": "N5",
         "pos": "名詞"
       },
       "line_indices": [
         0,
-        5,
-        39,
-        40,
-        108,
-        110,
-        133,
-        134
+        2,
+        20,
+        63,
+        64,
+        76
       ]
     },
     {
@@ -40,50 +38,15 @@
       "data": {
         "word": "人",
         "reading": "ひと",
-        "meaning": "person",
+        "meaning": "人",
         "jlpt_level": "N5",
         "pos": "名詞"
       },
       "line_indices": [
-        5,
-        32,
-        51,
-        133
-      ]
-    },
-    {
-      "type": "vocabulary",
-      "score": 8,
-      "data": {
-        "word": "空",
-        "reading": "そら",
-        "meaning": "sky",
-        "jlpt_level": "N5",
-        "pos": "名詞"
-      },
-      "line_indices": [
-        5,
-        6,
-        11,
-        127,
-        128
-      ]
-    },
-    {
-      "type": "vocabulary",
-      "score": 8,
-      "data": {
-        "word": "日",
-        "reading": "ひ",
-        "meaning": "day, sun",
-        "jlpt_level": "N5",
-        "pos": "名詞"
-      },
-      "line_indices": [
-        11,
-        12,
-        15,
-        48
+        2,
+        16,
+        27,
+        76
       ]
     },
     {
@@ -92,23 +55,23 @@
       "data": {
         "word": "君",
         "reading": "きみ",
-        "meaning": "you (informal)",
+        "meaning": "你（非正式）",
         "jlpt_level": "N5",
         "pos": "名詞"
       },
       "line_indices": [
-        11,
-        19,
-        35,
+        5,
+        9,
+        18,
+        28,
+        29,
+        45,
         53,
-        55,
-        82,
-        93,
-        100,
-        107,
-        111,
-        115,
-        125
+        58,
+        62,
+        65,
+        67,
+        72
       ]
     },
     {
@@ -117,17 +80,17 @@
       "data": {
         "word": "僕",
         "reading": "ぼく",
-        "meaning": "I (male, informal)",
+        "meaning": "我（男性非正式）",
         "jlpt_level": "N5",
         "pos": "名詞"
       },
       "line_indices": [
-        17,
-        41,
-        82,
-        87,
-        107,
-        113
+        8,
+        21,
+        45,
+        49,
+        62,
+        66
       ]
     },
     {
@@ -136,34 +99,48 @@
       "data": {
         "word": "手",
         "reading": "て",
-        "meaning": "hand",
+        "meaning": "手",
         "jlpt_level": "N5",
         "pos": "名詞"
       },
       "line_indices": [
-        41,
-        42,
-        82,
-        84,
-        125,
-        131
+        21,
+        45,
+        46,
+        72,
+        75
       ]
     },
     {
       "type": "vocabulary",
       "score": 7,
       "data": {
-        "word": "世界",
-        "reading": "せかい",
-        "meaning": "world",
-        "jlpt_level": "N4",
+        "word": "空",
+        "reading": "そら",
+        "meaning": "天空",
+        "jlpt_level": "N5",
         "pos": "名詞"
       },
       "line_indices": [
-        24,
-        25,
-        90,
-        91
+        2,
+        5,
+        73
+      ]
+    },
+    {
+      "type": "vocabulary",
+      "score": 7,
+      "data": {
+        "word": "日",
+        "reading": "ひ",
+        "meaning": "日；太阳",
+        "jlpt_level": "N5",
+        "pos": "名詞"
+      },
+      "line_indices": [
+        5,
+        7,
+        25
       ]
     },
     {
@@ -172,14 +149,14 @@
       "data": {
         "word": "何",
         "reading": "なに/なん",
-        "meaning": "what",
+        "meaning": "什么",
         "jlpt_level": "N5",
         "pos": "名詞"
       },
       "line_indices": [
-        25,
-        55,
-        90
+        12,
+        29,
+        51
       ]
     },
     {
@@ -188,14 +165,14 @@
       "data": {
         "word": "今",
         "reading": "いま",
-        "meaning": "now",
+        "meaning": "现在",
         "jlpt_level": "N5",
         "pos": "接頭詞"
       },
       "line_indices": [
-        68,
-        129,
-        133
+        37,
+        74,
+        76
       ]
     },
     {
@@ -204,13 +181,13 @@
       "data": {
         "word": "目",
         "reading": "め",
-        "meaning": "eye",
+        "meaning": "眼睛",
         "jlpt_level": "N5",
         "pos": "名詞"
       },
       "line_indices": [
-        21,
-        107
+        10,
+        62
       ]
     },
     {
@@ -219,29 +196,14 @@
       "data": {
         "word": "言葉",
         "reading": "ことば",
-        "meaning": "words, language",
+        "meaning": "话语；语言",
         "jlpt_level": "N4",
         "pos": "名詞"
       },
       "line_indices": [
-        27,
-        93,
-        99
-      ]
-    },
-    {
-      "type": "vocabulary",
-      "score": 6,
-      "data": {
-        "word": "声",
-        "reading": "こえ",
-        "meaning": "voice",
-        "jlpt_level": "N5",
-        "pos": "名詞"
-      },
-      "line_indices": [
-        27,
-        28
+        13,
+        53,
+        57
       ]
     },
     {
@@ -251,12 +213,12 @@
         "pattern": "〜ている",
         "level": "N5",
         "meaning": "is doing ~ / state of being",
-        "explanation": "表示动作的持续或状态的存续。例：走っている（正在跑）",
+        "explanation": "动作持续或状态存续",
         "example": "見ている → 正在看",
         "in_context": "見惚れているかのような"
       },
       "line_indices": [
-        56
+        30
       ]
     },
     {
@@ -266,12 +228,42 @@
         "pattern": "〜ないで",
         "level": "N5",
         "meaning": "without doing ~",
-        "explanation": "动词ない形 + で，表示不做某事的状态。例：食べないで（不吃就...）",
+        "explanation": "不做某事的状态",
         "example": "泣かないで → 请不要哭",
         "in_context": "繋いだ手を離さないでよ"
       },
       "line_indices": [
-        131
+        75
+      ]
+    },
+    {
+      "type": "vocabulary",
+      "score": 5,
+      "data": {
+        "word": "沈む",
+        "reading": "しずむ",
+        "meaning": "下沉",
+        "jlpt_level": "N3",
+        "pos": "動詞"
+      },
+      "line_indices": [
+        1,
+        5,
+        68
+      ]
+    },
+    {
+      "type": "vocabulary",
+      "score": 5,
+      "data": {
+        "word": "心",
+        "reading": "こころ",
+        "meaning": "心；内心",
+        "jlpt_level": "N5",
+        "pos": "名詞"
+      },
+      "line_indices": [
+        8
       ]
     }
   ],
@@ -280,8 +272,9 @@
       "index": 0,
       "text": "夜に駆ける - YOASOBI",
       "romaji": "yoru ni kakeru - YOASOBI",
+      "translation": null,
       "start": 0.0,
-      "end": 0.0,
+      "end": 1.0,
       "section": "Unknown",
       "duration": 0,
       "tokens": [
@@ -353,7 +346,7 @@
         {
           "word": "夜",
           "reading": "よる",
-          "meaning": "night, evening",
+          "meaning": "夜晚",
           "jlpt_level": "N5",
           "pos": "名詞"
         }
@@ -393,118 +386,9 @@
     },
     {
       "index": 1,
-      "text": "词：Ayase",
-      "romaji": "词 Ayase",
-      "start": 0.0,
-      "end": 1.0,
-      "section": "Unknown",
-      "duration": 0,
-      "tokens": [
-        {
-          "surface": "词",
-          "reading": "词",
-          "base_form": "词",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "：",
-          "reading": "：",
-          "base_form": "：",
-          "pos": "記号",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "Ayase",
-          "reading": "Ayase",
-          "base_form": "Ayase",
-          "pos": "名詞",
-          "pos_detail": "固有名詞",
-          "conjugation_type": "組織",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "词",
-          "reading": null
-        },
-        {
-          "text": "：",
-          "reading": null
-        },
-        {
-          "text": "Ayase",
-          "reading": null
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 2,
-      "text": "曲：Ayase",
-      "romaji": "kyoku Ayase",
-      "start": 1.0,
-      "end": 1.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "曲",
-          "reading": "キョク",
-          "base_form": "曲",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "：",
-          "reading": "：",
-          "base_form": "：",
-          "pos": "記号",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "Ayase",
-          "reading": "Ayase",
-          "base_form": "Ayase",
-          "pos": "名詞",
-          "pos_detail": "固有名詞",
-          "conjugation_type": "組織",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "曲",
-          "reading": "キョク"
-        },
-        {
-          "text": "：",
-          "reading": null
-        },
-        {
-          "text": "Ayase",
-          "reading": null
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 3,
       "text": "沈むように溶けてゆくように",
       "romaji": "shizumu you ni toke te yuku you ni",
+      "translation": "像是沉溺溶化一般",
       "start": 1.0,
       "end": 9.0,
       "section": "Unknown",
@@ -587,7 +471,7 @@
         {
           "word": "沈む",
           "reading": "しずむ",
-          "meaning": "to sink",
+          "meaning": "下沉",
           "jlpt_level": "N3",
           "pos": "動詞"
         }
@@ -597,7 +481,7 @@
           "pattern": "〜ように",
           "level": "N4",
           "meaning": "so that ~ / like ~",
-          "explanation": "表示目的或比喻。例：忘れないように（为了不忘记）",
+          "explanation": "目的或比喻",
           "example": "届くように → 希望传达得到",
           "in_context": "沈むように溶けてゆくように"
         }
@@ -639,90 +523,10 @@
       "has_notes": true
     },
     {
-      "index": 4,
-      "text": "像是沉溺溶化一般",
-      "romaji": "zou ze 沉溺溶 ka ipan",
-      "start": 9.0,
-      "end": 9.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "像",
-          "reading": "ゾウ",
-          "base_form": "像",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "是",
-          "reading": "ゼ",
-          "base_form": "是",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "沉溺溶",
-          "reading": "沉溺溶",
-          "base_form": "沉溺溶",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "化",
-          "reading": "カ",
-          "base_form": "化",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "サ変接続",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "一般",
-          "reading": "イッパン",
-          "base_form": "一般",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "像",
-          "reading": "ゾウ"
-        },
-        {
-          "text": "是",
-          "reading": "ゼ"
-        },
-        {
-          "text": "沉溺溶",
-          "reading": null
-        },
-        {
-          "text": "化",
-          "reading": "カ"
-        },
-        {
-          "text": "一般",
-          "reading": "イッパン"
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 5,
+      "index": 2,
       "text": "二人だけの空が広がる夜に",
       "romaji": "ni nin dake no sora ga hirogaru yoru ni",
+      "translation": "在只有你我二人的广阔夜空之下",
       "start": 9.0,
       "end": 31.0,
       "section": "Unknown",
@@ -814,28 +618,28 @@
         {
           "word": "人",
           "reading": "ひと",
-          "meaning": "person",
+          "meaning": "人",
           "jlpt_level": "N5",
           "pos": "名詞"
         },
         {
           "word": "空",
           "reading": "そら",
-          "meaning": "sky",
+          "meaning": "天空",
           "jlpt_level": "N5",
           "pos": "名詞"
         },
         {
           "word": "広がる",
           "reading": "ひろがる",
-          "meaning": "to spread, to expand",
+          "meaning": "扩散；展开",
           "jlpt_level": "N3",
           "pos": "動詞"
         },
         {
           "word": "夜",
           "reading": "よる",
-          "meaning": "night, evening",
+          "meaning": "夜晚",
           "jlpt_level": "N5",
           "pos": "名詞"
         }
@@ -882,150 +686,10 @@
       "has_notes": true
     },
     {
-      "index": 6,
-      "text": "在只有你我二人的广阔夜空之下",
-      "romaji": "zai tada yuu 你我二 jinteki 广阔夜 sora no shita",
-      "start": 31.0,
-      "end": 31.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "在",
-          "reading": "ザイ",
-          "base_form": "在",
-          "pos": "接頭詞",
-          "pos_detail": "名詞接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "只",
-          "reading": "タダ",
-          "base_form": "只",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "有",
-          "reading": "ユウ",
-          "base_form": "有",
-          "pos": "名詞",
-          "pos_detail": "サ変接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "你我二",
-          "reading": "你我二",
-          "base_form": "你我二",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "人的",
-          "reading": "ジンテキ",
-          "base_form": "人的",
-          "pos": "名詞",
-          "pos_detail": "形容動詞語幹",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "广阔夜",
-          "reading": "广阔夜",
-          "base_form": "广阔夜",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "空",
-          "reading": "ソラ",
-          "base_form": "空",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "之",
-          "reading": "ノ",
-          "base_form": "之",
-          "pos": "助詞",
-          "pos_detail": "格助詞",
-          "conjugation_type": "一般",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "下",
-          "reading": "シタ",
-          "base_form": "下",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [
-        {
-          "word": "空",
-          "reading": "そら",
-          "meaning": "sky",
-          "jlpt_level": "N5",
-          "pos": "名詞"
-        }
-      ],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "在",
-          "reading": "ザイ"
-        },
-        {
-          "text": "只",
-          "reading": "タダ"
-        },
-        {
-          "text": "有",
-          "reading": "ユウ"
-        },
-        {
-          "text": "你我二",
-          "reading": null
-        },
-        {
-          "text": "人的",
-          "reading": "ジンテキ"
-        },
-        {
-          "text": "广阔夜",
-          "reading": null
-        },
-        {
-          "text": "空",
-          "reading": "ソラ"
-        },
-        {
-          "text": "之",
-          "reading": "ノ"
-        },
-        {
-          "text": "下",
-          "reading": "シタ"
-        }
-      ],
-      "has_notes": true
-    },
-    {
-      "index": 7,
+      "index": 3,
       "text": "「さよなら」だけだった",
       "romaji": "sayonara dake da ta",
+      "translation": "你只留下了一句「再见了」",
       "start": 31.0,
       "end": 34.0,
       "section": "Unknown",
@@ -1117,129 +781,10 @@
       "has_notes": false
     },
     {
-      "index": 8,
-      "text": "你只留下了一句「再见了」",
-      "romaji": "你只留 ka ryou iku sai 见了",
-      "start": 34.0,
-      "end": 34.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "你只留",
-          "reading": "你只留",
-          "base_form": "你只留",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "下",
-          "reading": "カ",
-          "base_form": "下",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "一般",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "了",
-          "reading": "リョウ",
-          "base_form": "了",
-          "pos": "名詞",
-          "pos_detail": "固有名詞",
-          "conjugation_type": "人名",
-          "conjugation_form": "名"
-        },
-        {
-          "surface": "一句",
-          "reading": "イック",
-          "base_form": "一句",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "「",
-          "reading": "「",
-          "base_form": "「",
-          "pos": "記号",
-          "pos_detail": "括弧開",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "再",
-          "reading": "サイ",
-          "base_form": "再",
-          "pos": "接頭詞",
-          "pos_detail": "名詞接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "见了",
-          "reading": "见了",
-          "base_form": "见了",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "」",
-          "reading": "」",
-          "base_form": "」",
-          "pos": "記号",
-          "pos_detail": "括弧閉",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "你只留",
-          "reading": null
-        },
-        {
-          "text": "下",
-          "reading": "カ"
-        },
-        {
-          "text": "了",
-          "reading": "リョウ"
-        },
-        {
-          "text": "一句",
-          "reading": "イック"
-        },
-        {
-          "text": "「",
-          "reading": null
-        },
-        {
-          "text": "再",
-          "reading": "サイ"
-        },
-        {
-          "text": "见了",
-          "reading": null
-        },
-        {
-          "text": "」",
-          "reading": null
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 9,
+      "index": 4,
       "text": "その一言で全てが分かった",
       "romaji": "sono hitokoto de subete ga waka ta",
+      "translation": "但仅仅这三个字我就明白了一切",
       "start": 34.0,
       "end": 37.0,
       "section": "Unknown",
@@ -1344,116 +889,10 @@
       "has_notes": false
     },
     {
-      "index": 10,
-      "text": "但仅仅这三个字我就明白了一切",
-      "romaji": "tadashi 仅仅这 san 个字我 就明白 ryou isai",
-      "start": 37.0,
-      "end": 37.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "但",
-          "reading": "タダシ",
-          "base_form": "但",
-          "pos": "接続詞",
-          "pos_detail": "*",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "仅仅这",
-          "reading": "仅仅这",
-          "base_form": "仅仅这",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "三",
-          "reading": "サン",
-          "base_form": "三",
-          "pos": "名詞",
-          "pos_detail": "数",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "个字我",
-          "reading": "个字我",
-          "base_form": "个字我",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "就明白",
-          "reading": "就明白",
-          "base_form": "就明白",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "了",
-          "reading": "リョウ",
-          "base_form": "了",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "一切",
-          "reading": "イッサイ",
-          "base_form": "一切",
-          "pos": "名詞",
-          "pos_detail": "副詞可能",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "但",
-          "reading": "タダシ"
-        },
-        {
-          "text": "仅仅这",
-          "reading": null
-        },
-        {
-          "text": "三",
-          "reading": "サン"
-        },
-        {
-          "text": "个字我",
-          "reading": null
-        },
-        {
-          "text": "就明白",
-          "reading": null
-        },
-        {
-          "text": "了",
-          "reading": "リョウ"
-        },
-        {
-          "text": "一切",
-          "reading": "イッサイ"
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 11,
+      "index": 5,
       "text": "日が沈み出した空と君の姿",
       "romaji": "hi ga shizumi dashi ta sora to kimi no sugata",
+      "translation": "日落时分的天空与你的身影",
       "start": 37.0,
       "end": 42.0,
       "section": "Unknown",
@@ -1554,28 +993,28 @@
         {
           "word": "日",
           "reading": "ひ",
-          "meaning": "day, sun",
+          "meaning": "日；太阳",
           "jlpt_level": "N5",
           "pos": "名詞"
         },
         {
           "word": "沈む",
           "reading": "しずむ",
-          "meaning": "to sink",
+          "meaning": "下沉",
           "jlpt_level": "N3",
           "pos": "動詞"
         },
         {
           "word": "空",
           "reading": "そら",
-          "meaning": "sky",
+          "meaning": "天空",
           "jlpt_level": "N5",
           "pos": "名詞"
         },
         {
           "word": "君",
           "reading": "きみ",
-          "meaning": "you (informal)",
+          "meaning": "你（非正式）",
           "jlpt_level": "N5",
           "pos": "名詞"
         }
@@ -1626,131 +1065,10 @@
       "has_notes": true
     },
     {
-      "index": 12,
-      "text": "日落时分的天空与你的身影",
-      "romaji": "nichi 落时分 teki tenkuu azuka 你的身 kage",
-      "start": 42.0,
-      "end": 42.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "日",
-          "reading": "ニチ",
-          "base_form": "日",
-          "pos": "名詞",
-          "pos_detail": "固有名詞",
-          "conjugation_type": "地域",
-          "conjugation_form": "国"
-        },
-        {
-          "surface": "落时分",
-          "reading": "落时分",
-          "base_form": "落时分",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "的",
-          "reading": "テキ",
-          "base_form": "的",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "形容動詞語幹",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "天空",
-          "reading": "テンクウ",
-          "base_form": "天空",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "与",
-          "reading": "アズカ",
-          "base_form": "与る",
-          "pos": "動詞",
-          "pos_detail": "自立",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "你的身",
-          "reading": "你的身",
-          "base_form": "你的身",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "影",
-          "reading": "カゲ",
-          "base_form": "影",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [
-        {
-          "word": "日",
-          "reading": "ひ",
-          "meaning": "day, sun",
-          "jlpt_level": "N5",
-          "pos": "名詞"
-        },
-        {
-          "word": "影",
-          "reading": "かげ",
-          "meaning": "shadow",
-          "jlpt_level": "N3",
-          "pos": "名詞"
-        }
-      ],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "日",
-          "reading": "ニチ"
-        },
-        {
-          "text": "落时分",
-          "reading": null
-        },
-        {
-          "text": "的",
-          "reading": "テキ"
-        },
-        {
-          "text": "天空",
-          "reading": "テンクウ"
-        },
-        {
-          "text": "与",
-          "reading": "アズカ"
-        },
-        {
-          "text": "你的身",
-          "reading": null
-        },
-        {
-          "text": "影",
-          "reading": "カゲ"
-        }
-      ],
-      "has_notes": true
-    },
-    {
-      "index": 13,
+      "index": 6,
       "text": "フェンス越しに重なっていた",
       "romaji": "fuensu goshi ni kasana te i ta",
+      "translation": "在围栏的外侧重叠在一起",
       "start": 42.0,
       "end": 46.0,
       "section": "Unknown",
@@ -1855,103 +1173,10 @@
       "has_notes": false
     },
     {
-      "index": 14,
-      "text": "在围栏的外侧重叠在一起",
-      "romaji": "zai 围栏的 gai 侧重叠 zai kazuki",
-      "start": 46.0,
-      "end": 46.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "在",
-          "reading": "ザイ",
-          "base_form": "在",
-          "pos": "接頭詞",
-          "pos_detail": "名詞接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "围栏的",
-          "reading": "围栏的",
-          "base_form": "围栏的",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "外",
-          "reading": "ガイ",
-          "base_form": "外",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "一般",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "侧重叠",
-          "reading": "侧重叠",
-          "base_form": "侧重叠",
-          "pos": "名詞",
-          "pos_detail": "固有名詞",
-          "conjugation_type": "組織",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "在",
-          "reading": "ザイ",
-          "base_form": "在",
-          "pos": "接頭詞",
-          "pos_detail": "名詞接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "一起",
-          "reading": "カズキ",
-          "base_form": "一起",
-          "pos": "名詞",
-          "pos_detail": "固有名詞",
-          "conjugation_type": "人名",
-          "conjugation_form": "名"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "在",
-          "reading": "ザイ"
-        },
-        {
-          "text": "围栏的",
-          "reading": null
-        },
-        {
-          "text": "外",
-          "reading": "ガイ"
-        },
-        {
-          "text": "侧重叠",
-          "reading": null
-        },
-        {
-          "text": "在",
-          "reading": "ザイ"
-        },
-        {
-          "text": "一起",
-          "reading": "カズキ"
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 15,
+      "index": 7,
       "text": "初めて会った日から",
       "romaji": "hajimete a ta hi kara",
+      "translation": "从相遇的那天开始",
       "start": 46.0,
       "end": 49.0,
       "section": "Unknown",
@@ -2007,7 +1232,7 @@
         {
           "word": "日",
           "reading": "ひ",
-          "meaning": "day, sun",
+          "meaning": "日；太阳",
           "jlpt_level": "N5",
           "pos": "名詞"
         }
@@ -2038,77 +1263,10 @@
       "has_notes": true
     },
     {
-      "index": 16,
-      "text": "从相遇的那天开始",
-      "romaji": "从相遇 teki 那天开 hajime",
-      "start": 49.0,
-      "end": 49.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "从相遇",
-          "reading": "从相遇",
-          "base_form": "从相遇",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "的",
-          "reading": "テキ",
-          "base_form": "的",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "形容動詞語幹",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "那天开",
-          "reading": "那天开",
-          "base_form": "那天开",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "始",
-          "reading": "ハジメ",
-          "base_form": "始",
-          "pos": "名詞",
-          "pos_detail": "固有名詞",
-          "conjugation_type": "人名",
-          "conjugation_form": "名"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "从相遇",
-          "reading": null
-        },
-        {
-          "text": "的",
-          "reading": "テキ"
-        },
-        {
-          "text": "那天开",
-          "reading": null
-        },
-        {
-          "text": "始",
-          "reading": "ハジメ"
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 17,
+      "index": 8,
       "text": "僕の心の全てを奪った",
       "romaji": "boku no kokoro no subete wo uba ta",
+      "translation": "我的内心全部都被你夺去",
       "start": 49.0,
       "end": 52.0,
       "section": "Unknown",
@@ -2191,14 +1349,14 @@
         {
           "word": "僕",
           "reading": "ぼく",
-          "meaning": "I (male, informal)",
+          "meaning": "我（男性非正式）",
           "jlpt_level": "N5",
           "pos": "名詞"
         },
         {
           "word": "心",
           "reading": "こころ",
-          "meaning": "heart, mind",
+          "meaning": "心；内心",
           "jlpt_level": "N5",
           "pos": "名詞"
         }
@@ -2241,116 +1399,10 @@
       "has_notes": true
     },
     {
-      "index": 18,
-      "text": "我的内心全部都被你夺去",
-      "romaji": "waga teki naishin zenbu to hi 你夺去",
-      "start": 52.0,
-      "end": 52.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "我",
-          "reading": "ワガ",
-          "base_form": "我",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "的",
-          "reading": "テキ",
-          "base_form": "的",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "形容動詞語幹",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "内心",
-          "reading": "ナイシン",
-          "base_form": "内心",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "全部",
-          "reading": "ゼンブ",
-          "base_form": "全部",
-          "pos": "名詞",
-          "pos_detail": "副詞可能",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "都",
-          "reading": "ト",
-          "base_form": "都",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "地域",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "被",
-          "reading": "ヒ",
-          "base_form": "被",
-          "pos": "接頭詞",
-          "pos_detail": "名詞接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "你夺去",
-          "reading": "你夺去",
-          "base_form": "你夺去",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "我",
-          "reading": "ワガ"
-        },
-        {
-          "text": "的",
-          "reading": "テキ"
-        },
-        {
-          "text": "内心",
-          "reading": "ナイシン"
-        },
-        {
-          "text": "全部",
-          "reading": "ゼンブ"
-        },
-        {
-          "text": "都",
-          "reading": "ト"
-        },
-        {
-          "text": "被",
-          "reading": "ヒ"
-        },
-        {
-          "text": "你夺去",
-          "reading": null
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 19,
+      "index": 9,
       "text": "どこか儚い空気を纏う君は",
       "romaji": "doko ka hakanai kuuki wo matou kimi ha",
+      "translation": "缠绕着飘渺氤氲的你",
       "start": 52.0,
       "end": 57.0,
       "section": "Unknown",
@@ -2433,14 +1485,14 @@
         {
           "word": "儚い",
           "reading": "はかない",
-          "meaning": "fleeting, transient",
+          "meaning": "短暂；虚幻",
           "jlpt_level": "N3",
           "pos": "形容詞"
         },
         {
           "word": "君",
           "reading": "きみ",
-          "meaning": "you (informal)",
+          "meaning": "你（非正式）",
           "jlpt_level": "N5",
           "pos": "名詞"
         }
@@ -2483,64 +1535,10 @@
       "has_notes": true
     },
     {
-      "index": 20,
-      "text": "缠绕着飘渺氤氲的你",
-      "romaji": "缠绕着 飘渺氤 氲的你",
-      "start": 57.0,
-      "end": 57.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "缠绕着",
-          "reading": "缠绕着",
-          "base_form": "缠绕着",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "飘渺氤",
-          "reading": "飘渺氤",
-          "base_form": "飘渺氤",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "氲的你",
-          "reading": "氲的你",
-          "base_form": "氲的你",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "缠绕着",
-          "reading": null
-        },
-        {
-          "text": "飘渺氤",
-          "reading": null
-        },
-        {
-          "text": "氲的你",
-          "reading": null
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 21,
+      "index": 10,
       "text": "寂しい目をしてたんだ",
       "romaji": "sabishii me wo shi te ta n da",
+      "translation": "眼神却显得如此寂寞",
       "start": 57.0,
       "end": 60.0,
       "section": "Unknown",
@@ -2623,14 +1621,14 @@
         {
           "word": "寂しい",
           "reading": "さびしい",
-          "meaning": "lonely, lonesome",
+          "meaning": "寂寞；孤单",
           "jlpt_level": "N3",
           "pos": "形容詞"
         },
         {
           "word": "目",
           "reading": "め",
-          "meaning": "eye",
+          "meaning": "眼睛",
           "jlpt_level": "N5",
           "pos": "名詞"
         }
@@ -2673,90 +1671,10 @@
       "has_notes": true
     },
     {
-      "index": 22,
-      "text": "眼神却显得如此寂寞",
-      "romaji": "me shin 却显得 如此寂 寞",
-      "start": 60.0,
-      "end": 60.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "眼",
-          "reading": "メ",
-          "base_form": "眼",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "神",
-          "reading": "シン",
-          "base_form": "神",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "一般",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "却显得",
-          "reading": "却显得",
-          "base_form": "却显得",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "如此寂",
-          "reading": "如此寂",
-          "base_form": "如此寂",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "寞",
-          "reading": "寞",
-          "base_form": "寞",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "眼",
-          "reading": "メ"
-        },
-        {
-          "text": "神",
-          "reading": "シン"
-        },
-        {
-          "text": "却显得",
-          "reading": null
-        },
-        {
-          "text": "如此寂",
-          "reading": null
-        },
-        {
-          "text": "寞",
-          "reading": null
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 23,
+      "index": 11,
       "text": "いつだってチックタックと",
       "romaji": "itsu date chiku taku to",
+      "translation": "在这时针不停转动的世界里",
       "start": 60.0,
       "end": 62.0,
       "section": "Unknown",
@@ -2835,124 +1753,10 @@
       "has_notes": false
     },
     {
-      "index": 24,
-      "text": "在这时针不停转动的世界里",
-      "romaji": "zai 这时针 fu toma 转动的 sekai sato",
-      "start": 62.0,
-      "end": 62.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "在",
-          "reading": "ザイ",
-          "base_form": "在",
-          "pos": "接頭詞",
-          "pos_detail": "名詞接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "这时针",
-          "reading": "这时针",
-          "base_form": "这时针",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "不",
-          "reading": "フ",
-          "base_form": "不",
-          "pos": "接頭詞",
-          "pos_detail": "名詞接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "停",
-          "reading": "トマ",
-          "base_form": "停る",
-          "pos": "動詞",
-          "pos_detail": "自立",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "转动的",
-          "reading": "转动的",
-          "base_form": "转动的",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "世界",
-          "reading": "セカイ",
-          "base_form": "世界",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "里",
-          "reading": "サト",
-          "base_form": "里",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [
-        {
-          "word": "世界",
-          "reading": "せかい",
-          "meaning": "world",
-          "jlpt_level": "N4",
-          "pos": "名詞"
-        }
-      ],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "在",
-          "reading": "ザイ"
-        },
-        {
-          "text": "这时针",
-          "reading": null
-        },
-        {
-          "text": "不",
-          "reading": "フ"
-        },
-        {
-          "text": "停",
-          "reading": "トマ"
-        },
-        {
-          "text": "转动的",
-          "reading": null
-        },
-        {
-          "text": "世界",
-          "reading": "セカイ"
-        },
-        {
-          "text": "里",
-          "reading": "サト"
-        }
-      ],
-      "has_notes": true
-    },
-    {
-      "index": 25,
+      "index": 12,
       "text": "鳴る世界で何度だってさ",
       "romaji": "naru sekai de nan do date sa",
+      "translation": "无论多少次",
       "start": 62.0,
       "end": 64.0,
       "section": "Unknown",
@@ -3026,14 +1830,14 @@
         {
           "word": "世界",
           "reading": "せかい",
-          "meaning": "world",
+          "meaning": "世界",
           "jlpt_level": "N4",
           "pos": "名詞"
         },
         {
           "word": "何",
           "reading": "なに/なん",
-          "meaning": "what",
+          "meaning": "什么",
           "jlpt_level": "N5",
           "pos": "名詞"
         }
@@ -3072,64 +1876,10 @@
       "has_notes": true
     },
     {
-      "index": 26,
-      "text": "无论多少次",
-      "romaji": "无论多 shou tsugi",
-      "start": 64.0,
-      "end": 64.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "无论多",
-          "reading": "无论多",
-          "base_form": "无论多",
-          "pos": "名詞",
-          "pos_detail": "固有名詞",
-          "conjugation_type": "組織",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "少",
-          "reading": "ショウ",
-          "base_form": "少",
-          "pos": "接頭詞",
-          "pos_detail": "名詞接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "次",
-          "reading": "ツギ",
-          "base_form": "次",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "无论多",
-          "reading": null
-        },
-        {
-          "text": "少",
-          "reading": "ショウ"
-        },
-        {
-          "text": "次",
-          "reading": "ツギ"
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 27,
+      "index": 13,
       "text": "触れる心無い言葉うるさい声に",
       "romaji": "fureru kokoronai kotoba urusai koe ni",
+      "translation": "去触碰那残酷之言刺耳之声",
       "start": 64.0,
       "end": 66.0,
       "section": "Unknown",
@@ -3194,14 +1944,14 @@
         {
           "word": "言葉",
           "reading": "ことば",
-          "meaning": "words, language",
+          "meaning": "话语；语言",
           "jlpt_level": "N4",
           "pos": "名詞"
         },
         {
           "word": "声",
           "reading": "こえ",
-          "meaning": "voice",
+          "meaning": "声音",
           "jlpt_level": "N5",
           "pos": "名詞"
         }
@@ -3236,163 +1986,10 @@
       "has_notes": true
     },
     {
-      "index": 28,
-      "text": "去触碰那残酷之言刺耳之声",
-      "romaji": "sa sawa 碰那残 koku no gen toge mimi no koe",
-      "start": 66.0,
-      "end": 66.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "去",
-          "reading": "サ",
-          "base_form": "去る",
-          "pos": "動詞",
-          "pos_detail": "自立",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "触",
-          "reading": "サワ",
-          "base_form": "触る",
-          "pos": "動詞",
-          "pos_detail": "自立",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "碰那残",
-          "reading": "碰那残",
-          "base_form": "碰那残",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "酷",
-          "reading": "コク",
-          "base_form": "酷",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "之",
-          "reading": "ノ",
-          "base_form": "之",
-          "pos": "助詞",
-          "pos_detail": "格助詞",
-          "conjugation_type": "一般",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "言",
-          "reading": "ゲン",
-          "base_form": "言",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "刺",
-          "reading": "トゲ",
-          "base_form": "刺",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "耳",
-          "reading": "ミミ",
-          "base_form": "耳",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "之",
-          "reading": "ノ",
-          "base_form": "之",
-          "pos": "助詞",
-          "pos_detail": "格助詞",
-          "conjugation_type": "一般",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "声",
-          "reading": "コエ",
-          "base_form": "声",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [
-        {
-          "word": "声",
-          "reading": "こえ",
-          "meaning": "voice",
-          "jlpt_level": "N5",
-          "pos": "名詞"
-        }
-      ],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "去",
-          "reading": "サ"
-        },
-        {
-          "text": "触",
-          "reading": "サワ"
-        },
-        {
-          "text": "碰那残",
-          "reading": null
-        },
-        {
-          "text": "酷",
-          "reading": "コク"
-        },
-        {
-          "text": "之",
-          "reading": "ノ"
-        },
-        {
-          "text": "言",
-          "reading": "ゲン"
-        },
-        {
-          "text": "刺",
-          "reading": "トゲ"
-        },
-        {
-          "text": "耳",
-          "reading": "ミミ"
-        },
-        {
-          "text": "之",
-          "reading": "ノ"
-        },
-        {
-          "text": "声",
-          "reading": "コエ"
-        }
-      ],
-      "has_notes": true
-    },
-    {
-      "index": 29,
+      "index": 14,
       "text": "涙が零れそうでも",
       "romaji": "namida ga kobore sou de mo",
+      "translation": "都会泫然欲泣",
       "start": 66.0,
       "end": 68.0,
       "section": "Unknown",
@@ -3457,7 +2054,7 @@
         {
           "word": "涙",
           "reading": "なみだ",
-          "meaning": "tears",
+          "meaning": "眼泪",
           "jlpt_level": "N4",
           "pos": "名詞"
         }
@@ -3492,64 +2089,10 @@
       "has_notes": true
     },
     {
-      "index": 30,
-      "text": "都会泫然欲泣",
-      "romaji": "tokai 泫然欲 泣",
-      "start": 68.0,
-      "end": 68.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "都会",
-          "reading": "トカイ",
-          "base_form": "都会",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "泫然欲",
-          "reading": "泫然欲",
-          "base_form": "泫然欲",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "泣",
-          "reading": "泣",
-          "base_form": "泣",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "都会",
-          "reading": "トカイ"
-        },
-        {
-          "text": "泫然欲",
-          "reading": null
-        },
-        {
-          "text": "泣",
-          "reading": null
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 31,
+      "index": 15,
       "text": "ありきたりな喜び",
       "romaji": "ari ki tari na yorokobi",
+      "translation": null,
       "start": 68.0,
       "end": 71.0,
       "section": "Unknown",
@@ -3628,13 +2171,14 @@
       "has_notes": false
     },
     {
-      "index": 32,
+      "index": 16,
       "text": "きっと二人なら見つけられる",
       "romaji": "kito ni nin nara mitsuke rareru",
+      "translation": "但若是两个人的话",
       "start": 71.0,
-      "end": 71.0,
+      "end": 75.0,
       "section": "Unknown",
-      "duration": 0.0,
+      "duration": 4.0,
       "tokens": [
         {
           "surface": "きっと",
@@ -3695,14 +2239,14 @@
         {
           "word": "人",
           "reading": "ひと",
-          "meaning": "person",
+          "meaning": "人",
           "jlpt_level": "N5",
           "pos": "名詞"
         },
         {
           "word": "見つける",
           "reading": "みつける",
-          "meaning": "to find, to discover",
+          "meaning": "找到；发现",
           "jlpt_level": "N4",
           "pos": "動詞"
         }
@@ -3712,7 +2256,7 @@
           "pattern": "〜られる",
           "level": "N4",
           "meaning": "can do ~ / passive / potential",
-          "explanation": "可能态/被动态。一段动词去掉「る」+ られる。例：食べられる（能吃/被吃）",
+          "explanation": "可能态或被动态",
           "example": "見られる → 能被看到/被看",
           "in_context": "きっと二人なら見つけられる"
         }
@@ -3746,103 +2290,10 @@
       "has_notes": true
     },
     {
-      "index": 33,
-      "text": "但若是两个人的话",
-      "romaji": "tadashi waka ze 两个人 teki 话",
-      "start": 71.0,
-      "end": 75.0,
-      "section": "Unknown",
-      "duration": 4.0,
-      "tokens": [
-        {
-          "surface": "但",
-          "reading": "タダシ",
-          "base_form": "但",
-          "pos": "接続詞",
-          "pos_detail": "*",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "若",
-          "reading": "ワカ",
-          "base_form": "若",
-          "pos": "接頭詞",
-          "pos_detail": "名詞接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "是",
-          "reading": "ゼ",
-          "base_form": "是",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "两个人",
-          "reading": "两个人",
-          "base_form": "两个人",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "的",
-          "reading": "テキ",
-          "base_form": "的",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "形容動詞語幹",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "话",
-          "reading": "话",
-          "base_form": "话",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "但",
-          "reading": "タダシ"
-        },
-        {
-          "text": "若",
-          "reading": "ワカ"
-        },
-        {
-          "text": "是",
-          "reading": "ゼ"
-        },
-        {
-          "text": "两个人",
-          "reading": null
-        },
-        {
-          "text": "的",
-          "reading": "テキ"
-        },
-        {
-          "text": "话",
-          "reading": null
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 34,
+      "index": 17,
       "text": "一定能寻找到属于我们的平凡的喜悦",
       "romaji": "itei nou 寻找到 zoku 于我们 teki heibon teki kietsu",
+      "translation": null,
       "start": 75.0,
       "end": 75.0,
       "section": "Unknown",
@@ -3973,9 +2424,10 @@
       "has_notes": false
     },
     {
-      "index": 35,
+      "index": 18,
       "text": "騒がしい日々に笑えない君に",
       "romaji": "sawagashii hibi ni warae nai kimi ni",
+      "translation": "为在喧嚣的日子里失去笑容的你",
       "start": 75.0,
       "end": 79.0,
       "section": "Unknown",
@@ -4049,7 +2501,7 @@
         {
           "word": "君",
           "reading": "きみ",
-          "meaning": "you (informal)",
+          "meaning": "你（非正式）",
           "jlpt_level": "N5",
           "pos": "名詞"
         }
@@ -4088,155 +2540,10 @@
       "has_notes": true
     },
     {
-      "index": 36,
-      "text": "为在喧嚣的日子里失去笑容的你",
-      "romaji": "为在喧 嚣的日 ko sato shitsu sa emi you teki 你",
-      "start": 79.0,
-      "end": 79.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "为在喧",
-          "reading": "为在喧",
-          "base_form": "为在喧",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "嚣的日",
-          "reading": "嚣的日",
-          "base_form": "嚣的日",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "子",
-          "reading": "コ",
-          "base_form": "子",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "一般",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "里",
-          "reading": "サト",
-          "base_form": "里",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "失",
-          "reading": "シツ",
-          "base_form": "失",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "去",
-          "reading": "サ",
-          "base_form": "去る",
-          "pos": "動詞",
-          "pos_detail": "自立",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "笑",
-          "reading": "エミ",
-          "base_form": "笑",
-          "pos": "名詞",
-          "pos_detail": "固有名詞",
-          "conjugation_type": "人名",
-          "conjugation_form": "名"
-        },
-        {
-          "surface": "容",
-          "reading": "ヨウ",
-          "base_form": "容",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "的",
-          "reading": "テキ",
-          "base_form": "的",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "形容動詞語幹",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "你",
-          "reading": "你",
-          "base_form": "你",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "为在喧",
-          "reading": null
-        },
-        {
-          "text": "嚣的日",
-          "reading": null
-        },
-        {
-          "text": "子",
-          "reading": "コ"
-        },
-        {
-          "text": "里",
-          "reading": "サト"
-        },
-        {
-          "text": "失",
-          "reading": "シツ"
-        },
-        {
-          "text": "去",
-          "reading": "サ"
-        },
-        {
-          "text": "笑",
-          "reading": "エミ"
-        },
-        {
-          "text": "容",
-          "reading": "ヨウ"
-        },
-        {
-          "text": "的",
-          "reading": "テキ"
-        },
-        {
-          "text": "你",
-          "reading": null
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 37,
+      "index": 19,
       "text": "思い付く限り眩しい明日を",
       "romaji": "omoitsuku kagiri mabushii ashita wo",
+      "translation": "献上所能想象到的一切耀眼的明天",
       "start": 79.0,
       "end": 82.0,
       "section": "Unknown",
@@ -4292,14 +2599,14 @@
         {
           "word": "眩しい",
           "reading": "まぶしい",
-          "meaning": "dazzling, bright",
+          "meaning": "耀眼的，明亮的",
           "jlpt_level": "N3",
           "pos": "形容詞"
         },
         {
           "word": "明日",
           "reading": "あした",
-          "meaning": "tomorrow",
+          "meaning": "明天",
           "jlpt_level": "N5",
           "pos": "名詞"
         }
@@ -4330,155 +2637,10 @@
       "has_notes": true
     },
     {
-      "index": 38,
-      "text": "献上所能想象到的一切耀眼的明天",
-      "romaji": "kenjou sho nou sou zou ita teki isai 耀眼的 meiten",
-      "start": 82.0,
-      "end": 82.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "献上",
-          "reading": "ケンジョウ",
-          "base_form": "献上",
-          "pos": "名詞",
-          "pos_detail": "サ変接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "所",
-          "reading": "ショ",
-          "base_form": "所",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "一般",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "能",
-          "reading": "ノウ",
-          "base_form": "能",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "想",
-          "reading": "ソウ",
-          "base_form": "想",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "象",
-          "reading": "ゾウ",
-          "base_form": "象",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "到",
-          "reading": "イタ",
-          "base_form": "到る",
-          "pos": "動詞",
-          "pos_detail": "自立",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "的",
-          "reading": "テキ",
-          "base_form": "的",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "形容動詞語幹",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "一切",
-          "reading": "イッサイ",
-          "base_form": "一切",
-          "pos": "名詞",
-          "pos_detail": "副詞可能",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "耀眼的",
-          "reading": "耀眼的",
-          "base_form": "耀眼的",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "明天",
-          "reading": "メイテン",
-          "base_form": "明天",
-          "pos": "名詞",
-          "pos_detail": "固有名詞",
-          "conjugation_type": "地域",
-          "conjugation_form": "一般"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "献上",
-          "reading": "ケンジョウ"
-        },
-        {
-          "text": "所",
-          "reading": "ショ"
-        },
-        {
-          "text": "能",
-          "reading": "ノウ"
-        },
-        {
-          "text": "想",
-          "reading": "ソウ"
-        },
-        {
-          "text": "象",
-          "reading": "ゾウ"
-        },
-        {
-          "text": "到",
-          "reading": "イタ"
-        },
-        {
-          "text": "的",
-          "reading": "テキ"
-        },
-        {
-          "text": "一切",
-          "reading": "イッサイ"
-        },
-        {
-          "text": "耀眼的",
-          "reading": null
-        },
-        {
-          "text": "明天",
-          "reading": "メイテン"
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 39,
+      "index": 20,
       "text": "明けない夜に落ちてゆく前に",
       "romaji": "ake nai yoru ni ochi te yuku mae ni",
+      "translation": "在坠入永不破晓的黑夜之前",
       "start": 82.0,
       "end": 86.0,
       "section": "Unknown",
@@ -4570,7 +2732,7 @@
         {
           "word": "夜",
           "reading": "よる",
-          "meaning": "night, evening",
+          "meaning": "夜晚",
           "jlpt_level": "N5",
           "pos": "名詞"
         }
@@ -4617,124 +2779,10 @@
       "has_notes": true
     },
     {
-      "index": 40,
-      "text": "在坠入永不破晓的黑夜之前",
-      "romaji": "zai 坠入永 fuwa 晓的黑 yoru no mae",
-      "start": 86.0,
-      "end": 86.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "在",
-          "reading": "ザイ",
-          "base_form": "在",
-          "pos": "接頭詞",
-          "pos_detail": "名詞接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "坠入永",
-          "reading": "坠入永",
-          "base_form": "坠入永",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "不破",
-          "reading": "フワ",
-          "base_form": "不破",
-          "pos": "名詞",
-          "pos_detail": "固有名詞",
-          "conjugation_type": "地域",
-          "conjugation_form": "一般"
-        },
-        {
-          "surface": "晓的黑",
-          "reading": "晓的黑",
-          "base_form": "晓的黑",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "夜",
-          "reading": "ヨル",
-          "base_form": "夜",
-          "pos": "名詞",
-          "pos_detail": "副詞可能",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "之",
-          "reading": "ノ",
-          "base_form": "之",
-          "pos": "助詞",
-          "pos_detail": "格助詞",
-          "conjugation_type": "一般",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "前",
-          "reading": "マエ",
-          "base_form": "前",
-          "pos": "名詞",
-          "pos_detail": "副詞可能",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [
-        {
-          "word": "夜",
-          "reading": "よる",
-          "meaning": "night, evening",
-          "jlpt_level": "N5",
-          "pos": "名詞"
-        }
-      ],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "在",
-          "reading": "ザイ"
-        },
-        {
-          "text": "坠入永",
-          "reading": null
-        },
-        {
-          "text": "不破",
-          "reading": "フワ"
-        },
-        {
-          "text": "晓的黑",
-          "reading": null
-        },
-        {
-          "text": "夜",
-          "reading": "ヨル"
-        },
-        {
-          "text": "之",
-          "reading": "ノ"
-        },
-        {
-          "text": "前",
-          "reading": "マエ"
-        }
-      ],
-      "has_notes": true
-    },
-    {
-      "index": 41,
+      "index": 21,
       "text": "僕の手を掴んでほら",
       "romaji": "boku no te wo tsukan de hora",
+      "translation": "来 抓住我的手吧",
       "start": 86.0,
       "end": 89.0,
       "section": "Unknown",
@@ -4808,14 +2856,14 @@
         {
           "word": "僕",
           "reading": "ぼく",
-          "meaning": "I (male, informal)",
+          "meaning": "我（男性非正式）",
           "jlpt_level": "N5",
           "pos": "名詞"
         },
         {
           "word": "手",
           "reading": "て",
-          "meaning": "hand",
+          "meaning": "手",
           "jlpt_level": "N5",
           "pos": "名詞"
         }
@@ -4854,144 +2902,10 @@
       "has_notes": true
     },
     {
-      "index": 42,
-      "text": "来 抓住我的手吧",
-      "romaji": "ki tsume juu waga teki te 吧",
-      "start": 89.0,
-      "end": 89.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "来",
-          "reading": "キ",
-          "base_form": "来る",
-          "pos": "動詞",
-          "pos_detail": "自立",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": " ",
-          "reading": " ",
-          "base_form": " ",
-          "pos": "記号",
-          "pos_detail": "空白",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "抓",
-          "reading": "ツメ",
-          "base_form": "抓る",
-          "pos": "動詞",
-          "pos_detail": "自立",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "住",
-          "reading": "ジュウ",
-          "base_form": "住",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "我",
-          "reading": "ワガ",
-          "base_form": "我",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "的",
-          "reading": "テキ",
-          "base_form": "的",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "形容動詞語幹",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "手",
-          "reading": "テ",
-          "base_form": "手",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "吧",
-          "reading": "吧",
-          "base_form": "吧",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [
-        {
-          "word": "来る",
-          "reading": "くる",
-          "meaning": "to come",
-          "jlpt_level": "N5",
-          "pos": "動詞"
-        },
-        {
-          "word": "手",
-          "reading": "て",
-          "meaning": "hand",
-          "jlpt_level": "N5",
-          "pos": "名詞"
-        }
-      ],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "来",
-          "reading": "キ"
-        },
-        {
-          "text": " ",
-          "reading": null
-        },
-        {
-          "text": "抓",
-          "reading": "ツメ"
-        },
-        {
-          "text": "住",
-          "reading": "ジュウ"
-        },
-        {
-          "text": "我",
-          "reading": "ワガ"
-        },
-        {
-          "text": "的",
-          "reading": "テキ"
-        },
-        {
-          "text": "手",
-          "reading": "テ"
-        },
-        {
-          "text": "吧",
-          "reading": null
-        }
-      ],
-      "has_notes": true
-    },
-    {
-      "index": 43,
+      "index": 22,
       "text": "忘れてしまいたくて",
       "romaji": "wasure te shimai taku te",
+      "translation": "即使是那些想要尽数忘却的",
       "start": 89.0,
       "end": 92.0,
       "section": "Unknown",
@@ -5047,7 +2961,7 @@
         {
           "word": "忘れる",
           "reading": "わすれる",
-          "meaning": "to forget",
+          "meaning": "忘记",
           "jlpt_level": "N4",
           "pos": "動詞"
         }
@@ -5078,116 +2992,10 @@
       "has_notes": true
     },
     {
-      "index": 44,
-      "text": "即使是那些想要尽数忘却的",
-      "romaji": "soku shi ze 那些想 you 尽数忘 却的",
-      "start": 92.0,
-      "end": 92.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "即",
-          "reading": "ソク",
-          "base_form": "即",
-          "pos": "名詞",
-          "pos_detail": "サ変接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "使",
-          "reading": "シ",
-          "base_form": "使",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "一般",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "是",
-          "reading": "ゼ",
-          "base_form": "是",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "那些想",
-          "reading": "那些想",
-          "base_form": "那些想",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "要",
-          "reading": "ヨウ",
-          "base_form": "要",
-          "pos": "接頭詞",
-          "pos_detail": "名詞接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "尽数忘",
-          "reading": "尽数忘",
-          "base_form": "尽数忘",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "却的",
-          "reading": "却的",
-          "base_form": "却的",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "即",
-          "reading": "ソク"
-        },
-        {
-          "text": "使",
-          "reading": "シ"
-        },
-        {
-          "text": "是",
-          "reading": "ゼ"
-        },
-        {
-          "text": "那些想",
-          "reading": null
-        },
-        {
-          "text": "要",
-          "reading": "ヨウ"
-        },
-        {
-          "text": "尽数忘",
-          "reading": null
-        },
-        {
-          "text": "却的",
-          "reading": null
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 45,
+      "index": 23,
       "text": "閉じ込めた日々も",
       "romaji": "tojikome ta hibi mo",
+      "translation": "封闭的日子",
       "start": 92.0,
       "end": 94.0,
       "section": "Unknown",
@@ -5253,64 +3061,10 @@
       "has_notes": false
     },
     {
-      "index": 46,
-      "text": "封闭的日子",
-      "romaji": "fuu 闭的日 ko",
-      "start": 94.0,
-      "end": 94.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "封",
-          "reading": "フウ",
-          "base_form": "封",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "闭的日",
-          "reading": "闭的日",
-          "base_form": "闭的日",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "子",
-          "reading": "コ",
-          "base_form": "子",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "一般",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "封",
-          "reading": "フウ"
-        },
-        {
-          "text": "闭的日",
-          "reading": null
-        },
-        {
-          "text": "子",
-          "reading": "コ"
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 47,
+      "index": 24,
       "text": "抱きしめた温もりで溶かすから",
       "romaji": "dakishime ta nukumori de tokasu kara",
+      "translation": null,
       "start": 94.0,
       "end": 97.0,
       "section": "Unknown",
@@ -5375,7 +3129,7 @@
         {
           "word": "抱きしめる",
           "reading": "だきしめる",
-          "meaning": "to embrace tightly",
+          "meaning": "紧紧拥抱",
           "jlpt_level": "N3",
           "pos": "動詞"
         }
@@ -5410,13 +3164,14 @@
       "has_notes": true
     },
     {
-      "index": 48,
+      "index": 25,
       "text": "怖くないよいつか日が昇るまで",
       "romaji": "kowaku nai yo itsuka bi ga noboru made",
+      "translation": "我也会用相拥时的温暖将其溶化",
       "start": 97.0,
-      "end": 97.0,
+      "end": 102.0,
       "section": "Unknown",
-      "duration": 0.0,
+      "duration": 5.0,
       "tokens": [
         {
           "surface": "怖く",
@@ -5495,14 +3250,14 @@
         {
           "word": "怖い",
           "reading": "こわい",
-          "meaning": "scary, frightening",
+          "meaning": "可怕的，恐怖的",
           "jlpt_level": "N3",
           "pos": "形容詞"
         },
         {
           "word": "日",
           "reading": "ひ",
-          "meaning": "day, sun",
+          "meaning": "日；太阳",
           "jlpt_level": "N5",
           "pos": "名詞"
         }
@@ -5545,116 +3300,10 @@
       "has_notes": true
     },
     {
-      "index": 49,
-      "text": "我也会用相拥时的温暖将其溶化",
-      "romaji": "waga 也会用 shou 拥时的 ondan hata 其溶化",
-      "start": 97.0,
-      "end": 102.0,
-      "section": "Unknown",
-      "duration": 5.0,
-      "tokens": [
-        {
-          "surface": "我",
-          "reading": "ワガ",
-          "base_form": "我",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "也会用",
-          "reading": "也会用",
-          "base_form": "也会用",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "相",
-          "reading": "ショウ",
-          "base_form": "相",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "一般",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "拥时的",
-          "reading": "拥时的",
-          "base_form": "拥时的",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "温暖",
-          "reading": "オンダン",
-          "base_form": "温暖",
-          "pos": "名詞",
-          "pos_detail": "形容動詞語幹",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "将",
-          "reading": "ハタ",
-          "base_form": "将",
-          "pos": "副詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "其溶化",
-          "reading": "其溶化",
-          "base_form": "其溶化",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "我",
-          "reading": "ワガ"
-        },
-        {
-          "text": "也会用",
-          "reading": null
-        },
-        {
-          "text": "相",
-          "reading": "ショウ"
-        },
-        {
-          "text": "拥时的",
-          "reading": null
-        },
-        {
-          "text": "温暖",
-          "reading": "オンダン"
-        },
-        {
-          "text": "将",
-          "reading": "ハタ"
-        },
-        {
-          "text": "其溶化",
-          "reading": null
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 50,
+      "index": 26,
       "text": "没有什么害怕的 直到黎明再次降临",
       "romaji": "botsu yuu 什么害 怕的 choku ita reimei sai tsugi kuda 临",
+      "translation": null,
       "start": 102.0,
       "end": 102.0,
       "section": "Unknown",
@@ -5773,7 +3422,7 @@
         {
           "word": "黎明",
           "reading": "れいめい",
-          "meaning": "dawn, daybreak",
+          "meaning": "黎明",
           "jlpt_level": "N1",
           "pos": "名詞"
         }
@@ -5832,9 +3481,10 @@
       "has_notes": true
     },
     {
-      "index": 51,
+      "index": 27,
       "text": "二人でいよう",
       "romaji": "ni nin de iyo u",
+      "translation": "两人紧紧相依吧",
       "start": 102.0,
       "end": 118.0,
       "section": "Unknown",
@@ -5890,7 +3540,7 @@
         {
           "word": "人",
           "reading": "ひと",
-          "meaning": "person",
+          "meaning": "人",
           "jlpt_level": "N5",
           "pos": "名詞"
         }
@@ -5921,64 +3571,10 @@
       "has_notes": true
     },
     {
-      "index": 52,
-      "text": "两人紧紧相依吧",
-      "romaji": "两人紧 紧相依 吧",
-      "start": 118.0,
-      "end": 118.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "两人紧",
-          "reading": "两人紧",
-          "base_form": "两人紧",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "紧相依",
-          "reading": "紧相依",
-          "base_form": "紧相依",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "吧",
-          "reading": "吧",
-          "base_form": "吧",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "两人紧",
-          "reading": null
-        },
-        {
-          "text": "紧相依",
-          "reading": null
-        },
-        {
-          "text": "吧",
-          "reading": null
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 53,
+      "index": 28,
       "text": "君にしか見えない",
       "romaji": "kimi ni shika mie nai",
+      "translation": "讨厌总是注视着",
       "start": 118.0,
       "end": 121.0,
       "section": "Unknown",
@@ -6034,7 +3630,7 @@
         {
           "word": "君",
           "reading": "きみ",
-          "meaning": "you (informal)",
+          "meaning": "你（非正式）",
           "jlpt_level": "N5",
           "pos": "名詞"
         }
@@ -6065,77 +3661,10 @@
       "has_notes": true
     },
     {
-      "index": 54,
-      "text": "讨厌总是注视着",
-      "romaji": "讨厌总 ze chuu 视着",
-      "start": 121.0,
-      "end": 121.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "讨厌总",
-          "reading": "讨厌总",
-          "base_form": "讨厌总",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "是",
-          "reading": "ゼ",
-          "base_form": "是",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "注",
-          "reading": "チュウ",
-          "base_form": "注",
-          "pos": "接頭詞",
-          "pos_detail": "数接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "视着",
-          "reading": "视着",
-          "base_form": "视着",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "讨厌总",
-          "reading": null
-        },
-        {
-          "text": "是",
-          "reading": "ゼ"
-        },
-        {
-          "text": "注",
-          "reading": "チュウ"
-        },
-        {
-          "text": "视着",
-          "reading": null
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 55,
+      "index": 29,
       "text": "何かを見つめる君が嫌いだ",
       "romaji": "nani ka wo mitsumeru kimi ga kirai da",
+      "translation": null,
       "start": 121.0,
       "end": 124.0,
       "section": "Unknown",
@@ -6218,21 +3747,21 @@
         {
           "word": "何",
           "reading": "なに/なん",
-          "meaning": "what",
+          "meaning": "什么",
           "jlpt_level": "N5",
           "pos": "名詞"
         },
         {
           "word": "見つめる",
           "reading": "みつめる",
-          "meaning": "to stare at, to gaze",
+          "meaning": "凝视，注视",
           "jlpt_level": "N3",
           "pos": "動詞"
         },
         {
           "word": "君",
           "reading": "きみ",
-          "meaning": "you (informal)",
+          "meaning": "你（非正式）",
           "jlpt_level": "N5",
           "pos": "名詞"
         }
@@ -6275,13 +3804,14 @@
       "has_notes": true
     },
     {
-      "index": 56,
+      "index": 30,
       "text": "見惚れているかのような",
       "romaji": "mihore te iru ka no you na",
+      "translation": "我所看不见的东西的你",
       "start": 124.0,
-      "end": 124.0,
+      "end": 127.0,
       "section": "Unknown",
-      "duration": 0.0,
+      "duration": 3.0,
       "tokens": [
         {
           "surface": "見惚れ",
@@ -6353,7 +3883,7 @@
           "pattern": "〜ている",
           "level": "N5",
           "meaning": "is doing ~ / state of being",
-          "explanation": "表示动作的持续或状态的存续。例：走っている（正在跑）",
+          "explanation": "动作持续或状态存续",
           "example": "見ている → 正在看",
           "in_context": "見惚れているかのような"
         }
@@ -6391,129 +3921,10 @@
       "has_notes": true
     },
     {
-      "index": 57,
-      "text": "我所看不见的东西的你",
-      "romaji": "waga sho mi fu 见的东 nishi teki 你",
-      "start": 124.0,
-      "end": 127.0,
-      "section": "Unknown",
-      "duration": 3.0,
-      "tokens": [
-        {
-          "surface": "我",
-          "reading": "ワガ",
-          "base_form": "我",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "所",
-          "reading": "ショ",
-          "base_form": "所",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "一般",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "看",
-          "reading": "ミ",
-          "base_form": "看る",
-          "pos": "動詞",
-          "pos_detail": "自立",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "不",
-          "reading": "フ",
-          "base_form": "不",
-          "pos": "接頭詞",
-          "pos_detail": "名詞接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "见的东",
-          "reading": "见的东",
-          "base_form": "见的东",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "西",
-          "reading": "ニシ",
-          "base_form": "西",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "的",
-          "reading": "テキ",
-          "base_form": "的",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "形容動詞語幹",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "你",
-          "reading": "你",
-          "base_form": "你",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "我",
-          "reading": "ワガ"
-        },
-        {
-          "text": "所",
-          "reading": "ショ"
-        },
-        {
-          "text": "看",
-          "reading": "ミ"
-        },
-        {
-          "text": "不",
-          "reading": "フ"
-        },
-        {
-          "text": "见的东",
-          "reading": null
-        },
-        {
-          "text": "西",
-          "reading": "ニシ"
-        },
-        {
-          "text": "的",
-          "reading": "テキ"
-        },
-        {
-          "text": "你",
-          "reading": null
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 58,
+      "index": 31,
       "text": "讨厌你那看得入迷一般",
       "romaji": "讨厌你 那看得 nyuu 迷一般",
+      "translation": null,
       "start": 127.0,
       "end": 127.0,
       "section": "Unknown",
@@ -6579,9 +3990,10 @@
       "has_notes": false
     },
     {
-      "index": 59,
+      "index": 32,
       "text": "恋するような",
       "romaji": "koisuru you na",
+      "translation": "坠入爱河一般的",
       "start": 127.0,
       "end": 129.0,
       "section": "Unknown",
@@ -6634,77 +4046,10 @@
       "has_notes": false
     },
     {
-      "index": 60,
-      "text": "坠入爱河一般的",
-      "romaji": "坠入爱 kawa ipan teki",
-      "start": 129.0,
-      "end": 129.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "坠入爱",
-          "reading": "坠入爱",
-          "base_form": "坠入爱",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "河",
-          "reading": "カワ",
-          "base_form": "河",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "一般",
-          "reading": "イッパン",
-          "base_form": "一般",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "的",
-          "reading": "テキ",
-          "base_form": "的",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "形容動詞語幹",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "坠入爱",
-          "reading": null
-        },
-        {
-          "text": "河",
-          "reading": "カワ"
-        },
-        {
-          "text": "一般",
-          "reading": "イッパン"
-        },
-        {
-          "text": "的",
-          "reading": "テキ"
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 61,
+      "index": 33,
       "text": "そんな顔が嫌いだ",
       "romaji": "sonna kao ga kirai da",
+      "translation": "表情啊",
       "start": 129.0,
       "end": 132.0,
       "section": "Unknown",
@@ -6783,51 +4128,10 @@
       "has_notes": false
     },
     {
-      "index": 62,
-      "text": "表情啊",
-      "romaji": "hyoujou 啊",
-      "start": 132.0,
-      "end": 132.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "表情",
-          "reading": "ヒョウジョウ",
-          "base_form": "表情",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "啊",
-          "reading": "啊",
-          "base_form": "啊",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "表情",
-          "reading": "ヒョウジョウ"
-        },
-        {
-          "text": "啊",
-          "reading": null
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 63,
+      "index": 34,
       "text": "信じていたいけど信じれないこと",
       "romaji": "shinji te i tai kedo shinji re nai koto",
+      "translation": "虽然曾想要去相信却无法相信",
       "start": 132.0,
       "end": 134.0,
       "section": "Unknown",
@@ -6919,7 +4223,7 @@
         {
           "word": "信じる",
           "reading": "しんじる",
-          "meaning": "to believe",
+          "meaning": "相信",
           "jlpt_level": "N4",
           "pos": "動詞"
         }
@@ -6966,142 +4270,10 @@
       "has_notes": true
     },
     {
-      "index": 64,
-      "text": "虽然曾想要去相信却无法相信",
-      "romaji": "虽然曾 sou you sa ai shin 却无法 shou shin",
-      "start": 134.0,
-      "end": 134.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "虽然曾",
-          "reading": "虽然曾",
-          "base_form": "虽然曾",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "想",
-          "reading": "ソウ",
-          "base_form": "想",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "要",
-          "reading": "ヨウ",
-          "base_form": "要",
-          "pos": "接頭詞",
-          "pos_detail": "名詞接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "去",
-          "reading": "サ",
-          "base_form": "去る",
-          "pos": "動詞",
-          "pos_detail": "自立",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "相",
-          "reading": "アイ",
-          "base_form": "相",
-          "pos": "接頭詞",
-          "pos_detail": "動詞接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "信",
-          "reading": "シン",
-          "base_form": "信",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "却无法",
-          "reading": "却无法",
-          "base_form": "却无法",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "相",
-          "reading": "ショウ",
-          "base_form": "相",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "一般",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "信",
-          "reading": "シン",
-          "base_form": "信",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "虽然曾",
-          "reading": null
-        },
-        {
-          "text": "想",
-          "reading": "ソウ"
-        },
-        {
-          "text": "要",
-          "reading": "ヨウ"
-        },
-        {
-          "text": "去",
-          "reading": "サ"
-        },
-        {
-          "text": "相",
-          "reading": "アイ"
-        },
-        {
-          "text": "信",
-          "reading": "シン"
-        },
-        {
-          "text": "却无法",
-          "reading": null
-        },
-        {
-          "text": "相",
-          "reading": "ショウ"
-        },
-        {
-          "text": "信",
-          "reading": "シン"
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 65,
+      "index": 35,
       "text": "そんなのどうしたってきっと",
       "romaji": "sonna no dou shi ta te kito",
+      "translation": null,
       "start": 134.0,
       "end": 136.0,
       "section": "Unknown",
@@ -7206,13 +4378,14 @@
       "has_notes": false
     },
     {
-      "index": 66,
+      "index": 36,
       "text": "これからだっていくつもあって",
       "romaji": "korekara date ikutsu mo a te",
+      "translation": "那种事情不论如何",
       "start": 136.0,
-      "end": 136.0,
+      "end": 138.0,
       "section": "Unknown",
-      "duration": 0.0,
+      "duration": 2.0,
       "tokens": [
         {
           "surface": "これから",
@@ -7275,7 +4448,7 @@
           "pattern": "〜ていく",
           "level": "N3",
           "meaning": "will continue to ~ / going to ~",
-          "explanation": "表示从现在向未来的变化趋势。",
+          "explanation": "从现在向未来的变化趋势",
           "example": "消えていく → 渐渐消失",
           "in_context": "これからだっていくつもあって"
         }
@@ -7309,77 +4482,10 @@
       "has_notes": true
     },
     {
-      "index": 67,
-      "text": "那种事情不论如何",
-      "romaji": "那种事 jou fu 论如何",
-      "start": 136.0,
-      "end": 138.0,
-      "section": "Unknown",
-      "duration": 2.0,
-      "tokens": [
-        {
-          "surface": "那种事",
-          "reading": "那种事",
-          "base_form": "那种事",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "情",
-          "reading": "ジョウ",
-          "base_form": "情",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "不",
-          "reading": "フ",
-          "base_form": "不",
-          "pos": "接頭詞",
-          "pos_detail": "名詞接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "论如何",
-          "reading": "论如何",
-          "base_form": "论如何",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "那种事",
-          "reading": null
-        },
-        {
-          "text": "情",
-          "reading": "ジョウ"
-        },
-        {
-          "text": "不",
-          "reading": "フ"
-        },
-        {
-          "text": "论如何",
-          "reading": null
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 68,
+      "index": 37,
       "text": "今后定会重蹈覆辙",
       "romaji": "kon kisaki jou kai juu 蹈覆辙",
+      "translation": null,
       "start": 138.0,
       "end": 138.0,
       "section": "Unknown",
@@ -7444,7 +4550,7 @@
         {
           "word": "今",
           "reading": "いま",
-          "meaning": "now",
+          "meaning": "现在",
           "jlpt_level": "N5",
           "pos": "接頭詞"
         }
@@ -7479,9 +4585,10 @@
       "has_notes": true
     },
     {
-      "index": 69,
+      "index": 38,
       "text": "そのたんび怒って泣いていくの",
       "romaji": "sono tanbi oko te nai te iku no",
+      "translation": "那时一定会生气地哭出来吧",
       "start": 138.0,
       "end": 140.0,
       "section": "Unknown",
@@ -7564,7 +4671,7 @@
         {
           "word": "泣く",
           "reading": "なく",
-          "meaning": "to cry",
+          "meaning": "哭泣",
           "jlpt_level": "N4",
           "pos": "動詞"
         }
@@ -7574,7 +4681,7 @@
           "pattern": "〜ていく",
           "level": "N3",
           "meaning": "will continue to ~ / going to ~",
-          "explanation": "表示从现在向未来的变化趋势。",
+          "explanation": "从现在向未来的变化趋势",
           "example": "消えていく → 渐渐消失",
           "in_context": "そのたんび怒って泣いていくの"
         }
@@ -7616,103 +4723,10 @@
       "has_notes": true
     },
     {
-      "index": 70,
-      "text": "那时一定会生气地哭出来吧",
-      "romaji": "那时一 tei kaisei 气地哭 deki 吧",
-      "start": 140.0,
-      "end": 140.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "那时一",
-          "reading": "那时一",
-          "base_form": "那时一",
-          "pos": "名詞",
-          "pos_detail": "固有名詞",
-          "conjugation_type": "組織",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "定",
-          "reading": "テイ",
-          "base_form": "定",
-          "pos": "接頭詞",
-          "pos_detail": "名詞接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "会生",
-          "reading": "カイセイ",
-          "base_form": "会生",
-          "pos": "名詞",
-          "pos_detail": "固有名詞",
-          "conjugation_type": "地域",
-          "conjugation_form": "一般"
-        },
-        {
-          "surface": "气地哭",
-          "reading": "气地哭",
-          "base_form": "气地哭",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "出来",
-          "reading": "デキ",
-          "base_form": "出来",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "吧",
-          "reading": "吧",
-          "base_form": "吧",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "那时一",
-          "reading": null
-        },
-        {
-          "text": "定",
-          "reading": "テイ"
-        },
-        {
-          "text": "会生",
-          "reading": "カイセイ"
-        },
-        {
-          "text": "气地哭",
-          "reading": null
-        },
-        {
-          "text": "出来",
-          "reading": "デキ"
-        },
-        {
-          "text": "吧",
-          "reading": null
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 71,
+      "index": 39,
       "text": "それでもきっと",
       "romaji": "soredemo kito",
+      "translation": "即便如此我仍然相信着",
       "start": 140.0,
       "end": 141.0,
       "section": "Unknown",
@@ -7752,103 +4766,10 @@
       "has_notes": false
     },
     {
-      "index": 72,
-      "text": "即便如此我仍然相信着",
-      "romaji": "soku bin 如此我 仍然相 shin gi",
-      "start": 141.0,
-      "end": 141.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "即",
-          "reading": "ソク",
-          "base_form": "即",
-          "pos": "名詞",
-          "pos_detail": "サ変接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "便",
-          "reading": "ビン",
-          "base_form": "便",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "一般",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "如此我",
-          "reading": "如此我",
-          "base_form": "如此我",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "仍然相",
-          "reading": "仍然相",
-          "base_form": "仍然相",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "信",
-          "reading": "シン",
-          "base_form": "信",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "着",
-          "reading": "ギ",
-          "base_form": "着",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "一般",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "即",
-          "reading": "ソク"
-        },
-        {
-          "text": "便",
-          "reading": "ビン"
-        },
-        {
-          "text": "如此我",
-          "reading": null
-        },
-        {
-          "text": "仍然相",
-          "reading": null
-        },
-        {
-          "text": "信",
-          "reading": "シン"
-        },
-        {
-          "text": "着",
-          "reading": "ギ"
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 73,
+      "index": 40,
       "text": "いつかはきっと",
       "romaji": "itsuka ha kito",
+      "translation": "终有一天",
       "start": 141.0,
       "end": 141.0,
       "section": "Unknown",
@@ -7901,51 +4822,10 @@
       "has_notes": false
     },
     {
-      "index": 74,
-      "text": "终有一天",
-      "romaji": "终有一 ten",
-      "start": 141.0,
-      "end": 141.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "终有一",
-          "reading": "终有一",
-          "base_form": "终有一",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "天",
-          "reading": "テン",
-          "base_form": "天",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "终有一",
-          "reading": null
-        },
-        {
-          "text": "天",
-          "reading": "テン"
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 75,
+      "index": 41,
       "text": "僕らはきっと",
       "romaji": "bokura ha kito",
+      "translation": "我们一定能够",
       "start": 141.0,
       "end": 143.0,
       "section": "Unknown",
@@ -7998,77 +4878,10 @@
       "has_notes": false
     },
     {
-      "index": 76,
-      "text": "我们一定能够",
-      "romaji": "waga 们一定 nou 够",
-      "start": 143.0,
-      "end": 143.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "我",
-          "reading": "ワガ",
-          "base_form": "我",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "们一定",
-          "reading": "们一定",
-          "base_form": "们一定",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "能",
-          "reading": "ノウ",
-          "base_form": "能",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "够",
-          "reading": "够",
-          "base_form": "够",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "我",
-          "reading": "ワガ"
-        },
-        {
-          "text": "们一定",
-          "reading": null
-        },
-        {
-          "text": "能",
-          "reading": "ノウ"
-        },
-        {
-          "text": "够",
-          "reading": null
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 77,
+      "index": 42,
       "text": "分かり合えるさ信じてるよ",
       "romaji": "wakari aeru sa shinji teru yo",
+      "translation": "心意相通",
       "start": 143.0,
       "end": 161.0,
       "section": "Unknown",
@@ -8133,7 +4946,7 @@
         {
           "word": "信じる",
           "reading": "しんじる",
-          "meaning": "to believe",
+          "meaning": "相信",
           "jlpt_level": "N4",
           "pos": "動詞"
         }
@@ -8168,64 +4981,10 @@
       "has_notes": true
     },
     {
-      "index": 78,
-      "text": "心意相通",
-      "romaji": "shin'i shou doori",
-      "start": 161.0,
-      "end": 161.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "心意",
-          "reading": "シンイ",
-          "base_form": "心意",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "相",
-          "reading": "ショウ",
-          "base_form": "相",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "一般",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "通",
-          "reading": "ドオリ",
-          "base_form": "通",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "一般",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "心意",
-          "reading": "シンイ"
-        },
-        {
-          "text": "相",
-          "reading": "ショウ"
-        },
-        {
-          "text": "通",
-          "reading": "ドオリ"
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 79,
+      "index": 43,
       "text": "もう嫌だって疲れたんだって",
       "romaji": "mou iya date tsukare ta n date",
+      "translation": "你说着&quot;已经受够了&quot;&quot;已经疲惫了&quot;",
       "start": 161.0,
       "end": 163.0,
       "section": "Unknown",
@@ -8330,233 +5089,10 @@
       "has_notes": false
     },
     {
-      "index": 80,
-      "text": "你说着&quot;已经受够了&quot;&quot;已经疲惫了&quot;",
-      "romaji": "你说着 & quot ; 已经受 够了 & quot ;& quot ; 已经疲 惫了 & quot ;",
-      "start": 163.0,
-      "end": 163.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "你说着",
-          "reading": "你说着",
-          "base_form": "你说着",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "&",
-          "reading": "&",
-          "base_form": "&",
-          "pos": "名詞",
-          "pos_detail": "サ変接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "quot",
-          "reading": "quot",
-          "base_form": "quot",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": ";",
-          "reading": ";",
-          "base_form": ";",
-          "pos": "名詞",
-          "pos_detail": "サ変接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "已经受",
-          "reading": "已经受",
-          "base_form": "已经受",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "够了",
-          "reading": "够了",
-          "base_form": "够了",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "&",
-          "reading": "&",
-          "base_form": "&",
-          "pos": "名詞",
-          "pos_detail": "サ変接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "quot",
-          "reading": "quot",
-          "base_form": "quot",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": ";&",
-          "reading": ";&",
-          "base_form": ";&",
-          "pos": "名詞",
-          "pos_detail": "サ変接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "quot",
-          "reading": "quot",
-          "base_form": "quot",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": ";",
-          "reading": ";",
-          "base_form": ";",
-          "pos": "名詞",
-          "pos_detail": "サ変接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "已经疲",
-          "reading": "已经疲",
-          "base_form": "已经疲",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "惫了",
-          "reading": "惫了",
-          "base_form": "惫了",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "&",
-          "reading": "&",
-          "base_form": "&",
-          "pos": "名詞",
-          "pos_detail": "サ変接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "quot",
-          "reading": "quot",
-          "base_form": "quot",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": ";",
-          "reading": ";",
-          "base_form": ";",
-          "pos": "名詞",
-          "pos_detail": "サ変接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "你说着",
-          "reading": null
-        },
-        {
-          "text": "&",
-          "reading": null
-        },
-        {
-          "text": "quot",
-          "reading": null
-        },
-        {
-          "text": ";",
-          "reading": null
-        },
-        {
-          "text": "已经受",
-          "reading": null
-        },
-        {
-          "text": "够了",
-          "reading": null
-        },
-        {
-          "text": "&",
-          "reading": null
-        },
-        {
-          "text": "quot",
-          "reading": null
-        },
-        {
-          "text": ";&",
-          "reading": null
-        },
-        {
-          "text": "quot",
-          "reading": null
-        },
-        {
-          "text": ";",
-          "reading": null
-        },
-        {
-          "text": "已经疲",
-          "reading": null
-        },
-        {
-          "text": "惫了",
-          "reading": null
-        },
-        {
-          "text": "&",
-          "reading": null
-        },
-        {
-          "text": "quot",
-          "reading": null
-        },
-        {
-          "text": ";",
-          "reading": null
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 81,
+      "index": 44,
       "text": "がむしゃらに差し伸べた",
       "romaji": "gamushara ni sashinobe ta",
+      "translation": null,
       "start": 163.0,
       "end": 165.0,
       "section": "Unknown",
@@ -8622,13 +5158,14 @@
       "has_notes": false
     },
     {
-      "index": 82,
+      "index": 45,
       "text": "僕の手を振り払う君",
       "romaji": "boku no te wo furiharau kimi",
+      "translation": "将我不顾一切",
       "start": 165.0,
-      "end": 165.0,
+      "end": 168.0,
       "section": "Unknown",
-      "duration": 0.0,
+      "duration": 3.0,
       "tokens": [
         {
           "surface": "僕",
@@ -8689,21 +5226,21 @@
         {
           "word": "僕",
           "reading": "ぼく",
-          "meaning": "I (male, informal)",
+          "meaning": "我（男性非正式）",
           "jlpt_level": "N5",
           "pos": "名詞"
         },
         {
           "word": "手",
           "reading": "て",
-          "meaning": "hand",
+          "meaning": "手",
           "jlpt_level": "N5",
           "pos": "名詞"
         },
         {
           "word": "君",
           "reading": "きみ",
-          "meaning": "you (informal)",
+          "meaning": "你（非正式）",
           "jlpt_level": "N5",
           "pos": "名詞"
         }
@@ -8738,77 +5275,10 @@
       "has_notes": true
     },
     {
-      "index": 83,
-      "text": "将我不顾一切",
-      "romaji": "hata waga fu 顾一切",
-      "start": 165.0,
-      "end": 168.0,
-      "section": "Unknown",
-      "duration": 3.0,
-      "tokens": [
-        {
-          "surface": "将",
-          "reading": "ハタ",
-          "base_form": "将",
-          "pos": "副詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "我",
-          "reading": "ワガ",
-          "base_form": "我",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "不",
-          "reading": "フ",
-          "base_form": "不",
-          "pos": "接頭詞",
-          "pos_detail": "名詞接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "顾一切",
-          "reading": "顾一切",
-          "base_form": "顾一切",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "将",
-          "reading": "ハタ"
-        },
-        {
-          "text": "我",
-          "reading": "ワガ"
-        },
-        {
-          "text": "不",
-          "reading": "フ"
-        },
-        {
-          "text": "顾一切",
-          "reading": null
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 84,
+      "index": 46,
       "text": "向你伸出的手甩开",
       "romaji": "kou 你伸出 teki te 甩开",
+      "translation": null,
       "start": 168.0,
       "end": 168.0,
       "section": "Unknown",
@@ -8864,7 +5334,7 @@
         {
           "word": "手",
           "reading": "て",
-          "meaning": "hand",
+          "meaning": "手",
           "jlpt_level": "N5",
           "pos": "名詞"
         }
@@ -8895,9 +5365,10 @@
       "has_notes": true
     },
     {
-      "index": 85,
+      "index": 47,
       "text": "もう嫌だって疲れたよなんて",
       "romaji": "mou iya date tsukare ta yo nante",
+      "translation": null,
       "start": 168.0,
       "end": 170.0,
       "section": "Unknown",
@@ -9002,9 +5473,10 @@
       "has_notes": false
     },
     {
-      "index": 86,
+      "index": 48,
       "text": "&quot;已经受够了&quot;&quot;已经疲惫了&quot;",
       "romaji": "& quot ; 已经受 够了 & quot ;& quot ; 已经疲 惫了 & quot ;",
+      "translation": null,
       "start": 170.0,
       "end": 170.0,
       "section": "Unknown",
@@ -9213,9 +5685,10 @@
       "has_notes": false
     },
     {
-      "index": 87,
+      "index": 49,
       "text": "本当は僕も言いたいんだ",
       "romaji": "hontouha boku mo ii tai n da",
+      "translation": "其实我也想这样说啊",
       "start": 170.0,
       "end": 175.0,
       "section": "Unknown",
@@ -9289,14 +5762,14 @@
         {
           "word": "僕",
           "reading": "ぼく",
-          "meaning": "I (male, informal)",
+          "meaning": "我（男性非正式）",
           "jlpt_level": "N5",
           "pos": "名詞"
         },
         {
           "word": "言う",
           "reading": "いう",
-          "meaning": "to say, to tell",
+          "meaning": "说，告诉",
           "jlpt_level": "N5",
           "pos": "動詞"
         }
@@ -9335,64 +5808,10 @@
       "has_notes": true
     },
     {
-      "index": 88,
-      "text": "其实我也想这样说啊",
-      "romaji": "其实我 也想这 样说啊",
-      "start": 175.0,
-      "end": 175.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "其实我",
-          "reading": "其实我",
-          "base_form": "其实我",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "也想这",
-          "reading": "也想这",
-          "base_form": "也想这",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "样说啊",
-          "reading": "样说啊",
-          "base_form": "样说啊",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "其实我",
-          "reading": null
-        },
-        {
-          "text": "也想这",
-          "reading": null
-        },
-        {
-          "text": "样说啊",
-          "reading": null
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 89,
+      "index": 50,
       "text": "ほらまたチックタックと",
       "romaji": "hora mata chiku taku to",
+      "translation": null,
       "start": 175.0,
       "end": 176.0,
       "section": "Unknown",
@@ -9471,13 +5890,14 @@
       "has_notes": false
     },
     {
-      "index": 90,
+      "index": 51,
       "text": "鳴る世界で何度だってさ",
       "romaji": "naru sekai de nan do date sa",
+      "translation": "看啊 在这时针仍然不停转动的世界里",
       "start": 176.0,
-      "end": 176.0,
+      "end": 178.0,
       "section": "Unknown",
-      "duration": 0.0,
+      "duration": 2.0,
       "tokens": [
         {
           "surface": "鳴る",
@@ -9547,14 +5967,14 @@
         {
           "word": "世界",
           "reading": "せかい",
-          "meaning": "world",
+          "meaning": "世界",
           "jlpt_level": "N4",
           "pos": "名詞"
         },
         {
           "word": "何",
           "reading": "なに/なん",
-          "meaning": "what",
+          "meaning": "什么",
           "jlpt_level": "N5",
           "pos": "名詞"
         }
@@ -9593,163 +6013,10 @@
       "has_notes": true
     },
     {
-      "index": 91,
-      "text": "看啊 在这时针仍然不停转动的世界里",
-      "romaji": "mi 啊 zai 这时针 仍然不 toma 转动的 sekai sato",
-      "start": 176.0,
-      "end": 178.0,
-      "section": "Unknown",
-      "duration": 2.0,
-      "tokens": [
-        {
-          "surface": "看",
-          "reading": "ミ",
-          "base_form": "看る",
-          "pos": "動詞",
-          "pos_detail": "自立",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "啊",
-          "reading": "啊",
-          "base_form": "啊",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": " ",
-          "reading": " ",
-          "base_form": " ",
-          "pos": "記号",
-          "pos_detail": "空白",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "在",
-          "reading": "ザイ",
-          "base_form": "在",
-          "pos": "接頭詞",
-          "pos_detail": "名詞接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "这时针",
-          "reading": "这时针",
-          "base_form": "这时针",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "仍然不",
-          "reading": "仍然不",
-          "base_form": "仍然不",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "停",
-          "reading": "トマ",
-          "base_form": "停る",
-          "pos": "動詞",
-          "pos_detail": "自立",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "转动的",
-          "reading": "转动的",
-          "base_form": "转动的",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "世界",
-          "reading": "セカイ",
-          "base_form": "世界",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "里",
-          "reading": "サト",
-          "base_form": "里",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [
-        {
-          "word": "世界",
-          "reading": "せかい",
-          "meaning": "world",
-          "jlpt_level": "N4",
-          "pos": "名詞"
-        }
-      ],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "看",
-          "reading": "ミ"
-        },
-        {
-          "text": "啊",
-          "reading": null
-        },
-        {
-          "text": " ",
-          "reading": null
-        },
-        {
-          "text": "在",
-          "reading": "ザイ"
-        },
-        {
-          "text": "这时针",
-          "reading": null
-        },
-        {
-          "text": "仍然不",
-          "reading": null
-        },
-        {
-          "text": "停",
-          "reading": "トマ"
-        },
-        {
-          "text": "转动的",
-          "reading": null
-        },
-        {
-          "text": "世界",
-          "reading": "セカイ"
-        },
-        {
-          "text": "里",
-          "reading": "サト"
-        }
-      ],
-      "has_notes": true
-    },
-    {
-      "index": 92,
+      "index": 52,
       "text": "无论多少次",
       "romaji": "无论多 shou tsugi",
+      "translation": null,
       "start": 178.0,
       "end": 178.0,
       "section": "Unknown",
@@ -9802,9 +6069,10 @@
       "has_notes": false
     },
     {
-      "index": 93,
+      "index": 53,
       "text": "君の為に用意した言葉",
       "romaji": "kimi no tame ni youi shi ta kotoba",
+      "translation": "为了你而准备的话语",
       "start": 178.0,
       "end": 180.0,
       "section": "Unknown",
@@ -9887,14 +6155,14 @@
         {
           "word": "君",
           "reading": "きみ",
-          "meaning": "you (informal)",
+          "meaning": "你（非正式）",
           "jlpt_level": "N5",
           "pos": "名詞"
         },
         {
           "word": "言葉",
           "reading": "ことば",
-          "meaning": "words, language",
+          "meaning": "话语；语言",
           "jlpt_level": "N4",
           "pos": "名詞"
         }
@@ -9937,77 +6205,10 @@
       "has_notes": true
     },
     {
-      "index": 94,
-      "text": "为了你而准备的话语",
-      "romaji": "为了你 而准备 teki 话语",
-      "start": 180.0,
-      "end": 180.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "为了你",
-          "reading": "为了你",
-          "base_form": "为了你",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "而准备",
-          "reading": "而准备",
-          "base_form": "而准备",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "的",
-          "reading": "テキ",
-          "base_form": "的",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "形容動詞語幹",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "话语",
-          "reading": "话语",
-          "base_form": "话语",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "为了你",
-          "reading": null
-        },
-        {
-          "text": "而准备",
-          "reading": null
-        },
-        {
-          "text": "的",
-          "reading": "テキ"
-        },
-        {
-          "text": "话语",
-          "reading": null
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 95,
+      "index": 54,
       "text": "どれも届かない",
       "romaji": "dore mo todoka nai",
+      "translation": "一句都不能传达给你",
       "start": 180.0,
       "end": 181.0,
       "section": "Unknown",
@@ -10054,7 +6255,7 @@
         {
           "word": "届く",
           "reading": "とどく",
-          "meaning": "to reach, to be delivered",
+          "meaning": "到达，送达",
           "jlpt_level": "N4",
           "pos": "動詞"
         }
@@ -10081,90 +6282,10 @@
       "has_notes": true
     },
     {
-      "index": 96,
-      "text": "一句都不能传达给你",
-      "romaji": "iku to funou 传达给 你",
-      "start": 181.0,
-      "end": 181.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "一句",
-          "reading": "イック",
-          "base_form": "一句",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "都",
-          "reading": "ト",
-          "base_form": "都",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "地域",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "不能",
-          "reading": "フノウ",
-          "base_form": "不能",
-          "pos": "名詞",
-          "pos_detail": "形容動詞語幹",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "传达给",
-          "reading": "传达给",
-          "base_form": "传达给",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "你",
-          "reading": "你",
-          "base_form": "你",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "一句",
-          "reading": "イック"
-        },
-        {
-          "text": "都",
-          "reading": "ト"
-        },
-        {
-          "text": "不能",
-          "reading": "フノウ"
-        },
-        {
-          "text": "传达给",
-          "reading": null
-        },
-        {
-          "text": "你",
-          "reading": null
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 97,
+      "index": 55,
       "text": "「終わりにしたい」だなんてさ",
       "romaji": "owari ni shi tai da nante sa",
+      "translation": null,
       "start": 181.0,
       "end": 184.0,
       "section": "Unknown",
@@ -10256,7 +6377,7 @@
         {
           "word": "終わる",
           "reading": "おわる",
-          "meaning": "to end, to finish",
+          "meaning": "结束",
           "jlpt_level": "N4",
           "pos": "動詞"
         }
@@ -10303,9 +6424,10 @@
       "has_notes": true
     },
     {
-      "index": 98,
+      "index": 56,
       "text": "&quot;想要结束了&quot;",
       "romaji": "& quot ; sou you 结束了 & quot ;",
+      "translation": null,
       "start": 184.0,
       "end": 184.0,
       "section": "Unknown",
@@ -10436,9 +6558,10 @@
       "has_notes": false
     },
     {
-      "index": 99,
+      "index": 57,
       "text": "釣られて言葉にした時",
       "romaji": "tsura re te kotoba ni shi ta toki",
+      "translation": null,
       "start": 184.0,
       "end": 186.0,
       "section": "Unknown",
@@ -10521,7 +6644,7 @@
         {
           "word": "言葉",
           "reading": "ことば",
-          "meaning": "words, language",
+          "meaning": "话语；语言",
           "jlpt_level": "N4",
           "pos": "名詞"
         }
@@ -10564,13 +6687,14 @@
       "has_notes": true
     },
     {
-      "index": 100,
+      "index": 58,
       "text": "君は初めて笑った",
       "romaji": "kimi ha hajimete wara ta",
+      "translation": "当我不由说出这句话的时候",
       "start": 186.0,
-      "end": 186.0,
+      "end": 191.0,
       "section": "Unknown",
-      "duration": 0.0,
+      "duration": 5.0,
       "tokens": [
         {
           "surface": "君",
@@ -10622,14 +6746,14 @@
         {
           "word": "君",
           "reading": "きみ",
-          "meaning": "you (informal)",
+          "meaning": "你（非正式）",
           "jlpt_level": "N5",
           "pos": "名詞"
         },
         {
           "word": "笑う",
           "reading": "わらう",
-          "meaning": "to laugh, to smile",
+          "meaning": "笑，微笑",
           "jlpt_level": "N4",
           "pos": "動詞"
         }
@@ -10660,129 +6784,10 @@
       "has_notes": true
     },
     {
-      "index": 101,
-      "text": "当我不由说出这句话的时候",
-      "romaji": "tou waga fu yoshi 说出这 ku 话的时 kou",
-      "start": 186.0,
-      "end": 191.0,
-      "section": "Unknown",
-      "duration": 5.0,
-      "tokens": [
-        {
-          "surface": "当",
-          "reading": "トウ",
-          "base_form": "当",
-          "pos": "接頭詞",
-          "pos_detail": "名詞接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "我",
-          "reading": "ワガ",
-          "base_form": "我",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "不",
-          "reading": "フ",
-          "base_form": "不",
-          "pos": "接頭詞",
-          "pos_detail": "名詞接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "由",
-          "reading": "ヨシ",
-          "base_form": "由",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "说出这",
-          "reading": "说出这",
-          "base_form": "说出这",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "句",
-          "reading": "ク",
-          "base_form": "句",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "一般",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "话的时",
-          "reading": "话的时",
-          "base_form": "话的时",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "候",
-          "reading": "コウ",
-          "base_form": "候",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "当",
-          "reading": "トウ"
-        },
-        {
-          "text": "我",
-          "reading": "ワガ"
-        },
-        {
-          "text": "不",
-          "reading": "フ"
-        },
-        {
-          "text": "由",
-          "reading": "ヨシ"
-        },
-        {
-          "text": "说出这",
-          "reading": null
-        },
-        {
-          "text": "句",
-          "reading": "ク"
-        },
-        {
-          "text": "话的时",
-          "reading": null
-        },
-        {
-          "text": "候",
-          "reading": "コウ"
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 102,
+      "index": 59,
       "text": "你第一次绽放了笑容",
       "romaji": "你第一 ji 绽放了 emi you",
+      "translation": null,
       "start": 191.0,
       "end": 191.0,
       "section": "Unknown",
@@ -10861,9 +6866,10 @@
       "has_notes": false
     },
     {
-      "index": 103,
+      "index": 60,
       "text": "騒がしい日々に",
       "romaji": "sawagashii hibi ni",
+      "translation": "在喧嚣的日子里",
       "start": 191.0,
       "end": 193.0,
       "section": "Unknown",
@@ -10916,77 +6922,10 @@
       "has_notes": false
     },
     {
-      "index": 104,
-      "text": "在喧嚣的日子里",
-      "romaji": "zai 喧嚣的 nishi sato",
-      "start": 193.0,
-      "end": 193.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "在",
-          "reading": "ザイ",
-          "base_form": "在",
-          "pos": "接頭詞",
-          "pos_detail": "名詞接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "喧嚣的",
-          "reading": "喧嚣的",
-          "base_form": "喧嚣的",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "日子",
-          "reading": "ニッシ",
-          "base_form": "日子",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "里",
-          "reading": "サト",
-          "base_form": "里",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "在",
-          "reading": "ザイ"
-        },
-        {
-          "text": "喧嚣的",
-          "reading": null
-        },
-        {
-          "text": "日子",
-          "reading": "ニッシ"
-        },
-        {
-          "text": "里",
-          "reading": "サト"
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 105,
+      "index": 61,
       "text": "笑えなくなっていた",
       "romaji": "warae naku na te i ta",
+      "translation": "失去笑容的你",
       "start": 193.0,
       "end": 195.0,
       "section": "Unknown",
@@ -11078,103 +7017,10 @@
       "has_notes": false
     },
     {
-      "index": 106,
-      "text": "失去笑容的你",
-      "romaji": "shitsu sa emi you teki 你",
-      "start": 195.0,
-      "end": 195.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "失",
-          "reading": "シツ",
-          "base_form": "失",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "去",
-          "reading": "サ",
-          "base_form": "去る",
-          "pos": "動詞",
-          "pos_detail": "自立",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "笑",
-          "reading": "エミ",
-          "base_form": "笑",
-          "pos": "名詞",
-          "pos_detail": "固有名詞",
-          "conjugation_type": "人名",
-          "conjugation_form": "名"
-        },
-        {
-          "surface": "容",
-          "reading": "ヨウ",
-          "base_form": "容",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "的",
-          "reading": "テキ",
-          "base_form": "的",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "形容動詞語幹",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "你",
-          "reading": "你",
-          "base_form": "你",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "失",
-          "reading": "シツ"
-        },
-        {
-          "text": "去",
-          "reading": "サ"
-        },
-        {
-          "text": "笑",
-          "reading": "エミ"
-        },
-        {
-          "text": "容",
-          "reading": "ヨウ"
-        },
-        {
-          "text": "的",
-          "reading": "テキ"
-        },
-        {
-          "text": "你",
-          "reading": null
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 107,
+      "index": 62,
       "text": "僕の目に映る君は綺麗だ",
       "romaji": "boku no me ni utsuru kimi ha kirei da",
+      "translation": null,
       "start": 195.0,
       "end": 199.0,
       "section": "Unknown",
@@ -11266,21 +7112,21 @@
         {
           "word": "僕",
           "reading": "ぼく",
-          "meaning": "I (male, informal)",
+          "meaning": "我（男性非正式）",
           "jlpt_level": "N5",
           "pos": "名詞"
         },
         {
           "word": "目",
           "reading": "め",
-          "meaning": "eye",
+          "meaning": "眼睛",
           "jlpt_level": "N5",
           "pos": "名詞"
         },
         {
           "word": "君",
           "reading": "きみ",
-          "meaning": "you (informal)",
+          "meaning": "你（非正式）",
           "jlpt_level": "N5",
           "pos": "名詞"
         }
@@ -11327,13 +7173,14 @@
       "has_notes": true
     },
     {
-      "index": 108,
+      "index": 63,
       "text": "明けない夜に溢れた涙も",
       "romaji": "ake nai yoru ni afure ta namida mo",
+      "translation": "在我的眼中却无比动人",
       "start": 199.0,
-      "end": 199.0,
+      "end": 203.0,
       "section": "Unknown",
-      "duration": 0.0,
+      "duration": 4.0,
       "tokens": [
         {
           "surface": "明け",
@@ -11412,21 +7259,21 @@
         {
           "word": "夜",
           "reading": "よる",
-          "meaning": "night, evening",
+          "meaning": "夜晚",
           "jlpt_level": "N5",
           "pos": "名詞"
         },
         {
           "word": "溢れる",
           "reading": "あふれる",
-          "meaning": "to overflow",
+          "meaning": "溢出，充满",
           "jlpt_level": "N3",
           "pos": "動詞"
         },
         {
           "word": "涙",
           "reading": "なみだ",
-          "meaning": "tears",
+          "meaning": "眼泪",
           "jlpt_level": "N4",
           "pos": "名詞"
         }
@@ -11469,103 +7316,10 @@
       "has_notes": true
     },
     {
-      "index": 109,
-      "text": "在我的眼中却无比动人",
-      "romaji": "zai waga teki ganchuu 却无比 动人",
-      "start": 199.0,
-      "end": 203.0,
-      "section": "Unknown",
-      "duration": 4.0,
-      "tokens": [
-        {
-          "surface": "在",
-          "reading": "ザイ",
-          "base_form": "在",
-          "pos": "接頭詞",
-          "pos_detail": "名詞接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "我",
-          "reading": "ワガ",
-          "base_form": "我",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "的",
-          "reading": "テキ",
-          "base_form": "的",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "形容動詞語幹",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "眼中",
-          "reading": "ガンチュウ",
-          "base_form": "眼中",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "却无比",
-          "reading": "却无比",
-          "base_form": "却无比",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "动人",
-          "reading": "动人",
-          "base_form": "动人",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "在",
-          "reading": "ザイ"
-        },
-        {
-          "text": "我",
-          "reading": "ワガ"
-        },
-        {
-          "text": "的",
-          "reading": "テキ"
-        },
-        {
-          "text": "眼中",
-          "reading": "ガンチュウ"
-        },
-        {
-          "text": "却无比",
-          "reading": null
-        },
-        {
-          "text": "动人",
-          "reading": null
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 110,
+      "index": 64,
       "text": "于永不破晓的黑夜里夺眶而出的眼泪",
       "romaji": "于永不 yabu 晓的黑 yoru sato 夺眶而 de teki me namida",
+      "translation": null,
       "start": 203.0,
       "end": 203.0,
       "section": "Unknown",
@@ -11666,7 +7420,7 @@
         {
           "word": "夜",
           "reading": "よる",
-          "meaning": "night, evening",
+          "meaning": "夜晚",
           "jlpt_level": "N5",
           "pos": "名詞"
         }
@@ -11717,9 +7471,10 @@
       "has_notes": true
     },
     {
-      "index": 111,
+      "index": 65,
       "text": "君の笑顔に溶けていく",
       "romaji": "kimi no egao ni toke te iku",
+      "translation": "也会因为你的笑容而消散",
       "start": 203.0,
       "end": 208.0,
       "section": "Unknown",
@@ -11793,14 +7548,14 @@
         {
           "word": "君",
           "reading": "きみ",
-          "meaning": "you (informal)",
+          "meaning": "你（非正式）",
           "jlpt_level": "N5",
           "pos": "名詞"
         },
         {
           "word": "笑顔",
           "reading": "えがお",
-          "meaning": "smile",
+          "meaning": "笑容",
           "jlpt_level": "N4",
           "pos": "名詞"
         }
@@ -11810,7 +7565,7 @@
           "pattern": "〜ていく",
           "level": "N3",
           "meaning": "will continue to ~ / going to ~",
-          "explanation": "表示从现在向未来的变化趋势。",
+          "explanation": "从现在向未来的变化趋势",
           "example": "消えていく → 渐渐消失",
           "in_context": "君の笑顔に溶けていく"
         }
@@ -11848,90 +7603,10 @@
       "has_notes": true
     },
     {
-      "index": 112,
-      "text": "也会因为你的笑容而消散",
-      "romaji": "也会因 为你的 emi you 而消散",
-      "start": 208.0,
-      "end": 208.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "也会因",
-          "reading": "也会因",
-          "base_form": "也会因",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "为你的",
-          "reading": "为你的",
-          "base_form": "为你的",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "笑",
-          "reading": "エミ",
-          "base_form": "笑",
-          "pos": "名詞",
-          "pos_detail": "固有名詞",
-          "conjugation_type": "人名",
-          "conjugation_form": "名"
-        },
-        {
-          "surface": "容",
-          "reading": "ヨウ",
-          "base_form": "容",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "而消散",
-          "reading": "而消散",
-          "base_form": "而消散",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "也会因",
-          "reading": null
-        },
-        {
-          "text": "为你的",
-          "reading": null
-        },
-        {
-          "text": "笑",
-          "reading": "エミ"
-        },
-        {
-          "text": "容",
-          "reading": "ヨウ"
-        },
-        {
-          "text": "而消散",
-          "reading": null
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 113,
+      "index": 66,
       "text": "変わらない日々に泣いていた僕を",
       "romaji": "kawara nai hibi ni nai te i ta boku wo",
+      "translation": "你将于一成不变的日子里哭泣的我",
       "start": 208.0,
       "end": 212.0,
       "section": "Unknown",
@@ -12032,21 +7707,21 @@
         {
           "word": "変わる",
           "reading": "かわる",
-          "meaning": "to change",
+          "meaning": "改变，变化",
           "jlpt_level": "N4",
           "pos": "動詞"
         },
         {
           "word": "泣く",
           "reading": "なく",
-          "meaning": "to cry",
+          "meaning": "哭泣",
           "jlpt_level": "N4",
           "pos": "動詞"
         },
         {
           "word": "僕",
           "reading": "ぼく",
-          "meaning": "I (male, informal)",
+          "meaning": "我（男性非正式）",
           "jlpt_level": "N5",
           "pos": "名詞"
         }
@@ -12097,129 +7772,10 @@
       "has_notes": true
     },
     {
-      "index": 114,
-      "text": "你将于一成不变的日子里哭泣的我",
-      "romaji": "你将于 isei fu 变的日 ko sato 哭泣的 waga",
-      "start": 212.0,
-      "end": 212.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "你将于",
-          "reading": "你将于",
-          "base_form": "你将于",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "一成",
-          "reading": "イッセイ",
-          "base_form": "一成",
-          "pos": "名詞",
-          "pos_detail": "固有名詞",
-          "conjugation_type": "人名",
-          "conjugation_form": "名"
-        },
-        {
-          "surface": "不",
-          "reading": "フ",
-          "base_form": "不",
-          "pos": "接頭詞",
-          "pos_detail": "名詞接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "变的日",
-          "reading": "变的日",
-          "base_form": "变的日",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "子",
-          "reading": "コ",
-          "base_form": "子",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "一般",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "里",
-          "reading": "サト",
-          "base_form": "里",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "哭泣的",
-          "reading": "哭泣的",
-          "base_form": "哭泣的",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "我",
-          "reading": "ワガ",
-          "base_form": "我",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "你将于",
-          "reading": null
-        },
-        {
-          "text": "一成",
-          "reading": "イッセイ"
-        },
-        {
-          "text": "不",
-          "reading": "フ"
-        },
-        {
-          "text": "变的日",
-          "reading": null
-        },
-        {
-          "text": "子",
-          "reading": "コ"
-        },
-        {
-          "text": "里",
-          "reading": "サト"
-        },
-        {
-          "text": "哭泣的",
-          "reading": null
-        },
-        {
-          "text": "我",
-          "reading": "ワガ"
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 115,
+      "index": 67,
       "text": "君は優しく終わりへと誘う",
       "romaji": "kimi ha yasashiku owari he to sasou",
+      "translation": "温柔地引向终结",
       "start": 212.0,
       "end": 215.0,
       "section": "Unknown",
@@ -12293,21 +7849,21 @@
         {
           "word": "君",
           "reading": "きみ",
-          "meaning": "you (informal)",
+          "meaning": "你（非正式）",
           "jlpt_level": "N5",
           "pos": "名詞"
         },
         {
           "word": "優しい",
           "reading": "やさしい",
-          "meaning": "gentle, kind",
+          "meaning": "温柔的，善良的",
           "jlpt_level": "N3",
           "pos": "形容詞"
         },
         {
           "word": "終わる",
           "reading": "おわる",
-          "meaning": "to end, to finish",
+          "meaning": "结束",
           "jlpt_level": "N4",
           "pos": "動詞"
         }
@@ -12346,77 +7902,10 @@
       "has_notes": true
     },
     {
-      "index": 116,
-      "text": "温柔地引向终结",
-      "romaji": "onjuu jibiki kou 终结",
-      "start": 215.0,
-      "end": 215.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "温柔",
-          "reading": "オンジュウ",
-          "base_form": "温柔",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "地引",
-          "reading": "ジビキ",
-          "base_form": "地引",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "向",
-          "reading": "コウ",
-          "base_form": "向",
-          "pos": "接頭詞",
-          "pos_detail": "名詞接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "终结",
-          "reading": "终结",
-          "base_form": "终结",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "温柔",
-          "reading": "オンジュウ"
-        },
-        {
-          "text": "地引",
-          "reading": "ジビキ"
-        },
-        {
-          "text": "向",
-          "reading": "コウ"
-        },
-        {
-          "text": "终结",
-          "reading": null
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 117,
+      "index": 68,
       "text": "沈むように溶けてゆくように",
       "romaji": "shizumu you ni toke te yuku you ni",
+      "translation": "像是沉溺溶化一般",
       "start": 215.0,
       "end": 219.0,
       "section": "Unknown",
@@ -12499,7 +7988,7 @@
         {
           "word": "沈む",
           "reading": "しずむ",
-          "meaning": "to sink",
+          "meaning": "下沉",
           "jlpt_level": "N3",
           "pos": "動詞"
         }
@@ -12509,7 +7998,7 @@
           "pattern": "〜ように",
           "level": "N4",
           "meaning": "so that ~ / like ~",
-          "explanation": "表示目的或比喻。例：忘れないように（为了不忘记）",
+          "explanation": "目的或比喻",
           "example": "届くように → 希望传达得到",
           "in_context": "沈むように溶けてゆくように"
         }
@@ -12551,90 +8040,10 @@
       "has_notes": true
     },
     {
-      "index": 118,
-      "text": "像是沉溺溶化一般",
-      "romaji": "zou ze 沉溺溶 ka ipan",
-      "start": 219.0,
-      "end": 219.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "像",
-          "reading": "ゾウ",
-          "base_form": "像",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "是",
-          "reading": "ゼ",
-          "base_form": "是",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "沉溺溶",
-          "reading": "沉溺溶",
-          "base_form": "沉溺溶",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "化",
-          "reading": "カ",
-          "base_form": "化",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "サ変接続",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "一般",
-          "reading": "イッパン",
-          "base_form": "一般",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "像",
-          "reading": "ゾウ"
-        },
-        {
-          "text": "是",
-          "reading": "ゼ"
-        },
-        {
-          "text": "沉溺溶",
-          "reading": null
-        },
-        {
-          "text": "化",
-          "reading": "カ"
-        },
-        {
-          "text": "一般",
-          "reading": "イッパン"
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 119,
+      "index": 69,
       "text": "染み付いた霧が晴れる",
       "romaji": "shimitsui ta kiri ga hareru",
+      "translation": "染上的氤氲终于散开",
       "start": 219.0,
       "end": 222.0,
       "section": "Unknown",
@@ -12713,90 +8122,10 @@
       "has_notes": false
     },
     {
-      "index": 120,
-      "text": "染上的氤氲终于散开",
-      "romaji": "some jou teki 氤氲终 于散开",
-      "start": 222.0,
-      "end": 222.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "染",
-          "reading": "ソメ",
-          "base_form": "染",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "上",
-          "reading": "ジョウ",
-          "base_form": "上",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "副詞可能",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "的",
-          "reading": "テキ",
-          "base_form": "的",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "形容動詞語幹",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "氤氲终",
-          "reading": "氤氲终",
-          "base_form": "氤氲终",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "于散开",
-          "reading": "于散开",
-          "base_form": "于散开",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "染",
-          "reading": "ソメ"
-        },
-        {
-          "text": "上",
-          "reading": "ジョウ"
-        },
-        {
-          "text": "的",
-          "reading": "テキ"
-        },
-        {
-          "text": "氤氲终",
-          "reading": null
-        },
-        {
-          "text": "于散开",
-          "reading": null
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 121,
+      "index": 70,
       "text": "忘れてしまいたくて",
       "romaji": "wasure te shimai taku te",
+      "translation": "在想要尽数忘却的",
       "start": 222.0,
       "end": 224.0,
       "section": "Unknown",
@@ -12852,7 +8181,7 @@
         {
           "word": "忘れる",
           "reading": "わすれる",
-          "meaning": "to forget",
+          "meaning": "忘记",
           "jlpt_level": "N4",
           "pos": "動詞"
         }
@@ -12883,90 +8212,10 @@
       "has_notes": true
     },
     {
-      "index": 122,
-      "text": "在想要尽数忘却的",
-      "romaji": "zai sou you 尽数忘 却的",
-      "start": 224.0,
-      "end": 224.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "在",
-          "reading": "ザイ",
-          "base_form": "在",
-          "pos": "接頭詞",
-          "pos_detail": "名詞接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "想",
-          "reading": "ソウ",
-          "base_form": "想",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "要",
-          "reading": "ヨウ",
-          "base_form": "要",
-          "pos": "接頭詞",
-          "pos_detail": "名詞接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "尽数忘",
-          "reading": "尽数忘",
-          "base_form": "尽数忘",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "却的",
-          "reading": "却的",
-          "base_form": "却的",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "在",
-          "reading": "ザイ"
-        },
-        {
-          "text": "想",
-          "reading": "ソウ"
-        },
-        {
-          "text": "要",
-          "reading": "ヨウ"
-        },
-        {
-          "text": "尽数忘",
-          "reading": null
-        },
-        {
-          "text": "却的",
-          "reading": null
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 123,
+      "index": 71,
       "text": "閉じ込めた日々に",
       "romaji": "tojikome ta hibi ni",
+      "translation": "封闭的日子中",
       "start": 224.0,
       "end": 227.0,
       "section": "Unknown",
@@ -13032,64 +8281,10 @@
       "has_notes": false
     },
     {
-      "index": 124,
-      "text": "封闭的日子中",
-      "romaji": "fuu 闭的日 konaka",
-      "start": 227.0,
-      "end": 227.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "封",
-          "reading": "フウ",
-          "base_form": "封",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "闭的日",
-          "reading": "闭的日",
-          "base_form": "闭的日",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "子中",
-          "reading": "コナカ",
-          "base_form": "子中",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "封",
-          "reading": "フウ"
-        },
-        {
-          "text": "闭的日",
-          "reading": null
-        },
-        {
-          "text": "子中",
-          "reading": "コナカ"
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 125,
+      "index": 72,
       "text": "差し伸べてくれた君の手を取る",
       "romaji": "sashinobe te kure ta kimi no te wo toru",
+      "translation": "紧握住你向我伸出的双手",
       "start": 227.0,
       "end": 230.0,
       "section": "Unknown",
@@ -13181,14 +8376,14 @@
         {
           "word": "君",
           "reading": "きみ",
-          "meaning": "you (informal)",
+          "meaning": "你（非正式）",
           "jlpt_level": "N5",
           "pos": "名詞"
         },
         {
           "word": "手",
           "reading": "て",
-          "meaning": "hand",
+          "meaning": "手",
           "jlpt_level": "N5",
           "pos": "名詞"
         }
@@ -13235,103 +8430,10 @@
       "has_notes": true
     },
     {
-      "index": 126,
-      "text": "紧握住你向我伸出的双手",
-      "romaji": "紧握住 你向我 shin de teki soushu",
-      "start": 230.0,
-      "end": 230.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "紧握住",
-          "reading": "紧握住",
-          "base_form": "紧握住",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "你向我",
-          "reading": "你向我",
-          "base_form": "你向我",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "伸",
-          "reading": "シン",
-          "base_form": "伸",
-          "pos": "名詞",
-          "pos_detail": "固有名詞",
-          "conjugation_type": "人名",
-          "conjugation_form": "名"
-        },
-        {
-          "surface": "出",
-          "reading": "デ",
-          "base_form": "出",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "一般",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "的",
-          "reading": "テキ",
-          "base_form": "的",
-          "pos": "名詞",
-          "pos_detail": "接尾",
-          "conjugation_type": "形容動詞語幹",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "双手",
-          "reading": "ソウシュ",
-          "base_form": "双手",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "紧握住",
-          "reading": null
-        },
-        {
-          "text": "你向我",
-          "reading": null
-        },
-        {
-          "text": "伸",
-          "reading": "シン"
-        },
-        {
-          "text": "出",
-          "reading": "デ"
-        },
-        {
-          "text": "的",
-          "reading": "テキ"
-        },
-        {
-          "text": "双手",
-          "reading": "ソウシュ"
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 127,
+      "index": 73,
       "text": "涼しい風が空を泳ぐように",
       "romaji": "suzushii kaze ga sora wo oyogu you ni",
+      "translation": "凉爽的风如同泳于夜空一般",
       "start": 230.0,
       "end": 234.0,
       "section": "Unknown",
@@ -13414,14 +8516,14 @@
         {
           "word": "風",
           "reading": "かぜ",
-          "meaning": "wind",
+          "meaning": "风",
           "jlpt_level": "N5",
           "pos": "名詞"
         },
         {
           "word": "空",
           "reading": "そら",
-          "meaning": "sky",
+          "meaning": "天空",
           "jlpt_level": "N5",
           "pos": "名詞"
         }
@@ -13431,7 +8533,7 @@
           "pattern": "〜ように",
           "level": "N4",
           "meaning": "so that ~ / like ~",
-          "explanation": "表示目的或比喻。例：忘れないように（为了不忘记）",
+          "explanation": "目的或比喻",
           "example": "届くように → 希望传达得到",
           "in_context": "涼しい風が空を泳ぐように"
         }
@@ -13473,98 +8575,10 @@
       "has_notes": true
     },
     {
-      "index": 128,
-      "text": "凉爽的风如同泳于夜空一般",
-      "romaji": "凉爽的 风如同 泳于夜 sora ipan",
-      "start": 234.0,
-      "end": 234.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "凉爽的",
-          "reading": "凉爽的",
-          "base_form": "凉爽的",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "风如同",
-          "reading": "风如同",
-          "base_form": "风如同",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "泳于夜",
-          "reading": "泳于夜",
-          "base_form": "泳于夜",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "空",
-          "reading": "ソラ",
-          "base_form": "空",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "一般",
-          "reading": "イッパン",
-          "base_form": "一般",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [
-        {
-          "word": "空",
-          "reading": "そら",
-          "meaning": "sky",
-          "jlpt_level": "N5",
-          "pos": "名詞"
-        }
-      ],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "凉爽的",
-          "reading": null
-        },
-        {
-          "text": "风如同",
-          "reading": null
-        },
-        {
-          "text": "泳于夜",
-          "reading": null
-        },
-        {
-          "text": "空",
-          "reading": "ソラ"
-        },
-        {
-          "text": "一般",
-          "reading": "イッパン"
-        }
-      ],
-      "has_notes": true
-    },
-    {
-      "index": 129,
+      "index": 74,
       "text": "今吹き抜けていく",
       "romaji": "ima fukinuke te iku",
+      "translation": "吹拂而过",
       "start": 234.0,
       "end": 237.0,
       "section": "Unknown",
@@ -13611,7 +8625,7 @@
         {
           "word": "今",
           "reading": "いま",
-          "meaning": "now",
+          "meaning": "现在",
           "jlpt_level": "N5",
           "pos": "名詞"
         }
@@ -13621,7 +8635,7 @@
           "pattern": "〜ていく",
           "level": "N3",
           "meaning": "will continue to ~ / going to ~",
-          "explanation": "表示从现在向未来的变化趋势。",
+          "explanation": "从现在向未来的变化趋势",
           "example": "消えていく → 渐渐消失",
           "in_context": "今吹き抜けていく"
         }
@@ -13647,51 +8661,10 @@
       "has_notes": true
     },
     {
-      "index": 130,
-      "text": "吹拂而过",
-      "romaji": "吹拂而 过",
-      "start": 237.0,
-      "end": 237.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "吹拂而",
-          "reading": "吹拂而",
-          "base_form": "吹拂而",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "过",
-          "reading": "过",
-          "base_form": "过",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "吹拂而",
-          "reading": null
-        },
-        {
-          "text": "过",
-          "reading": null
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 131,
+      "index": 75,
       "text": "繋いだ手を離さないでよ",
       "romaji": "tsunai da te wo hanasa nai de yo",
+      "translation": "不要松开紧紧牵住的双手",
       "start": 237.0,
       "end": 240.0,
       "section": "Unknown",
@@ -13774,7 +8747,7 @@
         {
           "word": "手",
           "reading": "て",
-          "meaning": "hand",
+          "meaning": "手",
           "jlpt_level": "N5",
           "pos": "名詞"
         }
@@ -13784,7 +8757,7 @@
           "pattern": "〜ないで",
           "level": "N5",
           "meaning": "without doing ~",
-          "explanation": "动词ない形 + で，表示不做某事的状态。例：食べないで（不吃就...）",
+          "explanation": "不做某事的状态",
           "example": "泣かないで → 请不要哭",
           "in_context": "繋いだ手を離さないでよ"
         }
@@ -13826,90 +8799,10 @@
       "has_notes": true
     },
     {
-      "index": 132,
-      "text": "不要松开紧紧牵住的双手",
-      "romaji": "fu youmatsu 开紧紧 牵住的 soushu",
-      "start": 240.0,
-      "end": 240.0,
-      "section": "Unknown",
-      "duration": 0.0,
-      "tokens": [
-        {
-          "surface": "不",
-          "reading": "フ",
-          "base_form": "不",
-          "pos": "接頭詞",
-          "pos_detail": "名詞接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "要松",
-          "reading": "ヨウマツ",
-          "base_form": "要松",
-          "pos": "名詞",
-          "pos_detail": "固有名詞",
-          "conjugation_type": "人名",
-          "conjugation_form": "名"
-        },
-        {
-          "surface": "开紧紧",
-          "reading": "开紧紧",
-          "base_form": "开紧紧",
-          "pos": "名詞",
-          "pos_detail": "固有名詞",
-          "conjugation_type": "組織",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "牵住的",
-          "reading": "牵住的",
-          "base_form": "牵住的",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "双手",
-          "reading": "ソウシュ",
-          "base_form": "双手",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "不",
-          "reading": "フ"
-        },
-        {
-          "text": "要松",
-          "reading": "ヨウマツ"
-        },
-        {
-          "text": "开紧紧",
-          "reading": null
-        },
-        {
-          "text": "牵住的",
-          "reading": null
-        },
-        {
-          "text": "双手",
-          "reading": "ソウシュ"
-        }
-      ],
-      "has_notes": false
-    },
-    {
-      "index": 133,
+      "index": 76,
       "text": "二人今 夜に駆け出していく",
       "romaji": "ni nin ima yoru ni kakedashi te iku",
+      "translation": "两人现在 向夜晚飞奔而去",
       "start": 240.0,
       "end": 245.0,
       "section": "Unknown",
@@ -14001,28 +8894,28 @@
         {
           "word": "人",
           "reading": "ひと",
-          "meaning": "person",
+          "meaning": "人",
           "jlpt_level": "N5",
           "pos": "名詞"
         },
         {
           "word": "今",
           "reading": "いま",
-          "meaning": "now",
+          "meaning": "现在",
           "jlpt_level": "N5",
           "pos": "名詞"
         },
         {
           "word": "夜",
           "reading": "よる",
-          "meaning": "night, evening",
+          "meaning": "夜晚",
           "jlpt_level": "N5",
           "pos": "名詞"
         },
         {
           "word": "駆け出す",
           "reading": "かけだす",
-          "meaning": "to start running",
+          "meaning": "起跑，开始跑",
           "jlpt_level": "N3",
           "pos": "動詞"
         }
@@ -14032,7 +8925,7 @@
           "pattern": "〜ていく",
           "level": "N3",
           "meaning": "will continue to ~ / going to ~",
-          "explanation": "表示从现在向未来的变化趋势。",
+          "explanation": "从现在向未来的变化趋势",
           "example": "消えていく → 渐渐消失",
           "in_context": "二人今 夜に駆け出していく"
         }
@@ -14073,121 +8966,6 @@
         {
           "text": "いく",
           "reading": "イク"
-        }
-      ],
-      "has_notes": true
-    },
-    {
-      "index": 134,
-      "text": "两人现在 向夜晚飞奔而去",
-      "romaji": "两人现 zai kou yoru 晚飞奔 而去",
-      "start": 245.0,
-      "end": 250.0,
-      "section": "Unknown",
-      "duration": 5.0,
-      "tokens": [
-        {
-          "surface": "两人现",
-          "reading": "两人现",
-          "base_form": "两人现",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "在",
-          "reading": "ザイ",
-          "base_form": "在",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": " ",
-          "reading": " ",
-          "base_form": " ",
-          "pos": "記号",
-          "pos_detail": "空白",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "向",
-          "reading": "コウ",
-          "base_form": "向",
-          "pos": "接頭詞",
-          "pos_detail": "名詞接続",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "夜",
-          "reading": "ヨル",
-          "base_form": "夜",
-          "pos": "名詞",
-          "pos_detail": "副詞可能",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "晚飞奔",
-          "reading": "晚飞奔",
-          "base_form": "晚飞奔",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        },
-        {
-          "surface": "而去",
-          "reading": "而去",
-          "base_form": "而去",
-          "pos": "名詞",
-          "pos_detail": "一般",
-          "conjugation_type": "*",
-          "conjugation_form": "*"
-        }
-      ],
-      "vocabulary": [
-        {
-          "word": "夜",
-          "reading": "よる",
-          "meaning": "night, evening",
-          "jlpt_level": "N5",
-          "pos": "名詞"
-        }
-      ],
-      "grammar": [],
-      "reading_parts": [
-        {
-          "text": "两人现",
-          "reading": null
-        },
-        {
-          "text": "在",
-          "reading": "ザイ"
-        },
-        {
-          "text": " ",
-          "reading": null
-        },
-        {
-          "text": "向",
-          "reading": "コウ"
-        },
-        {
-          "text": "夜",
-          "reading": "ヨル"
-        },
-        {
-          "text": "晚飞奔",
-          "reading": null
-        },
-        {
-          "text": "而去",
-          "reading": null
         }
       ],
       "has_notes": true

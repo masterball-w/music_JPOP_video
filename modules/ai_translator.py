@@ -99,7 +99,10 @@ class AITranslator:
             }
             headers = {"Content-Type": "application/json"}
         else:
-            url = self.base_url or self.endpoints.get(self.provider, self.endpoints["deepseek"])
+            if self.base_url:
+                url = self.base_url.rstrip("/") + "/chat/completions"
+            else:
+                url = self.endpoints.get(self.provider, self.endpoints["deepseek"])
             payload = {
                 "model": self.model,
                 "messages": [

@@ -48,9 +48,25 @@ def load_config(config_path: str = None) -> dict:
     return config
 
 
+def _is_chinese(text: str) -> bool:
+    """判断文本是否为中文翻译行。
+    如果包含日文假名（平假名/片假名），则判定为日文。
+    否则如果包含较多中文字符，则判定为中文。
+    """
+    # 包含日文假名 → 日文
+    if re.search(r'[\u3040-\u309f\u30a0-\u30ff]', text):
+        return False
+    # 包含较多中文字符 → 中文
+    cjk = re.findall(r'[\u4e00-\u9fff\u3400-\u4dbf]', text)
+    return len(cjk) / max(len(text), 1) > 0.3
+
+
 def parse_lrc_file(lrc_path: Path) -> Optional[dict]:
-    """解析 LRC 文件，返回带时间戳的歌词数据"""
-    lines = []
+    """解析 LRC 文件，返回带时间戳的歌词数据
+    自动将中文翻译行合并到对应的日文行中。
+    """
+    # 第一阶段：读取所有带时间戳的行
+    timed_lines = []
     metadata = {}
     lrc_pattern = re.compile(r'\[(\d{2}):(\d{2})\.(\d{2,3})\]\s*(.*)')
     meta_pattern = re.compile(r'\[([a-zA-Z#]+):(.*)\]')
@@ -61,8 +77,6 @@ def parse_lrc_file(lrc_path: Path) -> Optional[dict]:
                 line = line.strip()
                 if not line:
                     continue
-
-                # 跳过 markdown 代码块标记
                 if line.startswith('```'):
                     continue
 
@@ -75,9 +89,8 @@ def parse_lrc_file(lrc_path: Path) -> Optional[dict]:
                     text = lrc_match.group(4).strip()
                     time_s = minutes * 60 + seconds + ms / 1000.0
                     if text:
-                        lines.append({
+                        timed_lines.append({
                             "start": round(time_s, 3),
-                            "end": None,
                             "text": text,
                         })
                 else:
@@ -85,10 +98,46 @@ def parse_lrc_file(lrc_path: Path) -> Optional[dict]:
                     if meta_match:
                         metadata[meta_match.group(1)] = meta_match.group(2).strip()
 
-        if not lines:
+        if not timed_lines:
             return None
 
-        # Fill end times
+        # 第二阶段：合并中文翻译到日文行
+        # LRC 结构：日文行在前，中文翻译行在后
+        # 中文翻译行的时间戳通常与下一句日文行相同（即下一句的开始时间）
+        # 例如:
+        #   [00:01.00]日文A
+        #   [00:09.00]中文翻译A  ← 翻译日文A，但时间戳=下一句日文B的开始时间
+        #   [00:09.00]日文B
+        # 策略：中文行总是附加到它前面的日文行上
+        lines = []
+        i = 0
+        while i < len(timed_lines):
+            current = timed_lines[i]
+            text = current["text"]
+
+            # 跳过元信息行（如词曲作者、著作权等）
+            if text.startswith(('词：', '曲：', '编曲', 'TME', '翻译', '原唱')):
+                i += 1
+                continue
+
+            if _is_chinese(text):
+                # 纯中文行（无对应日文）— 单独保留
+                lines.append({"start": current["start"], "text": text, "translation": None})
+                i += 1
+                continue
+
+            # 日文行：检查下一行是否为中文翻译
+            translation = None
+            if i + 1 < len(timed_lines):
+                next_line = timed_lines[i + 1]
+                if _is_chinese(next_line["text"]):
+                    translation = next_line["text"]
+                    i += 1  # 跳过中文翻译行
+
+            lines.append({"start": current["start"], "text": text, "translation": translation})
+            i += 1
+
+        # 第三阶段：填充结束时间
         for i in range(len(lines) - 1):
             lines[i]["end"] = lines[i + 1]["start"]
         lines[-1]["end"] = lines[-1]["start"] + 5.0
@@ -113,6 +162,7 @@ def lrc_to_serialized(lrc_data: dict, serializer: LyricsSerializer) -> dict:
         text = line.get("text", "")
         start = line.get("start", 0)
         end = line.get("end", 0)
+        translation = line.get("translation")
 
         # 添加罗马音
         romaji = serializer.to_romaji(text)
@@ -121,6 +171,7 @@ def lrc_to_serialized(lrc_data: dict, serializer: LyricsSerializer) -> dict:
             "index": i,
             "text": text,
             "romaji": romaji,
+            "translation": translation,
             "start": start,
             "end": end,
             "section": "Unknown",
