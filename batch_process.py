@@ -121,8 +121,16 @@ def parse_lrc_file(lrc_path: Path) -> Optional[dict]:
                 continue
 
             if _is_chinese(text):
-                # 纯中文行（无对应日文）— 单独保留
-                lines.append({"start": current["start"], "text": text, "translation": None})
+                # 中文行：追加到前一行日文的翻译中（处理翻译被分成多行的情况）
+                if lines and not _is_chinese(lines[-1]["text"]):
+                    # 前一行是日文，将中文追加到翻译
+                    if lines[-1].get("translation"):
+                        lines[-1]["translation"] += text
+                    else:
+                        lines[-1]["translation"] = text
+                else:
+                    # 无法配对的纯中文行 — 单独保留
+                    lines.append({"start": current["start"], "text": text, "translation": None})
                 i += 1
                 continue
 
@@ -289,7 +297,11 @@ def process_single_song(
         console.print(f"  [red]Analysis failed[/red]")
         return False
 
-    # 4.5. AI 翻译为中文
+    # 4.5. AI 深度分析歌词知识点（提取词汇和语法，中文释义）
+    console.print(f"  AI analyzing lyrics...")
+    analysis = translator.analyze_lyrics_with_ai(analysis)
+
+    # 4.6. AI 翻译为中文（翻译本地分析中的英文释义）
     console.print(f"  Translating to Chinese...")
     analysis = translator.translate_song_analysis(analysis)
 

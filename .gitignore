@@ -37,6 +37,16 @@ output/videos/preview_*.png
 data/test_*.png
 data/font_test_*.png
 
+# Debug / temp files
+output/frame_*.jpg
+debug_*.py
+test_nvenc*.py
+test_nvenc*.mp4
+test_debug.mp4
+test_lrc_parse.py
+*_MPY_wvf_snd.mp4
+jp-music-video-proposal/
+
 # Secrets / credentials
 cookie.txt
 config.yaml

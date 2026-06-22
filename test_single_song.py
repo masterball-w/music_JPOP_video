@@ -18,12 +18,13 @@ from rich.console import Console
 
 console = Console()
 
-def test_single_song():
+def test_single_song(song_name=None):
     """测试单首歌曲"""
     # 选择测试歌曲
-    test_song = "YOASOBI - 夜に駆ける"
+    if song_name is None:
+        song_name = "YOASOBI - 夜に駆ける"
     
-    console.print(f"\n[bold cyan]=== 测试歌曲: {test_song} ===[/bold cyan]\n")
+    console.print(f"\n[bold cyan]=== 测试歌曲: {song_name} ===[/bold cyan]\n")
     
     # 加载配置
     config = load_config()
@@ -36,7 +37,7 @@ def test_single_song():
     
     # 设置路径
     audio_dir = Path(config["paths"]["data_dir"]) / "audio"
-    lrc_path = audio_dir / f"{test_song}.lrc"
+    lrc_path = audio_dir / f"{song_name}.lrc"
     
     if not lrc_path.exists():
         console.print(f"[red]LRC文件不存在: {lrc_path}[/red]")
@@ -63,4 +64,8 @@ def test_single_song():
     return success
 
 if __name__ == '__main__':
-    test_single_song()
+    import argparse
+    parser = argparse.ArgumentParser(description="测试歌曲视频生成")
+    parser.add_argument("song", nargs="?", default=None, help="歌曲名称（不含.lrc后缀）")
+    args = parser.parse_args()
+    test_single_song(args.song)

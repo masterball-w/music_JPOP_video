@@ -249,8 +249,8 @@ class TextRenderer:
 
     def render_sweep(self, text, size, progress,
                      base_color=(200, 200, 220), active_color=(0, 230, 255),
-                     glow_color=(60, 180, 255), max_width=None):
-        f = self.font(size)
+                     glow_color=(60, 180, 255), max_width=None, bold=False):
+        f = self.bold_font(size) if bold else self.font(size)
         dummy = Image.new("RGBA", (1, 1))
         d = ImageDraw.Draw(dummy)
         bb = d.textbbox((0, 0), text, font=f)
@@ -982,7 +982,7 @@ class VideoGenerator:
             notes.append(note)
 
             # Limit to avoid too many cards
-            if len(notes) >= 3:
+            if len(notes) >= 5:
                 break
 
         return notes
@@ -1060,73 +1060,60 @@ class VideoGenerator:
                 draw.point((lx0 + xi, ly), fill=(r, g, b, a))
                 draw.point((lx0 + xi, ly + 1), fill=(r, g, b, a // 2))
 
-        # ---- Lyrics area with fly-in/fly-out animations ----
+        # ---- Lyrics area (top 30%, only current line + translation) ----
         active_idx = self._find_active(lines, t)
-        visible_count = 5
-        start_idx = max(0, active_idx - 2) if active_idx >= 0 else 0
-        end_idx = min(len(lines), start_idx + visible_count)
 
         lyric_size = self.style.get("lyric_font_size", 50)
         romaji_size = self.style.get("romaji_font_size", 28)
         active_col = tuple(self.style.get("lyric_active_color", [0, 220, 255]))
         inactive_col = tuple(self.style.get("lyric_inactive_color", [210, 215, 235]))
-        min_fade = self.style.get("lyric_inactive_min_fade", 0.55)
         romaji_col = (160, 170, 200)
         translation_col = (180, 210, 180)  # 淡绿色中文翻译
 
-        base_spacing = lyric_size + romaji_size + 28 + 24  # +24 为中文翻译留空间
-        lyric_top = int(H * 0.175)
-        y_cursor = lyric_top
-
-        for i in range(start_idx, end_idx):
-            ln = lines[i]
+        if active_idx >= 0:
+            ln = lines[active_idx]
             text = ln.get("text", "")
             romaji = ln.get("romaji", "")
             translation = ln.get("translation")
-            is_active = (i == active_idx)
-
             line_start = ln.get("start", 0) or 0
             line_end = ln.get("end", 0) or line_start + 1
 
-            # Get animation transforms
             offset_x, offset_y, scale, alpha, glow = LyricAnimationEngine.get_lyric_transform(
-                i, active_idx, t, line_start, line_end
+                active_idx, active_idx, t, line_start, line_end
             )
 
             cur_size = max(16, int(lyric_size * scale))
+            progress = clamp((t - line_start) / max(0.1, line_end - line_start), 0, 1)
 
-            if is_active:
-                progress = clamp((t - line_start) / max(0.1, line_end - line_start), 0, 1)
-                lyric_img = self.R.render_sweep(
-                    text, cur_size, progress,
-                    base_color=inactive_col, active_color=active_col,
-                    glow_color=(active_col[0]//2, active_col[1]//2, active_col[2]),
-                    max_width=W - 80,
-                )
-            else:
-                col = tuple(int(c * alpha) for c in inactive_col)
-                if glow > 0:
-                    lyric_img = self.R.render(
-                        text, cur_size, color=col, max_width=W - 80,
-                        glow=True, glow_color=(active_col[0]//3, active_col[1]//3, active_col[2]//2), glow_radius=8,
-                        shadow=True, shadow_color=(0, 0, 0),
-                    )
-                else:
-                    lyric_img = self.R.render(
-                        text, cur_size, color=col, max_width=W - 80,
-                        shadow=True, shadow_color=(0, 0, 0),
-                    )
+            lyric_img = self.R.render_sweep(
+                text, cur_size, progress,
+                base_color=inactive_col, active_color=active_col,
+                glow_color=(active_col[0]//2, active_col[1]//2, active_col[2]),
+                max_width=W - 80,
+                bold=True,
+            )
+
+            # 计算歌词区垂直居中位置（顶部30%区域内）
+            total_lyric_h = cur_size
+            if romaji:
+                total_lyric_h += romaji_size + 6
+            if translation:
+                tr_size = max(20, int(lyric_size * 0.72 * scale))
+                total_lyric_h += tr_size + 6
+
+            lyric_top = int(H * 0.13)
+            y_cursor = lyric_top
 
             lx = (W - lyric_img.width) // 2 + offset_x
             frame.paste(lyric_img, (lx, y_cursor + offset_y), lyric_img)
 
-            if is_active and romaji:
+            if romaji:
                 r_img = self.R.render(romaji, romaji_size, color=romaji_col, max_width=W - 80)
                 rx = (W - r_img.width) // 2 + offset_x
                 frame.paste(r_img, (rx, y_cursor + cur_size + 6 + offset_y), r_img)
 
-            # 中文翻译显示在罗马音下方（仅活跃行）
-            if is_active and translation:
+            # 中文翻译显示在罗马音下方，与日文歌词同步
+            if translation:
                 tr_size = max(20, int(lyric_size * 0.72 * scale))
                 tr_img = self.R.render(translation, tr_size, color=translation_col, max_width=W - 80)
                 tr_x = (W - tr_img.width) // 2 + offset_x
@@ -1135,15 +1122,13 @@ class VideoGenerator:
                     tr_y += romaji_size + 4
                 frame.paste(tr_img, (tr_x, tr_y + offset_y), tr_img)
 
-            y_cursor += int(base_spacing * scale)
-
-        # ---- Progress indicator ----
+        # ---- Progress indicator (at 30% boundary) ----
         if lines:
             first_s = lines[0].get("start", 0) or 0
             last_e = max((l.get("end", 0) or 0) for l in lines)
             overall = clamp((t - first_s) / max(0.1, last_e - first_s), 0, 1)
 
-            bar_y = int(H * 0.635)
+            bar_y = int(H * 0.295)
             bar_x, bar_w, bar_h = 50, W - 100, 3
 
             draw.rounded_rectangle([(bar_x, bar_y), (bar_x + bar_w, bar_y + bar_h)],
@@ -1207,7 +1192,7 @@ class VideoGenerator:
             current_notes = [top_notes[ni]]
 
         if current_notes:
-            notes_y = int(H * 0.665)
+            notes_y = int(H * 0.32)
 
             backdrop = Image.new("RGBA", (W, H - notes_y + 20), (0, 0, 0, 0))
             bd_draw = ImageDraw.Draw(backdrop)
@@ -1248,7 +1233,7 @@ class VideoGenerator:
 
             card_w = W - 60
             y_cursor = notes_y + 4
-            max_cards = 2
+            max_cards = 5  # 从2增加到5，充分利用70%的空间
 
             directions = ["bottom", "left"]
 
@@ -1308,7 +1293,7 @@ class VideoGenerator:
             duration = max((l.get("end", 0) or 0) for l in lines) + self.outro_s + 1
         else:
             duration = 30
-        duration = min(duration, self.max_duration)
+        # 不再限制最大时长，以歌曲实际长度为准
 
         console.print(f"\n[bold cyan]=== Generating Video v3 (Enhanced) ===[/bold cyan]")
         console.print(f"  {title} - {artist}")

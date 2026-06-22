@@ -350,7 +350,14 @@ class LyricsScraper:
                 continue
 
             if _is_chinese(text):
-                lines.append({"start": current["start"], "end": None, "text": text, "translation": None})
+                # 中文行：追加到前一行日文的翻译中（处理翻译被分成多行的情况）
+                if lines and not _is_chinese(lines[-1]["text"]):
+                    if lines[-1].get("translation"):
+                        lines[-1]["translation"] += text
+                    else:
+                        lines[-1]["translation"] = text
+                else:
+                    lines.append({"start": current["start"], "end": None, "text": text, "translation": None})
                 i += 1
                 continue
 

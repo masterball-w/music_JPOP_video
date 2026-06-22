@@ -1,0 +1,5712 @@
+{
+  "title": "Lemon",
+  "artist": "米津玄師",
+  "song_id": "米津玄師_Lemon",
+  "total_lines": 55,
+  "lines_with_notes": 32,
+  "jlpt_distribution": {
+    "N5": 7,
+    "N4": 6,
+    "N3": 5
+  },
+  "vocabulary_count": 18,
+  "grammar_count": 10,
+  "top_notes": [
+    {
+      "type": "vocabulary",
+      "score": 8,
+      "data": {
+        "word": "日",
+        "reading": "ひ",
+        "meaning": "天；太阳",
+        "jlpt_level": "N5",
+        "pos": "名詞"
+      },
+      "line_indices": [
+        14,
+        15,
+        46,
+        47
+      ]
+    },
+    {
+      "type": "vocabulary",
+      "score": 8,
+      "data": {
+        "word": "今",
+        "reading": "いま",
+        "meaning": "现在",
+        "jlpt_level": "N5",
+        "pos": "名詞"
+      },
+      "line_indices": [
+        21,
+        30,
+        37,
+        54
+      ]
+    },
+    {
+      "type": "vocabulary",
+      "score": 7,
+      "data": {
+        "word": "光",
+        "reading": "ひかり",
+        "meaning": "光；光线",
+        "jlpt_level": "N5",
+        "pos": "名詞"
+      },
+      "line_indices": [
+        21,
+        37,
+        54
+      ]
+    },
+    {
+      "type": "vocabulary",
+      "score": 6,
+      "data": {
+        "word": "夢",
+        "reading": "ゆめ",
+        "meaning": "梦；梦想",
+        "jlpt_level": "N5",
+        "pos": "名詞"
+      },
+      "line_indices": [
+        1,
+        3
+      ]
+    },
+    {
+      "type": "vocabulary",
+      "score": 6,
+      "data": {
+        "word": "忘れる",
+        "reading": "わすれる",
+        "meaning": "忘记",
+        "jlpt_level": "N4",
+        "pos": "動詞"
+      },
+      "line_indices": [
+        4,
+        35,
+        44
+      ]
+    },
+    {
+      "type": "vocabulary",
+      "score": 6,
+      "data": {
+        "word": "雨",
+        "reading": "あめ",
+        "meaning": "雨；下雨",
+        "jlpt_level": "N5",
+        "pos": "名詞"
+      },
+      "line_indices": [
+        20,
+        52
+      ]
+    },
+    {
+      "type": "vocabulary",
+      "score": 6,
+      "data": {
+        "word": "何",
+        "reading": "なに/なん",
+        "meaning": "什么",
+        "jlpt_level": "N5",
+        "pos": "名詞"
+      },
+      "line_indices": [
+        27,
+        28
+      ]
+    },
+    {
+      "type": "grammar",
+      "score": 6,
+      "data": {
+        "pattern": "〜ている",
+        "level": "N5",
+        "meaning": "is doing ~ / state of being",
+        "explanation": "〜ている：表示动作持续或状态存续。走っている（正在跑）",
+        "example": "見ている → 正在看",
+        "in_context": "ありはしないとわかっている"
+      },
+      "line_indices": [
+        13,
+        23
+      ]
+    },
+    {
+      "type": "grammar",
+      "score": 6,
+      "data": {
+        "pattern": "〜たい",
+        "level": "N5",
+        "meaning": "want to do ~",
+        "explanation": "〜たい：动词去「ます」加「たい」，表示说话人的愿望。食べたい（想吃）",
+        "example": "会いたい → 想要见面",
+        "in_context": "まるで嘘みたい"
+      },
+      "line_indices": [
+        43
+      ]
+    },
+    {
+      "type": "vocabulary",
+      "score": 5,
+      "data": {
+        "word": "離れる",
+        "reading": "はなれる",
+        "meaning": "分离；离开",
+        "jlpt_level": "N4",
+        "pos": "動詞"
+      },
+      "line_indices": [
+        18,
+        50
+      ]
+    },
+    {
+      "type": "vocabulary",
+      "score": 5,
+      "data": {
+        "word": "涙",
+        "reading": "なみだ",
+        "meaning": "眼泪；泪水",
+        "jlpt_level": "N4",
+        "pos": "名詞"
+      },
+      "line_indices": [
+        26,
+        32
+      ]
+    },
+    {
+      "type": "vocabulary",
+      "score": 5,
+      "data": {
+        "word": "見る",
+        "reading": "みる",
+        "meaning": "看；看见",
+        "jlpt_level": "N5",
+        "pos": "動詞"
+      },
+      "line_indices": [
+        28
+      ]
+    },
+    {
+      "type": "grammar",
+      "score": 5,
+      "data": {
+        "pattern": "〜ように",
+        "level": "N4",
+        "meaning": "so that ~ / like ~",
+        "explanation": "〜ように：表示目的或比喻。忘れないように（为了不忘记）",
+        "example": "届くように → 希望传达得到",
+        "in_context": "忘れた物を取りに帰るように"
+      },
+      "line_indices": [
+        4,
+        40
+      ]
+    },
+    {
+      "type": "vocabulary",
+      "score": 4,
+      "data": {
+        "word": "過去",
+        "reading": "かこ",
+        "meaning": "过去",
+        "jlpt_level": "N4",
+        "pos": "名詞"
+      },
+      "line_indices": [
+        8
+      ]
+    },
+    {
+      "type": "vocabulary",
+      "score": 4,
+      "data": {
+        "word": "胸",
+        "reading": "むね",
+        "meaning": "胸；胸口；内心",
+        "jlpt_level": "N3",
+        "pos": "名詞"
+      },
+      "line_indices": [
+        18,
+        50
+      ]
+    }
+  ],
+  "analyzed_lines": [
+    {
+      "index": 0,
+      "text": "Lemon - 米津玄師 (よねづ けんし)",
+      "romaji": "Lemon - yonetsu gen shi ( yo ne du kenshi )",
+      "translation": "词：米津玄師",
+      "start": 0.0,
+      "end": 1.0,
+      "section": "Unknown",
+      "duration": 0,
+      "tokens": [
+        {
+          "surface": "Lemon",
+          "reading": "Lemon",
+          "base_form": "Lemon",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "-",
+          "reading": "-",
+          "base_form": "-",
+          "pos": "名詞",
+          "pos_detail": "サ変接続",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "米津",
+          "reading": "ヨネツ",
+          "base_form": "米津",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "人名",
+          "conjugation_form": "姓"
+        },
+        {
+          "surface": "玄",
+          "reading": "ゲン",
+          "base_form": "玄",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "人名",
+          "conjugation_form": "名"
+        },
+        {
+          "surface": "師",
+          "reading": "シ",
+          "base_form": "師",
+          "pos": "名詞",
+          "pos_detail": "接尾",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "(",
+          "reading": "(",
+          "base_form": "(",
+          "pos": "名詞",
+          "pos_detail": "サ変接続",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "よ",
+          "reading": "ヨ",
+          "base_form": "よ",
+          "pos": "助詞",
+          "pos_detail": "終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ね",
+          "reading": "ネ",
+          "base_form": "ね",
+          "pos": "助詞",
+          "pos_detail": "終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "づ",
+          "reading": "づ",
+          "base_form": "づ",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "けんし",
+          "reading": "ケンシ",
+          "base_form": "けんする",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": ")",
+          "reading": ")",
+          "base_form": ")",
+          "pos": "名詞",
+          "pos_detail": "サ変接続",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "Lemon",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "-",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "米津",
+          "reading": "ヨネツ"
+        },
+        {
+          "text": "玄",
+          "reading": "ゲン"
+        },
+        {
+          "text": "師",
+          "reading": "シ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "(",
+          "reading": null
+        },
+        {
+          "text": "よ",
+          "reading": "ヨ"
+        },
+        {
+          "text": "ね",
+          "reading": "ネ"
+        },
+        {
+          "text": "づ",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "けんし",
+          "reading": "ケンシ"
+        },
+        {
+          "text": ")",
+          "reading": null
+        }
+      ],
+      "has_notes": false
+    },
+    {
+      "index": 1,
+      "text": "夢ならば",
+      "romaji": "yume nara ba",
+      "translation": "如果只是一场梦",
+      "start": 1.0,
+      "end": 2.0,
+      "section": "Unknown",
+      "duration": 1.0,
+      "tokens": [
+        {
+          "surface": "夢",
+          "reading": "ユメ",
+          "base_form": "夢",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "なら",
+          "reading": "ナラ",
+          "base_form": "だ",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ば",
+          "reading": "バ",
+          "base_form": "ば",
+          "pos": "助詞",
+          "pos_detail": "接続助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "夢",
+          "reading": "ゆめ",
+          "meaning": "梦；梦想",
+          "jlpt_level": "N5",
+          "pos": "名詞"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "夢",
+          "reading": "ユメ"
+        },
+        {
+          "text": "なら",
+          "reading": "ナラ"
+        },
+        {
+          "text": "ば",
+          "reading": "バ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 2,
+      "text": "どれほどよかったでしょう",
+      "romaji": "dorehodo yoka ta desho u",
+      "translation": "那该有多好",
+      "start": 2.0,
+      "end": 6.0,
+      "section": "Unknown",
+      "duration": 4.0,
+      "tokens": [
+        {
+          "surface": "どれほど",
+          "reading": "ドレホド",
+          "base_form": "どれほど",
+          "pos": "副詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "よかっ",
+          "reading": "ヨカッ",
+          "base_form": "よい",
+          "pos": "形容詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "た",
+          "reading": "タ",
+          "base_form": "た",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "でしょ",
+          "reading": "デショ",
+          "base_form": "です",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "う",
+          "reading": "ウ",
+          "base_form": "う",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [
+        {
+          "pattern": "〜ほど",
+          "level": "N3",
+          "meaning": "to the extent that ~",
+          "explanation": "〜ほど：表示程度，歌词中常用于夸张",
+          "example": "死にたいほど → 痛苦到想死的程度",
+          "in_context": "どれほどよかったでしょう"
+        }
+      ],
+      "reading_parts": [
+        {
+          "text": "どれほど",
+          "reading": "ドレホド"
+        },
+        {
+          "text": "よかっ",
+          "reading": "ヨカッ"
+        },
+        {
+          "text": "た",
+          "reading": "タ"
+        },
+        {
+          "text": "でしょ",
+          "reading": "デショ"
+        },
+        {
+          "text": "う",
+          "reading": "ウ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 3,
+      "text": "未だにあなたのことを夢にみる",
+      "romaji": "imadani anata no koto wo yume ni miru",
+      "translation": "你依旧出现在我梦里",
+      "start": 6.0,
+      "end": 12.0,
+      "section": "Unknown",
+      "duration": 6.0,
+      "tokens": [
+        {
+          "surface": "未だに",
+          "reading": "イマダニ",
+          "base_form": "未だに",
+          "pos": "副詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "あなた",
+          "reading": "アナタ",
+          "base_form": "あなた",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "の",
+          "reading": "ノ",
+          "base_form": "の",
+          "pos": "助詞",
+          "pos_detail": "連体化",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "こと",
+          "reading": "コト",
+          "base_form": "こと",
+          "pos": "名詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "を",
+          "reading": "ヲ",
+          "base_form": "を",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "夢",
+          "reading": "ユメ",
+          "base_form": "夢",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "に",
+          "reading": "ニ",
+          "base_form": "に",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "みる",
+          "reading": "ミル",
+          "base_form": "みる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "夢",
+          "reading": "ゆめ",
+          "meaning": "梦；梦想",
+          "jlpt_level": "N5",
+          "pos": "名詞"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "未だに",
+          "reading": "イマダニ"
+        },
+        {
+          "text": "あなた",
+          "reading": "アナタ"
+        },
+        {
+          "text": "の",
+          "reading": "ノ"
+        },
+        {
+          "text": "こと",
+          "reading": "コト"
+        },
+        {
+          "text": "を",
+          "reading": "ヲ"
+        },
+        {
+          "text": "夢",
+          "reading": "ユメ"
+        },
+        {
+          "text": "に",
+          "reading": "ニ"
+        },
+        {
+          "text": "みる",
+          "reading": "ミル"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 4,
+      "text": "忘れた物を取りに帰るように",
+      "romaji": "wasure ta mono wo tori ni kaeru you ni",
+      "translation": "就像取回遗忘的东西一样",
+      "start": 12.0,
+      "end": 17.0,
+      "section": "Unknown",
+      "duration": 5.0,
+      "tokens": [
+        {
+          "surface": "忘れ",
+          "reading": "ワスレ",
+          "base_form": "忘れる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "た",
+          "reading": "タ",
+          "base_form": "た",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "物",
+          "reading": "モノ",
+          "base_form": "物",
+          "pos": "名詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "を",
+          "reading": "ヲ",
+          "base_form": "を",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "取り",
+          "reading": "トリ",
+          "base_form": "取る",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "に",
+          "reading": "ニ",
+          "base_form": "に",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "帰る",
+          "reading": "カエル",
+          "base_form": "帰る",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "よう",
+          "reading": "ヨウ",
+          "base_form": "よう",
+          "pos": "名詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "助動詞語幹",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "に",
+          "reading": "ニ",
+          "base_form": "に",
+          "pos": "助詞",
+          "pos_detail": "副詞化",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "忘れる",
+          "reading": "わすれる",
+          "meaning": "忘记",
+          "jlpt_level": "N4",
+          "pos": "動詞"
+        }
+      ],
+      "grammar": [
+        {
+          "pattern": "〜ように",
+          "level": "N4",
+          "meaning": "so that ~ / like ~",
+          "explanation": "〜ように：表示目的或比喻。忘れないように（为了不忘记）",
+          "example": "届くように → 希望传达得到",
+          "in_context": "忘れた物を取りに帰るように"
+        }
+      ],
+      "reading_parts": [
+        {
+          "text": "忘れ",
+          "reading": "ワスレ"
+        },
+        {
+          "text": "た",
+          "reading": "タ"
+        },
+        {
+          "text": "物",
+          "reading": "モノ"
+        },
+        {
+          "text": "を",
+          "reading": "ヲ"
+        },
+        {
+          "text": "取り",
+          "reading": "トリ"
+        },
+        {
+          "text": "に",
+          "reading": "ニ"
+        },
+        {
+          "text": "帰る",
+          "reading": "カエル"
+        },
+        {
+          "text": "よう",
+          "reading": "ヨウ"
+        },
+        {
+          "text": "に",
+          "reading": "ニ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 5,
+      "text": "古びた思い出の埃を払う",
+      "romaji": "furubi ta omoide no hokori wo harau",
+      "translation": null,
+      "start": 17.0,
+      "end": 26.0,
+      "section": "Unknown",
+      "duration": 9.0,
+      "tokens": [
+        {
+          "surface": "古び",
+          "reading": "フルビ",
+          "base_form": "古びる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "た",
+          "reading": "タ",
+          "base_form": "た",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "思い出",
+          "reading": "オモイデ",
+          "base_form": "思い出",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "の",
+          "reading": "ノ",
+          "base_form": "の",
+          "pos": "助詞",
+          "pos_detail": "連体化",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "埃",
+          "reading": "ホコリ",
+          "base_form": "埃",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "を",
+          "reading": "ヲ",
+          "base_form": "を",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "払う",
+          "reading": "ハラウ",
+          "base_form": "払う",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "思い出",
+          "reading": "おもいで",
+          "meaning": "回忆；记忆",
+          "jlpt_level": "N3",
+          "pos": "名詞"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "古び",
+          "reading": "フルビ"
+        },
+        {
+          "text": "た",
+          "reading": "タ"
+        },
+        {
+          "text": "思い出",
+          "reading": "オモイデ"
+        },
+        {
+          "text": "の",
+          "reading": "ノ"
+        },
+        {
+          "text": "埃",
+          "reading": "ホコリ"
+        },
+        {
+          "text": "を",
+          "reading": "ヲ"
+        },
+        {
+          "text": "払う",
+          "reading": "ハラウ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 6,
+      "text": "戻らない幸せがあることを",
+      "romaji": "modora nai shiawase ga aru koto wo",
+      "translation": "把陈旧回忆上的尘埃拂去有些幸福再也无法重来",
+      "start": 26.0,
+      "end": 31.0,
+      "section": "Unknown",
+      "duration": 5.0,
+      "tokens": [
+        {
+          "surface": "戻ら",
+          "reading": "モドラ",
+          "base_form": "戻る",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ない",
+          "reading": "ナイ",
+          "base_form": "ない",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "幸せ",
+          "reading": "シアワセ",
+          "base_form": "幸せ",
+          "pos": "名詞",
+          "pos_detail": "形容動詞語幹",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "が",
+          "reading": "ガ",
+          "base_form": "が",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ある",
+          "reading": "アル",
+          "base_form": "ある",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "こと",
+          "reading": "コト",
+          "base_form": "こと",
+          "pos": "名詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "を",
+          "reading": "ヲ",
+          "base_form": "を",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "幸せ",
+          "reading": "しあわせ",
+          "meaning": "幸福；幸运",
+          "jlpt_level": "N3",
+          "pos": "名詞"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "戻ら",
+          "reading": "モドラ"
+        },
+        {
+          "text": "ない",
+          "reading": "ナイ"
+        },
+        {
+          "text": "幸せ",
+          "reading": "シアワセ"
+        },
+        {
+          "text": "が",
+          "reading": "ガ"
+        },
+        {
+          "text": "ある",
+          "reading": "アル"
+        },
+        {
+          "text": "こと",
+          "reading": "コト"
+        },
+        {
+          "text": "を",
+          "reading": "ヲ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 7,
+      "text": "最後にあなたが教えてくれた",
+      "romaji": "saigo ni anata ga oshie te kure ta",
+      "translation": "这是最后你告诉我的",
+      "start": 31.0,
+      "end": 37.0,
+      "section": "Unknown",
+      "duration": 6.0,
+      "tokens": [
+        {
+          "surface": "最後",
+          "reading": "サイゴ",
+          "base_form": "最後",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "に",
+          "reading": "ニ",
+          "base_form": "に",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "あなた",
+          "reading": "アナタ",
+          "base_form": "あなた",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "が",
+          "reading": "ガ",
+          "base_form": "が",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "教え",
+          "reading": "オシエ",
+          "base_form": "教える",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "て",
+          "reading": "テ",
+          "base_form": "て",
+          "pos": "助詞",
+          "pos_detail": "接続助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "くれ",
+          "reading": "クレ",
+          "base_form": "くれる",
+          "pos": "動詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "た",
+          "reading": "タ",
+          "base_form": "た",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "最後",
+          "reading": "サイゴ"
+        },
+        {
+          "text": "に",
+          "reading": "ニ"
+        },
+        {
+          "text": "あなた",
+          "reading": "アナタ"
+        },
+        {
+          "text": "が",
+          "reading": "ガ"
+        },
+        {
+          "text": "教え",
+          "reading": "オシエ"
+        },
+        {
+          "text": "て",
+          "reading": "テ"
+        },
+        {
+          "text": "くれ",
+          "reading": "クレ"
+        },
+        {
+          "text": "た",
+          "reading": "タ"
+        }
+      ],
+      "has_notes": false
+    },
+    {
+      "index": 8,
+      "text": "言えずに隠してた昏い過去も",
+      "romaji": "ie zu ni kakushi te ta 昏 i kako mo",
+      "translation": "藏在心里的黑暗过去",
+      "start": 37.0,
+      "end": 42.0,
+      "section": "Unknown",
+      "duration": 5.0,
+      "tokens": [
+        {
+          "surface": "言え",
+          "reading": "イエ",
+          "base_form": "言える",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ず",
+          "reading": "ズ",
+          "base_form": "ぬ",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "に",
+          "reading": "ニ",
+          "base_form": "に",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "隠し",
+          "reading": "カクシ",
+          "base_form": "隠す",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "て",
+          "reading": "テ",
+          "base_form": "てる",
+          "pos": "動詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "た",
+          "reading": "タ",
+          "base_form": "た",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "昏",
+          "reading": "昏",
+          "base_form": "昏",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "い",
+          "reading": "イ",
+          "base_form": "いる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "過去",
+          "reading": "カコ",
+          "base_form": "過去",
+          "pos": "名詞",
+          "pos_detail": "副詞可能",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "も",
+          "reading": "モ",
+          "base_form": "も",
+          "pos": "助詞",
+          "pos_detail": "係助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "過去",
+          "reading": "かこ",
+          "meaning": "过去",
+          "jlpt_level": "N4",
+          "pos": "名詞"
+        }
+      ],
+      "grammar": [
+        {
+          "pattern": "〜ずに",
+          "level": "N2",
+          "meaning": "without doing ~",
+          "explanation": "〜ずに：「ない」的文语形式，歌词中常用。見ずに（不看就……）",
+          "example": "止めずに → 不停下来地...",
+          "in_context": "言えずに隠してた昏い過去も"
+        }
+      ],
+      "reading_parts": [
+        {
+          "text": "言え",
+          "reading": "イエ"
+        },
+        {
+          "text": "ず",
+          "reading": "ズ"
+        },
+        {
+          "text": "に",
+          "reading": "ニ"
+        },
+        {
+          "text": "隠し",
+          "reading": "カクシ"
+        },
+        {
+          "text": "て",
+          "reading": "テ"
+        },
+        {
+          "text": "た",
+          "reading": "タ"
+        },
+        {
+          "text": "昏",
+          "reading": null
+        },
+        {
+          "text": "い",
+          "reading": "イ"
+        },
+        {
+          "text": "過去",
+          "reading": "カコ"
+        },
+        {
+          "text": "も",
+          "reading": "モ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 9,
+      "text": "あなたがいなきゃ",
+      "romaji": "anata ga i nakya",
+      "translation": "没有了你",
+      "start": 42.0,
+      "end": 44.0,
+      "section": "Unknown",
+      "duration": 2.0,
+      "tokens": [
+        {
+          "surface": "あなた",
+          "reading": "アナタ",
+          "base_form": "あなた",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "が",
+          "reading": "ガ",
+          "base_form": "が",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "い",
+          "reading": "イ",
+          "base_form": "いる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "なきゃ",
+          "reading": "ナキャ",
+          "base_form": "ない",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "あなた",
+          "reading": "アナタ"
+        },
+        {
+          "text": "が",
+          "reading": "ガ"
+        },
+        {
+          "text": "い",
+          "reading": "イ"
+        },
+        {
+          "text": "なきゃ",
+          "reading": "ナキャ"
+        }
+      ],
+      "has_notes": false
+    },
+    {
+      "index": 10,
+      "text": "永遠に昏いまま",
+      "romaji": "eien ni 昏 ima ma",
+      "translation": "也会永远黑暗",
+      "start": 44.0,
+      "end": 48.0,
+      "section": "Unknown",
+      "duration": 4.0,
+      "tokens": [
+        {
+          "surface": "永遠",
+          "reading": "エイエン",
+          "base_form": "永遠",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "に",
+          "reading": "ニ",
+          "base_form": "に",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "昏",
+          "reading": "昏",
+          "base_form": "昏",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "いま",
+          "reading": "イマ",
+          "base_form": "いま",
+          "pos": "名詞",
+          "pos_detail": "副詞可能",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ま",
+          "reading": "マ",
+          "base_form": "ま",
+          "pos": "感動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "永遠",
+          "reading": "えいえん",
+          "meaning": "永远；永恒",
+          "jlpt_level": "N3",
+          "pos": "名詞"
+        }
+      ],
+      "grammar": [
+        {
+          "pattern": "〜まま",
+          "level": "N3",
+          "meaning": "as it is ~ / while still ~",
+          "explanation": "〜まま：保持某种状态不变",
+          "example": "夢のまま → 就这样在梦中",
+          "in_context": "永遠に昏いまま"
+        }
+      ],
+      "reading_parts": [
+        {
+          "text": "永遠",
+          "reading": "エイエン"
+        },
+        {
+          "text": "に",
+          "reading": "ニ"
+        },
+        {
+          "text": "昏",
+          "reading": null
+        },
+        {
+          "text": "いま",
+          "reading": "イマ"
+        },
+        {
+          "text": "ま",
+          "reading": "マ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 11,
+      "text": "きっともうこれ以上",
+      "romaji": "kito mou kore ijou",
+      "translation": "我明白",
+      "start": 48.0,
+      "end": 51.0,
+      "section": "Unknown",
+      "duration": 3.0,
+      "tokens": [
+        {
+          "surface": "きっと",
+          "reading": "キット",
+          "base_form": "きっと",
+          "pos": "副詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "もう",
+          "reading": "モウ",
+          "base_form": "もう",
+          "pos": "副詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "これ",
+          "reading": "コレ",
+          "base_form": "これ",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "以上",
+          "reading": "イジョウ",
+          "base_form": "以上",
+          "pos": "名詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "副詞可能",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "きっと",
+          "reading": "キット"
+        },
+        {
+          "text": "もう",
+          "reading": "モウ"
+        },
+        {
+          "text": "これ",
+          "reading": "コレ"
+        },
+        {
+          "text": "以上",
+          "reading": "イジョウ"
+        }
+      ],
+      "has_notes": false
+    },
+    {
+      "index": 12,
+      "text": "傷つくことなど",
+      "romaji": "kizutsuku koto nado",
+      "translation": null,
+      "start": 51.0,
+      "end": 54.0,
+      "section": "Unknown",
+      "duration": 3.0,
+      "tokens": [
+        {
+          "surface": "傷つく",
+          "reading": "キズツク",
+          "base_form": "傷つく",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "こと",
+          "reading": "コト",
+          "base_form": "こと",
+          "pos": "名詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "など",
+          "reading": "ナド",
+          "base_form": "など",
+          "pos": "助詞",
+          "pos_detail": "副助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "傷つく",
+          "reading": "キズツク"
+        },
+        {
+          "text": "こと",
+          "reading": "コト"
+        },
+        {
+          "text": "など",
+          "reading": "ナド"
+        }
+      ],
+      "has_notes": false
+    },
+    {
+      "index": 13,
+      "text": "ありはしないとわかっている",
+      "romaji": "ari ha shi nai to waka te iru",
+      "translation": "不会再有比这更让人受伤的事了",
+      "start": 54.0,
+      "end": 58.0,
+      "section": "Unknown",
+      "duration": 4.0,
+      "tokens": [
+        {
+          "surface": "あり",
+          "reading": "アリ",
+          "base_form": "ある",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "は",
+          "reading": "ハ",
+          "base_form": "は",
+          "pos": "助詞",
+          "pos_detail": "係助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "し",
+          "reading": "シ",
+          "base_form": "する",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ない",
+          "reading": "ナイ",
+          "base_form": "ない",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "と",
+          "reading": "ト",
+          "base_form": "と",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "引用",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "わかっ",
+          "reading": "ワカッ",
+          "base_form": "わかる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "て",
+          "reading": "テ",
+          "base_form": "て",
+          "pos": "助詞",
+          "pos_detail": "接続助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "いる",
+          "reading": "イル",
+          "base_form": "いる",
+          "pos": "動詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [
+        {
+          "pattern": "〜ている",
+          "level": "N5",
+          "meaning": "is doing ~ / state of being",
+          "explanation": "〜ている：表示动作持续或状态存续。走っている（正在跑）",
+          "example": "見ている → 正在看",
+          "in_context": "ありはしないとわかっている"
+        }
+      ],
+      "reading_parts": [
+        {
+          "text": "あり",
+          "reading": "アリ"
+        },
+        {
+          "text": "は",
+          "reading": "ハ"
+        },
+        {
+          "text": "し",
+          "reading": "シ"
+        },
+        {
+          "text": "ない",
+          "reading": "ナイ"
+        },
+        {
+          "text": "と",
+          "reading": "ト"
+        },
+        {
+          "text": "わかっ",
+          "reading": "ワカッ"
+        },
+        {
+          "text": "て",
+          "reading": "テ"
+        },
+        {
+          "text": "いる",
+          "reading": "イル"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 14,
+      "text": "あの日の悲しみさえ",
+      "romaji": "ano hi no kanashimi sae",
+      "translation": "连那一天的悲伤",
+      "start": 58.0,
+      "end": 61.0,
+      "section": "Unknown",
+      "duration": 3.0,
+      "tokens": [
+        {
+          "surface": "あの",
+          "reading": "アノ",
+          "base_form": "あの",
+          "pos": "連体詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "日",
+          "reading": "ヒ",
+          "base_form": "日",
+          "pos": "名詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "副詞可能",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "の",
+          "reading": "ノ",
+          "base_form": "の",
+          "pos": "助詞",
+          "pos_detail": "連体化",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "悲しみ",
+          "reading": "カナシミ",
+          "base_form": "悲しみ",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "さえ",
+          "reading": "サエ",
+          "base_form": "さえ",
+          "pos": "助詞",
+          "pos_detail": "係助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "日",
+          "reading": "ひ",
+          "meaning": "天；太阳",
+          "jlpt_level": "N5",
+          "pos": "名詞"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "あの",
+          "reading": "アノ"
+        },
+        {
+          "text": "日",
+          "reading": "ヒ"
+        },
+        {
+          "text": "の",
+          "reading": "ノ"
+        },
+        {
+          "text": "悲しみ",
+          "reading": "カナシミ"
+        },
+        {
+          "text": "さえ",
+          "reading": "サエ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 15,
+      "text": "あの日の苦しみさえ",
+      "romaji": "ano hi no kurushimi sae",
+      "translation": "连那一天的痛苦",
+      "start": 61.0,
+      "end": 64.0,
+      "section": "Unknown",
+      "duration": 3.0,
+      "tokens": [
+        {
+          "surface": "あの",
+          "reading": "アノ",
+          "base_form": "あの",
+          "pos": "連体詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "日",
+          "reading": "ヒ",
+          "base_form": "日",
+          "pos": "名詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "副詞可能",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "の",
+          "reading": "ノ",
+          "base_form": "の",
+          "pos": "助詞",
+          "pos_detail": "連体化",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "苦しみ",
+          "reading": "クルシミ",
+          "base_form": "苦しみ",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "さえ",
+          "reading": "サエ",
+          "base_form": "さえ",
+          "pos": "助詞",
+          "pos_detail": "係助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "日",
+          "reading": "ひ",
+          "meaning": "天；太阳",
+          "jlpt_level": "N5",
+          "pos": "名詞"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "あの",
+          "reading": "アノ"
+        },
+        {
+          "text": "日",
+          "reading": "ヒ"
+        },
+        {
+          "text": "の",
+          "reading": "ノ"
+        },
+        {
+          "text": "苦しみ",
+          "reading": "クルシミ"
+        },
+        {
+          "text": "さえ",
+          "reading": "サエ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 16,
+      "text": "そのすべてを愛してた",
+      "romaji": "sono subete wo aishi te ta",
+      "translation": "那一切我都深爱着",
+      "start": 64.0,
+      "end": 67.0,
+      "section": "Unknown",
+      "duration": 3.0,
+      "tokens": [
+        {
+          "surface": "その",
+          "reading": "ソノ",
+          "base_form": "その",
+          "pos": "連体詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "すべて",
+          "reading": "スベテ",
+          "base_form": "すべて",
+          "pos": "名詞",
+          "pos_detail": "副詞可能",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "を",
+          "reading": "ヲ",
+          "base_form": "を",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "愛し",
+          "reading": "アイシ",
+          "base_form": "愛す",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "て",
+          "reading": "テ",
+          "base_form": "てる",
+          "pos": "動詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "た",
+          "reading": "タ",
+          "base_form": "た",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "その",
+          "reading": "ソノ"
+        },
+        {
+          "text": "すべて",
+          "reading": "スベテ"
+        },
+        {
+          "text": "を",
+          "reading": "ヲ"
+        },
+        {
+          "text": "愛し",
+          "reading": "アイシ"
+        },
+        {
+          "text": "て",
+          "reading": "テ"
+        },
+        {
+          "text": "た",
+          "reading": "タ"
+        }
+      ],
+      "has_notes": false
+    },
+    {
+      "index": 17,
+      "text": "あなたとともに",
+      "romaji": "anata totomoni",
+      "translation": "连同你一起",
+      "start": 67.0,
+      "end": 69.0,
+      "section": "Unknown",
+      "duration": 2.0,
+      "tokens": [
+        {
+          "surface": "あなた",
+          "reading": "アナタ",
+          "base_form": "あなた",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "とともに",
+          "reading": "トトモニ",
+          "base_form": "とともに",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "連語",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "あなた",
+          "reading": "アナタ"
+        },
+        {
+          "text": "とともに",
+          "reading": "トトモニ"
+        }
+      ],
+      "has_notes": false
+    },
+    {
+      "index": 18,
+      "text": "胸に残り離れない",
+      "romaji": "mune ni nokori hanare nai",
+      "translation": "留在我心间 挥之不去",
+      "start": 69.0,
+      "end": 73.0,
+      "section": "Unknown",
+      "duration": 4.0,
+      "tokens": [
+        {
+          "surface": "胸",
+          "reading": "ムネ",
+          "base_form": "胸",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "に",
+          "reading": "ニ",
+          "base_form": "に",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "残り",
+          "reading": "ノコリ",
+          "base_form": "残る",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "離れ",
+          "reading": "ハナレ",
+          "base_form": "離れる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ない",
+          "reading": "ナイ",
+          "base_form": "ない",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "胸",
+          "reading": "むね",
+          "meaning": "胸；胸口；内心",
+          "jlpt_level": "N3",
+          "pos": "名詞"
+        },
+        {
+          "word": "離れる",
+          "reading": "はなれる",
+          "meaning": "分离；离开",
+          "jlpt_level": "N4",
+          "pos": "動詞"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "胸",
+          "reading": "ムネ"
+        },
+        {
+          "text": "に",
+          "reading": "ニ"
+        },
+        {
+          "text": "残り",
+          "reading": "ノコリ"
+        },
+        {
+          "text": "離れ",
+          "reading": "ハナレ"
+        },
+        {
+          "text": "ない",
+          "reading": "ナイ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 19,
+      "text": "苦いレモンの匂い",
+      "romaji": "nigai remon no nioi",
+      "translation": "苦涩的柠檬香",
+      "start": 73.0,
+      "end": 75.0,
+      "section": "Unknown",
+      "duration": 2.0,
+      "tokens": [
+        {
+          "surface": "苦い",
+          "reading": "ニガイ",
+          "base_form": "苦い",
+          "pos": "形容詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "レモン",
+          "reading": "レモン",
+          "base_form": "レモン",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "の",
+          "reading": "ノ",
+          "base_form": "の",
+          "pos": "助詞",
+          "pos_detail": "連体化",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "匂い",
+          "reading": "ニオイ",
+          "base_form": "匂い",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "苦い",
+          "reading": "ニガイ"
+        },
+        {
+          "text": "レモン",
+          "reading": null
+        },
+        {
+          "text": "の",
+          "reading": "ノ"
+        },
+        {
+          "text": "匂い",
+          "reading": "ニオイ"
+        }
+      ],
+      "has_notes": false
+    },
+    {
+      "index": 20,
+      "text": "雨が降り止むまでは帰れない",
+      "romaji": "ame ga ori yamu made ha kaere nai",
+      "translation": "直到大雨停下为止都不会归去",
+      "start": 75.0,
+      "end": 81.0,
+      "section": "Unknown",
+      "duration": 6.0,
+      "tokens": [
+        {
+          "surface": "雨",
+          "reading": "アメ",
+          "base_form": "雨",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "が",
+          "reading": "ガ",
+          "base_form": "が",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "降り",
+          "reading": "オリ",
+          "base_form": "降りる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "止む",
+          "reading": "ヤム",
+          "base_form": "止む",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "まで",
+          "reading": "マデ",
+          "base_form": "まで",
+          "pos": "助詞",
+          "pos_detail": "副助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "は",
+          "reading": "ハ",
+          "base_form": "は",
+          "pos": "助詞",
+          "pos_detail": "係助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "帰れ",
+          "reading": "カエレ",
+          "base_form": "帰れる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ない",
+          "reading": "ナイ",
+          "base_form": "ない",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "雨",
+          "reading": "あめ",
+          "meaning": "雨；下雨",
+          "jlpt_level": "N5",
+          "pos": "名詞"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "雨",
+          "reading": "アメ"
+        },
+        {
+          "text": "が",
+          "reading": "ガ"
+        },
+        {
+          "text": "降り",
+          "reading": "オリ"
+        },
+        {
+          "text": "止む",
+          "reading": "ヤム"
+        },
+        {
+          "text": "まで",
+          "reading": "マデ"
+        },
+        {
+          "text": "は",
+          "reading": "ハ"
+        },
+        {
+          "text": "帰れ",
+          "reading": "カエレ"
+        },
+        {
+          "text": "ない",
+          "reading": "ナイ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 21,
+      "text": "今でもあなたはわたしの光",
+      "romaji": "ima demo anata ha watashi no hikari",
+      "translation": "时至今日你依然是我的光",
+      "start": 81.0,
+      "end": 97.0,
+      "section": "Unknown",
+      "duration": 16.0,
+      "tokens": [
+        {
+          "surface": "今",
+          "reading": "イマ",
+          "base_form": "今",
+          "pos": "名詞",
+          "pos_detail": "副詞可能",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "でも",
+          "reading": "デモ",
+          "base_form": "でも",
+          "pos": "助詞",
+          "pos_detail": "副助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "あなた",
+          "reading": "アナタ",
+          "base_form": "あなた",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "は",
+          "reading": "ハ",
+          "base_form": "は",
+          "pos": "助詞",
+          "pos_detail": "係助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "わたし",
+          "reading": "ワタシ",
+          "base_form": "わたし",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "の",
+          "reading": "ノ",
+          "base_form": "の",
+          "pos": "助詞",
+          "pos_detail": "連体化",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "光",
+          "reading": "ヒカリ",
+          "base_form": "光",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "今",
+          "reading": "いま",
+          "meaning": "现在",
+          "jlpt_level": "N5",
+          "pos": "名詞"
+        },
+        {
+          "word": "光",
+          "reading": "ひかり",
+          "meaning": "光；光线",
+          "jlpt_level": "N5",
+          "pos": "名詞"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "今",
+          "reading": "イマ"
+        },
+        {
+          "text": "でも",
+          "reading": "デモ"
+        },
+        {
+          "text": "あなた",
+          "reading": "アナタ"
+        },
+        {
+          "text": "は",
+          "reading": "ハ"
+        },
+        {
+          "text": "わたし",
+          "reading": "ワタシ"
+        },
+        {
+          "text": "の",
+          "reading": "ノ"
+        },
+        {
+          "text": "光",
+          "reading": "ヒカリ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 22,
+      "text": "暗闇であなたの背をなぞった",
+      "romaji": "kurayami de anata no se wo nazo ta",
+      "translation": "黑暗中描摹着你的背影",
+      "start": 97.0,
+      "end": 103.0,
+      "section": "Unknown",
+      "duration": 6.0,
+      "tokens": [
+        {
+          "surface": "暗闇",
+          "reading": "クラヤミ",
+          "base_form": "暗闇",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "で",
+          "reading": "デ",
+          "base_form": "で",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "あなた",
+          "reading": "アナタ",
+          "base_form": "あなた",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "の",
+          "reading": "ノ",
+          "base_form": "の",
+          "pos": "助詞",
+          "pos_detail": "連体化",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "背",
+          "reading": "セ",
+          "base_form": "背",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "を",
+          "reading": "ヲ",
+          "base_form": "を",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "なぞっ",
+          "reading": "ナゾッ",
+          "base_form": "なぞる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "た",
+          "reading": "タ",
+          "base_form": "た",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "暗闇",
+          "reading": "クラヤミ"
+        },
+        {
+          "text": "で",
+          "reading": "デ"
+        },
+        {
+          "text": "あなた",
+          "reading": "アナタ"
+        },
+        {
+          "text": "の",
+          "reading": "ノ"
+        },
+        {
+          "text": "背",
+          "reading": "セ"
+        },
+        {
+          "text": "を",
+          "reading": "ヲ"
+        },
+        {
+          "text": "なぞっ",
+          "reading": "ナゾッ"
+        },
+        {
+          "text": "た",
+          "reading": "タ"
+        }
+      ],
+      "has_notes": false
+    },
+    {
+      "index": 23,
+      "text": "その輪郭を鮮明に覚えている",
+      "romaji": "sono rinkaku wo senmei ni oboe te iru",
+      "translation": "那轮廓我一直鲜明地牢记在心",
+      "start": 103.0,
+      "end": 108.0,
+      "section": "Unknown",
+      "duration": 5.0,
+      "tokens": [
+        {
+          "surface": "その",
+          "reading": "ソノ",
+          "base_form": "その",
+          "pos": "連体詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "輪郭",
+          "reading": "リンカク",
+          "base_form": "輪郭",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "を",
+          "reading": "ヲ",
+          "base_form": "を",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "鮮明",
+          "reading": "センメイ",
+          "base_form": "鮮明",
+          "pos": "名詞",
+          "pos_detail": "形容動詞語幹",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "に",
+          "reading": "ニ",
+          "base_form": "に",
+          "pos": "助詞",
+          "pos_detail": "副詞化",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "覚え",
+          "reading": "オボエ",
+          "base_form": "覚える",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "て",
+          "reading": "テ",
+          "base_form": "て",
+          "pos": "助詞",
+          "pos_detail": "接続助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "いる",
+          "reading": "イル",
+          "base_form": "いる",
+          "pos": "動詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "覚える",
+          "reading": "おぼえる",
+          "meaning": "记住；记忆",
+          "jlpt_level": "N4",
+          "pos": "動詞"
+        }
+      ],
+      "grammar": [
+        {
+          "pattern": "〜ている",
+          "level": "N5",
+          "meaning": "is doing ~ / state of being",
+          "explanation": "〜ている：表示动作持续或状态存续。走っている（正在跑）",
+          "example": "見ている → 正在看",
+          "in_context": "その輪郭を鮮明に覚えている"
+        }
+      ],
+      "reading_parts": [
+        {
+          "text": "その",
+          "reading": "ソノ"
+        },
+        {
+          "text": "輪郭",
+          "reading": "リンカク"
+        },
+        {
+          "text": "を",
+          "reading": "ヲ"
+        },
+        {
+          "text": "鮮明",
+          "reading": "センメイ"
+        },
+        {
+          "text": "に",
+          "reading": "ニ"
+        },
+        {
+          "text": "覚え",
+          "reading": "オボエ"
+        },
+        {
+          "text": "て",
+          "reading": "テ"
+        },
+        {
+          "text": "いる",
+          "reading": "イル"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 24,
+      "text": "受け止めきれないものと",
+      "romaji": "uketome kire nai mono to",
+      "translation": "每当遇到",
+      "start": 108.0,
+      "end": 112.0,
+      "section": "Unknown",
+      "duration": 4.0,
+      "tokens": [
+        {
+          "surface": "受け止め",
+          "reading": "ウケトメ",
+          "base_form": "受け止める",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "きれ",
+          "reading": "キレ",
+          "base_form": "きれる",
+          "pos": "動詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ない",
+          "reading": "ナイ",
+          "base_form": "ない",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "もの",
+          "reading": "モノ",
+          "base_form": "もの",
+          "pos": "名詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "と",
+          "reading": "ト",
+          "base_form": "と",
+          "pos": "助詞",
+          "pos_detail": "並立助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "受け止め",
+          "reading": "ウケトメ"
+        },
+        {
+          "text": "きれ",
+          "reading": "キレ"
+        },
+        {
+          "text": "ない",
+          "reading": "ナイ"
+        },
+        {
+          "text": "もの",
+          "reading": "モノ"
+        },
+        {
+          "text": "と",
+          "reading": "ト"
+        }
+      ],
+      "has_notes": false
+    },
+    {
+      "index": 25,
+      "text": "出会うたび",
+      "romaji": "deau tabi",
+      "translation": "我无法接受的事情",
+      "start": 112.0,
+      "end": 114.0,
+      "section": "Unknown",
+      "duration": 2.0,
+      "tokens": [
+        {
+          "surface": "出会う",
+          "reading": "デアウ",
+          "base_form": "出会う",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "たび",
+          "reading": "タビ",
+          "base_form": "たび",
+          "pos": "名詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "副詞可能",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "出会う",
+          "reading": "デアウ"
+        },
+        {
+          "text": "たび",
+          "reading": "タビ"
+        }
+      ],
+      "has_notes": false
+    },
+    {
+      "index": 26,
+      "text": "溢れてやまないのは涙だけ",
+      "romaji": "afure te yama nai no ha namida dake",
+      "translation": null,
+      "start": 114.0,
+      "end": 120.0,
+      "section": "Unknown",
+      "duration": 6.0,
+      "tokens": [
+        {
+          "surface": "溢れ",
+          "reading": "アフレ",
+          "base_form": "溢れる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "て",
+          "reading": "テ",
+          "base_form": "て",
+          "pos": "助詞",
+          "pos_detail": "接続助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "やま",
+          "reading": "ヤマ",
+          "base_form": "やむ",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ない",
+          "reading": "ナイ",
+          "base_form": "ない",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "の",
+          "reading": "ノ",
+          "base_form": "の",
+          "pos": "名詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "は",
+          "reading": "ハ",
+          "base_form": "は",
+          "pos": "助詞",
+          "pos_detail": "係助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "涙",
+          "reading": "ナミダ",
+          "base_form": "涙",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "だけ",
+          "reading": "ダケ",
+          "base_form": "だけ",
+          "pos": "助詞",
+          "pos_detail": "副助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "溢れる",
+          "reading": "あふれる",
+          "meaning": "溢出；充满",
+          "jlpt_level": "N3",
+          "pos": "動詞"
+        },
+        {
+          "word": "涙",
+          "reading": "なみだ",
+          "meaning": "眼泪；泪水",
+          "jlpt_level": "N4",
+          "pos": "名詞"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "溢れ",
+          "reading": "アフレ"
+        },
+        {
+          "text": "て",
+          "reading": "テ"
+        },
+        {
+          "text": "やま",
+          "reading": "ヤマ"
+        },
+        {
+          "text": "ない",
+          "reading": "ナイ"
+        },
+        {
+          "text": "の",
+          "reading": "ノ"
+        },
+        {
+          "text": "は",
+          "reading": "ハ"
+        },
+        {
+          "text": "涙",
+          "reading": "ナミダ"
+        },
+        {
+          "text": "だけ",
+          "reading": "ダケ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 27,
+      "text": "何をしていたの",
+      "romaji": "nani wo shi te i ta no",
+      "translation": "泪水就止不住地流淌你在做什么",
+      "start": 120.0,
+      "end": 123.0,
+      "section": "Unknown",
+      "duration": 3.0,
+      "tokens": [
+        {
+          "surface": "何",
+          "reading": "ナニ",
+          "base_form": "何",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "を",
+          "reading": "ヲ",
+          "base_form": "を",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "し",
+          "reading": "シ",
+          "base_form": "する",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "て",
+          "reading": "テ",
+          "base_form": "て",
+          "pos": "助詞",
+          "pos_detail": "接続助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "い",
+          "reading": "イ",
+          "base_form": "いる",
+          "pos": "動詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "た",
+          "reading": "タ",
+          "base_form": "た",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "の",
+          "reading": "ノ",
+          "base_form": "の",
+          "pos": "助詞",
+          "pos_detail": "終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "何",
+          "reading": "なに/なん",
+          "meaning": "什么",
+          "jlpt_level": "N5",
+          "pos": "名詞"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "何",
+          "reading": "ナニ"
+        },
+        {
+          "text": "を",
+          "reading": "ヲ"
+        },
+        {
+          "text": "し",
+          "reading": "シ"
+        },
+        {
+          "text": "て",
+          "reading": "テ"
+        },
+        {
+          "text": "い",
+          "reading": "イ"
+        },
+        {
+          "text": "た",
+          "reading": "タ"
+        },
+        {
+          "text": "の",
+          "reading": "ノ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 28,
+      "text": "何を見ていたの",
+      "romaji": "nani wo mi te i ta no",
+      "translation": "在看着什么",
+      "start": 123.0,
+      "end": 125.0,
+      "section": "Unknown",
+      "duration": 2.0,
+      "tokens": [
+        {
+          "surface": "何",
+          "reading": "ナニ",
+          "base_form": "何",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "を",
+          "reading": "ヲ",
+          "base_form": "を",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "見",
+          "reading": "ミ",
+          "base_form": "見る",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "て",
+          "reading": "テ",
+          "base_form": "て",
+          "pos": "助詞",
+          "pos_detail": "接続助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "い",
+          "reading": "イ",
+          "base_form": "いる",
+          "pos": "動詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "た",
+          "reading": "タ",
+          "base_form": "た",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "の",
+          "reading": "ノ",
+          "base_form": "の",
+          "pos": "助詞",
+          "pos_detail": "終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "何",
+          "reading": "なに/なん",
+          "meaning": "什么",
+          "jlpt_level": "N5",
+          "pos": "名詞"
+        },
+        {
+          "word": "見る",
+          "reading": "みる",
+          "meaning": "看；看见",
+          "jlpt_level": "N5",
+          "pos": "動詞"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "何",
+          "reading": "ナニ"
+        },
+        {
+          "text": "を",
+          "reading": "ヲ"
+        },
+        {
+          "text": "見",
+          "reading": "ミ"
+        },
+        {
+          "text": "て",
+          "reading": "テ"
+        },
+        {
+          "text": "い",
+          "reading": "イ"
+        },
+        {
+          "text": "た",
+          "reading": "タ"
+        },
+        {
+          "text": "の",
+          "reading": "ノ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 29,
+      "text": "わたしの知らない横顔で",
+      "romaji": "watashi no shira nai yokogao de",
+      "translation": "带着我所陌生的表情",
+      "start": 125.0,
+      "end": 130.0,
+      "section": "Unknown",
+      "duration": 5.0,
+      "tokens": [
+        {
+          "surface": "わたし",
+          "reading": "ワタシ",
+          "base_form": "わたし",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "の",
+          "reading": "ノ",
+          "base_form": "の",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "知ら",
+          "reading": "シラ",
+          "base_form": "知る",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ない",
+          "reading": "ナイ",
+          "base_form": "ない",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "横顔",
+          "reading": "ヨコガオ",
+          "base_form": "横顔",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "で",
+          "reading": "デ",
+          "base_form": "で",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "わたし",
+          "reading": "ワタシ"
+        },
+        {
+          "text": "の",
+          "reading": "ノ"
+        },
+        {
+          "text": "知ら",
+          "reading": "シラ"
+        },
+        {
+          "text": "ない",
+          "reading": "ナイ"
+        },
+        {
+          "text": "横顔",
+          "reading": "ヨコガオ"
+        },
+        {
+          "text": "で",
+          "reading": "デ"
+        }
+      ],
+      "has_notes": false
+    },
+    {
+      "index": 30,
+      "text": "どこかであなたが今",
+      "romaji": "doko ka de anata ga ima",
+      "translation": "如果此刻你也在某处",
+      "start": 130.0,
+      "end": 133.0,
+      "section": "Unknown",
+      "duration": 3.0,
+      "tokens": [
+        {
+          "surface": "どこ",
+          "reading": "ドコ",
+          "base_form": "どこ",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "か",
+          "reading": "カ",
+          "base_form": "か",
+          "pos": "助詞",
+          "pos_detail": "副助詞／並立助詞／終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "で",
+          "reading": "デ",
+          "base_form": "で",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "あなた",
+          "reading": "アナタ",
+          "base_form": "あなた",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "が",
+          "reading": "ガ",
+          "base_form": "が",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "今",
+          "reading": "イマ",
+          "base_form": "今",
+          "pos": "名詞",
+          "pos_detail": "副詞可能",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "今",
+          "reading": "いま",
+          "meaning": "现在",
+          "jlpt_level": "N5",
+          "pos": "名詞"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "どこ",
+          "reading": "ドコ"
+        },
+        {
+          "text": "か",
+          "reading": "カ"
+        },
+        {
+          "text": "で",
+          "reading": "デ"
+        },
+        {
+          "text": "あなた",
+          "reading": "アナタ"
+        },
+        {
+          "text": "が",
+          "reading": "ガ"
+        },
+        {
+          "text": "今",
+          "reading": "イマ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 31,
+      "text": "わたしと同じ様な",
+      "romaji": "watashi to onaji you na",
+      "translation": "同我一样",
+      "start": 133.0,
+      "end": 136.0,
+      "section": "Unknown",
+      "duration": 3.0,
+      "tokens": [
+        {
+          "surface": "わたし",
+          "reading": "ワタシ",
+          "base_form": "わたし",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "と",
+          "reading": "ト",
+          "base_form": "と",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "同じ",
+          "reading": "オナジ",
+          "base_form": "同じ",
+          "pos": "連体詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "様",
+          "reading": "ヨウ",
+          "base_form": "様",
+          "pos": "名詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "助動詞語幹",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "な",
+          "reading": "ナ",
+          "base_form": "だ",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "わたし",
+          "reading": "ワタシ"
+        },
+        {
+          "text": "と",
+          "reading": "ト"
+        },
+        {
+          "text": "同じ",
+          "reading": "オナジ"
+        },
+        {
+          "text": "様",
+          "reading": "ヨウ"
+        },
+        {
+          "text": "な",
+          "reading": "ナ"
+        }
+      ],
+      "has_notes": false
+    },
+    {
+      "index": 32,
+      "text": "涙にくれ",
+      "romaji": "namida ni kure",
+      "translation": "泪眼潸然",
+      "start": 136.0,
+      "end": 137.0,
+      "section": "Unknown",
+      "duration": 1.0,
+      "tokens": [
+        {
+          "surface": "涙",
+          "reading": "ナミダ",
+          "base_form": "涙",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "に",
+          "reading": "ニ",
+          "base_form": "に",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "くれ",
+          "reading": "クレ",
+          "base_form": "くれる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "涙",
+          "reading": "なみだ",
+          "meaning": "眼泪；泪水",
+          "jlpt_level": "N4",
+          "pos": "名詞"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "涙",
+          "reading": "ナミダ"
+        },
+        {
+          "text": "に",
+          "reading": "ニ"
+        },
+        {
+          "text": "くれ",
+          "reading": "クレ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 33,
+      "text": "淋しさの中にいるなら",
+      "romaji": "sabishi sa no naka ni iru nara",
+      "translation": "身处寂寞之中",
+      "start": 137.0,
+      "end": 141.0,
+      "section": "Unknown",
+      "duration": 4.0,
+      "tokens": [
+        {
+          "surface": "淋し",
+          "reading": "サビシ",
+          "base_form": "淋しい",
+          "pos": "形容詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "さ",
+          "reading": "サ",
+          "base_form": "さ",
+          "pos": "名詞",
+          "pos_detail": "接尾",
+          "conjugation_type": "特殊",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "の",
+          "reading": "ノ",
+          "base_form": "の",
+          "pos": "助詞",
+          "pos_detail": "連体化",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "中",
+          "reading": "ナカ",
+          "base_form": "中",
+          "pos": "名詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "副詞可能",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "に",
+          "reading": "ニ",
+          "base_form": "に",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "いる",
+          "reading": "イル",
+          "base_form": "いる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "なら",
+          "reading": "ナラ",
+          "base_form": "だ",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "淋し",
+          "reading": "サビシ"
+        },
+        {
+          "text": "さ",
+          "reading": "サ"
+        },
+        {
+          "text": "の",
+          "reading": "ノ"
+        },
+        {
+          "text": "中",
+          "reading": "ナカ"
+        },
+        {
+          "text": "に",
+          "reading": "ニ"
+        },
+        {
+          "text": "いる",
+          "reading": "イル"
+        },
+        {
+          "text": "なら",
+          "reading": "ナラ"
+        }
+      ],
+      "has_notes": false
+    },
+    {
+      "index": 34,
+      "text": "わたしのことなどどうか",
+      "romaji": "watashi no koto nado dou ka",
+      "translation": "那么请你",
+      "start": 141.0,
+      "end": 144.0,
+      "section": "Unknown",
+      "duration": 3.0,
+      "tokens": [
+        {
+          "surface": "わたし",
+          "reading": "ワタシ",
+          "base_form": "わたし",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "の",
+          "reading": "ノ",
+          "base_form": "の",
+          "pos": "助詞",
+          "pos_detail": "連体化",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "こと",
+          "reading": "コト",
+          "base_form": "こと",
+          "pos": "名詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "など",
+          "reading": "ナド",
+          "base_form": "など",
+          "pos": "助詞",
+          "pos_detail": "副助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "どう",
+          "reading": "ドウ",
+          "base_form": "どう",
+          "pos": "副詞",
+          "pos_detail": "助詞類接続",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "か",
+          "reading": "カ",
+          "base_form": "か",
+          "pos": "助詞",
+          "pos_detail": "副助詞／並立助詞／終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "わたし",
+          "reading": "ワタシ"
+        },
+        {
+          "text": "の",
+          "reading": "ノ"
+        },
+        {
+          "text": "こと",
+          "reading": "コト"
+        },
+        {
+          "text": "など",
+          "reading": "ナド"
+        },
+        {
+          "text": "どう",
+          "reading": "ドウ"
+        },
+        {
+          "text": "か",
+          "reading": "カ"
+        }
+      ],
+      "has_notes": false
+    },
+    {
+      "index": 35,
+      "text": "忘れてください",
+      "romaji": "wasure te kudasai",
+      "translation": "忘了我的一切吧",
+      "start": 144.0,
+      "end": 147.0,
+      "section": "Unknown",
+      "duration": 3.0,
+      "tokens": [
+        {
+          "surface": "忘れ",
+          "reading": "ワスレ",
+          "base_form": "忘れる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "て",
+          "reading": "テ",
+          "base_form": "て",
+          "pos": "助詞",
+          "pos_detail": "接続助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ください",
+          "reading": "クダサイ",
+          "base_form": "くださる",
+          "pos": "動詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "忘れる",
+          "reading": "わすれる",
+          "meaning": "忘记",
+          "jlpt_level": "N4",
+          "pos": "動詞"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "忘れ",
+          "reading": "ワスレ"
+        },
+        {
+          "text": "て",
+          "reading": "テ"
+        },
+        {
+          "text": "ください",
+          "reading": "クダサイ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 36,
+      "text": "そんなことを心から願うほどに",
+      "romaji": "sonna koto wo kokorokara negau hodo ni",
+      "translation": "我发自内心这么希望",
+      "start": 147.0,
+      "end": 153.0,
+      "section": "Unknown",
+      "duration": 6.0,
+      "tokens": [
+        {
+          "surface": "そんな",
+          "reading": "ソンナ",
+          "base_form": "そんな",
+          "pos": "連体詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "こと",
+          "reading": "コト",
+          "base_form": "こと",
+          "pos": "名詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "を",
+          "reading": "ヲ",
+          "base_form": "を",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "心から",
+          "reading": "ココロカラ",
+          "base_form": "心から",
+          "pos": "副詞",
+          "pos_detail": "助詞類接続",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "願う",
+          "reading": "ネガウ",
+          "base_form": "願う",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ほど",
+          "reading": "ホド",
+          "base_form": "ほど",
+          "pos": "助詞",
+          "pos_detail": "副助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "に",
+          "reading": "ニ",
+          "base_form": "に",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [
+        {
+          "pattern": "〜ほど",
+          "level": "N3",
+          "meaning": "to the extent that ~",
+          "explanation": "〜ほど：表示程度，歌词中常用于夸张",
+          "example": "死にたいほど → 痛苦到想死的程度",
+          "in_context": "そんなことを心から願うほどに"
+        }
+      ],
+      "reading_parts": [
+        {
+          "text": "そんな",
+          "reading": "ソンナ"
+        },
+        {
+          "text": "こと",
+          "reading": "コト"
+        },
+        {
+          "text": "を",
+          "reading": "ヲ"
+        },
+        {
+          "text": "心から",
+          "reading": "ココロカラ"
+        },
+        {
+          "text": "願う",
+          "reading": "ネガウ"
+        },
+        {
+          "text": "ほど",
+          "reading": "ホド"
+        },
+        {
+          "text": "に",
+          "reading": "ニ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 37,
+      "text": "今でもあなたはわたしの光",
+      "romaji": "ima demo anata ha watashi no hikari",
+      "translation": "时至今日你依然是我的光",
+      "start": 153.0,
+      "end": 161.0,
+      "section": "Unknown",
+      "duration": 8.0,
+      "tokens": [
+        {
+          "surface": "今",
+          "reading": "イマ",
+          "base_form": "今",
+          "pos": "名詞",
+          "pos_detail": "副詞可能",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "でも",
+          "reading": "デモ",
+          "base_form": "でも",
+          "pos": "助詞",
+          "pos_detail": "副助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "あなた",
+          "reading": "アナタ",
+          "base_form": "あなた",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "は",
+          "reading": "ハ",
+          "base_form": "は",
+          "pos": "助詞",
+          "pos_detail": "係助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "わたし",
+          "reading": "ワタシ",
+          "base_form": "わたし",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "の",
+          "reading": "ノ",
+          "base_form": "の",
+          "pos": "助詞",
+          "pos_detail": "連体化",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "光",
+          "reading": "ヒカリ",
+          "base_form": "光",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "今",
+          "reading": "いま",
+          "meaning": "现在",
+          "jlpt_level": "N5",
+          "pos": "名詞"
+        },
+        {
+          "word": "光",
+          "reading": "ひかり",
+          "meaning": "光；光线",
+          "jlpt_level": "N5",
+          "pos": "名詞"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "今",
+          "reading": "イマ"
+        },
+        {
+          "text": "でも",
+          "reading": "デモ"
+        },
+        {
+          "text": "あなた",
+          "reading": "アナタ"
+        },
+        {
+          "text": "は",
+          "reading": "ハ"
+        },
+        {
+          "text": "わたし",
+          "reading": "ワタシ"
+        },
+        {
+          "text": "の",
+          "reading": "ノ"
+        },
+        {
+          "text": "光",
+          "reading": "ヒカリ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 38,
+      "text": "自分が思うより",
+      "romaji": "jibun ga omou yori",
+      "translation": "我比自己想象中",
+      "start": 161.0,
+      "end": 167.0,
+      "section": "Unknown",
+      "duration": 6.0,
+      "tokens": [
+        {
+          "surface": "自分",
+          "reading": "ジブン",
+          "base_form": "自分",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "が",
+          "reading": "ガ",
+          "base_form": "が",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "思う",
+          "reading": "オモウ",
+          "base_form": "思う",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "より",
+          "reading": "ヨリ",
+          "base_form": "より",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "自分",
+          "reading": "ジブン"
+        },
+        {
+          "text": "が",
+          "reading": "ガ"
+        },
+        {
+          "text": "思う",
+          "reading": "オモウ"
+        },
+        {
+          "text": "より",
+          "reading": "ヨリ"
+        }
+      ],
+      "has_notes": false
+    },
+    {
+      "index": 39,
+      "text": "恋をしていたあなたに",
+      "romaji": "koi wo shi te i ta anata ni",
+      "translation": "还要喜欢你",
+      "start": 167.0,
+      "end": 172.0,
+      "section": "Unknown",
+      "duration": 5.0,
+      "tokens": [
+        {
+          "surface": "恋",
+          "reading": "コイ",
+          "base_form": "恋",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "を",
+          "reading": "ヲ",
+          "base_form": "を",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "し",
+          "reading": "シ",
+          "base_form": "する",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "て",
+          "reading": "テ",
+          "base_form": "て",
+          "pos": "助詞",
+          "pos_detail": "接続助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "い",
+          "reading": "イ",
+          "base_form": "いる",
+          "pos": "動詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "た",
+          "reading": "タ",
+          "base_form": "た",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "あなた",
+          "reading": "アナタ",
+          "base_form": "あなた",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "に",
+          "reading": "ニ",
+          "base_form": "に",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "恋",
+          "reading": "コイ"
+        },
+        {
+          "text": "を",
+          "reading": "ヲ"
+        },
+        {
+          "text": "し",
+          "reading": "シ"
+        },
+        {
+          "text": "て",
+          "reading": "テ"
+        },
+        {
+          "text": "い",
+          "reading": "イ"
+        },
+        {
+          "text": "た",
+          "reading": "タ"
+        },
+        {
+          "text": "あなた",
+          "reading": "アナタ"
+        },
+        {
+          "text": "に",
+          "reading": "ニ"
+        }
+      ],
+      "has_notes": false
+    },
+    {
+      "index": 40,
+      "text": "あれから思うように",
+      "romaji": "are kara omou you ni",
+      "translation": null,
+      "start": 172.0,
+      "end": 178.0,
+      "section": "Unknown",
+      "duration": 6.0,
+      "tokens": [
+        {
+          "surface": "あれ",
+          "reading": "アレ",
+          "base_form": "あれ",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "から",
+          "reading": "カラ",
+          "base_form": "から",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "思う",
+          "reading": "オモウ",
+          "base_form": "思う",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "よう",
+          "reading": "ヨウ",
+          "base_form": "よう",
+          "pos": "名詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "助動詞語幹",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "に",
+          "reading": "ニ",
+          "base_form": "に",
+          "pos": "助詞",
+          "pos_detail": "副詞化",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [
+        {
+          "pattern": "〜ように",
+          "level": "N4",
+          "meaning": "so that ~ / like ~",
+          "explanation": "〜ように：表示目的或比喻。忘れないように（为了不忘记）",
+          "example": "届くように → 希望传达得到",
+          "in_context": "あれから思うように"
+        }
+      ],
+      "reading_parts": [
+        {
+          "text": "あれ",
+          "reading": "アレ"
+        },
+        {
+          "text": "から",
+          "reading": "カラ"
+        },
+        {
+          "text": "思う",
+          "reading": "オモウ"
+        },
+        {
+          "text": "よう",
+          "reading": "ヨウ"
+        },
+        {
+          "text": "に",
+          "reading": "ニ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 41,
+      "text": "息ができない",
+      "romaji": "iki ga deki nai",
+      "translation": "在那之后我便无法如想象般自如地呼吸",
+      "start": 178.0,
+      "end": 183.0,
+      "section": "Unknown",
+      "duration": 5.0,
+      "tokens": [
+        {
+          "surface": "息",
+          "reading": "イキ",
+          "base_form": "息",
+          "pos": "名詞",
+          "pos_detail": "サ変接続",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "が",
+          "reading": "ガ",
+          "base_form": "が",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "でき",
+          "reading": "デキ",
+          "base_form": "できる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ない",
+          "reading": "ナイ",
+          "base_form": "ない",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "息",
+          "reading": "イキ"
+        },
+        {
+          "text": "が",
+          "reading": "ガ"
+        },
+        {
+          "text": "でき",
+          "reading": "デキ"
+        },
+        {
+          "text": "ない",
+          "reading": "ナイ"
+        }
+      ],
+      "has_notes": false
+    },
+    {
+      "index": 42,
+      "text": "あんなに側にいたのに",
+      "romaji": "annani gawa ni i ta noni",
+      "translation": "明明曾与你那般靠近",
+      "start": 183.0,
+      "end": 189.0,
+      "section": "Unknown",
+      "duration": 6.0,
+      "tokens": [
+        {
+          "surface": "あんなに",
+          "reading": "アンナニ",
+          "base_form": "あんなに",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "側",
+          "reading": "ガワ",
+          "base_form": "側",
+          "pos": "名詞",
+          "pos_detail": "接尾",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "に",
+          "reading": "ニ",
+          "base_form": "に",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "い",
+          "reading": "イ",
+          "base_form": "いる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "た",
+          "reading": "タ",
+          "base_form": "た",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "のに",
+          "reading": "ノニ",
+          "base_form": "のに",
+          "pos": "助詞",
+          "pos_detail": "接続助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [
+        {
+          "pattern": "〜のに",
+          "level": "N3",
+          "meaning": "even though ~ / despite ~",
+          "explanation": "〜のに：表示转折，带有不满或遗憾的语气",
+          "example": "好きなのに → 明明喜欢却...",
+          "in_context": "あんなに側にいたのに"
+        }
+      ],
+      "reading_parts": [
+        {
+          "text": "あんなに",
+          "reading": "アンナニ"
+        },
+        {
+          "text": "側",
+          "reading": "ガワ"
+        },
+        {
+          "text": "に",
+          "reading": "ニ"
+        },
+        {
+          "text": "い",
+          "reading": "イ"
+        },
+        {
+          "text": "た",
+          "reading": "タ"
+        },
+        {
+          "text": "のに",
+          "reading": "ノニ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 43,
+      "text": "まるで嘘みたい",
+      "romaji": "marude uso mitai",
+      "translation": "如今想来那么不真实",
+      "start": 189.0,
+      "end": 194.0,
+      "section": "Unknown",
+      "duration": 5.0,
+      "tokens": [
+        {
+          "surface": "まるで",
+          "reading": "マルデ",
+          "base_form": "まるで",
+          "pos": "副詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "嘘",
+          "reading": "ウソ",
+          "base_form": "嘘",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "みたい",
+          "reading": "ミタイ",
+          "base_form": "みたい",
+          "pos": "名詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "形容動詞語幹",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "嘘",
+          "reading": "うそ",
+          "meaning": "谎言；谎话",
+          "jlpt_level": "N4",
+          "pos": "名詞"
+        }
+      ],
+      "grammar": [
+        {
+          "pattern": "〜たい",
+          "level": "N5",
+          "meaning": "want to do ~",
+          "explanation": "〜たい：动词去「ます」加「たい」，表示说话人的愿望。食べたい（想吃）",
+          "example": "会いたい → 想要见面",
+          "in_context": "まるで嘘みたい"
+        }
+      ],
+      "reading_parts": [
+        {
+          "text": "まるで",
+          "reading": "マルデ"
+        },
+        {
+          "text": "嘘",
+          "reading": "ウソ"
+        },
+        {
+          "text": "みたい",
+          "reading": "ミタイ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 44,
+      "text": "とても忘れられない",
+      "romaji": "totemo wasure rare nai",
+      "translation": "唯一确定的是",
+      "start": 194.0,
+      "end": 200.0,
+      "section": "Unknown",
+      "duration": 6.0,
+      "tokens": [
+        {
+          "surface": "とても",
+          "reading": "トテモ",
+          "base_form": "とても",
+          "pos": "副詞",
+          "pos_detail": "助詞類接続",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "忘れ",
+          "reading": "ワスレ",
+          "base_form": "忘れる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "られ",
+          "reading": "ラレ",
+          "base_form": "られる",
+          "pos": "動詞",
+          "pos_detail": "接尾",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ない",
+          "reading": "ナイ",
+          "base_form": "ない",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "忘れる",
+          "reading": "わすれる",
+          "meaning": "忘记",
+          "jlpt_level": "N4",
+          "pos": "動詞"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "とても",
+          "reading": "トテモ"
+        },
+        {
+          "text": "忘れ",
+          "reading": "ワスレ"
+        },
+        {
+          "text": "られ",
+          "reading": "ラレ"
+        },
+        {
+          "text": "ない",
+          "reading": "ナイ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 45,
+      "text": "それだけが確か",
+      "romaji": "sore dake ga tashika",
+      "translation": "至今我仍忘不了你",
+      "start": 200.0,
+      "end": 210.0,
+      "section": "Unknown",
+      "duration": 10.0,
+      "tokens": [
+        {
+          "surface": "それ",
+          "reading": "ソレ",
+          "base_form": "それ",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "だけ",
+          "reading": "ダケ",
+          "base_form": "だけ",
+          "pos": "助詞",
+          "pos_detail": "副助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "が",
+          "reading": "ガ",
+          "base_form": "が",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "確か",
+          "reading": "タシカ",
+          "base_form": "確か",
+          "pos": "名詞",
+          "pos_detail": "形容動詞語幹",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "それ",
+          "reading": "ソレ"
+        },
+        {
+          "text": "だけ",
+          "reading": "ダケ"
+        },
+        {
+          "text": "が",
+          "reading": "ガ"
+        },
+        {
+          "text": "確か",
+          "reading": "タシカ"
+        }
+      ],
+      "has_notes": false
+    },
+    {
+      "index": 46,
+      "text": "あの日の悲しみさえ",
+      "romaji": "ano hi no kanashimi sae",
+      "translation": "连那一天的悲伤",
+      "start": 210.0,
+      "end": 213.0,
+      "section": "Unknown",
+      "duration": 3.0,
+      "tokens": [
+        {
+          "surface": "あの",
+          "reading": "アノ",
+          "base_form": "あの",
+          "pos": "連体詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "日",
+          "reading": "ヒ",
+          "base_form": "日",
+          "pos": "名詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "副詞可能",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "の",
+          "reading": "ノ",
+          "base_form": "の",
+          "pos": "助詞",
+          "pos_detail": "連体化",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "悲しみ",
+          "reading": "カナシミ",
+          "base_form": "悲しみ",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "さえ",
+          "reading": "サエ",
+          "base_form": "さえ",
+          "pos": "助詞",
+          "pos_detail": "係助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "日",
+          "reading": "ひ",
+          "meaning": "天；太阳",
+          "jlpt_level": "N5",
+          "pos": "名詞"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "あの",
+          "reading": "アノ"
+        },
+        {
+          "text": "日",
+          "reading": "ヒ"
+        },
+        {
+          "text": "の",
+          "reading": "ノ"
+        },
+        {
+          "text": "悲しみ",
+          "reading": "カナシミ"
+        },
+        {
+          "text": "さえ",
+          "reading": "サエ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 47,
+      "text": "あの日の苦しみさえ",
+      "romaji": "ano hi no kurushimi sae",
+      "translation": null,
+      "start": 213.0,
+      "end": 216.0,
+      "section": "Unknown",
+      "duration": 3.0,
+      "tokens": [
+        {
+          "surface": "あの",
+          "reading": "アノ",
+          "base_form": "あの",
+          "pos": "連体詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "日",
+          "reading": "ヒ",
+          "base_form": "日",
+          "pos": "名詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "副詞可能",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "の",
+          "reading": "ノ",
+          "base_form": "の",
+          "pos": "助詞",
+          "pos_detail": "連体化",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "苦しみ",
+          "reading": "クルシミ",
+          "base_form": "苦しみ",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "さえ",
+          "reading": "サエ",
+          "base_form": "さえ",
+          "pos": "助詞",
+          "pos_detail": "係助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "日",
+          "reading": "ひ",
+          "meaning": "天；太阳",
+          "jlpt_level": "N5",
+          "pos": "名詞"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "あの",
+          "reading": "アノ"
+        },
+        {
+          "text": "日",
+          "reading": "ヒ"
+        },
+        {
+          "text": "の",
+          "reading": "ノ"
+        },
+        {
+          "text": "苦しみ",
+          "reading": "クルシミ"
+        },
+        {
+          "text": "さえ",
+          "reading": "サエ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 48,
+      "text": "そのすべてを愛してた",
+      "romaji": "sono subete wo aishi te ta",
+      "translation": "连那一天的痛苦那一切我都深爱着",
+      "start": 216.0,
+      "end": 218.0,
+      "section": "Unknown",
+      "duration": 2.0,
+      "tokens": [
+        {
+          "surface": "その",
+          "reading": "ソノ",
+          "base_form": "その",
+          "pos": "連体詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "すべて",
+          "reading": "スベテ",
+          "base_form": "すべて",
+          "pos": "名詞",
+          "pos_detail": "副詞可能",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "を",
+          "reading": "ヲ",
+          "base_form": "を",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "愛し",
+          "reading": "アイシ",
+          "base_form": "愛す",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "て",
+          "reading": "テ",
+          "base_form": "てる",
+          "pos": "動詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "た",
+          "reading": "タ",
+          "base_form": "た",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "その",
+          "reading": "ソノ"
+        },
+        {
+          "text": "すべて",
+          "reading": "スベテ"
+        },
+        {
+          "text": "を",
+          "reading": "ヲ"
+        },
+        {
+          "text": "愛し",
+          "reading": "アイシ"
+        },
+        {
+          "text": "て",
+          "reading": "テ"
+        },
+        {
+          "text": "た",
+          "reading": "タ"
+        }
+      ],
+      "has_notes": false
+    },
+    {
+      "index": 49,
+      "text": "あなたとともに",
+      "romaji": "anata totomoni",
+      "translation": "连同你一起",
+      "start": 218.0,
+      "end": 221.0,
+      "section": "Unknown",
+      "duration": 3.0,
+      "tokens": [
+        {
+          "surface": "あなた",
+          "reading": "アナタ",
+          "base_form": "あなた",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "とともに",
+          "reading": "トトモニ",
+          "base_form": "とともに",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "連語",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "あなた",
+          "reading": "アナタ"
+        },
+        {
+          "text": "とともに",
+          "reading": "トトモニ"
+        }
+      ],
+      "has_notes": false
+    },
+    {
+      "index": 50,
+      "text": "胸に残り離れない",
+      "romaji": "mune ni nokori hanare nai",
+      "translation": "残留在我心间 挥之不去",
+      "start": 221.0,
+      "end": 224.0,
+      "section": "Unknown",
+      "duration": 3.0,
+      "tokens": [
+        {
+          "surface": "胸",
+          "reading": "ムネ",
+          "base_form": "胸",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "に",
+          "reading": "ニ",
+          "base_form": "に",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "残り",
+          "reading": "ノコリ",
+          "base_form": "残る",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "離れ",
+          "reading": "ハナレ",
+          "base_form": "離れる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ない",
+          "reading": "ナイ",
+          "base_form": "ない",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "胸",
+          "reading": "むね",
+          "meaning": "胸；胸口；内心",
+          "jlpt_level": "N3",
+          "pos": "名詞"
+        },
+        {
+          "word": "離れる",
+          "reading": "はなれる",
+          "meaning": "分离；离开",
+          "jlpt_level": "N4",
+          "pos": "動詞"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "胸",
+          "reading": "ムネ"
+        },
+        {
+          "text": "に",
+          "reading": "ニ"
+        },
+        {
+          "text": "残り",
+          "reading": "ノコリ"
+        },
+        {
+          "text": "離れ",
+          "reading": "ハナレ"
+        },
+        {
+          "text": "ない",
+          "reading": "ナイ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 51,
+      "text": "苦いレモンの匂い",
+      "romaji": "nigai remon no nioi",
+      "translation": "苦涩的柠檬香",
+      "start": 224.0,
+      "end": 227.0,
+      "section": "Unknown",
+      "duration": 3.0,
+      "tokens": [
+        {
+          "surface": "苦い",
+          "reading": "ニガイ",
+          "base_form": "苦い",
+          "pos": "形容詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "レモン",
+          "reading": "レモン",
+          "base_form": "レモン",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "の",
+          "reading": "ノ",
+          "base_form": "の",
+          "pos": "助詞",
+          "pos_detail": "連体化",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "匂い",
+          "reading": "ニオイ",
+          "base_form": "匂い",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "苦い",
+          "reading": "ニガイ"
+        },
+        {
+          "text": "レモン",
+          "reading": null
+        },
+        {
+          "text": "の",
+          "reading": "ノ"
+        },
+        {
+          "text": "匂い",
+          "reading": "ニオイ"
+        }
+      ],
+      "has_notes": false
+    },
+    {
+      "index": 52,
+      "text": "雨が降り止むまでは帰れない",
+      "romaji": "ame ga ori yamu made ha kaere nai",
+      "translation": "直到大雨停下为止都不会归去",
+      "start": 227.0,
+      "end": 233.0,
+      "section": "Unknown",
+      "duration": 6.0,
+      "tokens": [
+        {
+          "surface": "雨",
+          "reading": "アメ",
+          "base_form": "雨",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "が",
+          "reading": "ガ",
+          "base_form": "が",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "降り",
+          "reading": "オリ",
+          "base_form": "降りる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "止む",
+          "reading": "ヤム",
+          "base_form": "止む",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "まで",
+          "reading": "マデ",
+          "base_form": "まで",
+          "pos": "助詞",
+          "pos_detail": "副助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "は",
+          "reading": "ハ",
+          "base_form": "は",
+          "pos": "助詞",
+          "pos_detail": "係助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "帰れ",
+          "reading": "カエレ",
+          "base_form": "帰れる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ない",
+          "reading": "ナイ",
+          "base_form": "ない",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "雨",
+          "reading": "あめ",
+          "meaning": "雨；下雨",
+          "jlpt_level": "N5",
+          "pos": "名詞"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "雨",
+          "reading": "アメ"
+        },
+        {
+          "text": "が",
+          "reading": "ガ"
+        },
+        {
+          "text": "降り",
+          "reading": "オリ"
+        },
+        {
+          "text": "止む",
+          "reading": "ヤム"
+        },
+        {
+          "text": "まで",
+          "reading": "マデ"
+        },
+        {
+          "text": "は",
+          "reading": "ハ"
+        },
+        {
+          "text": "帰れ",
+          "reading": "カエレ"
+        },
+        {
+          "text": "ない",
+          "reading": "ナイ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 53,
+      "text": "切り分けた果実の片方の様に",
+      "romaji": "kiriwake ta kajitsu no katahou no you ni",
+      "translation": "我们就像被分为两瓣的果实",
+      "start": 233.0,
+      "end": 238.0,
+      "section": "Unknown",
+      "duration": 5.0,
+      "tokens": [
+        {
+          "surface": "切り分け",
+          "reading": "キリワケ",
+          "base_form": "切り分ける",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "た",
+          "reading": "タ",
+          "base_form": "た",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "果実",
+          "reading": "カジツ",
+          "base_form": "果実",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "の",
+          "reading": "ノ",
+          "base_form": "の",
+          "pos": "助詞",
+          "pos_detail": "連体化",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "片方",
+          "reading": "カタホウ",
+          "base_form": "片方",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "の",
+          "reading": "ノ",
+          "base_form": "の",
+          "pos": "助詞",
+          "pos_detail": "連体化",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "様",
+          "reading": "ヨウ",
+          "base_form": "様",
+          "pos": "名詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "助動詞語幹",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "に",
+          "reading": "ニ",
+          "base_form": "に",
+          "pos": "助詞",
+          "pos_detail": "副詞化",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "切り分け",
+          "reading": "キリワケ"
+        },
+        {
+          "text": "た",
+          "reading": "タ"
+        },
+        {
+          "text": "果実",
+          "reading": "カジツ"
+        },
+        {
+          "text": "の",
+          "reading": "ノ"
+        },
+        {
+          "text": "片方",
+          "reading": "カタホウ"
+        },
+        {
+          "text": "の",
+          "reading": "ノ"
+        },
+        {
+          "text": "様",
+          "reading": "ヨウ"
+        },
+        {
+          "text": "に",
+          "reading": "ニ"
+        }
+      ],
+      "has_notes": false
+    },
+    {
+      "index": 54,
+      "text": "今でもあなたはわたしの光",
+      "romaji": "ima demo anata ha watashi no hikari",
+      "translation": "时至今日你依然是我的光",
+      "start": 238.0,
+      "end": 243.0,
+      "section": "Unknown",
+      "duration": 5.0,
+      "tokens": [
+        {
+          "surface": "今",
+          "reading": "イマ",
+          "base_form": "今",
+          "pos": "名詞",
+          "pos_detail": "副詞可能",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "でも",
+          "reading": "デモ",
+          "base_form": "でも",
+          "pos": "助詞",
+          "pos_detail": "副助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "あなた",
+          "reading": "アナタ",
+          "base_form": "あなた",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "は",
+          "reading": "ハ",
+          "base_form": "は",
+          "pos": "助詞",
+          "pos_detail": "係助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "わたし",
+          "reading": "ワタシ",
+          "base_form": "わたし",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "の",
+          "reading": "ノ",
+          "base_form": "の",
+          "pos": "助詞",
+          "pos_detail": "連体化",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "光",
+          "reading": "ヒカリ",
+          "base_form": "光",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "今",
+          "reading": "いま",
+          "meaning": "现在",
+          "jlpt_level": "N5",
+          "pos": "名詞"
+        },
+        {
+          "word": "光",
+          "reading": "ひかり",
+          "meaning": "光；光线",
+          "jlpt_level": "N5",
+          "pos": "名詞"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "今",
+          "reading": "イマ"
+        },
+        {
+          "text": "でも",
+          "reading": "デモ"
+        },
+        {
+          "text": "あなた",
+          "reading": "アナタ"
+        },
+        {
+          "text": "は",
+          "reading": "ハ"
+        },
+        {
+          "text": "わたし",
+          "reading": "ワタシ"
+        },
+        {
+          "text": "の",
+          "reading": "ノ"
+        },
+        {
+          "text": "光",
+          "reading": "ヒカリ"
+        }
+      ],
+      "has_notes": true
+    }
+  ]
+}
