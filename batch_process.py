@@ -275,6 +275,13 @@ def process_single_song(
     console.print(f"  Title: {title}")
     console.print(f"  Artist: {artist}")
 
+    # 检查视频是否已存在 — 跳过整首歌的处理
+    safe_video_name = re.sub(r'[^\w\-\u3000-\u9fff\uff00-\uffef]', '_', f"{title}_{artist}")
+    expected_video = Path(config["paths"]["output_dir"]) / "videos" / f"{safe_video_name}_tiktok.mp4"
+    if expected_video.exists():
+        console.print(f"  [yellow]Skip (video exists): {expected_video.name}[/yellow]")
+        return True
+
     # 2. 查找音频
     audio_path = find_matching_audio(title, artist, audio_dir)
     if audio_path:
@@ -318,7 +325,7 @@ def process_single_song(
     try:
         video_path = generator.generate_video(analysis, audio_path=audio_path)
         if video_path:
-            console.print(f"  [green]✓ Video: {Path(video_path).name}[/green]")
+            console.print(f"  [green][OK] Video: {Path(video_path).name}[/green]")
             return True
         else:
             console.print(f"  [red]Video generation failed[/red]")

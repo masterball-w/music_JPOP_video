@@ -118,7 +118,10 @@ class AITranslator:
             }
 
         try:
-            resp = requests.post(url, json=payload, headers=headers, timeout=self.timeout)
+            # 禁用系统代理，避免代理导致连接卡死
+            resp = requests.post(url, json=payload, headers=headers, 
+                               timeout=(10, self.timeout),
+                               proxies={"http": None, "https": None})
             resp.raise_for_status()
             data = resp.json()
 
@@ -249,99 +252,65 @@ class AITranslator:
 
     def translate_song_analysis(self, analysis: dict) -> dict:
         """
-        Translate all vocabulary and grammar meanings in a song analysis to Chinese.
-        Adds 'meaning_cn' to vocabulary items and 'explanation_cn' to grammar items.
+        将分析结果中的英文释义翻译为中文。
+        AI分析的词汇已经是中文释义，只需翻译本地语法点的英文解释。
         """
-        console.print(f"\n[bold cyan]Translating explanations to Chinese...[/bold cyan]")
+        console.print(f"\n[bold cyan]翻译英文释义为中文...[/bold cyan]")
 
-        # Collect all unique items to translate
-        vocab_items = []
+        # 只收集需要翻译的语法点（本地分析产生的英文解释）
         grammar_items = []
-        seen_vocab = set()
         seen_grammar = set()
 
         # From top_notes
         for note in analysis.get("top_notes", []):
             data = note.get("data", {})
-            if note.get("type") == "vocabulary":
-                key = data.get("word", "")
-                if key and key not in seen_vocab:
-                    seen_vocab.add(key)
-                    vocab_items.append({
-                        "word": key,
-                        "reading": data.get("reading", ""),
-                        "meaning": data.get("meaning", ""),
-                        "jlpt_level": data.get("jlpt_level", ""),
-                    })
-            elif note.get("type") == "grammar":
+            if note.get("type") == "grammar":
                 key = data.get("pattern", "")
-                if key and key not in seen_grammar:
+                explanation = data.get("explanation", "")
+                # 只翻译英文解释（AI分析的是中文，本地分析的是英文）
+                if key and key not in seen_grammar and self._is_english(explanation):
                     seen_grammar.add(key)
                     grammar_items.append({
                         "pattern": key,
                         "level": data.get("level", ""),
-                        "explanation": data.get("explanation", ""),
+                        "explanation": explanation,
                     })
 
         # From analyzed_lines
         for line in analysis.get("analyzed_lines", []):
-            for v in line.get("vocabulary", []):
-                key = v.get("word", "")
-                if key and key not in seen_vocab:
-                    seen_vocab.add(key)
-                    vocab_items.append({
-                        "word": key,
-                        "reading": v.get("reading", ""),
-                        "meaning": v.get("meaning", ""),
-                        "jlpt_level": v.get("jlpt_level", ""),
-                    })
             for g in line.get("grammar", []):
                 key = g.get("pattern", "")
-                if key and key not in seen_grammar:
+                explanation = g.get("explanation", "")
+                if key and key not in seen_grammar and self._is_english(explanation):
                     seen_grammar.add(key)
                     grammar_items.append({
                         "pattern": key,
                         "level": g.get("level", ""),
-                        "explanation": g.get("explanation", ""),
+                        "explanation": explanation,
                     })
 
-        console.print(f"  Vocabulary items: {len(vocab_items)}")
-        console.print(f"  Grammar items: {len(grammar_items)}")
+        console.print(f"  需要翻译的语法点: {len(grammar_items)}")
 
-        # Translate in batches
-        total = len(vocab_items) + len(grammar_items)
-        if total == 0:
-            console.print("  [dim]Nothing to translate[/dim]")
+        if not grammar_items:
+            console.print("  [dim]无需翻译（AI分析已直接输出中文）[/dim]")
             return analysis
 
-        # Translate vocabulary
-        for i in range(0, len(vocab_items), self.batch_size):
-            batch = vocab_items[i:i + self.batch_size]
-            self.translate_batch(batch)
-            console.print(f"  [dim]Vocab batch {i // self.batch_size + 1} done[/dim]")
-
-        # Translate grammar
+        # 翻译语法点
         for i in range(0, len(grammar_items), self.batch_size):
             batch = grammar_items[i:i + self.batch_size]
             self.translate_batch(batch)
-            console.print(f"  [dim]Grammar batch {i // self.batch_size + 1} done[/dim]")
+            console.print(f"  [dim]语法批次 {i // self.batch_size + 1} 完成[/dim]")
 
-        # Build lookup maps
-        vocab_map = {item["word"]: item.get("meaning_cn", item["meaning"]) for item in vocab_items}
+        # Build lookup map
         grammar_map = {item["pattern"]: item.get("explanation_cn", item["explanation"]) for item in grammar_items}
 
         # Apply translations to analysis
         for note in analysis.get("top_notes", []):
             data = note.get("data", {})
-            if note.get("type") == "vocabulary" and data.get("word") in vocab_map:
-                data["meaning"] = vocab_map[data["word"]]
-            elif note.get("type") == "grammar" and data.get("pattern") in grammar_map:
+            if note.get("type") == "grammar" and data.get("pattern") in grammar_map:
                 data["explanation"] = grammar_map[data["pattern"]]
 
         for line in analysis.get("analyzed_lines", []):
-            for v in line.get("vocabulary", []):
-                if v.get("word") in vocab_map:
-                    v["meaning"] = vocab_map[v["word"]]
             for g in line.get("grammar", []):
                 if g.get("pattern") in grammar_map:
                     g["explanation"] = grammar_map[g["pattern"]]
@@ -349,8 +318,16 @@ class AITranslator:
         # Save cache
         self._save_cache()
 
-        console.print(f"  [green]Translation complete![/green]")
+        console.print(f"  [green]翻译完成！[/green]")
         return analysis
+
+    @staticmethod
+    def _is_english(text: str) -> bool:
+        """判断文本是否主要是英文（包含ASCII字母）"""
+        if not text:
+            return False
+        ascii_count = sum(1 for c in text if 'a' <= c.lower() <= 'z')
+        return ascii_count > len(text) * 0.3
 
     def flush_cache(self):
         """Force save cache to disk."""
@@ -358,14 +335,24 @@ class AITranslator:
 
     def analyze_lyrics_with_ai(self, analysis: dict) -> dict:
         """
-        使用AI深度分析歌词，提取词汇和语法知识点（中文释义）。
-        将AI分析结果合并到现有analysis中，补充本地分析遗漏的词汇。
+        使用AI深度分析歌词，直接从日文原句提取词汇和语法知识点（中文释义）。
+        不再依赖本地英文分析，AI直接输出中文释义。
         """
         console.print(f"\n[bold cyan]AI深度分析歌词知识点...[/bold cyan]")
 
         lines = analysis.get("analyzed_lines", [])
         if not lines:
             return analysis
+
+        # 清空本地分析产生的英文释义词汇，改为AI直接分析
+        # 保留语法点（本地语法识别较准确）
+        for line in lines:
+            ai_vocab = []
+            for v in line.get("vocabulary", []):
+                # 保留AI来源的词汇，清除本地英文释义的词汇
+                if v.get("source") == "ai":
+                    ai_vocab.append(v)
+            line["vocabulary"] = ai_vocab
 
         # 收集已有词汇，避免重复
         existing_vocab = set()
@@ -395,14 +382,18 @@ class AITranslator:
 {lyrics_text}
 
 要求：
-1. 每行提取1-3个重要词汇（动词、形容词、副词优先）
-2. 跳过已提取的词汇和语法点
-3. 跳过助词（は、が、の等）和常见代词（私、君等）
-4. 释义用简洁中文（2-6个字）
-5. 确保所有动词都被提取
+1. 每行提取2-4个重要词汇，必须包含所有动词（动词最重要，不可遗漏）
+2. 优先提取：动词 > 形容词 > 副词 > 名词
+3. 跳过已提取的词汇和语法点
+4. 跳过助词（は、が、の、を、に、で、と、から、まで、より）和常见代词（私、君、僕、彼、彼女）
+5. 跳过常见基础词汇（する、いる、ある、なる、見る、行く、来る、言う）
+6. 释义用简洁中文（2-6个字）
+7. 对于动词，必须提取其原形（辞書形）
+8. 对于复合动词、可能形、受身形、使役形等，提取原形动词
+9. jlpt_level 用 N1-N5 表示，不确定时用 N3
 
 输出纯JSON（不要markdown代码块，不要解释）：
-[{{"line":1,"items":[{{"type":"vocabulary","word":"溶ける","reading":"とける","meaning":"溶解","jlpt_level":"N3"}}]}}]"""
+[{{"line":1,"items":[{{"type":"vocabulary","word":"溶ける","reading":"とける","meaning":"溶解","jlpt_level":"N3"}},{{"type":"grammar","pattern":"〜ように","meaning":"为了...","explanation":"表示目的","jlpt_level":"N3"}}]}}]"""
 
             # 检查缓存
             cache_key = f"analysis:{hashlib.md5(lyrics_text.encode()).hexdigest()}"
@@ -507,7 +498,78 @@ class AITranslator:
         lines_with_notes = sum(1 for l in lines if l.get("has_notes"))
         console.print(f"  [green]AI分析完成！词汇: {total_vocab}, 语法: {total_grammar}, 有笔记行: {lines_with_notes}/{len(lines)}[/green]")
 
+        # 重建 top_notes，使用AI分析后的中文释义
+        analysis["top_notes"] = self._rebuild_top_notes(lines)
+
         return analysis
+
+    def _rebuild_top_notes(self, lines: list) -> list:
+        """根据AI分析后的歌词行重建top_notes"""
+        notes = []
+        jlpt_priority = {"N5": 5, "N4": 4, "N3": 3, "N2": 2, "N1": 1}
+
+        # 收集所有词汇
+        vocab_seen = {}
+        for line in lines:
+            line_idx = line.get("index", 0)
+            for v in line.get("vocabulary", []):
+                word = v.get("word", "")
+                if not word:
+                    continue
+                if word not in vocab_seen:
+                    vocab_seen[word] = {
+                        "word": word,
+                        "reading": v.get("reading", ""),
+                        "meaning": v.get("meaning", ""),
+                        "jlpt_level": v.get("jlpt_level", ""),
+                        "pos": v.get("pos", ""),
+                        "line_indices": [],
+                    }
+                vocab_seen[word]["line_indices"].append(line_idx)
+
+        # 收集所有语法点
+        grammar_seen = {}
+        for line in lines:
+            line_idx = line.get("index", 0)
+            for g in line.get("grammar", []):
+                pattern = g.get("pattern", "")
+                if not pattern:
+                    continue
+                if pattern not in grammar_seen:
+                    grammar_seen[pattern] = {
+                        "pattern": pattern,
+                        "meaning": g.get("meaning", ""),
+                        "explanation": g.get("explanation", ""),
+                        "level": g.get("level", ""),
+                        "example": g.get("example", ""),
+                        "line_indices": [],
+                    }
+                grammar_seen[pattern]["line_indices"].append(line_idx)
+
+        # 评分词汇
+        for word, info in vocab_seen.items():
+            score = jlpt_priority.get(info.get("jlpt_level", ""), 0)
+            score += min(len(info["line_indices"]) - 1, 3)
+            notes.append({
+                "type": "vocabulary",
+                "score": score,
+                "data": info,
+                "line_indices": info["line_indices"],
+            })
+
+        # 评分语法
+        for pattern, info in grammar_seen.items():
+            score = jlpt_priority.get(info.get("level", ""), 0) + 1
+            notes.append({
+                "type": "grammar",
+                "score": score,
+                "data": info,
+                "line_indices": info["line_indices"],
+            })
+
+        # 按分数排序，取前15个
+        notes.sort(key=lambda x: x["score"], reverse=True)
+        return notes[:15]
 
     def _call_api_analyze(self, prompt: str) -> Optional[str]:
         """调用AI API进行歌词分析（允许更长输出）"""
@@ -532,7 +594,7 @@ class AITranslator:
                 }
             ],
             "temperature": 0.3,
-            "max_tokens": 800,
+            "max_tokens": 2000,
         }
         headers = {
             "Content-Type": "application/json",
@@ -540,7 +602,10 @@ class AITranslator:
         }
 
         try:
-            resp = requests.post(url, json=payload, headers=headers, timeout=120)
+            # 禁用系统代理，避免代理导致连接卡死
+            resp = requests.post(url, json=payload, headers=headers, 
+                               timeout=(10, 60),
+                               proxies={"http": None, "https": None})
             resp.raise_for_status()
             data = resp.json()
             return data["choices"][0]["message"]["content"].strip()

@@ -253,24 +253,46 @@ class TextRenderer:
         f = self.bold_font(size) if bold else self.font(size)
         dummy = Image.new("RGBA", (1, 1))
         d = ImageDraw.Draw(dummy)
-        bb = d.textbbox((0, 0), text, font=f)
-        tw, th = bb[2] - bb[0], bb[3] - bb[1]
-        if max_width and tw > max_width:
-            tw = max_width
+
+        # 自动换行：超长歌词分成多行
+        if max_width:
+            wrapped_lines = self.wrap(text, f, max_width)
+        else:
+            wrapped_lines = [text]
+
+        # 计算每行尺寸
+        line_metrics = []
+        for line_text in wrapped_lines:
+            bb = d.textbbox((0, 0), line_text, font=f)
+            line_metrics.append({
+                "text": line_text,
+                "w": bb[2] - bb[0],
+                "h": bb[3] - bb[1],
+            })
+
+        line_h = max(m["h"] for m in line_metrics)
+        line_spacing = int(size * 0.2)
+        total_h = line_h * len(line_metrics) + line_spacing * (len(line_metrics) - 1)
+        total_w = max(m["w"] for m in line_metrics)
+
         pad = 20
-        W, H = tw + pad * 2, th + pad * 2
+        W, H = total_w + pad * 2, total_h + pad * 2
 
         base = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-        ImageDraw.Draw(base).text((pad, pad), text, font=f, fill=(*base_color, 255))
-
         active = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-        ImageDraw.Draw(active).text((pad, pad), text, font=f, fill=(*active_color, 255))
-
         glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-        ImageDraw.Draw(glow).text((pad, pad), text, font=f, fill=(*glow_color, 140))
+
+        # 逐行绘制
+        for i, m in enumerate(line_metrics):
+            y = pad + i * (line_h + line_spacing)
+            x = (W - m["w"]) // 2
+            ImageDraw.Draw(base).text((x, y), m["text"], font=f, fill=(*base_color, 255))
+            ImageDraw.Draw(active).text((x, y), m["text"], font=f, fill=(*active_color, 255))
+            ImageDraw.Draw(glow).text((x, y), m["text"], font=f, fill=(*glow_color, 140))
+
         glow = glow.filter(ImageFilter.GaussianBlur(10))
 
-        sweep_x = int(pad + tw * clamp(progress, 0, 1))
+        sweep_x = int(pad + total_w * clamp(progress, 0, 1))
         mask = Image.new("L", (W, H), 0)
         mask_draw = ImageDraw.Draw(mask)
         mask_draw.rectangle([(0, 0), (sweep_x, H)], fill=255)
@@ -340,9 +362,9 @@ class TextRenderer:
             meaning = data.get("meaning", "")
             elements.append(("title", word, f_title, accent, level))
             if reading:
-                elements.append(("label", f"\u8aad\u307f  {reading}", f_body, (220, 230, 255)))
+                elements.append(("label", f"读音：{reading}", f_body, (220, 230, 255)))
             if meaning:
-                elements.append(("label", f"\u610f\u5473  {meaning}", f_body, (220, 230, 255)))
+                elements.append(("label", f"翻译：{meaning}", f_body, (220, 230, 255)))
         else:
             pat = data.get("pattern", "").replace('\u301c', '~')
             level = data.get("level", "")
@@ -969,12 +991,13 @@ class VideoGenerator:
                 continue
 
             # Build a simple vocabulary note
+            # 注意：tokens中没有真实翻译，meaning留空，不显示词性作为翻译
             note = {
                 "type": "vocabulary",
                 "data": {
                     "word": surface,
                     "reading": reading if reading and reading != surface else "",
-                    "meaning": f"{pos}" + (f" / {token.get('pos_detail', '')}" if token.get('pos_detail') else ""),
+                    "meaning": "",  # 不再用词性充当翻译
                     "jlpt_level": "",
                     "pos": pos
                 }
