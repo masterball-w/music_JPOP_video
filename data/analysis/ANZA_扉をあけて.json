@@ -1,0 +1,5796 @@
+{
+  "title": "扉をあけて",
+  "artist": "ANZA",
+  "song_id": "ANZA_扉をあけて",
+  "total_lines": 25,
+  "lines_with_notes": 20,
+  "jlpt_distribution": {
+    "N3": 3,
+    "N5": 10,
+    "N4": 3
+  },
+  "vocabulary_count": 16,
+  "grammar_count": 2,
+  "top_notes": [
+    {
+      "type": "grammar",
+      "score": 6,
+      "data": {
+        "pattern": "〜ている",
+        "meaning": "正在...",
+        "explanation": "表示动作进行或状态持续",
+        "level": "N5",
+        "example": "",
+        "line_indices": [
+          12
+        ]
+      },
+      "line_indices": [
+        12
+      ]
+    },
+    {
+      "type": "grammar",
+      "score": 6,
+      "data": {
+        "pattern": "そして",
+        "meaning": "然后",
+        "explanation": "连接句子表示顺序",
+        "level": "N5",
+        "example": "",
+        "line_indices": [
+          24
+        ]
+      },
+      "line_indices": [
+        24
+      ]
+    },
+    {
+      "type": "grammar",
+      "score": 6,
+      "data": {
+        "pattern": "よ",
+        "meaning": "哦",
+        "explanation": "表示强调或提醒",
+        "level": "N5",
+        "example": "",
+        "line_indices": [
+          24
+        ]
+      },
+      "line_indices": [
+        24
+      ]
+    },
+    {
+      "type": "vocabulary",
+      "score": 5,
+      "data": {
+        "word": "大丈夫",
+        "reading": "だいじょうぶ",
+        "meaning": "没问题",
+        "jlpt_level": "N5",
+        "pos": "",
+        "line_indices": [
+          0
+        ]
+      },
+      "line_indices": [
+        0
+      ]
+    },
+    {
+      "type": "vocabulary",
+      "score": 5,
+      "data": {
+        "word": "行く",
+        "reading": "いく",
+        "meaning": "去",
+        "jlpt_level": "N5",
+        "pos": "",
+        "line_indices": [
+          2
+        ]
+      },
+      "line_indices": [
+        2
+      ]
+    },
+    {
+      "type": "vocabulary",
+      "score": 5,
+      "data": {
+        "word": "待つ",
+        "reading": "まつ",
+        "meaning": "等待",
+        "jlpt_level": "N5",
+        "pos": "",
+        "line_indices": [
+          3
+        ]
+      },
+      "line_indices": [
+        3
+      ]
+    },
+    {
+      "type": "vocabulary",
+      "score": 5,
+      "data": {
+        "word": "そして",
+        "reading": "そして",
+        "meaning": "然后",
+        "jlpt_level": "N5",
+        "pos": "",
+        "line_indices": [
+          4
+        ]
+      },
+      "line_indices": [
+        4
+      ]
+    },
+    {
+      "type": "vocabulary",
+      "score": 5,
+      "data": {
+        "word": "声",
+        "reading": "こえ",
+        "meaning": "声音",
+        "jlpt_level": "N5",
+        "pos": "",
+        "line_indices": [
+          5
+        ]
+      },
+      "line_indices": [
+        5
+      ]
+    },
+    {
+      "type": "vocabulary",
+      "score": 5,
+      "data": {
+        "word": "開く",
+        "reading": "ひらく",
+        "meaning": "打开",
+        "jlpt_level": "N5",
+        "pos": "",
+        "line_indices": [
+          13
+        ]
+      },
+      "line_indices": [
+        13
+      ]
+    },
+    {
+      "type": "vocabulary",
+      "score": 5,
+      "data": {
+        "word": "なる",
+        "reading": "なる",
+        "meaning": "成为",
+        "jlpt_level": "N5",
+        "pos": "",
+        "line_indices": [
+          18
+        ]
+      },
+      "line_indices": [
+        18
+      ]
+    },
+    {
+      "type": "vocabulary",
+      "score": 5,
+      "data": {
+        "word": "とっても",
+        "reading": "とっても",
+        "meaning": "非常",
+        "jlpt_level": "N5",
+        "pos": "",
+        "line_indices": [
+          18
+        ]
+      },
+      "line_indices": [
+        18
+      ]
+    },
+    {
+      "type": "vocabulary",
+      "score": 5,
+      "data": {
+        "word": "小さな",
+        "reading": "ちいさな",
+        "meaning": "小的",
+        "jlpt_level": "N5",
+        "pos": "",
+        "line_indices": [
+          18
+        ]
+      },
+      "line_indices": [
+        18
+      ]
+    },
+    {
+      "type": "vocabulary",
+      "score": 5,
+      "data": {
+        "word": "種",
+        "reading": "たね",
+        "meaning": "种子",
+        "jlpt_level": "N5",
+        "pos": "",
+        "line_indices": [
+          18
+        ]
+      },
+      "line_indices": [
+        18
+      ]
+    },
+    {
+      "type": "vocabulary",
+      "score": 5,
+      "data": {
+        "word": "大きな",
+        "reading": "おおきな",
+        "meaning": "大的",
+        "jlpt_level": "N5",
+        "pos": "",
+        "line_indices": [
+          19
+        ]
+      },
+      "line_indices": [
+        19
+      ]
+    },
+    {
+      "type": "vocabulary",
+      "score": 5,
+      "data": {
+        "word": "花",
+        "reading": "はな",
+        "meaning": "花",
+        "jlpt_level": "N5",
+        "pos": "",
+        "line_indices": [
+          19
+        ]
+      },
+      "line_indices": [
+        19
+      ]
+    }
+  ],
+  "analyzed_lines": [
+    {
+      "index": 0,
+      "text": "It's all right 大丈夫 ダイジョウブ だいじょうぶ",
+      "romaji": "It ' s all right daijoubu daijoubu daijoubu",
+      "translation": "没问题 没问题 没问题",
+      "start": 6.0,
+      "end": 11.0,
+      "section": "Unknown",
+      "duration": 5.0,
+      "tokens": [
+        {
+          "surface": "It",
+          "reading": "It",
+          "base_form": "It",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "'",
+          "reading": "'",
+          "base_form": "'",
+          "pos": "名詞",
+          "pos_detail": "サ変接続",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "s",
+          "reading": "s",
+          "base_form": "s",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "all",
+          "reading": "all",
+          "base_form": "all",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "right",
+          "reading": "right",
+          "base_form": "right",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "大丈夫",
+          "reading": "ダイジョウブ",
+          "base_form": "大丈夫",
+          "pos": "名詞",
+          "pos_detail": "形容動詞語幹",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ダイジョウブ",
+          "reading": "ダイジョウブ",
+          "base_form": "ダイジョウブ",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "だいじょうぶ",
+          "reading": "ダイジョウブ",
+          "base_form": "だいじょうぶ",
+          "pos": "名詞",
+          "pos_detail": "形容動詞語幹",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "大丈夫",
+          "reading": "だいじょうぶ",
+          "meaning": "没问题",
+          "jlpt_level": "N5",
+          "pos": "",
+          "source": "ai"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "It",
+          "reading": null
+        },
+        {
+          "text": "'",
+          "reading": null
+        },
+        {
+          "text": "s",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "all",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "right",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "大丈夫",
+          "reading": "ダイジョウブ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "ダイジョウブ",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "だいじょうぶ",
+          "reading": "ダイジョウブ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 1,
+      "text": "奇跡だって起こせる",
+      "romaji": "kiseki date okoseru",
+      "translation": "召唤奇迹也并非不可能",
+      "start": 11.0,
+      "end": 15.0,
+      "section": "Unknown",
+      "duration": 4.0,
+      "tokens": [
+        {
+          "surface": "奇跡",
+          "reading": "キセキ",
+          "base_form": "奇跡",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "だって",
+          "reading": "ダッテ",
+          "base_form": "だって",
+          "pos": "助詞",
+          "pos_detail": "副助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "起こせる",
+          "reading": "オコセル",
+          "base_form": "起こせる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "奇跡",
+          "reading": "きせき",
+          "meaning": "奇迹",
+          "jlpt_level": "N4",
+          "pos": "",
+          "source": "ai"
+        },
+        {
+          "word": "起こす",
+          "reading": "おこす",
+          "meaning": "引起",
+          "jlpt_level": "N4",
+          "pos": "",
+          "source": "ai"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "奇跡",
+          "reading": "キセキ"
+        },
+        {
+          "text": "だって",
+          "reading": "ダッテ"
+        },
+        {
+          "text": "起こせる",
+          "reading": "オコセル"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 2,
+      "text": "Here we go 行こうよ 行こうよ 行こうよ 翼拡げ",
+      "romaji": "Here we go iko u yo iko u yo iko u yo tsubasa hiroge",
+      "translation": "Here we go出发吧出发吧出发吧展开双翼",
+      "start": 15.0,
+      "end": 22.0,
+      "section": "Unknown",
+      "duration": 7.0,
+      "tokens": [
+        {
+          "surface": "Here",
+          "reading": "Here",
+          "base_form": "Here",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "we",
+          "reading": "we",
+          "base_form": "we",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "go",
+          "reading": "go",
+          "base_form": "go",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "行こ",
+          "reading": "イコ",
+          "base_form": "行く",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "う",
+          "reading": "ウ",
+          "base_form": "う",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "よ",
+          "reading": "ヨ",
+          "base_form": "よ",
+          "pos": "助詞",
+          "pos_detail": "終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "行こ",
+          "reading": "イコ",
+          "base_form": "行く",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "う",
+          "reading": "ウ",
+          "base_form": "う",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "よ",
+          "reading": "ヨ",
+          "base_form": "よ",
+          "pos": "助詞",
+          "pos_detail": "終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "行こ",
+          "reading": "イコ",
+          "base_form": "行く",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "う",
+          "reading": "ウ",
+          "base_form": "う",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "よ",
+          "reading": "ヨ",
+          "base_form": "よ",
+          "pos": "助詞",
+          "pos_detail": "終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "翼",
+          "reading": "ツバサ",
+          "base_form": "翼",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "拡げ",
+          "reading": "ヒロゲ",
+          "base_form": "拡げる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "行く",
+          "reading": "いく",
+          "meaning": "去",
+          "jlpt_level": "N5",
+          "pos": "",
+          "source": "ai"
+        },
+        {
+          "word": "拡げる",
+          "reading": "ひろげる",
+          "meaning": "展开",
+          "jlpt_level": "N3",
+          "pos": "",
+          "source": "ai"
+        },
+        {
+          "word": "翼",
+          "reading": "つばさ",
+          "meaning": "翅膀",
+          "jlpt_level": "N3",
+          "pos": "",
+          "source": "ai"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "Here",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "we",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "go",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "行こ",
+          "reading": "イコ"
+        },
+        {
+          "text": "う",
+          "reading": "ウ"
+        },
+        {
+          "text": "よ",
+          "reading": "ヨ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "行こ",
+          "reading": "イコ"
+        },
+        {
+          "text": "う",
+          "reading": "ウ"
+        },
+        {
+          "text": "よ",
+          "reading": "ヨ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "行こ",
+          "reading": "イコ"
+        },
+        {
+          "text": "う",
+          "reading": "ウ"
+        },
+        {
+          "text": "よ",
+          "reading": "ヨ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "翼",
+          "reading": "ツバサ"
+        },
+        {
+          "text": "拡げ",
+          "reading": "ヒロゲ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 3,
+      "text": "きっと 何かが 何かが どこかで 出会える日を待ってる",
+      "romaji": "kito nani ka ga nani ka ga doko ka de deaeru hi wo ma teru",
+      "translation": "一定有什么有什么在某处",
+      "start": 22.0,
+      "end": 31.0,
+      "section": "Unknown",
+      "duration": 9.0,
+      "tokens": [
+        {
+          "surface": "きっと",
+          "reading": "キット",
+          "base_form": "きっと",
+          "pos": "副詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "何",
+          "reading": "ナニ",
+          "base_form": "何",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "か",
+          "reading": "カ",
+          "base_form": "か",
+          "pos": "助詞",
+          "pos_detail": "副助詞／並立助詞／終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "が",
+          "reading": "ガ",
+          "base_form": "が",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "何",
+          "reading": "ナニ",
+          "base_form": "何",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "か",
+          "reading": "カ",
+          "base_form": "か",
+          "pos": "助詞",
+          "pos_detail": "副助詞／並立助詞／終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "が",
+          "reading": "ガ",
+          "base_form": "が",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "どこ",
+          "reading": "ドコ",
+          "base_form": "どこ",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "か",
+          "reading": "カ",
+          "base_form": "か",
+          "pos": "助詞",
+          "pos_detail": "副助詞／並立助詞／終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "で",
+          "reading": "デ",
+          "base_form": "で",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "出会える",
+          "reading": "デアエル",
+          "base_form": "出会える",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "日",
+          "reading": "ヒ",
+          "base_form": "日",
+          "pos": "名詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "副詞可能",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "を",
+          "reading": "ヲ",
+          "base_form": "を",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "待っ",
+          "reading": "マッ",
+          "base_form": "待つ",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "てる",
+          "reading": "テル",
+          "base_form": "てる",
+          "pos": "動詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "きっと",
+          "reading": "きっと",
+          "meaning": "一定",
+          "jlpt_level": "N3",
+          "pos": "",
+          "source": "ai"
+        },
+        {
+          "word": "出会う",
+          "reading": "であう",
+          "meaning": "相遇",
+          "jlpt_level": "N3",
+          "pos": "",
+          "source": "ai"
+        },
+        {
+          "word": "待つ",
+          "reading": "まつ",
+          "meaning": "等待",
+          "jlpt_level": "N5",
+          "pos": "",
+          "source": "ai"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "きっと",
+          "reading": "キット"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "何",
+          "reading": "ナニ"
+        },
+        {
+          "text": "か",
+          "reading": "カ"
+        },
+        {
+          "text": "が",
+          "reading": "ガ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "何",
+          "reading": "ナニ"
+        },
+        {
+          "text": "か",
+          "reading": "カ"
+        },
+        {
+          "text": "が",
+          "reading": "ガ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "どこ",
+          "reading": "ドコ"
+        },
+        {
+          "text": "か",
+          "reading": "カ"
+        },
+        {
+          "text": "で",
+          "reading": "デ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "出会える",
+          "reading": "デアエル"
+        },
+        {
+          "text": "日",
+          "reading": "ヒ"
+        },
+        {
+          "text": "を",
+          "reading": "ヲ"
+        },
+        {
+          "text": "待っ",
+          "reading": "マッ"
+        },
+        {
+          "text": "てる",
+          "reading": "テル"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 4,
+      "text": "DO! DO! DO! DREAMING! DREAMING! そして扉がひらくよ…",
+      "romaji": "DO ! DO ! DO ! DREAMInG ! DREAMInG ! soshite tobira ga hiraku yo",
+      "translation": "等待着我们与其辗转邂逅",
+      "start": 31.0,
+      "end": 53.0,
+      "section": "Unknown",
+      "duration": 22.0,
+      "tokens": [
+        {
+          "surface": "DO",
+          "reading": "DO",
+          "base_form": "DO",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "!",
+          "reading": "!",
+          "base_form": "!",
+          "pos": "名詞",
+          "pos_detail": "サ変接続",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "DO",
+          "reading": "DO",
+          "base_form": "DO",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "!",
+          "reading": "!",
+          "base_form": "!",
+          "pos": "名詞",
+          "pos_detail": "サ変接続",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "DO",
+          "reading": "DO",
+          "base_form": "DO",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "!",
+          "reading": "!",
+          "base_form": "!",
+          "pos": "名詞",
+          "pos_detail": "サ変接続",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "DREAMING",
+          "reading": "DREAMING",
+          "base_form": "DREAMING",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "!",
+          "reading": "!",
+          "base_form": "!",
+          "pos": "名詞",
+          "pos_detail": "サ変接続",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "DREAMING",
+          "reading": "DREAMING",
+          "base_form": "DREAMING",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "!",
+          "reading": "!",
+          "base_form": "!",
+          "pos": "名詞",
+          "pos_detail": "サ変接続",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "そして",
+          "reading": "ソシテ",
+          "base_form": "そして",
+          "pos": "接続詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "扉",
+          "reading": "トビラ",
+          "base_form": "扉",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "が",
+          "reading": "ガ",
+          "base_form": "が",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ひらく",
+          "reading": "ヒラク",
+          "base_form": "ひらく",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "よ",
+          "reading": "ヨ",
+          "base_form": "よ",
+          "pos": "助詞",
+          "pos_detail": "終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "…",
+          "reading": "…",
+          "base_form": "…",
+          "pos": "記号",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "そして",
+          "reading": "そして",
+          "meaning": "然后",
+          "jlpt_level": "N5",
+          "pos": "",
+          "source": "ai"
+        },
+        {
+          "word": "扉",
+          "reading": "とびら",
+          "meaning": "门",
+          "jlpt_level": "N4",
+          "pos": "",
+          "source": "ai"
+        },
+        {
+          "word": "ひらく",
+          "reading": "ひらく",
+          "meaning": "打开",
+          "jlpt_level": "N4",
+          "pos": "",
+          "source": "ai"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "DO",
+          "reading": null
+        },
+        {
+          "text": "!",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "DO",
+          "reading": null
+        },
+        {
+          "text": "!",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "DO",
+          "reading": null
+        },
+        {
+          "text": "!",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "DREAMING",
+          "reading": null
+        },
+        {
+          "text": "!",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "DREAMING",
+          "reading": null
+        },
+        {
+          "text": "!",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "そして",
+          "reading": "ソシテ"
+        },
+        {
+          "text": "扉",
+          "reading": "トビラ"
+        },
+        {
+          "text": "が",
+          "reading": "ガ"
+        },
+        {
+          "text": "ひらく",
+          "reading": "ヒラク"
+        },
+        {
+          "text": "よ",
+          "reading": "ヨ"
+        },
+        {
+          "text": "…",
+          "reading": null
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 5,
+      "text": "イザとなると 何も言えない しゃべりたいのに 声も聴きたくて",
+      "romaji": "iza to naru to nani mo ie nai shaberi tai noni koe mo kiki taku te",
+      "translation": "而后梦想的门扉就此敞开",
+      "start": 53.0,
+      "end": 68.0,
+      "section": "Unknown",
+      "duration": 15.0,
+      "tokens": [
+        {
+          "surface": "イザ",
+          "reading": "イザ",
+          "base_form": "イザ",
+          "pos": "副詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "と",
+          "reading": "ト",
+          "base_form": "と",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "なる",
+          "reading": "ナル",
+          "base_form": "なる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "と",
+          "reading": "ト",
+          "base_form": "と",
+          "pos": "助詞",
+          "pos_detail": "接続助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "何",
+          "reading": "ナニ",
+          "base_form": "何",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "も",
+          "reading": "モ",
+          "base_form": "も",
+          "pos": "助詞",
+          "pos_detail": "係助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "言え",
+          "reading": "イエ",
+          "base_form": "言える",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ない",
+          "reading": "ナイ",
+          "base_form": "ない",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "しゃべり",
+          "reading": "シャベリ",
+          "base_form": "しゃべる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "たい",
+          "reading": "タイ",
+          "base_form": "たい",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "のに",
+          "reading": "ノニ",
+          "base_form": "のに",
+          "pos": "助詞",
+          "pos_detail": "接続助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "声",
+          "reading": "コエ",
+          "base_form": "声",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "も",
+          "reading": "モ",
+          "base_form": "も",
+          "pos": "助詞",
+          "pos_detail": "係助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "聴き",
+          "reading": "キキ",
+          "base_form": "聴く",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "たく",
+          "reading": "タク",
+          "base_form": "たい",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "て",
+          "reading": "テ",
+          "base_form": "て",
+          "pos": "助詞",
+          "pos_detail": "接続助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "イザとなると",
+          "reading": "いざとなると",
+          "meaning": "关键时刻",
+          "jlpt_level": "N2",
+          "pos": "",
+          "source": "ai"
+        },
+        {
+          "word": "しゃべる",
+          "reading": "しゃべる",
+          "meaning": "说话",
+          "jlpt_level": "N4",
+          "pos": "",
+          "source": "ai"
+        },
+        {
+          "word": "聴く",
+          "reading": "きく",
+          "meaning": "听",
+          "jlpt_level": "N4",
+          "pos": "",
+          "source": "ai"
+        },
+        {
+          "word": "声",
+          "reading": "こえ",
+          "meaning": "声音",
+          "jlpt_level": "N5",
+          "pos": "",
+          "source": "ai"
+        }
+      ],
+      "grammar": [
+        {
+          "pattern": "〜のに",
+          "level": "N3",
+          "meaning": "even though ~ / despite ~",
+          "explanation": "表示转折，带有不满或遗憾的语气。",
+          "example": "好きなのに → 明明喜欢却...",
+          "in_context": "イザとなると 何も言えない しゃべりたいのに 声も聴きたくて"
+        }
+      ],
+      "reading_parts": [
+        {
+          "text": "イザ",
+          "reading": null
+        },
+        {
+          "text": "と",
+          "reading": "ト"
+        },
+        {
+          "text": "なる",
+          "reading": "ナル"
+        },
+        {
+          "text": "と",
+          "reading": "ト"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "何",
+          "reading": "ナニ"
+        },
+        {
+          "text": "も",
+          "reading": "モ"
+        },
+        {
+          "text": "言え",
+          "reading": "イエ"
+        },
+        {
+          "text": "ない",
+          "reading": "ナイ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "しゃべり",
+          "reading": "シャベリ"
+        },
+        {
+          "text": "たい",
+          "reading": "タイ"
+        },
+        {
+          "text": "のに",
+          "reading": "ノニ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "声",
+          "reading": "コエ"
+        },
+        {
+          "text": "も",
+          "reading": "モ"
+        },
+        {
+          "text": "聴き",
+          "reading": "キキ"
+        },
+        {
+          "text": "たく",
+          "reading": "タク"
+        },
+        {
+          "text": "て",
+          "reading": "テ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 6,
+      "text": "こころがね あわててる",
+      "romaji": "kokoro ga ne awate teru",
+      "translation": "关键的时刻 总是什么都说不出口",
+      "start": 68.0,
+      "end": 77.0,
+      "section": "Unknown",
+      "duration": 9.0,
+      "tokens": [
+        {
+          "surface": "こころ",
+          "reading": "ココロ",
+          "base_form": "こころ",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "が",
+          "reading": "ガ",
+          "base_form": "が",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ね",
+          "reading": "ネ",
+          "base_form": "ね",
+          "pos": "助詞",
+          "pos_detail": "終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "あわて",
+          "reading": "アワテ",
+          "base_form": "あわてる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "てる",
+          "reading": "テル",
+          "base_form": "てる",
+          "pos": "動詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "こころ",
+          "reading": "ココロ"
+        },
+        {
+          "text": "が",
+          "reading": "ガ"
+        },
+        {
+          "text": "ね",
+          "reading": "ネ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "あわて",
+          "reading": "アワテ"
+        },
+        {
+          "text": "てる",
+          "reading": "テル"
+        }
+      ],
+      "has_notes": false
+    },
+    {
+      "index": 7,
+      "text": "青い空に飛行機雲 繋いだ手に沸いてくる POWER",
+      "romaji": "aoi sora ni hikoukigumo tsunai da te ni wai te kuru POWER",
+      "translation": "明明想悉数倾诉 也想听见你的声音",
+      "start": 77.0,
+      "end": 93.0,
+      "section": "Unknown",
+      "duration": 16.0,
+      "tokens": [
+        {
+          "surface": "青い",
+          "reading": "アオイ",
+          "base_form": "青い",
+          "pos": "形容詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "空",
+          "reading": "ソラ",
+          "base_form": "空",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "に",
+          "reading": "ニ",
+          "base_form": "に",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "飛行機雲",
+          "reading": "ヒコウキグモ",
+          "base_form": "飛行機雲",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "繋い",
+          "reading": "ツナイ",
+          "base_form": "繋ぐ",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "だ",
+          "reading": "ダ",
+          "base_form": "だ",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "手",
+          "reading": "テ",
+          "base_form": "手",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "に",
+          "reading": "ニ",
+          "base_form": "に",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "沸い",
+          "reading": "ワイ",
+          "base_form": "沸く",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "て",
+          "reading": "テ",
+          "base_form": "て",
+          "pos": "助詞",
+          "pos_detail": "接続助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "くる",
+          "reading": "クル",
+          "base_form": "くる",
+          "pos": "動詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "POWER",
+          "reading": "POWER",
+          "base_form": "POWER",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [
+        {
+          "pattern": "〜てくる",
+          "level": "N3",
+          "meaning": "has been doing ~ / come to ~",
+          "explanation": "表示变化从过去持续到现在，或某种状态开始显现。",
+          "example": "変わってきた → 逐渐改变了",
+          "in_context": "青い空に飛行機雲 繋いだ手に沸いてくる POWER"
+        }
+      ],
+      "reading_parts": [
+        {
+          "text": "青い",
+          "reading": "アオイ"
+        },
+        {
+          "text": "空",
+          "reading": "ソラ"
+        },
+        {
+          "text": "に",
+          "reading": "ニ"
+        },
+        {
+          "text": "飛行機雲",
+          "reading": "ヒコウキグモ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "繋い",
+          "reading": "ツナイ"
+        },
+        {
+          "text": "だ",
+          "reading": "ダ"
+        },
+        {
+          "text": "手",
+          "reading": "テ"
+        },
+        {
+          "text": "に",
+          "reading": "ニ"
+        },
+        {
+          "text": "沸い",
+          "reading": "ワイ"
+        },
+        {
+          "text": "て",
+          "reading": "テ"
+        },
+        {
+          "text": "くる",
+          "reading": "クル"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "POWER",
+          "reading": null
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 8,
+      "text": "どこだってゆけそうだよ 風に乗って…",
+      "romaji": "doko date yuke sou da yo kaze ni no te",
+      "translation": "但我的心啊 却慌张地不知所措",
+      "start": 93.0,
+      "end": 106.0,
+      "section": "Unknown",
+      "duration": 13.0,
+      "tokens": [
+        {
+          "surface": "どこ",
+          "reading": "ドコ",
+          "base_form": "どこ",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "だって",
+          "reading": "ダッテ",
+          "base_form": "だって",
+          "pos": "助詞",
+          "pos_detail": "副助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ゆけ",
+          "reading": "ユケ",
+          "base_form": "ゆける",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "そう",
+          "reading": "ソウ",
+          "base_form": "そう",
+          "pos": "名詞",
+          "pos_detail": "接尾",
+          "conjugation_type": "助動詞語幹",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "だ",
+          "reading": "ダ",
+          "base_form": "だ",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "よ",
+          "reading": "ヨ",
+          "base_form": "よ",
+          "pos": "助詞",
+          "pos_detail": "終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "風",
+          "reading": "カゼ",
+          "base_form": "風",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "に",
+          "reading": "ニ",
+          "base_form": "に",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "乗っ",
+          "reading": "ノッ",
+          "base_form": "乗る",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "て",
+          "reading": "テ",
+          "base_form": "て",
+          "pos": "助詞",
+          "pos_detail": "接続助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "…",
+          "reading": "…",
+          "base_form": "…",
+          "pos": "記号",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "どこ",
+          "reading": "ドコ"
+        },
+        {
+          "text": "だって",
+          "reading": "ダッテ"
+        },
+        {
+          "text": "ゆけ",
+          "reading": "ユケ"
+        },
+        {
+          "text": "そう",
+          "reading": "ソウ"
+        },
+        {
+          "text": "だ",
+          "reading": "ダ"
+        },
+        {
+          "text": "よ",
+          "reading": "ヨ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "風",
+          "reading": "カゼ"
+        },
+        {
+          "text": "に",
+          "reading": "ニ"
+        },
+        {
+          "text": "乗っ",
+          "reading": "ノッ"
+        },
+        {
+          "text": "て",
+          "reading": "テ"
+        },
+        {
+          "text": "…",
+          "reading": null
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 9,
+      "text": "It's all right 大丈夫 ダイジョウブ だいじょうぶ",
+      "romaji": "It ' s all right daijoubu daijoubu daijoubu",
+      "translation": "蓝天中留下一道航迹云",
+      "start": 106.0,
+      "end": 111.0,
+      "section": "Unknown",
+      "duration": 5.0,
+      "tokens": [
+        {
+          "surface": "It",
+          "reading": "It",
+          "base_form": "It",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "'",
+          "reading": "'",
+          "base_form": "'",
+          "pos": "名詞",
+          "pos_detail": "サ変接続",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "s",
+          "reading": "s",
+          "base_form": "s",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "all",
+          "reading": "all",
+          "base_form": "all",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "right",
+          "reading": "right",
+          "base_form": "right",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "大丈夫",
+          "reading": "ダイジョウブ",
+          "base_form": "大丈夫",
+          "pos": "名詞",
+          "pos_detail": "形容動詞語幹",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ダイジョウブ",
+          "reading": "ダイジョウブ",
+          "base_form": "ダイジョウブ",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "だいじょうぶ",
+          "reading": "ダイジョウブ",
+          "base_form": "だいじょうぶ",
+          "pos": "名詞",
+          "pos_detail": "形容動詞語幹",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "It",
+          "reading": null
+        },
+        {
+          "text": "'",
+          "reading": null
+        },
+        {
+          "text": "s",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "all",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "right",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "大丈夫",
+          "reading": "ダイジョウブ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "ダイジョウブ",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "だいじょうぶ",
+          "reading": "ダイジョウブ"
+        }
+      ],
+      "has_notes": false
+    },
+    {
+      "index": 10,
+      "text": "奇跡だって起こせる",
+      "romaji": "kiseki date okoseru",
+      "translation": "牵起你的手 一股力量涌上心头",
+      "start": 111.0,
+      "end": 115.0,
+      "section": "Unknown",
+      "duration": 4.0,
+      "tokens": [
+        {
+          "surface": "奇跡",
+          "reading": "キセキ",
+          "base_form": "奇跡",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "だって",
+          "reading": "ダッテ",
+          "base_form": "だって",
+          "pos": "助詞",
+          "pos_detail": "副助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "起こせる",
+          "reading": "オコセル",
+          "base_form": "起こせる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "奇跡",
+          "reading": "キセキ"
+        },
+        {
+          "text": "だって",
+          "reading": "ダッテ"
+        },
+        {
+          "text": "起こせる",
+          "reading": "オコセル"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 11,
+      "text": "Here we go 行こうよ 行こうよ 行こうよ 翼拡げ",
+      "romaji": "Here we go iko u yo iko u yo iko u yo tsubasa hiroge",
+      "translation": "仿佛世界的任何角落都能到达",
+      "start": 115.0,
+      "end": 122.0,
+      "section": "Unknown",
+      "duration": 7.0,
+      "tokens": [
+        {
+          "surface": "Here",
+          "reading": "Here",
+          "base_form": "Here",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "we",
+          "reading": "we",
+          "base_form": "we",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "go",
+          "reading": "go",
+          "base_form": "go",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "行こ",
+          "reading": "イコ",
+          "base_form": "行く",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "う",
+          "reading": "ウ",
+          "base_form": "う",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "よ",
+          "reading": "ヨ",
+          "base_form": "よ",
+          "pos": "助詞",
+          "pos_detail": "終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "行こ",
+          "reading": "イコ",
+          "base_form": "行く",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "う",
+          "reading": "ウ",
+          "base_form": "う",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "よ",
+          "reading": "ヨ",
+          "base_form": "よ",
+          "pos": "助詞",
+          "pos_detail": "終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "行こ",
+          "reading": "イコ",
+          "base_form": "行く",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "う",
+          "reading": "ウ",
+          "base_form": "う",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "よ",
+          "reading": "ヨ",
+          "base_form": "よ",
+          "pos": "助詞",
+          "pos_detail": "終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "翼",
+          "reading": "ツバサ",
+          "base_form": "翼",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "拡げ",
+          "reading": "ヒロゲ",
+          "base_form": "拡げる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "Here",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "we",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "go",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "行こ",
+          "reading": "イコ"
+        },
+        {
+          "text": "う",
+          "reading": "ウ"
+        },
+        {
+          "text": "よ",
+          "reading": "ヨ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "行こ",
+          "reading": "イコ"
+        },
+        {
+          "text": "う",
+          "reading": "ウ"
+        },
+        {
+          "text": "よ",
+          "reading": "ヨ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "行こ",
+          "reading": "イコ"
+        },
+        {
+          "text": "う",
+          "reading": "ウ"
+        },
+        {
+          "text": "よ",
+          "reading": "ヨ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "翼",
+          "reading": "ツバサ"
+        },
+        {
+          "text": "拡げ",
+          "reading": "ヒロゲ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 12,
+      "text": "きっと 何かが 何かが どこかで 出会える日を待ってる",
+      "romaji": "kito nani ka ga nani ka ga doko ka de deaeru hi wo ma teru",
+      "translation": "乘着清风",
+      "start": 122.0,
+      "end": 131.0,
+      "section": "Unknown",
+      "duration": 9.0,
+      "tokens": [
+        {
+          "surface": "きっと",
+          "reading": "キット",
+          "base_form": "きっと",
+          "pos": "副詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "何",
+          "reading": "ナニ",
+          "base_form": "何",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "か",
+          "reading": "カ",
+          "base_form": "か",
+          "pos": "助詞",
+          "pos_detail": "副助詞／並立助詞／終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "が",
+          "reading": "ガ",
+          "base_form": "が",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "何",
+          "reading": "ナニ",
+          "base_form": "何",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "か",
+          "reading": "カ",
+          "base_form": "か",
+          "pos": "助詞",
+          "pos_detail": "副助詞／並立助詞／終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "が",
+          "reading": "ガ",
+          "base_form": "が",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "どこ",
+          "reading": "ドコ",
+          "base_form": "どこ",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "か",
+          "reading": "カ",
+          "base_form": "か",
+          "pos": "助詞",
+          "pos_detail": "副助詞／並立助詞／終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "で",
+          "reading": "デ",
+          "base_form": "で",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "出会える",
+          "reading": "デアエル",
+          "base_form": "出会える",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "日",
+          "reading": "ヒ",
+          "base_form": "日",
+          "pos": "名詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "副詞可能",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "を",
+          "reading": "ヲ",
+          "base_form": "を",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "待っ",
+          "reading": "マッ",
+          "base_form": "待つ",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "てる",
+          "reading": "テル",
+          "base_form": "てる",
+          "pos": "動詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [
+        {
+          "pattern": "〜ている",
+          "meaning": "正在...",
+          "explanation": "表示动作进行或状态持续",
+          "level": "N5",
+          "example": "",
+          "source": "ai"
+        }
+      ],
+      "reading_parts": [
+        {
+          "text": "きっと",
+          "reading": "キット"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "何",
+          "reading": "ナニ"
+        },
+        {
+          "text": "か",
+          "reading": "カ"
+        },
+        {
+          "text": "が",
+          "reading": "ガ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "何",
+          "reading": "ナニ"
+        },
+        {
+          "text": "か",
+          "reading": "カ"
+        },
+        {
+          "text": "が",
+          "reading": "ガ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "どこ",
+          "reading": "ドコ"
+        },
+        {
+          "text": "か",
+          "reading": "カ"
+        },
+        {
+          "text": "で",
+          "reading": "デ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "出会える",
+          "reading": "デアエル"
+        },
+        {
+          "text": "日",
+          "reading": "ヒ"
+        },
+        {
+          "text": "を",
+          "reading": "ヲ"
+        },
+        {
+          "text": "待っ",
+          "reading": "マッ"
+        },
+        {
+          "text": "てる",
+          "reading": "テル"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 13,
+      "text": "DO! DO! DO! DREAMING! DREAMING! そして扉がひらくよ…",
+      "romaji": "DO ! DO ! DO ! DREAMInG ! DREAMInG ! soshite tobira ga hiraku yo",
+      "translation": "没问题 没问题 没问题",
+      "start": 131.0,
+      "end": 153.0,
+      "section": "Unknown",
+      "duration": 22.0,
+      "tokens": [
+        {
+          "surface": "DO",
+          "reading": "DO",
+          "base_form": "DO",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "!",
+          "reading": "!",
+          "base_form": "!",
+          "pos": "名詞",
+          "pos_detail": "サ変接続",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "DO",
+          "reading": "DO",
+          "base_form": "DO",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "!",
+          "reading": "!",
+          "base_form": "!",
+          "pos": "名詞",
+          "pos_detail": "サ変接続",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "DO",
+          "reading": "DO",
+          "base_form": "DO",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "!",
+          "reading": "!",
+          "base_form": "!",
+          "pos": "名詞",
+          "pos_detail": "サ変接続",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "DREAMING",
+          "reading": "DREAMING",
+          "base_form": "DREAMING",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "!",
+          "reading": "!",
+          "base_form": "!",
+          "pos": "名詞",
+          "pos_detail": "サ変接続",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "DREAMING",
+          "reading": "DREAMING",
+          "base_form": "DREAMING",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "!",
+          "reading": "!",
+          "base_form": "!",
+          "pos": "名詞",
+          "pos_detail": "サ変接続",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "そして",
+          "reading": "ソシテ",
+          "base_form": "そして",
+          "pos": "接続詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "扉",
+          "reading": "トビラ",
+          "base_form": "扉",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "が",
+          "reading": "ガ",
+          "base_form": "が",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ひらく",
+          "reading": "ヒラク",
+          "base_form": "ひらく",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "よ",
+          "reading": "ヨ",
+          "base_form": "よ",
+          "pos": "助詞",
+          "pos_detail": "終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "…",
+          "reading": "…",
+          "base_form": "…",
+          "pos": "記号",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "開く",
+          "reading": "ひらく",
+          "meaning": "打开",
+          "jlpt_level": "N5",
+          "pos": "",
+          "source": "ai"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "DO",
+          "reading": null
+        },
+        {
+          "text": "!",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "DO",
+          "reading": null
+        },
+        {
+          "text": "!",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "DO",
+          "reading": null
+        },
+        {
+          "text": "!",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "DREAMING",
+          "reading": null
+        },
+        {
+          "text": "!",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "DREAMING",
+          "reading": null
+        },
+        {
+          "text": "!",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "そして",
+          "reading": "ソシテ"
+        },
+        {
+          "text": "扉",
+          "reading": "トビラ"
+        },
+        {
+          "text": "が",
+          "reading": "ガ"
+        },
+        {
+          "text": "ひらく",
+          "reading": "ヒラク"
+        },
+        {
+          "text": "よ",
+          "reading": "ヨ"
+        },
+        {
+          "text": "…",
+          "reading": null
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 14,
+      "text": "なんでもない 小石でさえ 不思議だよね 宝石に変わる",
+      "romaji": "nan de mo nai koishi de sae fushigi da yo ne houseki ni kawaru",
+      "translation": "召唤奇迹也并非不可能",
+      "start": 153.0,
+      "end": 169.0,
+      "section": "Unknown",
+      "duration": 16.0,
+      "tokens": [
+        {
+          "surface": "なん",
+          "reading": "ナン",
+          "base_form": "なん",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "で",
+          "reading": "デ",
+          "base_form": "で",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "も",
+          "reading": "モ",
+          "base_form": "も",
+          "pos": "助詞",
+          "pos_detail": "係助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ない",
+          "reading": "ナイ",
+          "base_form": "ない",
+          "pos": "形容詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "小石",
+          "reading": "コイシ",
+          "base_form": "小石",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "で",
+          "reading": "デ",
+          "base_form": "で",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "さえ",
+          "reading": "サエ",
+          "base_form": "さえ",
+          "pos": "助詞",
+          "pos_detail": "係助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "不思議",
+          "reading": "フシギ",
+          "base_form": "不思議",
+          "pos": "名詞",
+          "pos_detail": "形容動詞語幹",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "だ",
+          "reading": "ダ",
+          "base_form": "だ",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "よ",
+          "reading": "ヨ",
+          "base_form": "よ",
+          "pos": "助詞",
+          "pos_detail": "終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ね",
+          "reading": "ネ",
+          "base_form": "ね",
+          "pos": "助詞",
+          "pos_detail": "終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "宝石",
+          "reading": "ホウセキ",
+          "base_form": "宝石",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "に",
+          "reading": "ニ",
+          "base_form": "に",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "変わる",
+          "reading": "カワル",
+          "base_form": "変わる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "変わる",
+          "reading": "かわる",
+          "meaning": "变化",
+          "jlpt_level": "N4",
+          "pos": "",
+          "source": "ai"
+        },
+        {
+          "word": "なんでもない",
+          "reading": "なんでもない",
+          "meaning": "没什么大不了",
+          "jlpt_level": "N4",
+          "pos": "",
+          "source": "ai"
+        },
+        {
+          "word": "不思議",
+          "reading": "ふしぎ",
+          "meaning": "不可思议",
+          "jlpt_level": "N4",
+          "pos": "",
+          "source": "ai"
+        }
+      ],
+      "grammar": [
+        {
+          "pattern": "〜でさえ",
+          "meaning": "甚至...",
+          "explanation": "表示举出极端事例",
+          "level": "N2",
+          "example": "",
+          "source": "ai"
+        }
+      ],
+      "reading_parts": [
+        {
+          "text": "なん",
+          "reading": "ナン"
+        },
+        {
+          "text": "で",
+          "reading": "デ"
+        },
+        {
+          "text": "も",
+          "reading": "モ"
+        },
+        {
+          "text": "ない",
+          "reading": "ナイ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "小石",
+          "reading": "コイシ"
+        },
+        {
+          "text": "で",
+          "reading": "デ"
+        },
+        {
+          "text": "さえ",
+          "reading": "サエ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "不思議",
+          "reading": "フシギ"
+        },
+        {
+          "text": "だ",
+          "reading": "ダ"
+        },
+        {
+          "text": "よ",
+          "reading": "ヨ"
+        },
+        {
+          "text": "ね",
+          "reading": "ネ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "宝石",
+          "reading": "ホウセキ"
+        },
+        {
+          "text": "に",
+          "reading": "ニ"
+        },
+        {
+          "text": "変わる",
+          "reading": "カワル"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 15,
+      "text": "一緒にね 見てるだけで… みんな光る",
+      "romaji": "isho ni ne mi teru dake de minna hikaru",
+      "translation": "出发吧出发吧展开双翼",
+      "start": 169.0,
+      "end": 184.0,
+      "section": "Unknown",
+      "duration": 15.0,
+      "tokens": [
+        {
+          "surface": "一緒",
+          "reading": "イッショ",
+          "base_form": "一緒",
+          "pos": "名詞",
+          "pos_detail": "サ変接続",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "に",
+          "reading": "ニ",
+          "base_form": "に",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ね",
+          "reading": "ネ",
+          "base_form": "ね",
+          "pos": "助詞",
+          "pos_detail": "終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "見",
+          "reading": "ミ",
+          "base_form": "見る",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "てる",
+          "reading": "テル",
+          "base_form": "てる",
+          "pos": "動詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "だけ",
+          "reading": "ダケ",
+          "base_form": "だけ",
+          "pos": "助詞",
+          "pos_detail": "副助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "で",
+          "reading": "デ",
+          "base_form": "で",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "…",
+          "reading": "…",
+          "base_form": "…",
+          "pos": "記号",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "みんな",
+          "reading": "ミンナ",
+          "base_form": "みんな",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "光る",
+          "reading": "ヒカル",
+          "base_form": "光る",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "一緒",
+          "reading": "イッショ"
+        },
+        {
+          "text": "に",
+          "reading": "ニ"
+        },
+        {
+          "text": "ね",
+          "reading": "ネ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "見",
+          "reading": "ミ"
+        },
+        {
+          "text": "てる",
+          "reading": "テル"
+        },
+        {
+          "text": "だけ",
+          "reading": "ダケ"
+        },
+        {
+          "text": "で",
+          "reading": "デ"
+        },
+        {
+          "text": "…",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "みんな",
+          "reading": "ミンナ"
+        },
+        {
+          "text": "光る",
+          "reading": "ヒカル"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 16,
+      "text": "Top secret 大好きな ダイスキな だいすきな 瞬間が増えてゆく",
+      "romaji": "Top secret daisuki na daisuki na dai suki na shunkan ga fue te yuku",
+      "translation": null,
+      "start": 184.0,
+      "end": 184.0,
+      "section": "Unknown",
+      "duration": 0.0,
+      "tokens": [
+        {
+          "surface": "Top",
+          "reading": "Top",
+          "base_form": "Top",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "secret",
+          "reading": "secret",
+          "base_form": "secret",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "大好き",
+          "reading": "ダイスキ",
+          "base_form": "大好き",
+          "pos": "名詞",
+          "pos_detail": "形容動詞語幹",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "な",
+          "reading": "ナ",
+          "base_form": "だ",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ダイスキ",
+          "reading": "ダイスキ",
+          "base_form": "ダイスキ",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "な",
+          "reading": "ナ",
+          "base_form": "だ",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "だい",
+          "reading": "ダイ",
+          "base_form": "だい",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "すき",
+          "reading": "スキ",
+          "base_form": "すき",
+          "pos": "名詞",
+          "pos_detail": "形容動詞語幹",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "な",
+          "reading": "ナ",
+          "base_form": "だ",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "瞬間",
+          "reading": "シュンカン",
+          "base_form": "瞬間",
+          "pos": "名詞",
+          "pos_detail": "副詞可能",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "が",
+          "reading": "ガ",
+          "base_form": "が",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "増え",
+          "reading": "フエ",
+          "base_form": "増える",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "て",
+          "reading": "テ",
+          "base_form": "て",
+          "pos": "助詞",
+          "pos_detail": "接続助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ゆく",
+          "reading": "ユク",
+          "base_form": "ゆく",
+          "pos": "動詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "Top",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "secret",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "大好き",
+          "reading": "ダイスキ"
+        },
+        {
+          "text": "な",
+          "reading": "ナ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "ダイスキ",
+          "reading": null
+        },
+        {
+          "text": "な",
+          "reading": "ナ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "だい",
+          "reading": "ダイ"
+        },
+        {
+          "text": "すき",
+          "reading": "スキ"
+        },
+        {
+          "text": "な",
+          "reading": "ナ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "瞬間",
+          "reading": "シュンカン"
+        },
+        {
+          "text": "が",
+          "reading": "ガ"
+        },
+        {
+          "text": "増え",
+          "reading": "フエ"
+        },
+        {
+          "text": "て",
+          "reading": "テ"
+        },
+        {
+          "text": "ゆく",
+          "reading": "ユク"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 17,
+      "text": "Here we go出发吧",
+      "romaji": "Here we go de 发吧",
+      "translation": null,
+      "start": 184.0,
+      "end": 193.0,
+      "section": "Unknown",
+      "duration": 9.0,
+      "tokens": [
+        {
+          "surface": "Here",
+          "reading": "Here",
+          "base_form": "Here",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "we",
+          "reading": "we",
+          "base_form": "we",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "go",
+          "reading": "go",
+          "base_form": "go",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "出",
+          "reading": "デ",
+          "base_form": "出",
+          "pos": "名詞",
+          "pos_detail": "接尾",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "发吧",
+          "reading": "发吧",
+          "base_form": "发吧",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "Here",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "we",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "go",
+          "reading": null
+        },
+        {
+          "text": "出",
+          "reading": "デ"
+        },
+        {
+          "text": "发吧",
+          "reading": null
+        }
+      ],
+      "has_notes": false
+    },
+    {
+      "index": 18,
+      "text": "とっても小さな チイサナ ちいさな 種になって",
+      "romaji": "totemo chiisana chiisana chiisana tane ni na te",
+      "translation": null,
+      "start": 193.0,
+      "end": 200.0,
+      "section": "Unknown",
+      "duration": 7.0,
+      "tokens": [
+        {
+          "surface": "とっても",
+          "reading": "トッテモ",
+          "base_form": "とっても",
+          "pos": "副詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "小さな",
+          "reading": "チイサナ",
+          "base_form": "小さな",
+          "pos": "連体詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "チイサナ",
+          "reading": "チイサナ",
+          "base_form": "チイサナ",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ちいさな",
+          "reading": "チイサナ",
+          "base_form": "ちいさな",
+          "pos": "連体詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "種",
+          "reading": "タネ",
+          "base_form": "種",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "に",
+          "reading": "ニ",
+          "base_form": "に",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "なっ",
+          "reading": "ナッ",
+          "base_form": "なる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "て",
+          "reading": "テ",
+          "base_form": "て",
+          "pos": "助詞",
+          "pos_detail": "接続助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "なる",
+          "reading": "なる",
+          "meaning": "成为",
+          "jlpt_level": "N5",
+          "pos": "",
+          "source": "ai"
+        },
+        {
+          "word": "とっても",
+          "reading": "とっても",
+          "meaning": "非常",
+          "jlpt_level": "N5",
+          "pos": "",
+          "source": "ai"
+        },
+        {
+          "word": "小さな",
+          "reading": "ちいさな",
+          "meaning": "小的",
+          "jlpt_level": "N5",
+          "pos": "",
+          "source": "ai"
+        },
+        {
+          "word": "種",
+          "reading": "たね",
+          "meaning": "种子",
+          "jlpt_level": "N5",
+          "pos": "",
+          "source": "ai"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "とっても",
+          "reading": "トッテモ"
+        },
+        {
+          "text": "小さな",
+          "reading": "チイサナ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "チイサナ",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "ちいさな",
+          "reading": "チイサナ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "種",
+          "reading": "タネ"
+        },
+        {
+          "text": "に",
+          "reading": "ニ"
+        },
+        {
+          "text": "なっ",
+          "reading": "ナッ"
+        },
+        {
+          "text": "て",
+          "reading": "テ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 19,
+      "text": "きっと こころのどこかで大きな花が咲き始めてる",
+      "romaji": "kito kokoro no doko ka de ookina hana ga saki hajime teru",
+      "translation": null,
+      "start": 200.0,
+      "end": 209.0,
+      "section": "Unknown",
+      "duration": 9.0,
+      "tokens": [
+        {
+          "surface": "きっと",
+          "reading": "キット",
+          "base_form": "きっと",
+          "pos": "副詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "こころ",
+          "reading": "ココロ",
+          "base_form": "こころ",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "の",
+          "reading": "ノ",
+          "base_form": "の",
+          "pos": "助詞",
+          "pos_detail": "連体化",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "どこ",
+          "reading": "ドコ",
+          "base_form": "どこ",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "か",
+          "reading": "カ",
+          "base_form": "か",
+          "pos": "助詞",
+          "pos_detail": "副助詞／並立助詞／終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "で",
+          "reading": "デ",
+          "base_form": "で",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "大きな",
+          "reading": "オオキナ",
+          "base_form": "大きな",
+          "pos": "連体詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "花",
+          "reading": "ハナ",
+          "base_form": "花",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "が",
+          "reading": "ガ",
+          "base_form": "が",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "咲き",
+          "reading": "サキ",
+          "base_form": "咲く",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "始め",
+          "reading": "ハジメ",
+          "base_form": "始める",
+          "pos": "動詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "てる",
+          "reading": "テル",
+          "base_form": "てる",
+          "pos": "動詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "咲き始める",
+          "reading": "さきはじめる",
+          "meaning": "开始开",
+          "jlpt_level": "N3",
+          "pos": "",
+          "source": "ai"
+        },
+        {
+          "word": "大きな",
+          "reading": "おおきな",
+          "meaning": "大的",
+          "jlpt_level": "N5",
+          "pos": "",
+          "source": "ai"
+        },
+        {
+          "word": "花",
+          "reading": "はな",
+          "meaning": "花",
+          "jlpt_level": "N5",
+          "pos": "",
+          "source": "ai"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "きっと",
+          "reading": "キット"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "こころ",
+          "reading": "ココロ"
+        },
+        {
+          "text": "の",
+          "reading": "ノ"
+        },
+        {
+          "text": "どこ",
+          "reading": "ドコ"
+        },
+        {
+          "text": "か",
+          "reading": "カ"
+        },
+        {
+          "text": "で",
+          "reading": "デ"
+        },
+        {
+          "text": "大きな",
+          "reading": "オオキナ"
+        },
+        {
+          "text": "花",
+          "reading": "ハナ"
+        },
+        {
+          "text": "が",
+          "reading": "ガ"
+        },
+        {
+          "text": "咲き",
+          "reading": "サキ"
+        },
+        {
+          "text": "始め",
+          "reading": "ハジメ"
+        },
+        {
+          "text": "てる",
+          "reading": "テル"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 20,
+      "text": "DO! DO! DO! DREAMING! DREAMING! そして世界はひらく",
+      "romaji": "DO ! DO ! DO ! DREAMInG ! DREAMInG ! soshite sekai ha hiraku",
+      "translation": null,
+      "start": 209.0,
+      "end": 219.0,
+      "section": "Unknown",
+      "duration": 10.0,
+      "tokens": [
+        {
+          "surface": "DO",
+          "reading": "DO",
+          "base_form": "DO",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "!",
+          "reading": "!",
+          "base_form": "!",
+          "pos": "名詞",
+          "pos_detail": "サ変接続",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "DO",
+          "reading": "DO",
+          "base_form": "DO",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "!",
+          "reading": "!",
+          "base_form": "!",
+          "pos": "名詞",
+          "pos_detail": "サ変接続",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "DO",
+          "reading": "DO",
+          "base_form": "DO",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "!",
+          "reading": "!",
+          "base_form": "!",
+          "pos": "名詞",
+          "pos_detail": "サ変接続",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "DREAMING",
+          "reading": "DREAMING",
+          "base_form": "DREAMING",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "!",
+          "reading": "!",
+          "base_form": "!",
+          "pos": "名詞",
+          "pos_detail": "サ変接続",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "DREAMING",
+          "reading": "DREAMING",
+          "base_form": "DREAMING",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "!",
+          "reading": "!",
+          "base_form": "!",
+          "pos": "名詞",
+          "pos_detail": "サ変接続",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "そして",
+          "reading": "ソシテ",
+          "base_form": "そして",
+          "pos": "接続詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "世界",
+          "reading": "セカイ",
+          "base_form": "世界",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "は",
+          "reading": "ハ",
+          "base_form": "は",
+          "pos": "助詞",
+          "pos_detail": "係助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ひらく",
+          "reading": "ヒラク",
+          "base_form": "ひらく",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [
+        {
+          "word": "世界",
+          "reading": "せかい",
+          "meaning": "世界",
+          "jlpt_level": "N5",
+          "pos": "",
+          "source": "ai"
+        }
+      ],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "DO",
+          "reading": null
+        },
+        {
+          "text": "!",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "DO",
+          "reading": null
+        },
+        {
+          "text": "!",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "DO",
+          "reading": null
+        },
+        {
+          "text": "!",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "DREAMING",
+          "reading": null
+        },
+        {
+          "text": "!",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "DREAMING",
+          "reading": null
+        },
+        {
+          "text": "!",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "そして",
+          "reading": "ソシテ"
+        },
+        {
+          "text": "世界",
+          "reading": "セカイ"
+        },
+        {
+          "text": "は",
+          "reading": "ハ"
+        },
+        {
+          "text": "ひらく",
+          "reading": "ヒラク"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 21,
+      "text": "大丈夫 ダイジョウブ だいじょうぶ 奇跡だって起こせる",
+      "romaji": "daijoubu daijoubu daijoubu kiseki date okoseru",
+      "translation": null,
+      "start": 219.0,
+      "end": 227.0,
+      "section": "Unknown",
+      "duration": 8.0,
+      "tokens": [
+        {
+          "surface": "大丈夫",
+          "reading": "ダイジョウブ",
+          "base_form": "大丈夫",
+          "pos": "名詞",
+          "pos_detail": "形容動詞語幹",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ダイジョウブ",
+          "reading": "ダイジョウブ",
+          "base_form": "ダイジョウブ",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "だいじょうぶ",
+          "reading": "ダイジョウブ",
+          "base_form": "だいじょうぶ",
+          "pos": "名詞",
+          "pos_detail": "形容動詞語幹",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "奇跡",
+          "reading": "キセキ",
+          "base_form": "奇跡",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "だって",
+          "reading": "ダッテ",
+          "base_form": "だって",
+          "pos": "助詞",
+          "pos_detail": "副助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "起こせる",
+          "reading": "オコセル",
+          "base_form": "起こせる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "大丈夫",
+          "reading": "ダイジョウブ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "ダイジョウブ",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "だいじょうぶ",
+          "reading": "ダイジョウブ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "奇跡",
+          "reading": "キセキ"
+        },
+        {
+          "text": "だって",
+          "reading": "ダッテ"
+        },
+        {
+          "text": "起こせる",
+          "reading": "オコセル"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 22,
+      "text": "Here we go 行こうよ 行こうよ 行こうよ 翼拡げ",
+      "romaji": "Here we go iko u yo iko u yo iko u yo tsubasa hiroge",
+      "translation": null,
+      "start": 227.0,
+      "end": 234.0,
+      "section": "Unknown",
+      "duration": 7.0,
+      "tokens": [
+        {
+          "surface": "Here",
+          "reading": "Here",
+          "base_form": "Here",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "we",
+          "reading": "we",
+          "base_form": "we",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "go",
+          "reading": "go",
+          "base_form": "go",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "行こ",
+          "reading": "イコ",
+          "base_form": "行く",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "う",
+          "reading": "ウ",
+          "base_form": "う",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "よ",
+          "reading": "ヨ",
+          "base_form": "よ",
+          "pos": "助詞",
+          "pos_detail": "終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "行こ",
+          "reading": "イコ",
+          "base_form": "行く",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "う",
+          "reading": "ウ",
+          "base_form": "う",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "よ",
+          "reading": "ヨ",
+          "base_form": "よ",
+          "pos": "助詞",
+          "pos_detail": "終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "行こ",
+          "reading": "イコ",
+          "base_form": "行く",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "う",
+          "reading": "ウ",
+          "base_form": "う",
+          "pos": "助動詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "よ",
+          "reading": "ヨ",
+          "base_form": "よ",
+          "pos": "助詞",
+          "pos_detail": "終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "翼",
+          "reading": "ツバサ",
+          "base_form": "翼",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "拡げ",
+          "reading": "ヒロゲ",
+          "base_form": "拡げる",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "Here",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "we",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "go",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "行こ",
+          "reading": "イコ"
+        },
+        {
+          "text": "う",
+          "reading": "ウ"
+        },
+        {
+          "text": "よ",
+          "reading": "ヨ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "行こ",
+          "reading": "イコ"
+        },
+        {
+          "text": "う",
+          "reading": "ウ"
+        },
+        {
+          "text": "よ",
+          "reading": "ヨ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "行こ",
+          "reading": "イコ"
+        },
+        {
+          "text": "う",
+          "reading": "ウ"
+        },
+        {
+          "text": "よ",
+          "reading": "ヨ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "翼",
+          "reading": "ツバサ"
+        },
+        {
+          "text": "拡げ",
+          "reading": "ヒロゲ"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 23,
+      "text": "きっと 何かが 何かが どこかで 出会える日を待ってる",
+      "romaji": "kito nani ka ga nani ka ga doko ka de deaeru hi wo ma teru",
+      "translation": null,
+      "start": 234.0,
+      "end": 243.0,
+      "section": "Unknown",
+      "duration": 9.0,
+      "tokens": [
+        {
+          "surface": "きっと",
+          "reading": "キット",
+          "base_form": "きっと",
+          "pos": "副詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "何",
+          "reading": "ナニ",
+          "base_form": "何",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "か",
+          "reading": "カ",
+          "base_form": "か",
+          "pos": "助詞",
+          "pos_detail": "副助詞／並立助詞／終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "が",
+          "reading": "ガ",
+          "base_form": "が",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "何",
+          "reading": "ナニ",
+          "base_form": "何",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "か",
+          "reading": "カ",
+          "base_form": "か",
+          "pos": "助詞",
+          "pos_detail": "副助詞／並立助詞／終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "が",
+          "reading": "ガ",
+          "base_form": "が",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "どこ",
+          "reading": "ドコ",
+          "base_form": "どこ",
+          "pos": "名詞",
+          "pos_detail": "代名詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "か",
+          "reading": "カ",
+          "base_form": "か",
+          "pos": "助詞",
+          "pos_detail": "副助詞／並立助詞／終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "で",
+          "reading": "デ",
+          "base_form": "で",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "出会える",
+          "reading": "デアエル",
+          "base_form": "出会える",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "日",
+          "reading": "ヒ",
+          "base_form": "日",
+          "pos": "名詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "副詞可能",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "を",
+          "reading": "ヲ",
+          "base_form": "を",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "待っ",
+          "reading": "マッ",
+          "base_form": "待つ",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "てる",
+          "reading": "テル",
+          "base_form": "てる",
+          "pos": "動詞",
+          "pos_detail": "非自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [],
+      "reading_parts": [
+        {
+          "text": "きっと",
+          "reading": "キット"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "何",
+          "reading": "ナニ"
+        },
+        {
+          "text": "か",
+          "reading": "カ"
+        },
+        {
+          "text": "が",
+          "reading": "ガ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "何",
+          "reading": "ナニ"
+        },
+        {
+          "text": "か",
+          "reading": "カ"
+        },
+        {
+          "text": "が",
+          "reading": "ガ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "どこ",
+          "reading": "ドコ"
+        },
+        {
+          "text": "か",
+          "reading": "カ"
+        },
+        {
+          "text": "で",
+          "reading": "デ"
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "出会える",
+          "reading": "デアエル"
+        },
+        {
+          "text": "日",
+          "reading": "ヒ"
+        },
+        {
+          "text": "を",
+          "reading": "ヲ"
+        },
+        {
+          "text": "待っ",
+          "reading": "マッ"
+        },
+        {
+          "text": "てる",
+          "reading": "テル"
+        }
+      ],
+      "has_notes": true
+    },
+    {
+      "index": 24,
+      "text": "DO! DO! DO! DREAMING! DREAMING! そして扉がひらくよ…",
+      "romaji": "DO ! DO ! DO ! DREAMInG ! DREAMInG ! soshite tobira ga hiraku yo",
+      "translation": null,
+      "start": 243.0,
+      "end": 248.0,
+      "section": "Unknown",
+      "duration": 5.0,
+      "tokens": [
+        {
+          "surface": "DO",
+          "reading": "DO",
+          "base_form": "DO",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "!",
+          "reading": "!",
+          "base_form": "!",
+          "pos": "名詞",
+          "pos_detail": "サ変接続",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "DO",
+          "reading": "DO",
+          "base_form": "DO",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "!",
+          "reading": "!",
+          "base_form": "!",
+          "pos": "名詞",
+          "pos_detail": "サ変接続",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "DO",
+          "reading": "DO",
+          "base_form": "DO",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "!",
+          "reading": "!",
+          "base_form": "!",
+          "pos": "名詞",
+          "pos_detail": "サ変接続",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "DREAMING",
+          "reading": "DREAMING",
+          "base_form": "DREAMING",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "!",
+          "reading": "!",
+          "base_form": "!",
+          "pos": "名詞",
+          "pos_detail": "サ変接続",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "DREAMING",
+          "reading": "DREAMING",
+          "base_form": "DREAMING",
+          "pos": "名詞",
+          "pos_detail": "固有名詞",
+          "conjugation_type": "組織",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "!",
+          "reading": "!",
+          "base_form": "!",
+          "pos": "名詞",
+          "pos_detail": "サ変接続",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": " ",
+          "reading": " ",
+          "base_form": " ",
+          "pos": "記号",
+          "pos_detail": "空白",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "そして",
+          "reading": "ソシテ",
+          "base_form": "そして",
+          "pos": "接続詞",
+          "pos_detail": "*",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "扉",
+          "reading": "トビラ",
+          "base_form": "扉",
+          "pos": "名詞",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "が",
+          "reading": "ガ",
+          "base_form": "が",
+          "pos": "助詞",
+          "pos_detail": "格助詞",
+          "conjugation_type": "一般",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "ひらく",
+          "reading": "ヒラク",
+          "base_form": "ひらく",
+          "pos": "動詞",
+          "pos_detail": "自立",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "よ",
+          "reading": "ヨ",
+          "base_form": "よ",
+          "pos": "助詞",
+          "pos_detail": "終助詞",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        },
+        {
+          "surface": "…",
+          "reading": "…",
+          "base_form": "…",
+          "pos": "記号",
+          "pos_detail": "一般",
+          "conjugation_type": "*",
+          "conjugation_form": "*"
+        }
+      ],
+      "vocabulary": [],
+      "grammar": [
+        {
+          "pattern": "そして",
+          "meaning": "然后",
+          "explanation": "连接句子表示顺序",
+          "level": "N5",
+          "example": "",
+          "source": "ai"
+        },
+        {
+          "pattern": "よ",
+          "meaning": "哦",
+          "explanation": "表示强调或提醒",
+          "level": "N5",
+          "example": "",
+          "source": "ai"
+        }
+      ],
+      "reading_parts": [
+        {
+          "text": "DO",
+          "reading": null
+        },
+        {
+          "text": "!",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "DO",
+          "reading": null
+        },
+        {
+          "text": "!",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "DO",
+          "reading": null
+        },
+        {
+          "text": "!",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "DREAMING",
+          "reading": null
+        },
+        {
+          "text": "!",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "DREAMING",
+          "reading": null
+        },
+        {
+          "text": "!",
+          "reading": null
+        },
+        {
+          "text": " ",
+          "reading": null
+        },
+        {
+          "text": "そして",
+          "reading": "ソシテ"
+        },
+        {
+          "text": "扉",
+          "reading": "トビラ"
+        },
+        {
+          "text": "が",
+          "reading": "ガ"
+        },
+        {
+          "text": "ひらく",
+          "reading": "ヒラク"
+        },
+        {
+          "text": "よ",
+          "reading": "ヨ"
+        },
+        {
+          "text": "…",
+          "reading": null
+        }
+      ],
+      "has_notes": true
+    }
+  ]
+}

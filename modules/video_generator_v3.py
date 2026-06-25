@@ -1062,8 +1062,11 @@ class VideoGenerator:
         # Artist
         abb = draw.textbbox((0, 0), artist, font=af)
         aw = abb[2] - abb[0]
+        ah = abb[3] - abb[1]
         ax = (W - aw) // 2
-        ay = ty + 48
+        # 使用标题实际渲染高度 + 行间距，避免与标题重叠
+        title_render_h = title_img.height if title_alpha > 10 else 36
+        ay = ty + title_render_h + 12
         draw.text((ax, ay), artist, font=af, fill=(160, 170, 200, title_alpha // 2))
 
         # Animated decorative line
@@ -1117,12 +1120,19 @@ class VideoGenerator:
             )
 
             # 计算歌词区垂直居中位置（顶部30%区域内）
-            total_lyric_h = cur_size
+            # 使用实际渲染图片的高度（包含多行换行和padding），避免重叠
+            total_lyric_h = lyric_img.height
             if romaji:
-                total_lyric_h += romaji_size + 6
+                r_img_tmp = self.R.render(romaji, romaji_size, color=romaji_col, max_width=W - 80)
+                total_lyric_h += r_img_tmp.height + 6
+            else:
+                r_img_tmp = None
             if translation:
                 tr_size = max(20, int(lyric_size * 0.72 * scale))
-                total_lyric_h += tr_size + 6
+                tr_img_tmp = self.R.render(translation, tr_size, color=translation_col, max_width=W - 80)
+                total_lyric_h += tr_img_tmp.height + 6
+            else:
+                tr_img_tmp = None
 
             lyric_top = int(H * 0.13)
             y_cursor = lyric_top
@@ -1130,20 +1140,17 @@ class VideoGenerator:
             lx = (W - lyric_img.width) // 2 + offset_x
             frame.paste(lyric_img, (lx, y_cursor + offset_y), lyric_img)
 
-            if romaji:
-                r_img = self.R.render(romaji, romaji_size, color=romaji_col, max_width=W - 80)
-                rx = (W - r_img.width) // 2 + offset_x
-                frame.paste(r_img, (rx, y_cursor + cur_size + 6 + offset_y), r_img)
+            # 罗马字：基于歌词图片实际高度定位
+            current_y = y_cursor + lyric_img.height + 6 + offset_y
+            if romaji and r_img_tmp is not None:
+                rx = (W - r_img_tmp.width) // 2 + offset_x
+                frame.paste(r_img_tmp, (rx, current_y), r_img_tmp)
+                current_y += r_img_tmp.height + 4
 
             # 中文翻译显示在罗马音下方，与日文歌词同步
-            if translation:
-                tr_size = max(20, int(lyric_size * 0.72 * scale))
-                tr_img = self.R.render(translation, tr_size, color=translation_col, max_width=W - 80)
-                tr_x = (W - tr_img.width) // 2 + offset_x
-                tr_y = y_cursor + cur_size + 6
-                if romaji:
-                    tr_y += romaji_size + 4
-                frame.paste(tr_img, (tr_x, tr_y + offset_y), tr_img)
+            if translation and tr_img_tmp is not None:
+                tr_x = (W - tr_img_tmp.width) // 2 + offset_x
+                frame.paste(tr_img_tmp, (tr_x, current_y), tr_img_tmp)
 
         # ---- Progress indicator (at 30% boundary) ----
         if lines:
