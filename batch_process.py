@@ -2,6 +2,7 @@
 """
 批量处理所有歌曲：LRC → 序列化 → 分析 → 生成视频
 """
+import html
 import json
 import re
 import sys
@@ -87,6 +88,8 @@ def parse_lrc_file(lrc_path: Path) -> Optional[dict]:
                     ms_str = lrc_match.group(3)
                     ms = int(ms_str) if len(ms_str) == 3 else int(ms_str) * 10
                     text = lrc_match.group(4).strip()
+                    # 解码 HTML 实体（如 &quot; &amp; &lt; &gt;）
+                    text = html.unescape(text)
                     time_s = minutes * 60 + seconds + ms / 1000.0
                     if text:
                         timed_lines.append({
@@ -102,48 +105,77 @@ def parse_lrc_file(lrc_path: Path) -> Optional[dict]:
             return None
 
         # 第二阶段：合并中文翻译到日文行
-        # LRC 结构：日文行在前，中文翻译行在后
-        # 中文翻译行的时间戳通常与下一句日文行相同（即下一句的开始时间）
+        # LRC 结构分析：
+        # 中文翻译行的时间戳通常等于"被翻译日文行的下一句日文行"的开始时间
+        # 即：翻译行出现在被翻译日文行之后，时间戳=下一句日文行的开始时间
         # 例如:
-        #   [00:01.00]日文A
-        #   [00:09.00]中文翻译A  ← 翻译日文A，但时间戳=下一句日文B的开始时间
-        #   [00:09.00]日文B
-        # 策略：中文行总是附加到它前面的日文行上
+        #   [00:10.00]どうやってこうやって          ← 日文A
+        #   [00:13.00]要怎么做？就这么做              ← 翻译A（时间戳=日文B的开始时间）
+        #   [00:13.00]またほら君と話そうか            ← 日文B
+        #
+        # 策略：缓存翻译行，遇到下一个日文行时触发批量匹配
+        # 当连续出现多个翻译行时（如 日文A,日文B,翻译A,翻译B,日文C），
+        # 按顺序匹配到"除当前日文行外的未翻译日文行"（翻译A→A, 翻译B→B）
+        # 这样可避免"最近未翻译行"策略把翻译A错误匹配到最后添加的日文B
         lines = []
-        i = 0
-        while i < len(timed_lines):
-            current = timed_lines[i]
+        pending_translations = []  # 待匹配的翻译行缓存
+
+        def flush_pending_translations(exclude_last=False):
+            """将缓存的翻译按顺序匹配到未翻译日文行。
+            exclude_last=True 时，排除最后添加的日文行（因为当前正准备添加新日文行，
+            该新日文行还没有翻译）。
+            """
+            if not pending_translations:
+                return
+            # 收集未翻译日文行的索引
+            untranslated = []
+            for k, ln in enumerate(lines):
+                if not _is_chinese(ln["text"]) and not ln.get("translation"):
+                    untranslated.append(k)
+            # 排除最后添加的日文行（如果需要）
+            if exclude_last and untranslated:
+                untranslated.pop()
+            # 按顺序匹配
+            for j, trans_text in enumerate(pending_translations):
+                if j < len(untranslated):
+                    idx = untranslated[j]
+                    if lines[idx].get("translation"):
+                        lines[idx]["translation"] += trans_text
+                    else:
+                        lines[idx]["translation"] = trans_text
+                else:
+                    # 没有足够的未翻译日文行，追加到行末尾作为单独行
+                    lines.append({"start": 0, "text": trans_text, "translation": None})
+            pending_translations.clear()
+
+        for current in timed_lines:
             text = current["text"]
 
             # 跳过元信息行（如词曲作者、著作权等）
             if text.startswith(('词：', '曲：', '编曲', 'TME', '翻译', '原唱')):
-                i += 1
+                continue
+
+            # 跳过标题行（格式为"歌曲名 - 艺术家"，通常在LRC首行）
+            title = metadata.get("ti", "")
+            artist = metadata.get("ar", "")
+            if title and artist and text == f"{title} - {artist}":
+                continue
+            if title and text == title:
                 continue
 
             if _is_chinese(text):
-                # 中文行：追加到前一行日文的翻译中（处理翻译被分成多行的情况）
-                if lines and not _is_chinese(lines[-1]["text"]):
-                    # 前一行是日文，将中文追加到翻译
-                    if lines[-1].get("translation"):
-                        lines[-1]["translation"] += text
-                    else:
-                        lines[-1]["translation"] = text
-                else:
-                    # 无法配对的纯中文行 — 单独保留
-                    lines.append({"start": current["start"], "text": text, "translation": None})
-                i += 1
+                # 中文翻译行：缓存起来，等待批量匹配
+                pending_translations.append(text)
                 continue
 
-            # 日文行：检查下一行是否为中文翻译
-            translation = None
-            if i + 1 < len(timed_lines):
-                next_line = timed_lines[i + 1]
-                if _is_chinese(next_line["text"]):
-                    translation = next_line["text"]
-                    i += 1  # 跳过中文翻译行
+            # 日文行：先触发批量匹配，再添加日文行
+            # 此时lines中的最后一个是上一个日文行（还未添加当前日文行），
+            # 所以所有未翻译日文行都可以被匹配
+            flush_pending_translations(exclude_last=False)
+            lines.append({"start": current["start"], "text": text, "translation": None})
 
-            lines.append({"start": current["start"], "text": text, "translation": translation})
-            i += 1
+        # 文件结束：处理剩余的待匹配翻译
+        flush_pending_translations(exclude_last=False)
 
         # 第三阶段：填充结束时间
         for i in range(len(lines) - 1):
